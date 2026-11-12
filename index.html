@@ -6,6 +6,19 @@
 <title>MetisOps</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="MetisOps: consultoría en operaciones industriales, logística y gestión en Chile. Diagnóstico inicial sin costo: envíanos un documento real y recibe un informe breve con las principales oportunidades.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MetisOps">
+<meta property="og:title" content="MetisOps · Operaciones industriales, logística y gestión">
+<meta property="og:description" content="Operar bien desde el primer día, con criterio de terreno y herramientas de hoy. Diagnóstico inicial sin costo.">
+<meta property="og:url" content="https://metisops-chile.github.io/">
+<meta property="og:image" content="https://metisops-chile.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_CL">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400&family=Jost:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
@@ -20,6 +33,7 @@
     --bg: #FAF8F4;
     --fg: #282725;
     --muted: #6F6B64;
+    --muted-strong: #4A4743;
     --line: #E1DBD0;
     --panel: #FFFFFF;
     --accent: #A44735;
@@ -36,13 +50,13 @@
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #1E1D1B; --fg: #F1EDE6; --muted: #B3ADA3; --line: #3A3835; --panel: #262523;
+      --bg: #1E1D1B; --fg: #F1EDE6; --muted: #B3ADA3; --muted-strong: #D6D0C6; --line: #3A3835; --panel: #262523;
       --accent: #D47A63; --band: #141312; --band-fg: #F1EDE6; --band-muted: #A9A398; --band-line: #34322F; --band-panel: #1F1E1C;
       --ok: #8DB597; color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #1E1D1B; --fg: #F1EDE6; --muted: #B3ADA3; --line: #3A3835; --panel: #262523;
+    --bg: #1E1D1B; --fg: #F1EDE6; --muted: #B3ADA3; --muted-strong: #D6D0C6; --line: #3A3835; --panel: #262523;
     --accent: #D47A63; --band: #141312; --band-fg: #F1EDE6; --band-muted: #A9A398; --band-line: #34322F; --band-panel: #1F1E1C;
     --ok: #8DB597; color-scheme: dark;
   }
@@ -57,7 +71,7 @@
   h3 { font-size: 24px; line-height: 1.2; }
   em { font-style: italic; color: var(--accent); }
   p { margin: 0; }
-  .lead { font-size: clamp(18px, 2vw, 21px); color: var(--muted); max-width: 60ch; }
+  .lead { font-size: clamp(18px, 2vw, 21px); color: var(--muted-strong); max-width: 60ch; }
   .section-head { display: flex; flex-direction: column; gap: 14px; margin-bottom: clamp(32px, 5vw, 52px); max-width: 760px; }
 
   /* Nav */
@@ -197,6 +211,38 @@
 
   @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 
+
+  /* Founder */
+  .founder { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+  @media (max-width: 760px) { .founder { grid-template-columns: minmax(0, 1fr); } }
+  .avatar { width: 100%; max-width: 220px; aspect-ratio: 1; border-radius: 50%; background: var(--carbon); color: #FAF8F4; display: grid; place-items: center; font-family: var(--serif); font-size: 64px; position: relative; overflow: hidden; }
+  .avatar .ini { display: inline-block; white-space: nowrap; }
+  .avatar .ini span { color: var(--oxido-claro); font-style: italic; }
+  .avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .founder-text { display: flex; flex-direction: column; gap: 18px; max-width: 64ch; }
+  .founder-text p { color: var(--muted-strong); }
+  .timeline { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; }
+  .timeline li { padding: 14px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; font-size: 16px; color: var(--muted-strong); }
+  .timeline li b { font-family: var(--serif); font-weight: 400; font-size: 18px; color: var(--accent); font-variant-numeric: tabular-nums; }
+  @media (max-width: 480px) { .timeline li { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+  .signature { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--fg); }
+
+  /* Results */
+  .results { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0; border-top: 1px solid var(--fg); }
+  .result { padding: 26px 24px 26px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .result-n { font-family: var(--serif); font-size: clamp(40px, 5vw, 56px); line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .result h3 { font-size: 20px; }
+  .result p { color: var(--muted); font-size: 15px; }
+  .results-note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+
+  /* Contact actions */
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn-sm { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 500; font-size: 15px; padding: 10px 16px; border-radius: 2px; }
+  .btn-mail { background: var(--accent); color: #FFFFFF; }
+  .btn-wa { background: transparent; color: var(--fg); border: 1px solid var(--fg); }
+  .btn-sm:hover, .btn-sm:focus-visible { filter: brightness(1.08); }
+  .phone { font-variant-numeric: tabular-nums; color: var(--muted-strong); font-size: 15px; }
+
   /* Language switch */
   .langs { display: flex; gap: 6px; align-items: center; }
   .lang { appearance: none; border: 1px solid transparent; background: transparent; padding: 3px; border-radius: 3px; cursor: pointer; line-height: 0; opacity: .55; }
@@ -220,7 +266,9 @@
         <summary data-i18n="nav.about">Nosotros</summary>
         <div class="dd-menu">
           <a href="#quienes-somos" data-i18n="nav.who">Quiénes somos</a>
+          <a href="#fundador" data-i18n="nav.founder">Quién está detrás</a>
           <a href="#mision-vision" data-i18n="nav.mv">Misión y visión</a>
+          <a href="#resultados" data-i18n="nav.results">Resultados</a>
           <a href="#como-trabajamos" data-i18n="nav.how">Para quién y cómo trabajamos</a>
         </div>
       </details>
@@ -247,7 +295,9 @@
         <div class="burger-menu">
           <span class="burger-h" data-i18n="nav.about">Nosotros</span>
           <a href="#quienes-somos" data-i18n="nav.who">Quiénes somos</a>
+          <a href="#fundador" data-i18n="nav.founder">Quién está detrás</a>
           <a href="#mision-vision" data-i18n="nav.mv">Misión y visión</a>
+          <a href="#resultados" data-i18n="nav.results">Resultados</a>
           <a href="#como-trabajamos" data-i18n="nav.how">Para quién y cómo trabajamos</a>
           <span class="burger-h" data-i18n="nav.services">Servicios</span>
           <a href="#revision" data-i18n="nav.express">Diagnóstico inicial</a>
@@ -309,7 +359,26 @@
   </div>
 </section>
 
-<section class="band alt" id="revision">
+<section class="band alt" id="fundador">
+  <div class="wrap founder">
+    <div class="avatar" aria-hidden="true"><span class="ini">G<span>U</span></span></div>
+    <div class="founder-text">
+      <div class="section-head" style="margin-bottom:0">
+        <p class="eyebrow" data-i18n="fo.e">Quién está detrás</p>
+        <h2 data-i18n="fo.h2">Gerald Ulloa Retamal, <em>fundador.</em></h2>
+      </div>
+      <p data-i18n="fo.p1">Ingeniero Civil Industrial y MBA, con 13 años gerenciando plantas, equipos, logística y proyectos industriales en Chile y en grupos multinacionales de Brasil y México. Más de USD 13 millones en plantas montadas y puestas en marcha.</p>
+      <ul class="timeline">
+        <li><b>2023–2026</b><span data-i18n="fo.t1">Gerente de Logística y Jefe de Planta en una empresa química proveedora de la gran minería. Contratos de transporte por más de USD 6 millones al año y puesta en marcha de una planta en Antofagasta.</span></li>
+        <li><b>2022–2023</b><span data-i18n="fo.t2">Superintendente de Planta en Grupo Lamosa – Adhesivos Crest: tres líneas de producción y 52 personas.</span></li>
+        <li><b>2014–2022</b><span data-i18n="fo.t3">Jefe de Planta en Isogama Industria Química, parte de un grupo con operaciones en Brasil.</span></li>
+      </ul>
+      <p data-i18n="fo.p2">Trabaja en español y portugués. Cada diagnóstico y cada proyecto de MetisOps lo lidera él personalmente.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="revision">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-i18n="nav.express">Diagnóstico inicial</p>
@@ -317,14 +386,14 @@
       <p class="lead" data-i18n="rev.lead">Antes de proponerte un proyecto, te mostramos lo que vemos en tu propia operación.</p>
     </div>
     <div class="express">
-      <div class="step"><span class="step-n">1</span><h3 data-i18n="rev.s1h">Nos envías un documento real</h3><p data-i18n="rev.s1p">Un contrato de transporte, una tarifa, un layout de bodega o un reporte de producción.</p></div>
+      <div class="step"><span class="step-n">1</span><h3 data-i18n="rev.s1h">Nos envías un documento real</h3><p data-i18n="rev.s1p">Un contrato de transporte, una tarifa, un layout de bodega o un reporte de producción. Envíalo por correo o WhatsApp; si lo necesitas, firmamos antes un acuerdo de confidencialidad.</p></div>
       <div class="step"><span class="step-n">2</span><h3 data-i18n="rev.s2h">Lo revisamos en pocos días</h3><p data-i18n="rev.s2p">Lo leemos con ojos de gerente de operaciones: costos, cláusulas, indicadores y riesgos.</p></div>
       <div class="step"><span class="step-n">3</span><h3 data-i18n="rev.s3h">Recibes un informe breve</h3><p data-i18n="rev.s3p">Con las principales oportunidades, su impacto estimado y qué hacer. Sin compromiso de contratar nada después.</p></div>
     </div>
   </div>
 </section>
 
-<section class="band" id="servicios">
+<section class="band alt" id="servicios">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-i18n="nav.services">Servicios</p>
@@ -340,6 +409,22 @@
       <div class="service"><h3 data-i18n="srv.7h">Diseño organizacional</h3><p data-i18n="srv.7p">Roles, dotaciones y responsables claros para que la operación no dependa de una sola persona.</p></div>
       <div class="service"><h3 data-i18n="srv.8h">Indicadores y reportes con IA</h3><p data-i18n="srv.8p">Tableros con los datos que se usan para decidir y reportes que se arman solos.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="band" id="resultados">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="nav.results">Resultados</p>
+      <h2 data-i18n="res.h2">Resultados medibles, <em>en operaciones reales.</em></h2>
+    </div>
+    <div class="results">
+      <div class="result"><span class="result-n">+300%</span><h3 data-i18n="res.1h">Volumen de producción en 10 meses</h3><p data-i18n="res.1p">Planta de adhesivos con tres líneas productivas y 52 personas.</p></div>
+      <div class="result"><span class="result-n">−15%</span><h3 data-i18n="res.2h">Costo de fabricación</h3><p data-i18n="res.2p">Planta química de un grupo brasileño: menor consumo de gas, vapor y energía, y el mejor EBITDA operativo del grupo en 2020 y 2021.</p></div>
+      <div class="result"><span class="result-n">−15%</span><h3 data-i18n="res.3h">Costo de transporte</h3><p data-i18n="res.3p">Logística de productos químicos para la gran minería, con camiones a GNL, ferrocarril y rutas optimizadas.</p></div>
+      <div class="result"><span class="result-n">USD 13 MM</span><h3 data-i18n="res.4h">En plantas montadas y puestas en marcha</h3><p data-i18n="res.4p">Incluida una unidad productiva nueva en Antofagasta, desde la construcción hasta la operación.</p></div>
+    </div>
+    <p class="results-note" data-i18n="res.note">Resultados obtenidos por el fundador en sus cargos anteriores. Se omiten los nombres de los clientes.</p>
   </div>
 </section>
 
@@ -368,6 +453,29 @@
         <li><strong data-i18n="how.4s">Una herramienta que queda</strong><span data-i18n="how.4p">Cada entrega incluye un modelo, tablero o procedimiento que tu equipo sigue usando.</span></li>
       </ul>
       <p class="price-note" data-i18n="how.price">Proyectos a precio fijo <b>desde UF 40</b>.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="band" id="contacto">
+  <div class="wrap contact">
+    <div class="section-head" style="margin-bottom:0">
+      <p class="eyebrow" data-i18n="nav.contact">Contacto</p>
+      <h2 data-i18n="c.h2">Envíanos un documento real <em>y te mostramos dónde mejorar.</em></h2>
+      <p class="lead" data-i18n="c.lead">Un contrato, una tarifa, un layout o un reporte. Lo tratamos con total confidencialidad y te respondemos dentro de la semana.</p>
+    </div>
+    <div class="contact-card">
+      <span class="kpi-label" style="color:var(--muted)" data-i18n="c.write">Escríbenos a</span>
+      <span class="mail" id="mail"></span>
+      <div class="actions">
+        <a class="btn-sm btn-mail" id="mailto" href="mailto:metisops@outlook.com" data-i18n="c.send">Escribir un correo</a>
+        <a class="btn-sm btn-wa" id="wa" href="https://wa.me/56998153074" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+      <span class="phone">WhatsApp: +56 9 9815 3074</span>
+      <button class="copy" id="copy" type="button" data-i18n="c.copy">Copiar correo</button>
+      <p class="signature">Gerald Ulloa · <span data-i18n="c.sig">fundador de MetisOps</span></p>
     </div>
   </div>
 </section>
@@ -401,7 +509,7 @@
   </div>
 </section>
 
-<section class="band" id="noticias">
+<section class="band alt" id="noticias">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-i18n="nav.news">Noticias</p>
@@ -409,22 +517,6 @@
       <p class="lead" id="news-date"></p>
     </div>
     <div class="news" id="news"></div>
-  </div>
-</section>
-
-<section class="band alt" id="contacto">
-  <div class="wrap contact">
-    <div class="section-head" style="margin-bottom:0">
-      <p class="eyebrow" data-i18n="nav.contact">Contacto</p>
-      <h2 data-i18n="c.h2">Envíanos un documento real <em>y te mostramos dónde mejorar.</em></h2>
-      <p class="lead" data-i18n="c.lead">Un contrato, una tarifa, un layout o un reporte. Lo tratamos con total confidencialidad y te respondemos dentro de la semana.</p>
-    </div>
-    <div class="contact-card">
-      <span class="kpi-label" style="color:var(--muted)" data-i18n="c.write">Escríbenos a</span>
-      <span class="mail" id="mail"></span>
-      <button class="copy" id="copy" type="button" data-i18n="c.copy">Copiar correo</button>
-      <p style="color:var(--muted);font-size:15px" data-i18n="c.li">También nos encuentras en LinkedIn como MetisOps.</p>
-    </div>
   </div>
 </section>
 
@@ -440,6 +532,7 @@
   // ===== Datos editables =====
   var CONTACT_EMAIL = 'metisops@outlook.com';
   var ACTUALIZADO = '2026-11-11';
+  var WHATSAPP = '56998153074';
 
   // Respaldo si la fuente en vivo no responde (valores recopilados el 11-nov-2026).
   var FALLBACK = {
@@ -509,6 +602,20 @@
 
   var T = {
     en: {
+      'nav.founder': 'Who is behind it', 'nav.results': 'Results',
+      'fo.e': 'Who is behind it', 'fo.h2': 'Gerald Ulloa Retamal, <em>founder.</em>',
+      'fo.p1': 'Industrial engineer with an MBA and 13 years managing plants, teams, logistics and industrial projects in Chile and in multinational groups from Brazil and Mexico. More than USD 13 million in plants built and started up.',
+      'fo.t1': 'Logistics Manager and Plant Manager at a chemical supplier to large-scale mining. Transport contracts above USD 6 million a year and the start-up of a plant in Antofagasta.',
+      'fo.t2': 'Plant Superintendent at Grupo Lamosa – Adhesivos Crest: three production lines and 52 people.',
+      'fo.t3': 'Plant Manager at Isogama Industria Química, part of a group with operations in Brazil.',
+      'fo.p2': 'Works in Spanish and Portuguese. He personally leads every MetisOps assessment and project.',
+      'res.h2': 'Measurable results, <em>in real operations.</em>',
+      'res.1h': 'Production volume in 10 months', 'res.1p': 'Adhesives plant with three production lines and 52 people.',
+      'res.2h': 'Manufacturing cost', 'res.2p': 'Chemical plant of a Brazilian group: lower gas, steam and power use, and the group’s best operating EBITDA in 2020 and 2021.',
+      'res.3h': 'Transport cost', 'res.3p': 'Chemical logistics for large-scale mining, with LNG trucks, rail and optimized routes.',
+      'res.4h': 'In plants built and started up', 'res.4p': 'Including a new production unit in Antofagasta, from construction to operation.',
+      'res.note': 'Results achieved by the founder in previous roles. Client names are omitted.',
+      'c.send': 'Write an email', 'c.sig': 'founder of MetisOps',
       'nav.about': 'About us', 'nav.who': 'Who we are', 'nav.mv': 'Mission and vision', 'nav.how': 'Who we serve and how we work',
       'nav.services': 'Services', 'nav.express': 'Initial assessment', 'nav.all': 'All services', 'nav.ind': 'Indicators', 'nav.news': 'News',
       'nav.contact': 'Contact', 'nav.more': 'More', 'nav.menu': 'Open menu',
@@ -524,7 +631,7 @@
       'mv.m': 'Mission', 'mv.mt': 'To help industrial companies and investors run well from day one, with data-driven decisions, contracts that work and teams that sustain the results.',
       'mv.v': 'Vision', 'mv.vt': 'To be the reference operations partner for industry in Chile and for companies connecting Chile and Brazil, known for measurable results and tools that stay in place.',
       'rev.h2': 'A first look at your operation, <em>at no cost.</em>', 'rev.lead': 'Before proposing a project, we show you what we see in your own operation.',
-      'rev.s1h': 'You send us a real document', 'rev.s1p': 'A transport contract, a rate sheet, a warehouse layout or a production report.',
+      'rev.s1h': 'You send us a real document', 'rev.s1p': 'A transport contract, a rate sheet, a warehouse layout or a production report. Send it by email or WhatsApp; if you need one, we sign a confidentiality agreement first.',
       'rev.s2h': 'We review it within a few days', 'rev.s2p': 'We read it as an operations manager would: costs, clauses, indicators and risks.',
       'rev.s3h': 'You get a short report', 'rev.s3p': 'With the main opportunities, their estimated impact and what to do. No obligation to hire anything afterwards.',
       'srv.h2': 'Where operating margin <em>is won or lost.</em>',
@@ -556,6 +663,20 @@
       'f.tag': 'Consultancy in industrial operations, logistics and management'
     },
     pt: {
+      'nav.founder': 'Quem está por trás', 'nav.results': 'Resultados',
+      'fo.e': 'Quem está por trás', 'fo.h2': 'Gerald Ulloa Retamal, <em>fundador.</em>',
+      'fo.p1': 'Engenheiro Civil Industrial e MBA, com 13 anos gerenciando plantas, equipes, logística e projetos industriais no Chile e em grupos multinacionais do Brasil e do México. Mais de USD 13 milhões em plantas montadas e colocadas em marcha.',
+      'fo.t1': 'Gerente de Logística e Gerente de Planta em uma empresa química fornecedora da grande mineração. Contratos de transporte acima de USD 6 milhões por ano e a partida de uma planta em Antofagasta.',
+      'fo.t2': 'Superintendente de Planta no Grupo Lamosa – Adhesivos Crest: três linhas de produção e 52 pessoas.',
+      'fo.t3': 'Gerente de Planta na Isogama Industria Química, parte de um grupo com operações no Brasil.',
+      'fo.p2': 'Trabalha em espanhol e português. Ele lidera pessoalmente cada diagnóstico e cada projeto da MetisOps.',
+      'res.h2': 'Resultados mensuráveis, <em>em operações reais.</em>',
+      'res.1h': 'Volume de produção em 10 meses', 'res.1p': 'Planta de adesivos com três linhas de produção e 52 pessoas.',
+      'res.2h': 'Custo de fabricação', 'res.2p': 'Planta química de um grupo brasileiro: menor consumo de gás, vapor e energia, e o melhor EBITDA operacional do grupo em 2020 e 2021.',
+      'res.3h': 'Custo de transporte', 'res.3p': 'Logística de produtos químicos para a grande mineração, com caminhões a GNL, ferrovia e rotas otimizadas.',
+      'res.4h': 'Em plantas montadas e colocadas em marcha', 'res.4p': 'Incluindo uma nova unidade produtiva em Antofagasta, da construção à operação.',
+      'res.note': 'Resultados obtidos pelo fundador em cargos anteriores. Os nomes dos clientes são omitidos.',
+      'c.send': 'Escrever um e-mail', 'c.sig': 'fundador da MetisOps',
       'nav.about': 'Sobre nós', 'nav.who': 'Quem somos', 'nav.mv': 'Missão e visão', 'nav.how': 'Para quem e como trabalhamos',
       'nav.services': 'Serviços', 'nav.express': 'Diagnóstico inicial', 'nav.all': 'Todos os serviços', 'nav.ind': 'Indicadores', 'nav.news': 'Notícias',
       'nav.contact': 'Contato', 'nav.more': 'Mais', 'nav.menu': 'Abrir menu',
@@ -571,7 +692,7 @@
       'mv.m': 'Missão', 'mv.mt': 'Ajudar empresas industriais e investidores a operar bem desde o primeiro dia, com decisões baseadas em dados, contratos que funcionam e equipes que sustentam os resultados.',
       'mv.v': 'Visão', 'mv.vt': 'Ser o parceiro de operações de referência para a indústria no Chile e para as empresas que conectam o Chile e o Brasil, reconhecido por resultados mensuráveis e ferramentas que ficam instaladas.',
       'rev.h2': 'Um primeiro olhar sobre sua operação, <em>sem custo.</em>', 'rev.lead': 'Antes de propor um projeto, mostramos o que vemos na sua própria operação.',
-      'rev.s1h': 'Você nos envia um documento real', 'rev.s1p': 'Um contrato de transporte, uma tabela de fretes, um layout de armazém ou um relatório de produção.',
+      'rev.s1h': 'Você nos envia um documento real', 'rev.s1p': 'Um contrato de transporte, uma tabela de fretes, um layout de armazém ou um relatório de produção. Envie por e-mail ou WhatsApp; se precisar, assinamos antes um acordo de confidencialidade.',
       'rev.s2h': 'Analisamos em poucos dias', 'rev.s2p': 'Lemos com olhos de gerente de operações: custos, cláusulas, indicadores e riscos.',
       'rev.s3h': 'Você recebe um relatório breve', 'rev.s3p': 'Com as principais oportunidades, seu impacto estimado e o que fazer. Sem compromisso de contratar nada depois.',
       'srv.h2': 'Onde a margem operacional <em>é ganha ou perdida.</em>',
@@ -604,9 +725,9 @@
     }
   };
   var UI = {
-    es: { src: 'Fuentes', live: 'En vivo · Banco Central, INE y SII vía mindicador.cl', off: 'Valores al {d} · la fuente en vivo no respondió', fx: 'Tipo de cambio de referencia (ExchangeRate-API) al {d}.', news: 'Selección actualizada al {d}.', pending: 'Correo por confirmar', copied: 'Correo copiado' },
-    en: { src: 'Sources', live: 'Live · Central Bank of Chile, INE and SII via mindicador.cl', off: 'Values as of {d} · the live source did not respond', fx: 'Reference exchange rate (ExchangeRate-API) as of {d}.', news: 'Selection updated {d}.', pending: 'Email to be confirmed', copied: 'Email copied' },
-    pt: { src: 'Fontes', live: 'Ao vivo · Banco Central do Chile, INE e SII via mindicador.cl', off: 'Valores de {d} · a fonte ao vivo não respondeu', fx: 'Taxa de câmbio de referência (ExchangeRate-API) em {d}.', news: 'Seleção atualizada em {d}.', pending: 'E-mail a confirmar', copied: 'E-mail copiado' }
+    es: { subject: 'Diagnóstico inicial', watext: 'Hola, vengo del sitio de MetisOps y me interesa el diagnóstico inicial.', src: 'Fuentes', live: 'En vivo · Banco Central, INE y SII vía mindicador.cl', off: 'Valores al {d} · la fuente en vivo no respondió', fx: 'Tipo de cambio de referencia (ExchangeRate-API) al {d}.', news: 'Selección actualizada al {d}.', pending: 'Correo por confirmar', copied: 'Correo copiado' },
+    en: { subject: 'Initial assessment', watext: 'Hello, I found MetisOps online and I am interested in the initial assessment.', src: 'Sources', live: 'Live · Central Bank of Chile, INE and SII via mindicador.cl', off: 'Values as of {d} · the live source did not respond', fx: 'Reference exchange rate (ExchangeRate-API) as of {d}.', news: 'Selection updated {d}.', pending: 'Email to be confirmed', copied: 'Email copied' },
+    pt: { subject: 'Diagnóstico inicial', watext: 'Olá, vi o site da MetisOps e tenho interesse no diagnóstico inicial.', src: 'Fontes', live: 'Ao vivo · Banco Central do Chile, INE e SII via mindicador.cl', off: 'Valores de {d} · a fonte ao vivo não respondeu', fx: 'Taxa de câmbio de referência (ExchangeRate-API) em {d}.', news: 'Seleção atualizada em {d}.', pending: 'E-mail a confirmar', copied: 'E-mail copiado' }
   };
   var LOCALE = { es: 'es-CL', en: 'en-US', pt: 'pt-BR' };
   var MONTHS = {
@@ -671,7 +792,15 @@
     document.getElementById('com-note').textContent = ui('src') + ': ' + COMMODITIES.map(function (r) { return r.nombre[lang] + ', ' + (r.fuente || '—'); }).join(' · ') + '.';
   }
 
+  function isStale() {
+    var p = parseDate(ACTUALIZADO);
+    var d = Date.UTC(p.y, p.m - 1, p.d);
+    return (Date.now() - d) / 86400000 > 4;
+  }
+
   function renderNews() {
+    var sec = document.getElementById('noticias');
+    if (sec) sec.hidden = isStale();
     document.getElementById('news-date').textContent = ui('news', day(ACTUALIZADO));
     var n = document.getElementById('news'); n.replaceChildren();
     NEWS.forEach(function (r) {
@@ -692,6 +821,10 @@
     var copy = document.getElementById('copy');
     if (CONTACT_EMAIL) { mail.textContent = CONTACT_EMAIL; copy.hidden = false; }
     else { mail.textContent = ui('pending'); copy.hidden = true; }
+    var mt = document.getElementById('mailto');
+    if (mt) mt.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(ui('subject'));
+    var wa = document.getElementById('wa');
+    if (wa) wa.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(ui('watext'));
   }
 
   // Textos fijos: se guarda el español original y se reemplaza al cambiar de idioma.
@@ -736,8 +869,6 @@
   try {
     var saved = localStorage.getItem('metisops-lang');
     if (saved) start = saved;
-    else if (/^pt/i.test(navigator.language || '')) start = 'pt';
-    else if (/^en/i.test(navigator.language || '')) start = 'en';
   } catch (e) {}
   setLang(start, false);
 
