@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MetisOps</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="MetisOps: consultoría en operaciones industriales, logística y gestión en Chile. Diagnóstico inicial sin costo: envíanos un documento real y recibe un informe breve con las principales oportunidades.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400&family=Jost:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+  /* Layout: a single editorial column with full-width bands; the indicators band is the one dark surface. */
+  :root {
+    --carbon: #282725;
+    --oxido: #A44735;
+    --oxido-claro: #D47A63;
+    --gris: #6F6B64;
+    --piedra: #E7E2D9;
+    --bg: #FAF8F4;
+    --fg: #282725;
+    --muted: #6F6B64;
+    --line: #E1DBD0;
+    --panel: #FFFFFF;
+    --accent: #A44735;
+    --band: #282725;
+    --band-fg: #FAF8F4;
+    --band-muted: #B9B3A9;
+    --band-line: #43413D;
+    --band-panel: #312F2C;
+    --ok: #4F7A5A;
+    --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+    --sans: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+    --greek: 'Gentium Book Plus', 'Newsreader', Georgia, serif;
+    --wrap: 1120px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1E1D1B; --fg: #F1EDE6; --muted: #B3ADA3; --line: #3A3835; --panel: #262523;
+      --accent: #D47A63; --band: #141312; --band-fg: #F1EDE6; --band-muted: #A9A398; --band-line: #34322F; --band-panel: #1F1E1C;
+      --ok: #8DB597; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1E1D1B; --fg: #F1EDE6; --muted: #B3ADA3; --line: #3A3835; --panel: #262523;
+    --accent: #D47A63; --band: #141312; --band-fg: #F1EDE6; --band-muted: #A9A398; --band-line: #34322F; --band-panel: #1F1E1C;
+    --ok: #8DB597; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-weight: 300; font-size: 17px; line-height: 1.6; }
+  a { color: inherit; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+  .band { padding-block: clamp(56px, 8vw, 96px); }
+  .eyebrow { font-family: var(--sans); font-weight: 500; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin: 0; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; text-wrap: balance; }
+  h2 { font-size: clamp(30px, 4.2vw, 46px); line-height: 1.1; }
+  h3 { font-size: 24px; line-height: 1.2; }
+  em { font-style: italic; color: var(--accent); }
+  p { margin: 0; }
+  .lead { font-size: clamp(18px, 2vw, 21px); color: var(--muted); max-width: 60ch; }
+  .section-head { display: flex; flex-direction: column; gap: 14px; margin-bottom: clamp(32px, 5vw, 52px); max-width: 760px; }
+
+  /* Nav */
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+  .nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .mono { position: relative; display: inline-block; width: 34px; height: 34px; }
+  .mono .mu { position: absolute; left: 0; top: -6px; font-family: var(--greek); font-size: 36px; line-height: 1; color: var(--fg); }
+  .mono .o { position: absolute; left: 13px; top: -4px; font-family: var(--serif); font-style: italic; font-size: 30px; line-height: 1; color: var(--accent); }
+  .word { font-family: var(--serif); font-size: 24px; letter-spacing: .01em; }
+  .word i { color: var(--accent); }
+  .nav-links { display: flex; gap: 22px; font-size: 15px; font-weight: 400; }
+  .nav-links a { text-decoration: none; color: var(--muted); }
+  .nav-links a:hover, .nav-links a:focus-visible { color: var(--fg); }
+  .nav-cta { text-decoration: none; font-weight: 500; font-size: 15px; color: var(--bg); background: var(--fg); padding: 9px 16px; border-radius: 2px; white-space: nowrap; }
+  .nav-links { align-items: center; }
+  .nav-right { display: flex; align-items: center; gap: 10px; }
+  .dd { position: relative; }
+  .dd summary, .burger summary { list-style: none; cursor: pointer; }
+  .dd summary::-webkit-details-marker, .burger summary::-webkit-details-marker { display: none; }
+  .dd summary { color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
+  .dd summary::after { content: ""; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+  .dd[open] summary, .dd summary:hover { color: var(--fg); }
+  .dd-menu { position: absolute; top: calc(100% + 14px); left: -16px; min-width: 250px; background: var(--panel); border: 1px solid var(--line); box-shadow: 0 12px 32px rgba(40, 39, 37, .12); padding: 8px; display: flex; flex-direction: column; z-index: 6; }
+  .dd-menu a { padding: 10px 12px; color: var(--fg); }
+  .dd-menu a:hover, .dd-menu a:focus-visible { background: var(--bg); color: var(--accent); }
+  .burger { display: none; position: relative; }
+  .burger summary { width: 42px; height: 42px; display: flex; flex-direction: column; justify-content: center; gap: 5px; padding: 0 10px; border: 1px solid var(--line); border-radius: 2px; }
+  .burger summary span { display: block; height: 1.5px; background: var(--fg); }
+  .burger-menu { position: absolute; right: 0; top: calc(100% + 10px); width: min(300px, calc(100vw - 32px)); background: var(--panel); border: 1px solid var(--line); box-shadow: 0 12px 32px rgba(40, 39, 37, .14); padding: 10px; display: flex; flex-direction: column; z-index: 6; }
+  .burger-menu a { padding: 11px 12px; text-decoration: none; color: var(--fg); }
+  .burger-menu a:hover, .burger-menu a:focus-visible { background: var(--bg); color: var(--accent); }
+  .burger-h { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 500; padding: 12px 12px 2px; }
+  @media (max-width: 900px) { .nav-links { display: none; } .burger { display: block; } }
+  @media (max-width: 420px) { .nav-cta { display: none; } }
+
+  /* About */
+  .about { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); align-items: start; }
+  @media (max-width: 820px) { .about { grid-template-columns: minmax(0, 1fr); } }
+  .about-text { display: flex; flex-direction: column; gap: 18px; color: var(--muted); max-width: 60ch; }
+  .about-text strong { color: var(--fg); font-weight: 500; }
+  .mv { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--fg); }
+  .mv div { padding: 24px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; }
+  .mv p { font-family: var(--serif); font-size: 21px; line-height: 1.45; color: var(--fg); }
+  .mv p.eyebrow { font-family: var(--sans); font-size: 13px; line-height: 1.4; color: var(--accent); }
+  .metis { font-family: var(--greek); font-size: 15px; color: var(--muted); }
+  [id] { scroll-margin-top: 80px; }
+
+  /* Hero */
+  .hero { padding-block: clamp(56px, 9vw, 112px) clamp(40px, 6vw, 72px); }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); align-items: end; }
+  .hero h1 { font-size: clamp(38px, 6vw, 72px); line-height: 1.04; letter-spacing: -.01em; }
+  .hero-side { display: flex; flex-direction: column; gap: 22px; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 500; font-size: 16px; padding: 14px 22px; border-radius: 2px; background: var(--accent); color: #FFFFFF; width: fit-content; }
+  .btn:hover, .btn:focus-visible { filter: brightness(1.08); }
+  .btn-ghost { background: transparent; color: var(--fg); border: 1px solid var(--fg); }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  @media (max-width: 820px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } }
+
+  /* Ticker */
+  .ticker { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--panel); }
+  .ticker .wrap { display: flex; gap: 28px; overflow-x: auto; padding-block: 14px; scrollbar-width: none; }
+  .ticker .wrap::-webkit-scrollbar { display: none; }
+  .tick { display: flex; flex-direction: column; min-width: max-content; }
+  .tick span { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+  .tick b { font-family: var(--serif); font-weight: 400; font-size: 21px; font-variant-numeric: tabular-nums; }
+
+  /* Express review */
+  .express { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--fg); }
+  .step { padding: 28px 28px 8px 0; display: flex; flex-direction: column; gap: 12px; }
+  .step + .step { padding-left: 28px; border-left: 1px solid var(--line); }
+  .step-n { font-family: var(--serif); font-size: 52px; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .step p { color: var(--muted); }
+  @media (max-width: 760px) { .express { grid-template-columns: minmax(0, 1fr); } .step + .step { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); } }
+
+  /* Services */
+  .services { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); border-top: 1px solid var(--line); }
+  .service { padding: 26px 24px 26px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .service h3 { font-size: 22px; }
+  .service p { color: var(--muted); font-size: 16px; }
+  .alt { background: var(--panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+  /* Who + how */
+  .two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 72px); }
+  @media (max-width: 820px) { .two { grid-template-columns: minmax(0, 1fr); } }
+  .list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; }
+  .list li { padding: 18px 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; }
+  .list li strong { font-family: var(--serif); font-weight: 400; font-size: 21px; }
+  .list li span { color: var(--muted); font-size: 16px; }
+  .price-note { margin-top: 22px; font-size: 15px; color: var(--muted); }
+  .price-note b { color: var(--fg); font-weight: 500; }
+
+  /* Indicators band */
+  .indic { background: var(--band); color: var(--band-fg); }
+  .indic .eyebrow { color: var(--oxido-claro); }
+  .indic .lead { color: var(--band-muted); }
+  .status { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--band-muted); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--band-muted); }
+  .status[data-live="1"] .dot { background: #7FC08F; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+  .kpi { background: var(--band-panel); border: 1px solid var(--band-line); padding: 22px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .kpi-label { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--band-muted); font-weight: 400; }
+  .kpi-value { font-family: var(--serif); font-size: 32px; line-height: 1.15; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  .kpi-meta { font-size: 13px; color: var(--band-muted); font-variant-numeric: tabular-nums; }
+  .kpi-tag { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--oxido-claro); }
+  .indic-sub { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); margin-top: clamp(36px, 5vw, 56px); }
+  @media (max-width: 820px) { .indic-sub { grid-template-columns: minmax(0, 1fr); } }
+  .indic h3 { font-size: 24px; margin-bottom: 14px; }
+  .tablewrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 16px; }
+  th { text-align: left; font-weight: 400; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--band-muted); padding: 8px 0; border-bottom: 1px solid var(--band-line); }
+  td { padding: 10px 0; border-bottom: 1px solid var(--band-line); }
+  th:last-child, td:last-child { text-align: right; }
+  .note { font-size: 13px; color: var(--band-muted); margin-top: 12px; line-height: 1.5; }
+
+  /* News */
+  .news { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0; border-top: 1px solid var(--fg); }
+  .news article { padding: 24px 24px 24px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .news-meta { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+  .chip { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+  .news h3 { font-size: 21px; line-height: 1.25; }
+  .news h3 a { text-decoration: none; }
+  .news h3 a:hover, .news h3 a:focus-visible { text-decoration: underline; text-decoration-color: var(--accent); }
+  .news p { color: var(--muted); font-size: 16px; }
+
+  /* Contact */
+  .contact { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 72px); align-items: start; }
+  @media (max-width: 820px) { .contact { grid-template-columns: minmax(0, 1fr); } }
+  .contact-card { background: var(--panel); border: 1px solid var(--line); padding: 28px; display: flex; flex-direction: column; gap: 14px; }
+  .mail { font-family: var(--serif); font-size: 24px; overflow-wrap: anywhere; }
+  .copy { font-family: var(--sans); font-size: 14px; font-weight: 500; background: transparent; color: var(--fg); border: 1px solid var(--line); padding: 8px 14px; border-radius: 2px; cursor: pointer; width: fit-content; }
+  .copy:focus-visible, .btn:focus-visible, .nav-cta:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  footer { border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 28px; font-size: 14px; color: var(--muted); }
+
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+  /* Language switch */
+  .langs { display: flex; gap: 6px; align-items: center; }
+  .lang { appearance: none; border: 1px solid transparent; background: transparent; padding: 3px; border-radius: 3px; cursor: pointer; line-height: 0; opacity: .55; }
+  .lang svg { width: 24px; height: 16px; display: block; border-radius: 1px; box-shadow: 0 0 0 1px rgba(0,0,0,.12); }
+  .lang:hover { opacity: .9; }
+  .lang[aria-pressed="true"] { opacity: 1; border-color: var(--fg); }
+  .lang:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+
+<nav class="nav" aria-label="Principal">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="MetisOps">
+      <span class="mono" aria-hidden="true"><span class="mu">μ</span><span class="o">O</span></span>
+      <span class="word">Metis<i>Ops</i></span>
+    </a>
+    <div class="nav-links">
+      <details class="dd">
+        <summary data-i18n="nav.about">Nosotros</summary>
+        <div class="dd-menu">
+          <a href="#quienes-somos" data-i18n="nav.who">Quiénes somos</a>
+          <a href="#mision-vision" data-i18n="nav.mv">Misión y visión</a>
+          <a href="#como-trabajamos" data-i18n="nav.how">Para quién y cómo trabajamos</a>
+        </div>
+      </details>
+      <details class="dd">
+        <summary data-i18n="nav.services">Servicios</summary>
+        <div class="dd-menu">
+          <a href="#revision" data-i18n="nav.express">Diagnóstico inicial</a>
+          <a href="#servicios" data-i18n="nav.all">Todos los servicios</a>
+        </div>
+      </details>
+      <a href="#indicadores" data-i18n="nav.ind">Indicadores</a>
+      <a href="#noticias" data-i18n="nav.news">Noticias</a>
+      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+    </div>
+    <div class="nav-right">
+      <div class="langs" role="group" aria-label="Idioma / Language / Idioma">
+        <button type="button" class="lang" data-lang="es" title="Español" aria-label="Español"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#D52B1E"/><rect width="30" height="10" fill="#FFFFFF"/><rect width="10" height="10" fill="#0039A6"/><polygon points="5,2 5.9,4.3 8.3,4.3 6.4,5.8 7.1,8.1 5,6.7 2.9,8.1 3.6,5.8 1.7,4.3 4.1,4.3" fill="#FFFFFF"/></svg></button>
+        <button type="button" class="lang" data-lang="en" title="English" aria-label="English"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><g fill="#B22234"><rect y="0" width="30" height="1.54"/><rect y="3.08" width="30" height="1.54"/><rect y="6.15" width="30" height="1.54"/><rect y="9.23" width="30" height="1.54"/><rect y="12.31" width="30" height="1.54"/><rect y="15.38" width="30" height="1.54"/><rect y="18.46" width="30" height="1.54"/></g><rect width="13" height="10.77" fill="#3C3B6E"/></svg></button>
+        <button type="button" class="lang" data-lang="pt" title="Português" aria-label="Português"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,2 28,10 15,18 2,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.6" fill="#002776"/></svg></button>
+      </div>
+      <a class="nav-cta" href="#contacto" data-i18n="nav.express">Diagnóstico inicial</a>
+      <details class="burger">
+        <summary data-i18n-aria="nav.menu" aria-label="Abrir menú"><span></span><span></span><span></span></summary>
+        <div class="burger-menu">
+          <span class="burger-h" data-i18n="nav.about">Nosotros</span>
+          <a href="#quienes-somos" data-i18n="nav.who">Quiénes somos</a>
+          <a href="#mision-vision" data-i18n="nav.mv">Misión y visión</a>
+          <a href="#como-trabajamos" data-i18n="nav.how">Para quién y cómo trabajamos</a>
+          <span class="burger-h" data-i18n="nav.services">Servicios</span>
+          <a href="#revision" data-i18n="nav.express">Diagnóstico inicial</a>
+          <a href="#servicios" data-i18n="nav.all">Todos los servicios</a>
+          <span class="burger-h" data-i18n="nav.more">Más</span>
+          <a href="#indicadores" data-i18n="nav.ind">Indicadores</a>
+          <a href="#noticias" data-i18n="nav.news">Noticias</a>
+          <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Operaciones industriales · Logística · Gestión</p>
+      <h1 data-i18n="hero.h1">Operar bien desde el primer día, <em>con criterio de terreno y herramientas de hoy.</em></h1>
+    </div>
+    <div class="hero-side">
+      <p class="lead" data-i18n="hero.lead">Acompañamos a empresas industriales y a inversionistas que llegan a Chile a diseñar, poner en marcha y ordenar su operación. Unimos más de 13 años gerenciando equipos, plantas, logística y proyectos con análisis de datos e inteligencia artificial, para lograr costos claros y contratos que funcionan.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#contacto" data-i18n="hero.btn1">Pide tu diagnóstico inicial</a>
+        <a class="btn btn-ghost" href="#servicios" data-i18n="hero.btn2">Ver servicios</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-label="Indicadores">
+  <div class="wrap" id="ticker"></div>
+</div>
+
+<section class="band" id="quienes-somos">
+  <div class="wrap about">
+    <div>
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="nav.who">Quiénes somos</p>
+        <h2 data-i18n="about.h2">Sabiduría práctica <em>aplicada a la operación.</em></h2>
+      </div>
+      <div class="about-text">
+        <p data-i18n="about.p1"><strong>MetisOps es una consultoría chilena en operaciones industriales, logística y gestión.</strong> Nace de más de 13 años gerenciando equipos, plantas, bodegas, transporte y proyectos industriales, con experiencia en Chile, México y Brasil.</p>
+        <p data-i18n="about.p2">En la mitología griega, Metis es la diosa de la sabiduría práctica: la inteligencia que encuentra la salida a un problema real. Ops es la operación, el lugar donde esa inteligencia se pone a prueba todos los días.</p>
+        <p data-i18n="about.p3">Por eso trabajamos sobre documentos, datos y procesos reales de cada cliente, y dejamos herramientas que el equipo sigue usando cuando terminamos.</p>
+        <p class="metis" data-i18n="about.metis">μῆτις · métis: astucia, consejo, inteligencia práctica</p>
+      </div>
+    </div>
+    <div class="mv" id="mision-vision">
+      <div>
+        <p class="eyebrow" data-i18n="mv.m">Misión</p>
+        <p data-i18n="mv.mt">Ayudar a empresas industriales e inversionistas a operar bien desde el primer día, con decisiones basadas en datos, contratos que funcionan y equipos que sostienen los resultados.</p>
+      </div>
+      <div>
+        <p class="eyebrow" data-i18n="mv.v">Visión</p>
+        <p data-i18n="mv.vt">Ser el socio de operaciones de referencia para la industria en Chile y para las empresas que conectan Chile con Brasil, reconocido por resultados medibles y herramientas que quedan instaladas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="revision">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="nav.express">Diagnóstico inicial</p>
+      <h2 data-i18n="rev.h2">Una primera mirada a tu operación, <em>sin costo.</em></h2>
+      <p class="lead" data-i18n="rev.lead">Antes de proponerte un proyecto, te mostramos lo que vemos en tu propia operación.</p>
+    </div>
+    <div class="express">
+      <div class="step"><span class="step-n">1</span><h3 data-i18n="rev.s1h">Nos envías un documento real</h3><p data-i18n="rev.s1p">Un contrato de transporte, una tarifa, un layout de bodega o un reporte de producción.</p></div>
+      <div class="step"><span class="step-n">2</span><h3 data-i18n="rev.s2h">Lo revisamos en pocos días</h3><p data-i18n="rev.s2p">Lo leemos con ojos de gerente de operaciones: costos, cláusulas, indicadores y riesgos.</p></div>
+      <div class="step"><span class="step-n">3</span><h3 data-i18n="rev.s3h">Recibes un informe breve</h3><p data-i18n="rev.s3p">Con las principales oportunidades, su impacto estimado y qué hacer. Sin compromiso de contratar nada después.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="servicios">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="nav.services">Servicios</p>
+      <h2 data-i18n="srv.h2">Donde se gana o se pierde <em>el margen operacional.</em></h2>
+    </div>
+    <div class="services">
+      <div class="service"><h3 data-i18n="srv.1h">Costo total de flotas</h3><p data-i18n="srv.1p">Cuánto cuesta de verdad cada kilómetro y cuándo conviene renovar, tercerizar o cambiar de tecnología.</p></div>
+      <div class="service"><h3 data-i18n="srv.2h">Tarifas y polinomios de reajuste</h3><p data-i18n="srv.2p">Fórmulas de reajuste de fletes que reflejan el costo real y protegen a las dos partes.</p></div>
+      <div class="service"><h3 data-i18n="srv.3h">Licitación y control de contratos</h3><p data-i18n="srv.3p">Bases, KPI, conciliación mensual de facturas y gobierno del contrato durante su ejecución.</p></div>
+      <div class="service"><h3 data-i18n="srv.4h">Puesta en marcha de plantas y bodegas</h3><p data-i18n="srv.4p">Preparar la operación antes de partir para llegar antes a la capacidad de diseño.</p></div>
+      <div class="service"><h3 data-i18n="srv.5h">Excelencia operacional</h3><p data-i18n="srv.5p">Medir la capacidad que ya existe, atacar las pérdidas y dejar rutinas que se sostienen.</p></div>
+      <div class="service"><h3 data-i18n="srv.6h">Gerencia logística fraccional</h3><p data-i18n="srv.6p">Un gerente de logística con experiencia, por días al mes, sin el costo de una contratación completa.</p></div>
+      <div class="service"><h3 data-i18n="srv.7h">Diseño organizacional</h3><p data-i18n="srv.7p">Roles, dotaciones y responsables claros para que la operación no dependa de una sola persona.</p></div>
+      <div class="service"><h3 data-i18n="srv.8h">Indicadores y reportes con IA</h3><p data-i18n="srv.8p">Tableros con los datos que se usan para decidir y reportes que se arman solos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="como-trabajamos">
+  <div class="wrap two">
+    <div>
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="who.e">Para quién</p>
+        <h2 data-i18n="who.h2">Empresas que necesitan experiencia senior, <em>no estructura.</em></h2>
+      </div>
+      <ul class="list">
+        <li><strong data-i18n="who.1s">Empresas industriales y logísticas</strong><span data-i18n="who.1p">De cualquier tamaño, en química, minería, manufactura, alimentos y transporte, que quieren bajar costos u ordenar su operación.</span></li>
+        <li><strong data-i18n="who.2s">Proyectos nuevos</strong><span data-i18n="who.2p">Plantas o bodegas que deben licitar su construcción y prepararse para operar.</span></li>
+        <li><strong data-i18n="who.3s">Inversionistas que llegan a Chile</strong><span data-i18n="who.3p">Empresas extranjeras, partiendo por las brasileñas, que necesitan operar en Chile desde el primer día.</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="how.e">Cómo trabajamos</p>
+        <h2 data-i18n="how.h2">Cuatro compromisos <em>con cada cliente.</em></h2>
+      </div>
+      <ul class="list">
+        <li><strong data-i18n="how.1s">Experiencia gerencial y de terreno</strong><span data-i18n="how.1p">Más de 13 años gerenciando equipos, plantas, operaciones logísticas, contratos y proyectos industriales.</span></li>
+        <li><strong data-i18n="how.2s">Resultados antes de contratar</strong><span data-i18n="how.2p">El diagnóstico inicial es la primera entrega, sin costo.</span></li>
+        <li><strong data-i18n="how.3s">Precio fijo</strong><span data-i18n="how.3p">Alcance, plazo y precio cerrados desde el inicio, sin horas extra sorpresa.</span></li>
+        <li><strong data-i18n="how.4s">Una herramienta que queda</strong><span data-i18n="how.4p">Cada entrega incluye un modelo, tablero o procedimiento que tu equipo sigue usando.</span></li>
+      </ul>
+      <p class="price-note" data-i18n="how.price">Proyectos a precio fijo <b>desde UF 40</b>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band indic" id="indicadores">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="nav.ind">Indicadores</p>
+      <h2 data-i18n="ind.h2">El pulso de la economía, <em>al día.</em></h2>
+      <p class="status" id="status" data-live="0"><span class="dot"></span><span id="status-text">—</span></p>
+    </div>
+    <div class="kpis" id="kpis"></div>
+    <div class="indic-sub">
+      <div>
+        <h3 data-i18n="ind.com">Materias primas</h3>
+        <div class="tablewrap"><table>
+          <thead><tr><th scope="col" data-i18n="ind.prod">Producto</th><th scope="col" data-i18n="ind.date">Fecha</th><th scope="col" data-i18n="ind.price">Precio</th></tr></thead>
+          <tbody id="commodities"></tbody>
+        </table></div>
+        <p class="note" id="com-note"></p>
+      </div>
+      <div>
+        <h3 data-i18n="ind.fx">Principales divisas</h3>
+        <div class="tablewrap"><table>
+          <thead><tr><th scope="col" data-i18n="ind.cur">Moneda</th><th scope="col" data-i18n="ind.code">Código</th><th scope="col" data-i18n="ind.pesos">Pesos</th></tr></thead>
+          <tbody id="fx"></tbody>
+        </table></div>
+        <p class="note" id="fx-note"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="noticias">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="nav.news">Noticias</p>
+      <h2 data-i18n="news.h2">Lo que mueve <em>la operación en Chile.</em></h2>
+      <p class="lead" id="news-date"></p>
+    </div>
+    <div class="news" id="news"></div>
+  </div>
+</section>
+
+<section class="band alt" id="contacto">
+  <div class="wrap contact">
+    <div class="section-head" style="margin-bottom:0">
+      <p class="eyebrow" data-i18n="nav.contact">Contacto</p>
+      <h2 data-i18n="c.h2">Envíanos un documento real <em>y te mostramos dónde mejorar.</em></h2>
+      <p class="lead" data-i18n="c.lead">Un contrato, una tarifa, un layout o un reporte. Lo tratamos con total confidencialidad y te respondemos dentro de la semana.</p>
+    </div>
+    <div class="contact-card">
+      <span class="kpi-label" style="color:var(--muted)" data-i18n="c.write">Escríbenos a</span>
+      <span class="mail" id="mail"></span>
+      <button class="copy" id="copy" type="button" data-i18n="c.copy">Copiar correo</button>
+      <p style="color:var(--muted);font-size:15px" data-i18n="c.li">También nos encuentras en LinkedIn como MetisOps.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 MetisOps · Santiago, Chile</span>
+    <span data-i18n="f.tag">Consultoría en operaciones industriales, logística y gestión</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // ===== Datos editables =====
+  var CONTACT_EMAIL = 'metisops@outlook.com';
+  var ACTUALIZADO = '2026-11-11';
+
+  // Respaldo si la fuente en vivo no responde (valores recopilados el 11-nov-2026).
+  var FALLBACK = {
+    dolar: { valor: 983.88, fecha: '2026-11-11' },
+    euro: { valor: 1086.74, fecha: '2026-11-11' },
+    uf: { valor: 41309.19, fecha: '2026-11-11' },
+    utm: { valor: 72440, fecha: '2026-11-01' },
+    ipc: { valor: 0.5, fecha: '2026-10-01' },
+    tpm: { valor: 4.5, fecha: '2026-10-27' },
+    libra_cobre: { valor: 6.35, fecha: '2026-11-10' },
+    imacec: { valor: 0.2, fecha: '2026-09-01' },
+    tasa_desempleo: { valor: 9.8, fecha: '2026-09-01' }
+  };
+  var KPIS = [
+    { id: 'dolar', kind: 'clp', label: { es: 'Dólar observado', en: 'US dollar', pt: 'Dólar observado' }, tick: { es: 'Dólar', en: 'Dollar', pt: 'Dólar' } },
+    { id: 'euro', kind: 'clp', label: { es: 'Euro', en: 'Euro', pt: 'Euro' }, tick: { es: 'Euro', en: 'Euro', pt: 'Euro' } },
+    { id: 'uf', kind: 'clp', label: { es: 'UF', en: 'UF (inflation-indexed unit)', pt: 'UF (unidade indexada)' }, tick: { es: 'UF', en: 'UF', pt: 'UF' } },
+    { id: 'utm', kind: 'clp0', monthly: true, label: { es: 'UTM', en: 'UTM (monthly tax unit)', pt: 'UTM (unidade tributária)' }, tick: { es: 'UTM', en: 'UTM', pt: 'UTM' } },
+    { id: 'ipc', kind: 'pct', monthly: true, label: { es: 'IPC del mes', en: 'CPI, monthly change', pt: 'IPC do mês' } },
+    { id: 'tpm', kind: 'pct', label: { es: 'Tasa de política monetaria', en: 'Monetary policy rate', pt: 'Taxa de política monetária' } },
+    { id: 'libra_cobre', kind: 'usdlb', label: { es: 'Cobre', en: 'Copper', pt: 'Cobre' }, tick: { es: 'Cobre', en: 'Copper', pt: 'Cobre' } },
+    { id: 'imacec', kind: 'pct', monthly: true, label: { es: 'Imacec (anual)', en: 'Imacec (activity, y/y)', pt: 'Imacec (anual)' } },
+    { id: 'tasa_desempleo', kind: 'pct', monthly: true, label: { es: 'Desempleo', en: 'Unemployment', pt: 'Desemprego' } }
+  ];
+  var COMMODITIES = [
+    { nombre: { es: 'Petróleo Brent', en: 'Brent crude', pt: 'Petróleo Brent' }, valor: 92.37, fecha: '2026-11-11', fuente: 'euribor.com.es' },
+    { nombre: { es: 'Petróleo WTI', en: 'WTI crude', pt: 'Petróleo WTI' }, valor: 86.85, fecha: '2026-11-09', fuente: 'The Star (NYMEX)' },
+    { nombre: { es: 'Oro', en: 'Gold', pt: 'Ouro' }, valor: 4103.55, fecha: '2026-11-10', fuente: 'Portal Minero (LME)' }
+  ];
+  var FX = [
+    { codigo: 'EUR', clp: 1086.74, moneda: { es: 'Euro', en: 'Euro', pt: 'Euro' } },
+    { codigo: 'GBP', clp: 1299.27, moneda: { es: 'Libra esterlina', en: 'British pound', pt: 'Libra esterlina' } },
+    { codigo: 'BRL', clp: 175.21, moneda: { es: 'Real brasileño', en: 'Brazilian real', pt: 'Real brasileiro' } },
+    { codigo: 'CNY', clp: 146.16, moneda: { es: 'Yuan chino', en: 'Chinese yuan', pt: 'Yuan chinês' } },
+    { codigo: 'PEN', clp: 285.79, moneda: { es: 'Sol peruano', en: 'Peruvian sol', pt: 'Sol peruano' } },
+    { codigo: 'MXN', clp: 52.37, moneda: { es: 'Peso mexicano', en: 'Mexican peso', pt: 'Peso mexicano' } },
+    { codigo: 'JPY', clp: 6.13, moneda: { es: 'Yen japonés', en: 'Japanese yen', pt: 'Iene japonês' } },
+    { codigo: 'ARS', clp: 0.63, moneda: { es: 'Peso argentino', en: 'Argentine peso', pt: 'Peso argentino' } }
+  ];
+  var NEWS = [
+    { fecha: '2026-11-11', fuente: 'BioBioChile', url: 'https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/11/11/quiroz-reconoce-que-chile-esta-tecnicamente-en-recesion-e-insta-a-poner-codelco-en-manos-privadas.shtml',
+      tema: { es: 'Chile', en: 'Chile', pt: 'Chile' },
+      titular: { es: 'Hacienda reconoce que Chile está técnicamente en recesión', en: "Chile's Finance Minister acknowledges a technical recession", pt: 'Fazenda reconhece que o Chile está tecnicamente em recessão' },
+      resumen: { es: 'El ministro Jorge Quiroz lo atribuye a la caída de la producción de cobre y proyecta cerca de 3% de crecimiento para 2027.', en: 'Minister Jorge Quiroz attributes it to the drop in copper output and projects close to 3% growth for 2027.', pt: 'O ministro Jorge Quiroz atribui à queda da produção de cobre e projeta crescimento perto de 3% para 2027.' } },
+    { fecha: '2026-11-10', fuente: 'CV Noticias', url: 'https://cvnoticias.com.co/petroleo-brent-cae-a-91-dolares-tras-anuncio-de-trump-sobre-guerra-en-iran/',
+      tema: { es: 'Petróleo', en: 'Oil', pt: 'Petróleo' },
+      titular: { es: 'Trump da por casi terminada la guerra con Irán y el Brent baja a la zona de US$ 91', en: 'Trump says the Iran war is nearly over; Brent falls to around US$ 91', pt: 'Trump dá a guerra com o Irã como quase encerrada e o Brent cai para perto de US$ 91' },
+      resumen: { es: 'Anticipó un acuerdo con garantías nucleares y la reapertura del estrecho de Ormuz.', en: 'He anticipated a deal with nuclear guarantees and the reopening of the Strait of Hormuz.', pt: 'Antecipou um acordo com garantias nucleares e a reabertura do Estreito de Ormuz.' } },
+    { fecha: '2026-11-10', fuente: 'El Mostrador', url: 'https://www.elmostrador.cl/mercados/2026/11/10/duro-golpe-al-gobierno-de-kast-mercado-proyecta-crecimiento-cero-para-chile-en-2026/',
+      tema: { es: 'Chile', en: 'Chile', pt: 'Chile' },
+      titular: { es: 'El mercado proyecta crecimiento cero para Chile en 2026', en: 'Markets now expect zero growth for Chile in 2026', pt: 'Mercado projeta crescimento zero para o Chile em 2026' },
+      resumen: { es: 'La encuesta de expectativas del Banco Central bajó la proyección de 0,3% a 0%. Para 2027 se espera 3%.', en: "The Central Bank's expectations survey cut its forecast from 0.3% to 0%. Growth of 3% is expected for 2027.", pt: 'A pesquisa de expectativas do Banco Central reduziu a projeção de 0,3% para 0%. Para 2027, espera-se 3%.' } },
+    { fecha: '2026-11-06', fuente: 'Pauta', url: 'https://www.pauta.cl/economia/2026/11/06/combustibles-y-alimentos-impulsan-ipc-de-octubre-a-05-inflacion-anual-llega-a-45.html',
+      tema: { es: 'Inflación', en: 'Inflation', pt: 'Inflação' },
+      titular: { es: 'IPC de octubre sube 0,5% y la inflación anual llega a 4,5%', en: 'October CPI rises 0.5% and annual inflation reaches 4.5%', pt: 'IPC de outubro sobe 0,5% e a inflação anual chega a 4,5%' },
+      resumen: { es: 'El diésel subió 12,3% en el mes y acumula 53,5% en el año.', en: 'Diesel rose 12.3% in the month and 53.5% so far this year.', pt: 'O diesel subiu 12,3% no mês e acumula 53,5% no ano.' } },
+    { fecha: '2026-11-06', fuente: 'Emol', url: 'https://www.emol.com/noticias/Economia/2026/11/06/1216381/camioneros-san-antonio-deponen-paro.html',
+      tema: { es: 'Logística', en: 'Logistics', pt: 'Logística' },
+      titular: { es: 'Camioneros de San Antonio deponen el paro tras nueve días', en: 'San Antonio truckers end nine-day strike', pt: 'Caminhoneiros de San Antonio encerram greve após nove dias' },
+      resumen: { es: 'Los porteadores pasan a ser contratistas directos de los depósitos extraportuarios.', en: 'Port hauliers become direct contractors of the off-dock container depots.', pt: 'Os transportadores passam a ser contratados diretos dos depósitos extraportuários.' } },
+    { fecha: '2026-10-30', fuente: 'Prensa Digital', url: 'https://www.prensadigital.cl/cochilco-proyeccion-cobre-produccion-chile-2026.html',
+      tema: { es: 'Minería', en: 'Mining', pt: 'Mineração' },
+      titular: { es: 'Cochilco: la producción de cobre caería 8,4% en 2026', en: "Cochilco: Chile's copper output to fall 8.4% in 2026", pt: 'Cochilco: produção de cobre do Chile deve cair 8,4% em 2026' },
+      resumen: { es: 'Proyecta 4,94 millones de toneladas y un precio de US$ 6,18 por libra para el año.', en: 'It projects 4.94 million tonnes and a price of US$ 6.18 per pound for the year.', pt: 'Projeta 4,94 milhões de toneladas e preço de US$ 6,18 por libra no ano.' } }
+  ];
+  // ===== Fin de datos editables =====
+
+  var T = {
+    en: {
+      'nav.about': 'About us', 'nav.who': 'Who we are', 'nav.mv': 'Mission and vision', 'nav.how': 'Who we serve and how we work',
+      'nav.services': 'Services', 'nav.express': 'Initial assessment', 'nav.all': 'All services', 'nav.ind': 'Indicators', 'nav.news': 'News',
+      'nav.contact': 'Contact', 'nav.more': 'More', 'nav.menu': 'Open menu',
+      'hero.eyebrow': 'Industrial operations · Logistics · Management',
+      'hero.h1': 'Run well from day one, <em>with field experience and today’s tools.</em>',
+      'hero.lead': 'We help industrial companies and investors arriving in Chile design, start up and organize their operations. We combine more than 13 years managing teams, plants, logistics and projects with data analysis and artificial intelligence, for clear costs and contracts that work.',
+      'hero.btn1': 'Request your initial assessment', 'hero.btn2': 'See services',
+      'about.h2': 'Practical wisdom <em>applied to operations.</em>',
+      'about.p1': '<strong>MetisOps is a Chilean consultancy in industrial operations, logistics and management.</strong> It grew out of more than 13 years managing teams, plants, warehouses, transport and industrial projects, with experience in Chile, Mexico and Brazil.',
+      'about.p2': 'In Greek mythology, Metis is the goddess of practical wisdom: the intelligence that finds the way out of a real problem. Ops is operations, where that intelligence is tested every day.',
+      'about.p3': 'That is why we work on each client’s real documents, data and processes, and leave behind tools the team keeps using after we finish.',
+      'about.metis': 'μῆτις · métis: cunning, counsel, practical intelligence',
+      'mv.m': 'Mission', 'mv.mt': 'To help industrial companies and investors run well from day one, with data-driven decisions, contracts that work and teams that sustain the results.',
+      'mv.v': 'Vision', 'mv.vt': 'To be the reference operations partner for industry in Chile and for companies connecting Chile and Brazil, known for measurable results and tools that stay in place.',
+      'rev.h2': 'A first look at your operation, <em>at no cost.</em>', 'rev.lead': 'Before proposing a project, we show you what we see in your own operation.',
+      'rev.s1h': 'You send us a real document', 'rev.s1p': 'A transport contract, a rate sheet, a warehouse layout or a production report.',
+      'rev.s2h': 'We review it within a few days', 'rev.s2p': 'We read it as an operations manager would: costs, clauses, indicators and risks.',
+      'rev.s3h': 'You get a short report', 'rev.s3p': 'With the main opportunities, their estimated impact and what to do. No obligation to hire anything afterwards.',
+      'srv.h2': 'Where operating margin <em>is won or lost.</em>',
+      'srv.1h': 'Total cost of fleet ownership', 'srv.1p': 'What each kilometre really costs and when to renew, outsource or switch technology.',
+      'srv.2h': 'Freight rates and price-adjustment formulas', 'srv.2p': 'Freight adjustment formulas that reflect real cost and protect both parties.',
+      'srv.3h': 'Tendering and contract management', 'srv.3p': 'Tender documents, KPIs, monthly invoice reconciliation and contract governance during execution.',
+      'srv.4h': 'Plant and warehouse start-up', 'srv.4p': 'Preparing the operation before start-up to reach design capacity sooner.',
+      'srv.5h': 'Operational excellence', 'srv.5p': 'Measuring the capacity you already have, attacking losses and leaving routines that last.',
+      'srv.6h': 'Fractional logistics management', 'srv.6p': 'An experienced logistics manager, a few days a month, without the cost of a full-time hire.',
+      'srv.7h': 'Organizational design', 'srv.7p': 'Clear roles, staffing and owners so the operation does not depend on a single person.',
+      'srv.8h': 'KPIs and AI-powered reporting', 'srv.8p': 'Dashboards with the data used to decide, and reports that build themselves.',
+      'who.e': 'Who we serve', 'who.h2': 'Companies that need senior experience, <em>not overhead.</em>',
+      'who.1s': 'Industrial and logistics companies', 'who.1p': 'Of any size, in chemicals, mining, manufacturing, food and transport, that want to cut costs or put their operation in order.',
+      'who.2s': 'New projects', 'who.2p': 'Plants or warehouses that must tender their construction and get ready to operate.',
+      'who.3s': 'Investors arriving in Chile', 'who.3p': 'Foreign companies, starting with Brazilian ones, that need to operate in Chile from day one.',
+      'how.e': 'How we work', 'how.h2': 'Four commitments <em>to every client.</em>',
+      'how.1s': 'Management and field experience', 'how.1p': 'More than 13 years managing teams, plants, logistics operations, contracts and industrial projects.',
+      'how.2s': 'Results before you hire', 'how.2p': 'The initial assessment is the first deliverable, at no cost.',
+      'how.3s': 'Fixed price', 'how.3p': 'Scope, timeline and price agreed from the start, with no surprise extra hours.',
+      'how.4s': 'A tool that stays', 'how.4p': 'Every deliverable includes a model, dashboard or procedure your team keeps using.',
+      'how.price': 'Fixed-price projects <b>from UF 40</b>.',
+      'ind.h2': 'The pulse of the economy, <em>up to date.</em>', 'ind.com': 'Commodities', 'ind.prod': 'Product', 'ind.date': 'Date', 'ind.price': 'Price',
+      
+      'ind.fx': 'Main currencies', 'ind.cur': 'Currency', 'ind.code': 'Code', 'ind.pesos': 'Chilean pesos',
+      'news.h2': 'What moves <em>operations in Chile.</em>',
+      'c.h2': 'Send us a real document <em>and we’ll show you where to improve.</em>',
+      'c.lead': 'A contract, a rate sheet, a layout or a report. We treat it in full confidence and reply within the week.',
+      'c.write': 'Write to us at', 'c.copy': 'Copy email', 'c.li': 'You can also find us on LinkedIn as MetisOps.',
+      'f.tag': 'Consultancy in industrial operations, logistics and management'
+    },
+    pt: {
+      'nav.about': 'Sobre nós', 'nav.who': 'Quem somos', 'nav.mv': 'Missão e visão', 'nav.how': 'Para quem e como trabalhamos',
+      'nav.services': 'Serviços', 'nav.express': 'Diagnóstico inicial', 'nav.all': 'Todos os serviços', 'nav.ind': 'Indicadores', 'nav.news': 'Notícias',
+      'nav.contact': 'Contato', 'nav.more': 'Mais', 'nav.menu': 'Abrir menu',
+      'hero.eyebrow': 'Operações industriais · Logística · Gestão',
+      'hero.h1': 'Operar bem desde o primeiro dia, <em>com experiência de campo e ferramentas de hoje.</em>',
+      'hero.lead': 'Apoiamos empresas industriais e investidores que chegam ao Chile a projetar, colocar em marcha e organizar sua operação. Unimos mais de 13 anos gerenciando equipes, plantas, logística e projetos com análise de dados e inteligência artificial, para chegar a custos claros e contratos que funcionam.',
+      'hero.btn1': 'Peça seu diagnóstico inicial', 'hero.btn2': 'Ver serviços',
+      'about.h2': 'Sabedoria prática <em>aplicada à operação.</em>',
+      'about.p1': '<strong>A MetisOps é uma consultoria chilena em operações industriais, logística e gestão.</strong> Nasce de mais de 13 anos gerenciando equipes, plantas, armazéns, transporte e projetos industriais, com experiência no Chile, no México e no Brasil.',
+      'about.p2': 'Na mitologia grega, Métis é a deusa da sabedoria prática: a inteligência que encontra a saída para um problema real. Ops é a operação, o lugar onde essa inteligência é posta à prova todos os dias.',
+      'about.p3': 'Por isso trabalhamos com documentos, dados e processos reais de cada cliente, e deixamos ferramentas que a equipe continua usando quando terminamos.',
+      'about.metis': 'μῆτις · métis: astúcia, conselho, inteligência prática',
+      'mv.m': 'Missão', 'mv.mt': 'Ajudar empresas industriais e investidores a operar bem desde o primeiro dia, com decisões baseadas em dados, contratos que funcionam e equipes que sustentam os resultados.',
+      'mv.v': 'Visão', 'mv.vt': 'Ser o parceiro de operações de referência para a indústria no Chile e para as empresas que conectam o Chile e o Brasil, reconhecido por resultados mensuráveis e ferramentas que ficam instaladas.',
+      'rev.h2': 'Um primeiro olhar sobre sua operação, <em>sem custo.</em>', 'rev.lead': 'Antes de propor um projeto, mostramos o que vemos na sua própria operação.',
+      'rev.s1h': 'Você nos envia um documento real', 'rev.s1p': 'Um contrato de transporte, uma tabela de fretes, um layout de armazém ou um relatório de produção.',
+      'rev.s2h': 'Analisamos em poucos dias', 'rev.s2p': 'Lemos com olhos de gerente de operações: custos, cláusulas, indicadores e riscos.',
+      'rev.s3h': 'Você recebe um relatório breve', 'rev.s3p': 'Com as principais oportunidades, seu impacto estimado e o que fazer. Sem compromisso de contratar nada depois.',
+      'srv.h2': 'Onde a margem operacional <em>é ganha ou perdida.</em>',
+      'srv.1h': 'Custo total de frotas', 'srv.1p': 'Quanto custa de verdade cada quilômetro e quando convém renovar, terceirizar ou mudar de tecnologia.',
+      'srv.2h': 'Fretes e fórmulas de reajuste', 'srv.2p': 'Fórmulas de reajuste de fretes que refletem o custo real e protegem as duas partes.',
+      'srv.3h': 'Licitação e gestão de contratos', 'srv.3p': 'Editais, KPIs, conciliação mensal de faturas e governança do contrato durante a execução.',
+      'srv.4h': 'Partida de plantas e armazéns', 'srv.4p': 'Preparar a operação antes da partida para chegar antes à capacidade de projeto.',
+      'srv.5h': 'Excelência operacional', 'srv.5p': 'Medir a capacidade que já existe, atacar as perdas e deixar rotinas que se sustentam.',
+      'srv.6h': 'Gerência logística fracionada', 'srv.6p': 'Um gerente de logística experiente, alguns dias por mês, sem o custo de uma contratação integral.',
+      'srv.7h': 'Desenho organizacional', 'srv.7p': 'Papéis, quadros e responsáveis claros para que a operação não dependa de uma só pessoa.',
+      'srv.8h': 'Indicadores e relatórios com IA', 'srv.8p': 'Painéis com os dados usados para decidir e relatórios que se montam sozinhos.',
+      'who.e': 'Para quem', 'who.h2': 'Empresas que precisam de experiência sênior, <em>não de estrutura.</em>',
+      'who.1s': 'Empresas industriais e logísticas', 'who.1p': 'De qualquer porte, em química, mineração, manufatura, alimentos e transporte, que querem reduzir custos ou organizar sua operação.',
+      'who.2s': 'Projetos novos', 'who.2p': 'Plantas ou armazéns que precisam licitar a construção e se preparar para operar.',
+      'who.3s': 'Investidores que chegam ao Chile', 'who.3p': 'Empresas estrangeiras, começando pelas brasileiras, que precisam operar no Chile desde o primeiro dia.',
+      'how.e': 'Como trabalhamos', 'how.h2': 'Quatro compromissos <em>com cada cliente.</em>',
+      'how.1s': 'Experiência gerencial e de campo', 'how.1p': 'Mais de 13 anos gerenciando equipes, plantas, operações logísticas, contratos e projetos industriais.',
+      'how.2s': 'Resultados antes de contratar', 'how.2p': 'O diagnóstico inicial é a primeira entrega, sem custo.',
+      'how.3s': 'Preço fixo', 'how.3p': 'Escopo, prazo e preço fechados desde o início, sem horas extras surpresa.',
+      'how.4s': 'Uma ferramenta que fica', 'how.4p': 'Cada entrega inclui um modelo, painel ou procedimento que sua equipe continua usando.',
+      'how.price': 'Projetos a preço fixo <b>a partir de UF 40</b>.',
+      'ind.h2': 'O pulso da economia, <em>em dia.</em>', 'ind.com': 'Commodities', 'ind.prod': 'Produto', 'ind.date': 'Data', 'ind.price': 'Preço',
+      
+      'ind.fx': 'Principais moedas', 'ind.cur': 'Moeda', 'ind.code': 'Código', 'ind.pesos': 'Pesos chilenos',
+      'news.h2': 'O que move <em>a operação no Chile.</em>',
+      'c.h2': 'Envie-nos um documento real <em>e mostramos onde melhorar.</em>',
+      'c.lead': 'Um contrato, uma tabela de fretes, um layout ou um relatório. Tratamos com total confidencialidade e respondemos dentro da semana.',
+      'c.write': 'Escreva para', 'c.copy': 'Copiar e-mail', 'c.li': 'Também estamos no LinkedIn como MetisOps.',
+      'f.tag': 'Consultoria em operações industriais, logística e gestão'
+    }
+  };
+  var UI = {
+    es: { src: 'Fuentes', live: 'En vivo · Banco Central, INE y SII vía mindicador.cl', off: 'Valores al {d} · la fuente en vivo no respondió', fx: 'Tipo de cambio de referencia (ExchangeRate-API) al {d}.', news: 'Selección actualizada al {d}.', pending: 'Correo por confirmar', copied: 'Correo copiado' },
+    en: { src: 'Sources', live: 'Live · Central Bank of Chile, INE and SII via mindicador.cl', off: 'Values as of {d} · the live source did not respond', fx: 'Reference exchange rate (ExchangeRate-API) as of {d}.', news: 'Selection updated {d}.', pending: 'Email to be confirmed', copied: 'Email copied' },
+    pt: { src: 'Fontes', live: 'Ao vivo · Banco Central do Chile, INE e SII via mindicador.cl', off: 'Valores de {d} · a fonte ao vivo não respondeu', fx: 'Taxa de câmbio de referência (ExchangeRate-API) em {d}.', news: 'Seleção atualizada em {d}.', pending: 'E-mail a confirmar', copied: 'E-mail copiado' }
+  };
+  var LOCALE = { es: 'es-CL', en: 'en-US', pt: 'pt-BR' };
+  var MONTHS = {
+    es: ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],
+    en: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+    pt: ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro']
+  };
+
+  var lang = 'es';
+  var liveData = {};
+  var isLive = false;
+
+  function parseDate(s) { var m = String(s).slice(0, 10).split('-'); return { y: +m[0], m: +m[1], d: +m[2] }; }
+  function day(s) { var p = parseDate(s), mo = MONTHS[lang][p.m - 1]; return lang === 'en' ? mo + ' ' + p.d : p.d + ' de ' + mo; }
+  function month(s) { var p = parseDate(s), mo = MONTHS[lang][p.m - 1]; return lang === 'pt' ? mo + ' de ' + p.y : mo + ' ' + p.y; }
+  function num(v, dec) { return Number(v).toLocaleString(LOCALE[lang], { minimumFractionDigits: dec, maximumFractionDigits: dec }); }
+  function fmt(kind, v) {
+    if (kind === 'clp') return '$' + num(v, 2);
+    if (kind === 'clp0') return '$' + num(v, 0);
+    if (kind === 'pct') return num(v, 1) + '%';
+    if (kind === 'usdlb') return 'US$ ' + num(v, 2);
+    return num(v, 2);
+  }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; }
+  function ui(key, d) { return UI[lang][key].replace('{d}', d || ''); }
+
+  function renderIndicators() {
+    var kpis = document.getElementById('kpis');
+    var ticker = document.getElementById('ticker');
+    kpis.replaceChildren(); ticker.replaceChildren();
+    KPIS.forEach(function (k) {
+      var d = liveData[k.id] || FALLBACK[k.id];
+      if (!d) return;
+      var card = el('div', 'kpi');
+      card.append(el('span', 'kpi-label', k.label[lang]), el('span', 'kpi-value', fmt(k.kind, d.valor)), el('span', 'kpi-meta', k.monthly ? month(d.fecha) : day(d.fecha)));
+      kpis.appendChild(card);
+      if (k.tick) {
+        var t = el('div', 'tick');
+        t.append(el('span', null, k.tick[lang]), el('b', null, fmt(k.kind, d.valor)));
+        ticker.appendChild(t);
+      }
+    });
+    var tb = el('div', 'tick'); tb.append(el('span', null, 'Brent'), el('b', null, 'US$ ' + num(COMMODITIES[0].valor, 2))); ticker.appendChild(tb);
+    document.getElementById('status').setAttribute('data-live', isLive ? '1' : '0');
+    document.getElementById('status-text').textContent = isLive ? ui('live') : ui('off', day(ACTUALIZADO));
+  }
+
+  function renderTables() {
+    var c = document.getElementById('commodities'); c.replaceChildren();
+    COMMODITIES.forEach(function (r) {
+      var tr = el('tr');
+      tr.append(el('td', null, r.nombre[lang]), el('td', null, day(r.fecha)), el('td', null, 'US$ ' + num(r.valor, 2)));
+      c.appendChild(tr);
+    });
+    var f = document.getElementById('fx'); f.replaceChildren();
+    FX.forEach(function (r) {
+      var tr = el('tr');
+      tr.append(el('td', null, r.moneda[lang]), el('td', null, r.codigo), el('td', null, '$' + num(r.clp, 2)));
+      f.appendChild(tr);
+    });
+    document.getElementById('fx-note').textContent = ui('fx', day(ACTUALIZADO));
+    document.getElementById('com-note').textContent = ui('src') + ': ' + COMMODITIES.map(function (r) { return r.nombre[lang] + ', ' + (r.fuente || '—'); }).join(' · ') + '.';
+  }
+
+  function renderNews() {
+    document.getElementById('news-date').textContent = ui('news', day(ACTUALIZADO));
+    var n = document.getElementById('news'); n.replaceChildren();
+    NEWS.forEach(function (r) {
+      var a = el('article');
+      var meta = el('div', 'news-meta');
+      meta.append(el('span', 'chip', r.tema[lang]), el('span', null, day(r.fecha) + ' · ' + r.fuente));
+      var h = el('h3'); var link = el('a', null, r.titular[lang]);
+      link.href = r.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+      if (lang !== 'es') link.title = r.titular.es;
+      h.appendChild(link);
+      a.append(meta, h, el('p', null, r.resumen[lang]));
+      n.appendChild(a);
+    });
+  }
+
+  function renderMail() {
+    var mail = document.getElementById('mail');
+    var copy = document.getElementById('copy');
+    if (CONTACT_EMAIL) { mail.textContent = CONTACT_EMAIL; copy.hidden = false; }
+    else { mail.textContent = ui('pending'); copy.hidden = true; }
+  }
+
+  // Textos fijos: se guarda el español original y se reemplaza al cambiar de idioma.
+  var ORIG = new Map();
+  document.querySelectorAll('[data-i18n]').forEach(function (n) { ORIG.set(n, n.innerHTML); });
+  var ORIG_ARIA = new Map();
+  document.querySelectorAll('[data-i18n-aria]').forEach(function (n) { ORIG_ARIA.set(n, n.getAttribute('aria-label')); });
+
+  function applyStatic() {
+    ORIG.forEach(function (es, n) {
+      var key = n.getAttribute('data-i18n');
+      n.innerHTML = lang === 'es' ? es : (T[lang][key] || es);
+    });
+    ORIG_ARIA.forEach(function (es, n) {
+      var key = n.getAttribute('data-i18n-aria');
+      n.setAttribute('aria-label', lang === 'es' ? es : (T[lang][key] || es));
+    });
+  }
+
+  function setLang(l, save) {
+    lang = (l === 'en' || l === 'pt') ? l : 'es';
+    document.documentElement.setAttribute('lang', LOCALE[lang]);
+    document.querySelectorAll('.lang').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false'); });
+    applyStatic();
+    renderIndicators(); renderTables(); renderNews(); renderMail();
+    if (save) { try { localStorage.setItem('metisops-lang', lang); } catch (e) {} }
+  }
+
+  document.querySelectorAll('.lang').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.getAttribute('data-lang'), true); });
+  });
+
+  document.getElementById('copy').addEventListener('click', function () {
+    var copy = this, mail = document.getElementById('mail');
+    function selectMail() { var r = document.createRange(); r.selectNodeContents(mail); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+    try {
+      navigator.clipboard.writeText(CONTACT_EMAIL).then(function () { copy.textContent = ui('copied'); }, selectMail);
+    } catch (e) { selectMail(); }
+  });
+
+  var start = 'es';
+  try {
+    var saved = localStorage.getItem('metisops-lang');
+    if (saved) start = saved;
+    else if (/^pt/i.test(navigator.language || '')) start = 'pt';
+    else if (/^en/i.test(navigator.language || '')) start = 'en';
+  } catch (e) {}
+  setLang(start, false);
+
+  // Datos del día (data.json junto al sitio): precios, divisas y noticias que actualiza la tarea diaria.
+  try {
+    fetch('data.json', { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (d) {
+        if (!d || typeof d !== 'object') return;
+        if (typeof d.actualizado === 'string') ACTUALIZADO = d.actualizado;
+        if (d.fallback && typeof d.fallback === 'object') Object.keys(d.fallback).forEach(function (k) { var x = d.fallback[k]; if (x && typeof x.valor === 'number' && x.fecha) FALLBACK[k] = x; });
+        if (Array.isArray(d.commodities) && d.commodities.length) COMMODITIES = d.commodities;
+        if (Array.isArray(d.fx) && d.fx.length) FX = d.fx;
+        if (Array.isArray(d.news) && d.news.length) NEWS = d.news.filter(function (n) { return /^https:\/\//.test(String(n.url)); });
+        renderIndicators(); renderTables(); renderNews();
+      })
+      .catch(function () {});
+  } catch (e) {}
+
+  // Cierra los menús al elegir una opción, al hacer clic fuera o con Escape.
+  var menus = document.querySelectorAll('details.dd, details.burger');
+  function closeAll(except) { menus.forEach(function (d) { if (d !== except) d.removeAttribute('open'); }); }
+  menus.forEach(function (d) {
+    d.addEventListener('toggle', function () { if (d.open) closeAll(d); });
+    d.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { d.removeAttribute('open'); }); });
+  });
+  document.addEventListener('click', function (e) { if (!e.target.closest('details.dd, details.burger')) closeAll(null); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(null); });
+
+  // Indicadores en vivo desde mindicador.cl (Banco Central, INE, SII).
+  var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+  var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 7000);
+  try {
+    fetch('https://mindicador.cl/api', ctrl ? { signal: ctrl.signal, cache: 'no-store' } : {})
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (j) {
+        clearTimeout(timer);
+        var data = {};
+        KPIS.forEach(function (k) {
+          var x = j && j[k.id];
+          if (x && typeof x.valor === 'number' && x.fecha) data[k.id] = { valor: x.valor, fecha: x.fecha };
+        });
+        if (Object.keys(data).length) { liveData = data; isLive = true; renderIndicators(); }
+      })
+      .catch(function () { clearTimeout(timer); });
+  } catch (e) { clearTimeout(timer); }
+})();
+</script>
+
+</body>
+</html>

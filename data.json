@@ -1,0 +1,269 @@
+{
+  "actualizado": "2026-11-11",
+  "fallback": {
+    "dolar": {
+      "valor": 983.88,
+      "fecha": "2026-11-11"
+    },
+    "euro": {
+      "valor": 1086.74,
+      "fecha": "2026-11-11"
+    },
+    "uf": {
+      "valor": 41309.19,
+      "fecha": "2026-11-11"
+    },
+    "utm": {
+      "valor": 72440,
+      "fecha": "2026-11-01"
+    },
+    "ipc": {
+      "valor": 0.5,
+      "fecha": "2026-10-01"
+    },
+    "tpm": {
+      "valor": 4.5,
+      "fecha": "2026-10-27"
+    },
+    "libra_cobre": {
+      "valor": 6.35,
+      "fecha": "2026-11-10"
+    },
+    "imacec": {
+      "valor": 0.2,
+      "fecha": "2026-09-01"
+    },
+    "tasa_desempleo": {
+      "valor": 9.8,
+      "fecha": "2026-09-01"
+    }
+  },
+  "commodities": [
+    {
+      "nombre": {
+        "es": "Petróleo Brent",
+        "en": "Brent crude",
+        "pt": "Petróleo Brent"
+      },
+      "valor": 92.37,
+      "fecha": "2026-11-11",
+      "fuente": "euribor.com.es"
+    },
+    {
+      "nombre": {
+        "es": "Petróleo WTI",
+        "en": "WTI crude",
+        "pt": "Petróleo WTI"
+      },
+      "valor": 86.85,
+      "fecha": "2026-11-09",
+      "fuente": "The Star (NYMEX)"
+    },
+    {
+      "nombre": {
+        "es": "Oro",
+        "en": "Gold",
+        "pt": "Ouro"
+      },
+      "valor": 4103.55,
+      "fecha": "2026-11-10",
+      "fuente": "Portal Minero (LME)"
+    }
+  ],
+  "fx": [
+    {
+      "codigo": "EUR",
+      "clp": 1086.74,
+      "moneda": {
+        "es": "Euro",
+        "en": "Euro",
+        "pt": "Euro"
+      }
+    },
+    {
+      "codigo": "GBP",
+      "clp": 1299.27,
+      "moneda": {
+        "es": "Libra esterlina",
+        "en": "British pound",
+        "pt": "Libra esterlina"
+      }
+    },
+    {
+      "codigo": "BRL",
+      "clp": 175.21,
+      "moneda": {
+        "es": "Real brasileño",
+        "en": "Brazilian real",
+        "pt": "Real brasileiro"
+      }
+    },
+    {
+      "codigo": "CNY",
+      "clp": 146.16,
+      "moneda": {
+        "es": "Yuan chino",
+        "en": "Chinese yuan",
+        "pt": "Yuan chinês"
+      }
+    },
+    {
+      "codigo": "PEN",
+      "clp": 285.79,
+      "moneda": {
+        "es": "Sol peruano",
+        "en": "Peruvian sol",
+        "pt": "Sol peruano"
+      }
+    },
+    {
+      "codigo": "MXN",
+      "clp": 52.37,
+      "moneda": {
+        "es": "Peso mexicano",
+        "en": "Mexican peso",
+        "pt": "Peso mexicano"
+      }
+    },
+    {
+      "codigo": "JPY",
+      "clp": 6.13,
+      "moneda": {
+        "es": "Yen japonés",
+        "en": "Japanese yen",
+        "pt": "Iene japonês"
+      }
+    },
+    {
+      "codigo": "ARS",
+      "clp": 0.63,
+      "moneda": {
+        "es": "Peso argentino",
+        "en": "Argentine peso",
+        "pt": "Peso argentino"
+      }
+    }
+  ],
+  "news": [
+    {
+      "fecha": "2026-11-11",
+      "fuente": "BioBioChile",
+      "url": "https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/11/11/quiroz-reconoce-que-chile-esta-tecnicamente-en-recesion-e-insta-a-poner-codelco-en-manos-privadas.shtml",
+      "tema": {
+        "es": "Chile",
+        "en": "Chile",
+        "pt": "Chile"
+      },
+      "titular": {
+        "es": "Hacienda reconoce que Chile está técnicamente en recesión",
+        "en": "Chile's Finance Minister acknowledges a technical recession",
+        "pt": "Fazenda reconhece que o Chile está tecnicamente em recessão"
+      },
+      "resumen": {
+        "es": "El ministro Jorge Quiroz lo atribuye a la caída de la producción de cobre y proyecta cerca de 3% de crecimiento para 2027.",
+        "en": "Minister Jorge Quiroz attributes it to the drop in copper output and projects close to 3% growth for 2027.",
+        "pt": "O ministro Jorge Quiroz atribui à queda da produção de cobre e projeta crescimento perto de 3% para 2027."
+      }
+    },
+    {
+      "fecha": "2026-11-10",
+      "fuente": "CV Noticias",
+      "url": "https://cvnoticias.com.co/petroleo-brent-cae-a-91-dolares-tras-anuncio-de-trump-sobre-guerra-en-iran/",
+      "tema": {
+        "es": "Petróleo",
+        "en": "Oil",
+        "pt": "Petróleo"
+      },
+      "titular": {
+        "es": "Trump da por casi terminada la guerra con Irán y el Brent baja a la zona de US$ 91",
+        "en": "Trump says the Iran war is nearly over; Brent falls to around US$ 91",
+        "pt": "Trump dá a guerra com o Irã como quase encerrada e o Brent cai para perto de US$ 91"
+      },
+      "resumen": {
+        "es": "Anticipó un acuerdo con garantías nucleares y la reapertura del estrecho de Ormuz.",
+        "en": "He anticipated a deal with nuclear guarantees and the reopening of the Strait of Hormuz.",
+        "pt": "Antecipou um acordo com garantias nucleares e a reabertura do Estreito de Ormuz."
+      }
+    },
+    {
+      "fecha": "2026-11-10",
+      "fuente": "El Mostrador",
+      "url": "https://www.elmostrador.cl/mercados/2026/11/10/duro-golpe-al-gobierno-de-kast-mercado-proyecta-crecimiento-cero-para-chile-en-2026/",
+      "tema": {
+        "es": "Chile",
+        "en": "Chile",
+        "pt": "Chile"
+      },
+      "titular": {
+        "es": "El mercado proyecta crecimiento cero para Chile en 2026",
+        "en": "Markets now expect zero growth for Chile in 2026",
+        "pt": "Mercado projeta crescimento zero para o Chile em 2026"
+      },
+      "resumen": {
+        "es": "La encuesta de expectativas del Banco Central bajó la proyección de 0,3% a 0%. Para 2027 se espera 3%.",
+        "en": "The Central Bank's expectations survey cut its forecast from 0.3% to 0%. Growth of 3% is expected for 2027.",
+        "pt": "A pesquisa de expectativas do Banco Central reduziu a projeção de 0,3% para 0%. Para 2027, espera-se 3%."
+      }
+    },
+    {
+      "fecha": "2026-11-06",
+      "fuente": "Pauta",
+      "url": "https://www.pauta.cl/economia/2026/11/06/combustibles-y-alimentos-impulsan-ipc-de-octubre-a-05-inflacion-anual-llega-a-45.html",
+      "tema": {
+        "es": "Inflación",
+        "en": "Inflation",
+        "pt": "Inflação"
+      },
+      "titular": {
+        "es": "IPC de octubre sube 0,5% y la inflación anual llega a 4,5%",
+        "en": "October CPI rises 0.5% and annual inflation reaches 4.5%",
+        "pt": "IPC de outubro sobe 0,5% e a inflação anual chega a 4,5%"
+      },
+      "resumen": {
+        "es": "El diésel subió 12,3% en el mes y acumula 53,5% en el año.",
+        "en": "Diesel rose 12.3% in the month and 53.5% so far this year.",
+        "pt": "O diesel subiu 12,3% no mês e acumula 53,5% no ano."
+      }
+    },
+    {
+      "fecha": "2026-11-06",
+      "fuente": "Emol",
+      "url": "https://www.emol.com/noticias/Economia/2026/11/06/1216381/camioneros-san-antonio-deponen-paro.html",
+      "tema": {
+        "es": "Logística",
+        "en": "Logistics",
+        "pt": "Logística"
+      },
+      "titular": {
+        "es": "Camioneros de San Antonio deponen el paro tras nueve días",
+        "en": "San Antonio truckers end nine-day strike",
+        "pt": "Caminhoneiros de San Antonio encerram greve após nove dias"
+      },
+      "resumen": {
+        "es": "Los porteadores pasan a ser contratistas directos de los depósitos extraportuarios.",
+        "en": "Port hauliers become direct contractors of the off-dock container depots.",
+        "pt": "Os transportadores passam a ser contratados diretos dos depósitos extraportuários."
+      }
+    },
+    {
+      "fecha": "2026-10-30",
+      "fuente": "Prensa Digital",
+      "url": "https://www.prensadigital.cl/cochilco-proyeccion-cobre-produccion-chile-2026.html",
+      "tema": {
+        "es": "Minería",
+        "en": "Mining",
+        "pt": "Mineração"
+      },
+      "titular": {
+        "es": "Cochilco: la producción de cobre caería 8,4% en 2026",
+        "en": "Cochilco: Chile's copper output to fall 8.4% in 2026",
+        "pt": "Cochilco: produção de cobre do Chile deve cair 8,4% em 2026"
+      },
+      "resumen": {
+        "es": "Proyecta 4,94 millones de toneladas y un precio de US$ 6,18 por libra para el año.",
+        "en": "It projects 4.94 million tonnes and a price of US$ 6.18 per pound for the year.",
+        "pt": "Projeta 4,94 milhões de toneladas e preço de US$ 6,18 por libra no ano."
+      }
+    }
+  ]
+}
