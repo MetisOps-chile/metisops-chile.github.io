@@ -230,7 +230,7 @@
   /* Results */
   .results { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0; border-top: 1px solid var(--fg); }
   .result { padding: 26px 24px 26px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; min-width: 0; }
-  .result-n { font-family: var(--serif); font-size: clamp(40px, 5vw, 56px); line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .result-n { font-family: var(--serif); font-size: clamp(40px, 5vw, 56px); line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
   .result h3 { font-size: 20px; }
   .result p { color: var(--muted); font-size: 15px; }
   .results-note { margin-top: 18px; font-size: 14px; color: var(--muted); }
@@ -414,10 +414,10 @@
       <h2 data-i18n="res.h2">Resultados medibles, <em>en operaciones reales.</em></h2>
     </div>
     <div class="results">
-      <div class="result"><span class="result-n">+300%</span><h3 data-i18n="res.1h">Volumen de producción en 10 meses</h3><p data-i18n="res.1p">Planta de adhesivos con tres líneas productivas y 52 personas.</p></div>
-      <div class="result"><span class="result-n">−15%</span><h3 data-i18n="res.2h">Costo de fabricación</h3><p data-i18n="res.2p">Planta química de un grupo brasileño: menor consumo de gas, vapor y energía, y el mejor EBITDA operativo del grupo en 2020 y 2021.</p></div>
-      <div class="result"><span class="result-n">−15%</span><h3 data-i18n="res.3h">Costo de transporte</h3><p data-i18n="res.3p">Logística de productos químicos para la gran minería, con camiones a GNL, ferrocarril y rutas optimizadas.</p></div>
-      <div class="result"><span class="result-n">USD 13 MM</span><h3 data-i18n="res.4h">En plantas montadas y puestas en marcha</h3><p data-i18n="res.4p">Incluida una unidad productiva nueva en Antofagasta, desde la construcción hasta la operación.</p></div>
+      <div class="result"><span class="result-n">+300%</span><h3 data-i18n="res.1h">Volumen de producción en 10 meses</h3><p data-i18n="res.1p">En una planta de manufactura.</p></div>
+      <div class="result"><span class="result-n">−15%</span><h3 data-i18n="res.2h">Costo de fabricación</h3><p data-i18n="res.2p">En una planta química, con el mejor EBITDA operativo del grupo.</p></div>
+      <div class="result"><span class="result-n">−15%</span><h3 data-i18n="res.3h">Costo de transporte</h3><p data-i18n="res.3p">En la logística de productos químicos para la gran minería.</p></div>
+      <div class="result"><span class="result-n">13 MM</span><h3 data-i18n="res.4h">Dólares en plantas montadas y puestas en marcha</h3><p data-i18n="res.4p">En proyectos de construcción, montaje y puesta en marcha.</p></div>
     </div>
     <p class="results-note" data-i18n="res.note">Resultados obtenidos por el fundador en sus cargos anteriores. Se omiten los nombres de los clientes.</p>
   </div>
@@ -605,10 +605,10 @@
       'fo.t3': 'Plant Manager at Isogama Industria Química, part of a group with operations in Brazil.',
       'fo.p2': 'Industrial engineer with an MBA, with experience in Chile and in multinational groups from Brazil and Mexico. He personally leads every MetisOps assessment and project.',
       'res.h2': 'Measurable results, <em>in real operations.</em>',
-      'res.1h': 'Production volume in 10 months', 'res.1p': 'Adhesives plant with three production lines and 52 people.',
-      'res.2h': 'Manufacturing cost', 'res.2p': 'Chemical plant of a Brazilian group: lower gas, steam and power use, and the group’s best operating EBITDA in 2020 and 2021.',
-      'res.3h': 'Transport cost', 'res.3p': 'Chemical logistics for large-scale mining, with LNG trucks, rail and optimized routes.',
-      'res.4h': 'In plants built and started up', 'res.4p': 'Including a new production unit in Antofagasta, from construction to operation.',
+      'res.1h': 'Production volume in 10 months', 'res.1p': 'At a manufacturing plant.',
+      'res.2h': 'Manufacturing cost', 'res.2p': 'At a chemical plant, with the group’s best operating EBITDA.',
+      'res.3h': 'Transport cost', 'res.3p': 'In chemical logistics for large-scale mining.',
+      'res.4h': 'US dollars in plants built and started up', 'res.4p': 'In construction, installation and start-up projects.',
       'res.note': 'Results achieved by the founder in previous roles. Client names are omitted.',
       'c.send': 'Write an email', 'c.sig': 'founder of MetisOps',
       'nav.about': 'About us', 'nav.who': 'Who we are', 'nav.mv': 'Mission and vision', 'nav.how': 'Who we serve and how we work',
@@ -666,10 +666,10 @@
       'fo.t3': 'Gerente de Planta na Isogama Industria Química, parte de um grupo com operações no Brasil.',
       'fo.p2': 'Engenheiro Civil Industrial e MBA, com experiência no Chile e em grupos multinacionais do Brasil e do México. Ele lidera pessoalmente cada diagnóstico e cada projeto da MetisOps.',
       'res.h2': 'Resultados mensuráveis, <em>em operações reais.</em>',
-      'res.1h': 'Volume de produção em 10 meses', 'res.1p': 'Planta de adesivos com três linhas de produção e 52 pessoas.',
-      'res.2h': 'Custo de fabricação', 'res.2p': 'Planta química de um grupo brasileiro: menor consumo de gás, vapor e energia, e o melhor EBITDA operacional do grupo em 2020 e 2021.',
-      'res.3h': 'Custo de transporte', 'res.3p': 'Logística de produtos químicos para a grande mineração, com caminhões a GNL, ferrovia e rotas otimizadas.',
-      'res.4h': 'Em plantas montadas e colocadas em marcha', 'res.4p': 'Incluindo uma nova unidade produtiva em Antofagasta, da construção à operação.',
+      'res.1h': 'Volume de produção em 10 meses', 'res.1p': 'Em uma planta de manufatura.',
+      'res.2h': 'Custo de fabricação', 'res.2p': 'Em uma planta química, com o melhor EBITDA operacional do grupo.',
+      'res.3h': 'Custo de transporte', 'res.3p': 'Na logística de produtos químicos para a grande mineração.',
+      'res.4h': 'Dólares em plantas montadas e colocadas em marcha', 'res.4p': 'Em projetos de construção, montagem e partida.',
       'res.note': 'Resultados obtidos pelo fundador em cargos anteriores. Os nomes dos clientes são omitidos.',
       'c.send': 'Escrever um e-mail', 'c.sig': 'fundador da MetisOps',
       'nav.about': 'Sobre nós', 'nav.who': 'Quem somos', 'nav.mv': 'Missão e visão', 'nav.how': 'Para quem e como trabalhamos',
