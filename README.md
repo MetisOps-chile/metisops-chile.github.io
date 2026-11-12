@@ -19,6 +19,11 @@ Sitio estático de una sola página (`index.html`) en español, inglés y portug
   "fx": [
     { "codigo": "EUR", "clp": 0, "moneda": { "es": "", "en": "", "pt": "" } }
   ],
+  "semana": {
+    "desde": "AAAA-MM-DD", "tema": "",
+    "pregunta": { "es": "", "en": "", "pt": "" },
+    "post_url": "https://www.linkedin.com/... (opcional)"
+  },
   "news": [
     { "fecha": "AAAA-MM-DD", "fuente": "", "url": "https://...",
       "tema": { "es": "", "en": "", "pt": "" },
@@ -27,6 +32,8 @@ Sitio estático de una sola página (`index.html`) en español, inglés y portug
   ]
 }
 ```
+
+`semana` es la pregunta de la semana que encabeza el sitio: la pregunta de cierre del post de LinkedIn de esa semana. Solo cambia cuando hay un post nuevo.
 
 Claves de `fallback`: `dolar`, `euro`, `uf`, `utm`, `ipc`, `tpm`, `libra_cobre`, `imacec`, `tasa_desempleo`.
 Las `url` de noticias deben empezar con `https://`. Los textos se muestran como texto plano.

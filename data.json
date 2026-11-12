@@ -265,5 +265,15 @@
         "pt": "O porto operava a 90% de sua capacidade de armazenagem, segundo a Frutas de Chile."
       }
     }
-  ]
+  ],
+  "semana": {
+    "desde": "2026-11-10",
+    "tema": "Polinomios de reajuste de fletes",
+    "pregunta": {
+      "es": "¿Cuándo fue la última vez que alguien revisó la fórmula de reajuste de tus contratos de transporte?",
+      "en": "When did anyone last review the price-adjustment formula in your transport contracts?",
+      "pt": "Quando foi a última vez que alguém revisou a fórmula de reajuste dos seus contratos de transporte?"
+    },
+    "post_url": ""
+  }
 }

@@ -79,10 +79,10 @@
   .nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
   .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
   .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .mono { position: relative; display: inline-block; width: 34px; height: 34px; }
-  .mono .mu { position: absolute; left: 0; top: -6px; font-family: var(--greek); font-size: 36px; line-height: 1; color: var(--fg); }
-  .mono .o { position: absolute; left: 13px; top: -4px; font-family: var(--serif); font-style: italic; font-size: 30px; line-height: 1; color: var(--accent); }
-  .word { font-family: var(--serif); font-size: 24px; letter-spacing: .01em; }
+  .mono { position: relative; display: inline-block; width: 26px; height: 26px; }
+  .mono .mu { position: absolute; left: 0; top: -5px; font-family: var(--greek); font-size: 28px; line-height: 1; color: var(--fg); }
+  .mono .o { position: absolute; left: 10px; top: -3px; font-family: var(--serif); font-style: italic; font-size: 23px; line-height: 1; color: var(--accent); }
+  .word { font-family: var(--serif); font-size: 19px; letter-spacing: .01em; }
   .word i { color: var(--accent); }
   .nav-links { display: flex; gap: 22px; font-size: 15px; font-weight: 400; }
   .nav-links a { text-decoration: none; color: var(--muted); }
@@ -124,7 +124,11 @@
   /* Hero */
   .hero { padding-block: clamp(56px, 9vw, 112px) clamp(40px, 6vw, 72px); }
   .hero-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); align-items: end; }
-  .hero h1 { font-size: clamp(38px, 6vw, 72px); line-height: 1.04; letter-spacing: -.01em; }
+  .hero h1 { font-size: clamp(34px, 5.2vw, 64px); line-height: 1.06; letter-spacing: -.01em; }
+  .hero-tag { font-family: var(--serif); font-size: clamp(20px, 2.2vw, 26px); line-height: 1.3; color: var(--fg); }
+  .hero-tag em { color: var(--accent); }
+  .hero-post { font-size: 15px; font-weight: 500; color: var(--accent); text-decoration: none; width: fit-content; }
+  .hero-post:hover, .hero-post:focus-visible { text-decoration: underline; }
   .hero-side { display: flex; flex-direction: column; gap: 22px; }
   .btn { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 500; font-size: 16px; padding: 14px 22px; border-radius: 2px; background: var(--accent); color: #FFFFFF; width: fit-content; }
   .btn:hover, .btn:focus-visible { filter: brightness(1.08); }
@@ -316,8 +320,10 @@
 <header class="hero" id="inicio">
   <div class="wrap hero-grid">
     <div style="display:flex;flex-direction:column;gap:22px">
-      <p class="eyebrow" data-i18n="hero.eyebrow">Operaciones industriales · Logística · Gestión</p>
-      <h1 data-i18n="hero.h1">Operar bien desde el primer día, <em>con criterio de terreno y herramientas de hoy.</em></h1>
+      <p class="eyebrow" data-i18n="hero.qe">Pregunta de la semana</p>
+      <h1 id="hero-q" data-i18n="hero.q">¿Cuándo fue la última vez que alguien revisó la fórmula de reajuste de tus contratos de transporte?</h1>
+      <p class="hero-tag" data-i18n="hero.h1">Operar bien desde el primer día, <em>con criterio de terreno y herramientas de hoy.</em></p>
+      <a class="hero-post" id="hero-post" href="#" target="_blank" rel="noopener noreferrer" data-i18n="hero.post" hidden>Lee la publicación de esta semana en LinkedIn →</a>
     </div>
     <div class="hero-side">
       <p class="lead" data-i18n="hero.lead">Acompañamos a empresas industriales y a inversionistas que llegan a Chile a diseñar, poner en marcha y ordenar su operación. Unimos más de 13 años gerenciando equipos, plantas, logística y proyectos con análisis de datos e inteligencia artificial, para lograr costos claros y contratos que funcionan.</p>
@@ -598,6 +604,9 @@
 
   var T = {
     en: {
+      'hero.post': 'Read this week’s LinkedIn post →',
+      'hero.q': 'When did anyone last review the price-adjustment formula in your transport contracts?',
+      'hero.qe': 'Question of the week',
       'res.4k': 'Projects',
       'res.3k': 'Logistics',
       'res.2k': 'Manufacturing',
@@ -663,6 +672,9 @@
       'f.tag': 'Consultancy in industrial operations, logistics and management'
     },
     pt: {
+      'hero.post': 'Leia a publicação desta semana no LinkedIn →',
+      'hero.q': 'Quando foi a última vez que alguém revisou a fórmula de reajuste dos seus contratos de transporte?',
+      'hero.qe': 'Pergunta da semana',
       'res.4k': 'Projetos',
       'res.3k': 'Logística',
       'res.2k': 'Fabricação',
@@ -741,6 +753,7 @@
   };
 
   var lang = 'es';
+  var SEMANA = null;
   var liveData = {};
   var isLive = false;
 
@@ -820,6 +833,17 @@
     });
   }
 
+  function renderHero() {
+    if (!SEMANA) return;
+    var q = document.getElementById('hero-q');
+    if (q && SEMANA.pregunta && SEMANA.pregunta[lang]) q.textContent = SEMANA.pregunta[lang];
+    var a = document.getElementById('hero-post');
+    if (a) {
+      var u = String(SEMANA.post_url || '');
+      if (/^https:\/\/(www\.)?linkedin\.com\//.test(u)) { a.href = u; a.hidden = false; } else { a.hidden = true; }
+    }
+  }
+
   function renderMail() {
     var mail = document.getElementById('mail');
     var copy = document.getElementById('copy');
@@ -853,7 +877,7 @@
     document.documentElement.setAttribute('lang', LOCALE[lang]);
     document.querySelectorAll('.lang').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false'); });
     applyStatic();
-    renderIndicators(); renderTables(); renderNews(); renderMail();
+    renderIndicators(); renderTables(); renderNews(); renderMail(); renderHero();
     if (save) { try { localStorage.setItem('metisops-lang', lang); } catch (e) {} }
   }
 
@@ -886,8 +910,9 @@
         if (d.fallback && typeof d.fallback === 'object') Object.keys(d.fallback).forEach(function (k) { var x = d.fallback[k]; if (x && typeof x.valor === 'number' && x.fecha) FALLBACK[k] = x; });
         if (Array.isArray(d.commodities) && d.commodities.length) COMMODITIES = d.commodities;
         if (Array.isArray(d.fx) && d.fx.length) FX = d.fx;
+        if (d.semana && typeof d.semana === 'object') SEMANA = d.semana;
         if (Array.isArray(d.news) && d.news.length) NEWS = d.news.filter(function (n) { return /^https:\/\//.test(String(n.url)); });
-        renderIndicators(); renderTables(); renderNews();
+        renderIndicators(); renderTables(); renderNews(); renderHero();
       })
       .catch(function () {});
   } catch (e) {}
