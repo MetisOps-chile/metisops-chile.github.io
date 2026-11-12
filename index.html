@@ -245,6 +245,7 @@
   .btn-sm { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 500; font-size: 15px; padding: 10px 16px; border-radius: 2px; }
   .btn-mail { background: var(--accent); color: #FFFFFF; }
   .btn-wa { background: transparent; color: var(--fg); border: 1px solid var(--fg); }
+  .foot-li { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
   .btn-sm:hover, .btn-sm:focus-visible { filter: brightness(1.08); }
   .phone { font-variant-numeric: tabular-nums; color: var(--muted-strong); font-size: 15px; }
 
@@ -474,6 +475,7 @@
       <div class="actions">
         <a class="btn-sm btn-mail" id="mailto" href="mailto:metisops@outlook.com" data-i18n="c.send">Escribir un correo</a>
         <a class="btn-sm btn-wa" id="wa" href="https://wa.me/56998153074" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn-sm btn-wa" href="https://www.linkedin.com/company/metisops" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
       <span class="phone">WhatsApp: +56 9 9815 3074</span>
       <button class="copy" id="copy" type="button" data-i18n="c.copy">Copiar correo</button>
@@ -524,7 +526,7 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 MetisOps · Santiago, Chile</span>
+    <span>© 2026 MetisOps · Santiago, Chile · <a class="foot-li" href="https://www.linkedin.com/company/metisops" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
     <span data-i18n="f.tag">Consultoría en operaciones industriales, logística y gestión</span>
   </div>
 </footer>
