@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="es-CL" data-page="pulso">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pulso económico · MetisOps</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="MetisOps: logística, transporte y contratos; evaluación de proyectos; plantas y puesta en marcha. Diagnóstico inicial sin costo.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MetisOps">
+<meta property="og:title" content="MetisOps · Logística, proyectos y plantas industriales">
+<meta property="og:description" content="Reducimos costos y riesgos en logística, proyectos y plantas industriales. Diagnóstico inicial sin costo.">
+<meta property="og:url" content="https://metisops-chile.github.io/">
+<meta property="og:image" content="https://metisops-chile.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_CL">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400&family=Jost:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+  /* Layout: a single editorial column with full-width bands; the indicators band is the one dark surface. */
+  :root {
+    --carbon: #282725;
+    --oxido: #A44735;
+    --oxido-claro: #D47A63;
+    --gris: #6F6B64;
+    --piedra: #E7E2D9;
+    --bg: #FAF8F4;
+    --fg: #282725;
+    --muted: #6F6B64;
+    --muted-strong: #4A4743;
+    --line: #E1DBD0;
+    --panel: #FFFFFF;
+    --accent: #A44735;
+    --band: #282725;
+    --band-fg: #FAF8F4;
+    --band-muted: #B9B3A9;
+    --band-line: #43413D;
+    --band-panel: #312F2C;
+    --ok: #4F7A5A;
+    --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+    --sans: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+    --greek: 'Gentium Book Plus', 'Newsreader', Georgia, serif;
+    --wrap: 1120px;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-weight: 300; font-size: 17px; line-height: 1.6; }
+  a { color: inherit; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+  .band { padding-block: clamp(56px, 8vw, 96px); }
+  .eyebrow { font-family: var(--sans); font-weight: 500; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin: 0; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; text-wrap: balance; }
+  h2 { font-size: clamp(30px, 4.2vw, 46px); line-height: 1.1; }
+  h3 { font-size: 24px; line-height: 1.2; }
+  em { font-style: italic; color: var(--accent); }
+  p { margin: 0; }
+  .lead { font-size: clamp(18px, 2vw, 21px); color: var(--muted-strong); max-width: 60ch; }
+  .section-head { display: flex; flex-direction: column; gap: 14px; margin-bottom: clamp(32px, 5vw, 52px); max-width: 760px; }
+
+  /* Nav */
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+  .nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .mono { position: relative; display: inline-block; width: 26px; height: 26px; }
+  .mono .mu { position: absolute; left: 0; top: -5px; font-family: var(--greek); font-size: 28px; line-height: 1; color: var(--fg); }
+  .mono .o { position: absolute; left: 10px; top: -3px; font-family: var(--serif); font-style: italic; font-size: 23px; line-height: 1; color: var(--accent); }
+  .word { font-family: var(--serif); font-size: 19px; letter-spacing: .01em; }
+  .word i { color: var(--accent); }
+  .nav-links { display: flex; gap: 22px; font-size: 15px; font-weight: 400; }
+  .nav-links a { text-decoration: none; color: var(--muted); }
+  .nav-links a:hover, .nav-links a:focus-visible { color: var(--fg); }
+  .nav-cta { text-decoration: none; font-weight: 500; font-size: 15px; color: var(--bg); background: var(--fg); padding: 9px 16px; border-radius: 2px; white-space: nowrap; }
+  .nav-links { align-items: center; }
+  .nav-right { display: flex; align-items: center; gap: 10px; }
+  .dd { position: relative; }
+  .dd summary, .burger summary { list-style: none; cursor: pointer; }
+  .dd summary::-webkit-details-marker, .burger summary::-webkit-details-marker { display: none; }
+  .dd summary { color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
+  .dd summary::after { content: ""; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+  .dd[open] summary, .dd summary:hover { color: var(--fg); }
+  .dd-menu { position: absolute; top: calc(100% + 14px); left: -16px; min-width: 250px; background: var(--panel); border: 1px solid var(--line); box-shadow: 0 12px 32px rgba(40, 39, 37, .12); padding: 8px; display: flex; flex-direction: column; z-index: 6; }
+  .dd-menu a { padding: 10px 12px; color: var(--fg); }
+  .dd-menu a:hover, .dd-menu a:focus-visible { background: var(--bg); color: var(--accent); }
+  .burger { display: none; position: relative; }
+  .burger summary { width: 42px; height: 42px; display: flex; flex-direction: column; justify-content: center; gap: 5px; padding: 0 10px; border: 1px solid var(--line); border-radius: 2px; }
+  .burger summary span { display: block; height: 1.5px; background: var(--fg); }
+  .burger-menu { position: absolute; right: 0; top: calc(100% + 10px); width: min(300px, calc(100vw - 32px)); background: var(--panel); border: 1px solid var(--line); box-shadow: 0 12px 32px rgba(40, 39, 37, .14); padding: 10px; display: flex; flex-direction: column; z-index: 6; }
+  .burger-menu a { padding: 11px 12px; text-decoration: none; color: var(--fg); }
+  .burger-menu a:hover, .burger-menu a:focus-visible { background: var(--bg); color: var(--accent); }
+  .burger-h { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 500; padding: 12px 12px 2px; }
+  @media (max-width: 900px) { .nav-links { display: none; } .burger { display: block; } }
+  @media (max-width: 420px) { .nav-cta { display: none; } }
+
+  /* About */
+  .about { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); align-items: start; }
+  @media (max-width: 820px) { .about { grid-template-columns: minmax(0, 1fr); } }
+  .about-text { display: flex; flex-direction: column; gap: 18px; color: var(--muted); max-width: 60ch; }
+  .about-text strong { color: var(--fg); font-weight: 500; }
+  .mv { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--fg); }
+  .mv div { padding: 24px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; }
+  .mv p { font-family: var(--serif); font-size: 21px; line-height: 1.45; color: var(--fg); }
+  .mv p.eyebrow { font-family: var(--sans); font-size: 13px; line-height: 1.4; color: var(--accent); }
+  .metis { font-family: var(--greek); font-size: 15px; color: var(--muted); }
+  [id] { scroll-margin-top: 80px; }
+
+  /* Hero */
+  .hero { padding-block: clamp(56px, 9vw, 112px) clamp(40px, 6vw, 72px); }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); align-items: end; }
+  .hero h1 { font-size: clamp(34px, 5.2vw, 64px); line-height: 1.06; letter-spacing: -.01em; }
+  .hero-tag { font-family: var(--serif); font-size: clamp(20px, 2.2vw, 26px); line-height: 1.3; color: var(--fg); }
+  .hero-tag em { color: var(--accent); }
+  .hero-post { font-size: 15px; font-weight: 500; color: var(--accent); text-decoration: none; width: fit-content; }
+  .hero-post:hover, .hero-post:focus-visible { text-decoration: underline; }
+  .hero-side { display: flex; flex-direction: column; gap: 22px; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 500; font-size: 16px; padding: 14px 22px; border-radius: 2px; background: var(--accent); color: #FFFFFF; width: fit-content; }
+  .btn:hover, .btn:focus-visible { filter: brightness(1.08); }
+  .btn-ghost { background: transparent; color: var(--fg); border: 1px solid var(--fg); }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  @media (max-width: 820px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } }
+
+  /* Ticker */
+  .ticker { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--panel); }
+  .ticker .wrap { display: flex; gap: 28px; overflow-x: auto; padding-block: 14px; scrollbar-width: none; }
+  .ticker .wrap::-webkit-scrollbar { display: none; }
+  .tick { display: flex; flex-direction: column; min-width: max-content; }
+  .tick span { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+  .tick b { font-family: var(--serif); font-weight: 400; font-size: 21px; font-variant-numeric: tabular-nums; }
+
+  /* Express review */
+  .express { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--fg); }
+  .step { padding: 28px 28px 8px 0; display: flex; flex-direction: column; gap: 12px; }
+  .step + .step { padding-left: 28px; border-left: 1px solid var(--line); }
+  .step-n { font-family: var(--serif); font-size: 52px; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .step p { color: var(--muted); }
+  @media (max-width: 760px) { .express { grid-template-columns: minmax(0, 1fr); } .step + .step { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); } }
+
+  /* Services */
+  .services { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); border-top: 1px solid var(--line); }
+  .service { padding: 26px 24px 26px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .service h3 { font-size: 22px; }
+  .service p { color: var(--muted); font-size: 16px; }
+  .alt { background: var(--panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+  /* Who + how */
+  .two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 72px); }
+  @media (max-width: 820px) { .two { grid-template-columns: minmax(0, 1fr); } }
+  .list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; }
+  .list li { padding: 18px 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; }
+  .list li strong { font-family: var(--serif); font-weight: 400; font-size: 21px; }
+  .list li span { color: var(--muted); font-size: 16px; }
+  .price-note { margin-top: 22px; font-size: 15px; color: var(--muted); }
+  .price-note b { color: var(--fg); font-weight: 500; }
+
+  /* Indicators band */
+  .indic { background: var(--band); color: var(--band-fg); }
+  .indic .eyebrow { color: var(--oxido-claro); }
+  .indic .lead { color: var(--band-muted); }
+  .status { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--band-muted); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--band-muted); }
+  .status[data-live="1"] .dot { background: #7FC08F; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+  .kpi { background: var(--band-panel); border: 1px solid var(--band-line); padding: 22px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .kpi-label { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--band-muted); font-weight: 400; }
+  .kpi-value { font-family: var(--serif); font-size: 32px; line-height: 1.15; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  .kpi-meta { font-size: 13px; color: var(--band-muted); font-variant-numeric: tabular-nums; }
+  .kpi-tag { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--oxido-claro); }
+  .indic-sub { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); margin-top: clamp(36px, 5vw, 56px); }
+  @media (max-width: 820px) { .indic-sub { grid-template-columns: minmax(0, 1fr); } }
+  .indic h3 { font-size: 24px; margin-bottom: 14px; }
+  .tablewrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 16px; }
+  th { text-align: left; font-weight: 400; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--band-muted); padding: 8px 0; border-bottom: 1px solid var(--band-line); }
+  td { padding: 10px 0; border-bottom: 1px solid var(--band-line); }
+  th:last-child, td:last-child { text-align: right; }
+  .note { font-size: 13px; color: var(--band-muted); margin-top: 12px; line-height: 1.5; }
+
+  /* News */
+  .news { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0; border-top: 1px solid var(--fg); }
+  .news article { padding: 24px 24px 24px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .news-meta { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+  .chip { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+  .news h3 { font-size: 21px; line-height: 1.25; }
+  .news h3 a { text-decoration: none; }
+  .news h3 a:hover, .news h3 a:focus-visible { text-decoration: underline; text-decoration-color: var(--accent); }
+  .news p { color: var(--muted); font-size: 16px; }
+
+  /* Contact */
+  .contact { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 72px); align-items: start; }
+  @media (max-width: 820px) { .contact { grid-template-columns: minmax(0, 1fr); } }
+  .contact-card { background: var(--panel); border: 1px solid var(--line); padding: 28px; display: flex; flex-direction: column; gap: 14px; }
+  .mail { font-family: var(--serif); font-size: 24px; overflow-wrap: anywhere; }
+  .copy { font-family: var(--sans); font-size: 14px; font-weight: 500; background: transparent; color: var(--fg); border: 1px solid var(--line); padding: 8px 14px; border-radius: 2px; cursor: pointer; width: fit-content; }
+  .copy:focus-visible, .btn:focus-visible, .nav-cta:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  footer { border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 28px; font-size: 14px; color: var(--muted); }
+
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+
+  /* Founder */
+  .founder { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+  @media (max-width: 760px) { .founder { grid-template-columns: minmax(0, 1fr); } }
+  .avatar { width: 100%; max-width: 220px; aspect-ratio: 1; border-radius: 50%; background: var(--carbon); color: #FAF8F4; display: grid; place-items: center; font-family: var(--serif); font-size: 64px; position: relative; overflow: hidden; }
+  .avatar .ini { display: inline-block; white-space: nowrap; }
+  .avatar .ini span { color: var(--oxido-claro); font-style: italic; }
+  .avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .founder-text { display: flex; flex-direction: column; gap: 18px; max-width: 64ch; }
+  .founder-text p { color: var(--muted-strong); }
+  .timeline { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; }
+  .timeline li { padding: 14px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; font-size: 16px; color: var(--muted-strong); }
+  .timeline li b { font-family: var(--serif); font-weight: 400; font-size: 18px; color: var(--accent); font-variant-numeric: tabular-nums; }
+  @media (max-width: 480px) { .timeline li { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+  .signature { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--fg); }
+
+  /* Results */
+  .results { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0; border-top: 1px solid var(--fg); }
+  .result { padding: 26px 24px 26px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .result-k { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; color: var(--accent); }
+  .result-n { font-family: var(--serif); font-size: clamp(40px, 5vw, 56px); line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .result h3 { font-size: 20px; }
+  .result p { color: var(--muted); font-size: 15px; }
+  .results-note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+
+  /* Contact actions */
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn-sm { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 500; font-size: 15px; padding: 10px 16px; border-radius: 2px; }
+  .btn-mail { background: var(--accent); color: #FFFFFF; }
+  .btn-wa { background: transparent; color: var(--fg); border: 1px solid var(--fg); }
+  .foot-li { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+  .btn-sm:hover, .btn-sm:focus-visible { filter: brightness(1.08); }
+  .phone { font-variant-numeric: tabular-nums; color: var(--muted-strong); font-size: 15px; }
+
+  /* Language switch */
+  .langs { display: flex; gap: 6px; align-items: center; }
+  .lang { appearance: none; border: 1px solid transparent; background: transparent; padding: 3px; border-radius: 3px; cursor: pointer; line-height: 0; opacity: .55; }
+  .lang svg { width: 24px; height: 16px; display: block; border-radius: 1px; box-shadow: 0 0 0 1px rgba(0,0,0,.12); }
+  .lang:hover { opacity: .9; }
+  .lang[aria-pressed="true"] { opacity: 1; border-color: var(--fg); }
+  .lang:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+
+  /* v2: página corta */
+  html:not([data-page="pulso"]) .pulso-only { display: none; }
+  html[data-page="pulso"] .home-only { display: none; }
+  .hero-main { display: flex; flex-direction: column; gap: 22px; }
+  .hero h1 { border-left: 5px solid var(--accent); padding-left: clamp(16px, 2.4vw, 28px); }
+  .hero-tag { font-size: clamp(22px, 2.4vw, 28px); }
+  .ticker { background: var(--carbon); border-color: var(--carbon); color: #FAF8F4; }
+  .ticker .wrap { display: flex; align-items: center; gap: 24px; padding-block: 0; overflow: visible; }
+  .tick-row { display: flex; gap: 28px; overflow-x: auto; padding-block: 14px; scrollbar-width: none; flex: 1; min-width: 0; }
+  .tick-row::-webkit-scrollbar { display: none; }
+  .ticker .tick span { color: #B9B3A9; }
+  .tick-more { color: var(--oxido-claro); font-size: 14px; font-weight: 500; text-decoration: none; white-space: nowrap; }
+  .tick-more:hover, .tick-more:focus-visible { text-decoration: underline; }
+  @media (max-width: 560px) { .tick-more { display: none; } }
+  .lines { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  @media (max-width: 860px) { .lines { grid-template-columns: minmax(0, 1fr); } }
+  .line { background: var(--panel); border: 1px solid var(--line); border-top: 4px solid var(--accent); padding: 26px 24px 22px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .line-n { font-family: var(--serif); font-size: 40px; line-height: 1; color: var(--accent); }
+  .line h3 { font-size: 24px; }
+  .line p { color: var(--muted-strong); font-size: 16px; }
+  .line ul { list-style: none; margin: 6px 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .line li { padding: 9px 0 9px 18px; border-bottom: 1px solid var(--line); font-size: 15px; position: relative; }
+  .line li::before { content: ""; position: absolute; left: 0; top: 17px; width: 8px; height: 2px; background: var(--accent); }
+  .lines-note { margin-top: 22px; font-size: 15px; color: var(--muted); max-width: 70ch; }
+  .lines-note b { color: var(--fg); font-weight: 500; }
+  .exp { list-style: none; margin: 4px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+  @media (max-width: 560px) { .exp { grid-template-columns: minmax(0, 1fr); } }
+  .exp li { padding: 12px 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 2px; }
+  .exp b { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; color: var(--accent); }
+  .exp span { font-family: var(--serif); font-size: 19px; line-height: 1.3; }
+  .metis { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--muted); }
+  .steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .steps li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; padding: 16px 0; border-top: 1px solid var(--line); align-items: baseline; }
+  .steps span { font-family: var(--serif); font-size: 34px; line-height: 1; color: var(--accent); }
+  .steps p { color: var(--muted-strong); }
+  .pulse-h { font-size: clamp(30px, 4.2vw, 46px); line-height: 1.1; }
+  .back { margin-top: 36px; }
+  .founder { grid-template-columns: minmax(0, 200px) minmax(0, 1fr); }
+  .avatar { max-width: 200px; }
+  @media (max-width: 760px) { .avatar { max-width: 140px; } .founder { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 760px) { .band { padding-block: 48px; } }
+  html[data-page="pulso"] .ticker { display: none; }
+
+
+  /* v3: encabezado transparente sobre foto + mega menú */
+  .nav { position: fixed; left: 0; right: 0; top: 0; background: transparent; border-bottom: 1px solid transparent; backdrop-filter: none; transition: background .25s ease, border-color .25s ease, box-shadow .25s ease; }
+  .nav.solid { background: var(--bg); border-color: var(--line); box-shadow: 0 6px 24px rgba(40,39,37,.08); }
+  .nav .wrap { padding-block: 16px; }
+  .nav:not(.solid) .word, .nav:not(.solid) .mu, .nav:not(.solid) .mm-btn, .nav:not(.solid) .nav-a { color: #FAF8F4; }
+  .nav:not(.solid) .word i, .nav:not(.solid) .mono .o { color: var(--oxido-claro); }
+  .nav:not(.solid) .burger summary { border-color: rgba(250,248,244,.5); }
+  .nav:not(.solid) .burger summary span { background: #FAF8F4; }
+  .nav:not(.solid) .nav-cta { background: var(--accent); color: #FFFFFF; }
+  .nav:not(.solid) .lang { opacity: .8; }
+  .nav:not(.solid) .lang[aria-pressed="true"] { border-color: #FAF8F4; opacity: 1; }
+  .nav-links { gap: 6px; }
+  .mm-btn, .nav-a { appearance: none; background: none; border: 0; font: inherit; font-size: 15px; font-weight: 400; color: var(--muted-strong); padding: 10px 12px; cursor: pointer; text-decoration: none; position: relative; }
+  .mm-btn::after, .nav-a::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 2px; height: 2px; background: var(--accent); transform: scaleX(0); transition: transform .2s ease; }
+  .mm.open .mm-btn::after, .mm-btn:hover::after, .nav-a:hover::after, .nav-a:focus-visible::after { transform: scaleX(1); }
+  .mm.open .mm-btn { color: var(--fg); }
+  .mm-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .mm-panel { position: absolute; left: 0; right: 0; top: 100%; background: var(--bg); border-top: 1px solid var(--line); box-shadow: 0 24px 48px rgba(40,39,37,.14); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s; }
+  .mm.open .mm-panel { opacity: 1; visibility: visible; transform: none; transition: opacity .18s ease, transform .18s ease; }
+  .mm-panel .wrap { display: grid; grid-template-columns: minmax(0,1.2fr) repeat(3, minmax(0,1fr)); gap: 36px; padding-block: 36px 40px; align-items: start; }
+  .mm-t { font-family: var(--serif); font-size: 26px; line-height: 1.2; color: var(--fg); }
+  .mm-cta { display: inline-block; margin-top: 16px; color: var(--accent); font-weight: 500; font-size: 15px; text-decoration: none; }
+  .mm-cta:hover { text-decoration: underline; }
+  .mm-link { display: flex; flex-direction: column; gap: 6px; padding-top: 14px; border-top: 2px solid var(--line); text-decoration: none; transition: border-color .2s ease; }
+  .mm-link:hover, .mm-link:focus-visible { border-color: var(--accent); }
+  .mm-link b { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--fg); }
+  .mm-link:hover b { color: var(--accent); }
+  .mm-link span { font-size: 14px; color: var(--muted); line-height: 1.45; }
+  @media (prefers-reduced-motion: reduce) { .nav, .mm-panel { transition: none; } }
+
+  /* Portada con foto */
+  .hero { position: relative; min-height: min(92vh, 820px); padding: 0; display: flex; align-items: center; color: #FAF8F4; overflow: hidden; background: var(--carbon); }
+  .hero-bg, .hero-bg img { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .hero-bg img { object-fit: cover; object-position: 62% 40%; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(28,27,25,.86) 0%, rgba(28,27,25,.72) 36%, rgba(28,27,25,.18) 64%, rgba(28,27,25,0) 78%); }
+  .hero-in { position: relative; z-index: 1; width: 100%; padding-top: 120px; padding-bottom: 72px; display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+  .hero-in > * { max-width: 660px; }
+  .hero .eyebrow { color: var(--oxido-claro); }
+  .hero h1 { color: #FAF8F4; border-left-color: var(--oxido-claro); font-size: clamp(32px, 4.2vw, 56px); }
+  .hero-post { color: #F2C3B6; }
+  .hero-tag { color: #FAF8F4; margin-top: 6px; }
+  .hero-tag em { color: #F0A792; }
+  .hero-lead { font-size: clamp(17px, 1.6vw, 19px); color: #E7E2D9; }
+  .hero .btn-ghost { color: #FAF8F4; border-color: #FAF8F4; }
+  @media (max-width: 760px) {
+    .hero { min-height: 100svh; align-items: flex-end; }
+    .hero::after { background: linear-gradient(180deg, rgba(28,27,25,.55) 0%, rgba(28,27,25,.62) 40%, rgba(28,27,25,.9) 100%); }
+    .hero-bg img { object-position: 70% 30%; }
+    .hero-in { padding-top: 100px; padding-bottom: 40px; }
+  }
+  html[data-page="pulso"] body { padding-top: 74px; }
+  html, body { margin: 0; }
+  .mm-link b { line-height: 1.25; }
+</style>
+</head>
+<body>
+
+
+
+<nav class="nav" aria-label="Principal">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="MetisOps">
+      <span class="mono" aria-hidden="true"><span class="mu">μ</span><span class="o">O</span></span>
+      <span class="word">Metis<i>Ops</i></span>
+    </a>
+    <div class="nav-links">
+      <div class="mm">
+        <button type="button" class="mm-btn" aria-expanded="false" data-i18n="nav.services">Servicios</button>
+        <div class="mm-panel">
+          <div class="wrap">
+            <div class="mm-intro"><p class="mm-t" data-i18n="mm.s.t">Tres líneas de trabajo, un mismo foco: el margen.</p><a class="mm-cta" href="./#contacto" data-i18n="mm.s.c">Pide tu diagnóstico inicial →</a></div>
+            <a class="mm-link" href="./#servicios"><b data-i18n="l1.h">Logística, transporte y contratos</b><span data-i18n="l1.p">Fletes, tarifas y contratos que reflejan el costo real.</span></a>
+            <a class="mm-link" href="./#servicios"><b data-i18n="l2.h">Evaluación de proyectos</b><span data-i18n="l2.p">Decidir con números antes de invertir o adjudicar.</span></a>
+            <a class="mm-link" href="./#servicios"><b data-i18n="l3.h">Plantas y puesta en marcha</b><span data-i18n="l3.p">Partir antes y operar con menos pérdidas.</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="mm">
+        <button type="button" class="mm-btn" aria-expanded="false" data-i18n="nav.about">Quiénes somos</button>
+        <div class="mm-panel">
+          <div class="wrap">
+            <div class="mm-intro"><p class="mm-t" data-i18n="mm.a.t">Experiencia de gerencia aplicada a tu operación.</p></div>
+            <a class="mm-link" href="./#nosotros"><b data-i18n="mm.a.1">Fundador</b><span data-i18n="mm.a.1p">Gerald Ulloa Retamal, Ingeniero Civil Industrial y MBA.</span></a>
+            <a class="mm-link" href="./#nosotros"><b data-i18n="mm.a.2">Experiencia</b><span data-i18n="mm.a.2p">Producción, costos, logística y proyectos.</span></a>
+            <a class="mm-link" href="./#contacto"><b data-i18n="mm.a.3">Cómo empezamos</b><span data-i18n="mm.a.3p">Un diagnóstico inicial, sin costo ni compromiso.</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="mm">
+        <button type="button" class="mm-btn" aria-expanded="false" data-i18n="nav.pulse">Pulso económico</button>
+        <div class="mm-panel">
+          <div class="wrap">
+            <div class="mm-intro"><p class="mm-t" data-i18n="mm.p.t">Los datos que mueven la operación en Chile, actualizados cada día.</p></div>
+            <a class="mm-link" href="pulso.html#indicadores"><b data-i18n="mm.p.1">Indicadores</b><span data-i18n="mm.p.1p">Dólar, UF, UTM, IPC, cobre, petróleo y divisas.</span></a>
+            <a class="mm-link" href="pulso.html#noticias"><b data-i18n="mm.p.2">Noticias</b><span data-i18n="mm.p.2p">Economía, minería, logística y energía.</span></a>
+            <a class="mm-link" id="mm-post" href="https://www.linkedin.com/company/metisops" target="_blank" rel="noopener noreferrer"><b data-i18n="mm.p.3">Publicaciones</b><span data-i18n="mm.p.3p">Nuestros análisis semanales en LinkedIn.</span></a>
+          </div>
+        </div>
+      </div>
+      <a class="nav-a" href="./#contacto" data-i18n="nav.contact">Contacto</a>
+    </div>
+    <div class="nav-right">
+      <div class="langs" role="group" aria-label="Idioma / Language / Idioma">
+        <button type="button" class="lang" data-lang="es" title="Español" aria-label="Español"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#D52B1E"/><rect width="30" height="10" fill="#FFFFFF"/><rect width="10" height="10" fill="#0039A6"/><polygon points="5,2 5.9,4.3 8.3,4.3 6.4,5.8 7.1,8.1 5,6.7 2.9,8.1 3.6,5.8 1.7,4.3 4.1,4.3" fill="#FFFFFF"/></svg></button>
+        <button type="button" class="lang" data-lang="en" title="English" aria-label="English"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><g fill="#B22234"><rect y="0" width="30" height="1.54"/><rect y="3.08" width="30" height="1.54"/><rect y="6.15" width="30" height="1.54"/><rect y="9.23" width="30" height="1.54"/><rect y="12.31" width="30" height="1.54"/><rect y="15.38" width="30" height="1.54"/><rect y="18.46" width="30" height="1.54"/></g><rect width="13" height="10.77" fill="#3C3B6E"/></svg></button>
+        <button type="button" class="lang" data-lang="pt" title="Português" aria-label="Português"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,2 28,10 15,18 2,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.6" fill="#002776"/></svg></button>
+      </div>
+      <a class="nav-cta" href="./#contacto" data-i18n="nav.express">Diagnóstico inicial</a>
+      <details class="burger">
+        <summary data-i18n-aria="nav.menu" aria-label="Abrir menú"><span></span><span></span><span></span></summary>
+        <div class="burger-menu">
+          <a href="./#servicios" data-i18n="nav.services">Servicios</a>
+          <a href="./#nosotros" data-i18n="nav.about">Quiénes somos</a>
+          <a href="pulso.html" data-i18n="nav.pulse">Pulso económico</a>
+          <a href="./#contacto" data-i18n="nav.contact">Contacto</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</nav>
+
+<header class="hero home-only" id="inicio">
+  <picture class="hero-bg">
+    <source type="image/webp" srcset="hero-santiago-torre-960.webp 960w, hero-santiago-torre-1600.webp 1600w" sizes="100vw">
+    <img src="hero-santiago-torre-1600.jpg" srcset="hero-santiago-torre-960.jpg 960w, hero-santiago-torre-1600.jpg 1600w, hero-santiago-torre-2400.jpg 2400w" sizes="100vw" alt="Santiago de Chile: Gran Torre Santiago y la cordillera de los Andes nevada" fetchpriority="high">
+  </picture>
+  <div class="wrap hero-in">
+    <p class="eyebrow" data-i18n="hero.qe">Pregunta de la semana</p>
+    <h1 id="hero-q" data-i18n="hero.q">¿Cuándo fue la última vez que alguien revisó la fórmula de reajuste de tus contratos de transporte?</h1>
+    <a class="hero-post" id="hero-post" href="#" target="_blank" rel="noopener noreferrer" data-i18n="hero.post" hidden>Lee la publicación de esta semana en LinkedIn →</a>
+    <p class="hero-tag" data-i18n="hero.tag">Reducimos costos y riesgos en <em>logística, proyectos y plantas industriales.</em></p>
+    <p class="hero-lead" data-i18n="hero.lead">Más de 13 años gerenciando operaciones, aplicados a los problemas reales de tu empresa.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#contacto" data-i18n="hero.btn1">Pide tu diagnóstico inicial</a>
+      <a class="btn btn-ghost" href="#servicios" data-i18n="hero.btn2">Ver servicios</a>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-label="Indicadores">
+  <div class="wrap"><div class="tick-row" id="ticker"></div><a class="tick-more" href="pulso.html" data-i18n="tick.more">Pulso económico →</a></div>
+</div>
+
+<section class="band home-only" id="servicios">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="nav.services">Servicios</p>
+      <h2 data-i18n="srv.h2">Tres líneas de trabajo, <em>un mismo foco: el margen.</em></h2>
+    </div>
+    <div class="lines">
+      <article class="line">
+        <span class="line-n">01</span>
+        <h3 data-i18n="l1.h">Logística, transporte y contratos</h3>
+        <p data-i18n="l1.p">Fletes, tarifas y contratos que reflejan el costo real.</p>
+        <ul>
+          <li data-i18n="l1.a">Revisión de tarifas y polinomios de reajuste</li>
+          <li data-i18n="l1.b">Costo total de flotas</li>
+          <li data-i18n="l1.c">Licitación y control de contratos</li>
+        </ul>
+      </article>
+      <article class="line">
+        <span class="line-n">02</span>
+        <h3 data-i18n="l2.h">Evaluación de proyectos</h3>
+        <p data-i18n="l2.p">Decidir con números antes de invertir o adjudicar.</p>
+        <ul>
+          <li data-i18n="l2.a">Evaluación y reevaluación económica</li>
+          <li data-i18n="l2.b">Cotización y comparación de ofertas</li>
+          <li data-i18n="l2.c">Apoyo a la adjudicación</li>
+        </ul>
+      </article>
+      <article class="line">
+        <span class="line-n">03</span>
+        <h3 data-i18n="l3.h">Plantas y puesta en marcha</h3>
+        <p data-i18n="l3.p">Partir antes y operar con menos pérdidas.</p>
+        <ul>
+          <li data-i18n="l3.a">Preparación de la puesta en marcha</li>
+          <li data-i18n="l3.b">Productividad y reducción de pérdidas</li>
+          <li data-i18n="l3.c">Gerencia de operaciones por días al mes</li>
+        </ul>
+      </article>
+    </div>
+    <p class="lines-note" data-i18n="srv.note">En las tres usamos análisis de datos e IA para que los indicadores y reportes se armen solos. Precio fijo, <b>desde UF 40</b>.</p>
+  </div>
+</section>
+
+<section class="band alt home-only" id="nosotros">
+  <div class="wrap founder">
+    <div class="avatar"><span class="ini" aria-hidden="true">G<span>U</span></span><img src="gerald.jpg" alt="Gerald Ulloa Retamal, fundador de MetisOps" width="520" height="520" loading="lazy" onerror="this.remove()"></div>
+    <div class="founder-text">
+      <div class="section-head" style="margin-bottom:0">
+        <p class="eyebrow" data-i18n="nav.about">Quiénes somos</p>
+        <h2 data-i18n="fo.h2">Gerald Ulloa Retamal, <em>fundador.</em></h2>
+      </div>
+      <p data-i18n="fo.p1">Más de 13 años gerenciando plantas químicas y manufactureras, proyectos de construcción y puesta en marcha, y la logística de una empresa proveedora de la gran minería.</p>
+      <p data-i18n="fo.p2">Ingeniero Civil Industrial y MBA. Lidera personalmente cada diagnóstico y cada proyecto.</p>
+      <ul class="exp">
+        <li><b data-i18n="res.1k">Producción</b><span data-i18n="res.1h">Más volumen en menos de un año</span></li>
+        <li><b data-i18n="res.2k">Costos</b><span data-i18n="res.2h">Menos energía e insumos por unidad</span></li>
+        <li><b data-i18n="res.3k">Logística</b><span data-i18n="res.3h">Rutas, flotas y contratos más eficientes</span></li>
+        <li><b data-i18n="res.4k">Proyectos</b><span data-i18n="res.4h">Plantas construidas y puestas en marcha</span></li>
+      </ul>
+      <p class="metis" data-i18n="about.metis">Metis: en griego, la sabiduría práctica. Ops: la operación, donde se pone a prueba.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band home-only" id="contacto">
+  <div class="wrap contact">
+    <div>
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="nav.express">Diagnóstico inicial</p>
+        <h2 data-i18n="c.h2">Empieza con un diagnóstico, <em>sin costo.</em></h2>
+      </div>
+      <ol class="steps">
+        <li><span>1</span><p data-i18n="st.1">Nos envías un contrato, una tarifa, un proyecto o un reporte. Si lo necesitas, firmamos antes un acuerdo de confidencialidad.</p></li>
+        <li><span>2</span><p data-i18n="st.2">Lo revisamos en pocos días, con ojos de gerente de operaciones.</p></li>
+        <li><span>3</span><p data-i18n="st.3">Recibes un informe breve con las oportunidades y qué hacer. Sin compromiso.</p></li>
+      </ol>
+    </div>
+    <div class="contact-card">
+      <span class="kpi-label" style="color:var(--muted)" data-i18n="c.write">Escríbenos a</span>
+      <span class="mail" id="mail"></span>
+      <div class="actions">
+        <a class="btn-sm btn-mail" id="mailto" href="mailto:metisops@outlook.com" data-i18n="c.send">Escribir un correo</a>
+        <a class="btn-sm btn-wa" id="wa" href="https://wa.me/56998153074" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn-sm btn-wa" href="https://www.linkedin.com/company/metisops" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <span class="phone">WhatsApp: +56 9 9815 3074</span>
+      <button class="copy" id="copy" type="button" data-i18n="c.copy">Copiar correo</button>
+      <p class="signature">Gerald Ulloa · <span data-i18n="c.sig">fundador de MetisOps</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="band indic pulso-only" id="indicadores">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="nav.pulse">Pulso económico</p>
+      <h1 class="pulse-h" data-i18n="ind.h2">El pulso de la economía, <em>al día.</em></h1>
+      <p class="status" id="status" data-live="0"><span class="dot"></span><span id="status-text">—</span></p>
+    </div>
+    <div class="kpis" id="kpis"></div>
+    <div class="indic-sub">
+      <div>
+        <h3 data-i18n="ind.com">Materias primas</h3>
+        <div class="tablewrap"><table>
+          <thead><tr><th scope="col" data-i18n="ind.prod">Producto</th><th scope="col" data-i18n="ind.date">Fecha</th><th scope="col" data-i18n="ind.price">Precio</th></tr></thead>
+          <tbody id="commodities"></tbody>
+        </table></div>
+        <p class="note" id="com-note"></p>
+      </div>
+      <div>
+        <h3 data-i18n="ind.fx">Principales divisas</h3>
+        <div class="tablewrap"><table>
+          <thead><tr><th scope="col" data-i18n="ind.cur">Moneda</th><th scope="col" data-i18n="ind.code">Código</th><th scope="col" data-i18n="ind.pesos">Pesos</th></tr></thead>
+          <tbody id="fx"></tbody>
+        </table></div>
+        <p class="note" id="fx-note"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt pulso-only" id="noticias">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="nav.news">Noticias</p>
+      <h2 data-i18n="news.h2">Lo que mueve <em>la operación en Chile.</em></h2>
+      <p class="lead" id="news-date"></p>
+    </div>
+    <div class="news" id="news"></div>
+    <p class="back"><a class="btn" href="./#contacto" data-i18n="hero.btn1">Pide tu diagnóstico inicial</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 MetisOps · Santiago, Chile · <a class="foot-li" href="https://www.linkedin.com/company/metisops" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a class="foot-li" href="pulso.html" data-i18n="nav.pulse">Pulso económico</a></span>
+    <span data-i18n="f.tag">Logística, evaluación de proyectos y plantas industriales</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // ===== Datos editables =====
+  var CONTACT_EMAIL = 'metisops@outlook.com';
+  var ACTUALIZADO = '2026-11-11';
+  var WHATSAPP = '56998153074';
+
+  // Respaldo si la fuente en vivo no responde (valores recopilados el 11-nov-2026).
+  var FALLBACK = {
+    dolar: { valor: 983.88, fecha: '2026-11-11' },
+    euro: { valor: 1086.74, fecha: '2026-11-11' },
+    uf: { valor: 41309.19, fecha: '2026-11-11' },
+    utm: { valor: 72440, fecha: '2026-11-01' },
+    ipc: { valor: 0.5, fecha: '2026-10-01' },
+    tpm: { valor: 4.5, fecha: '2026-10-27' },
+    libra_cobre: { valor: 6.35, fecha: '2026-11-10' },
+    imacec: { valor: 0.2, fecha: '2026-09-01' },
+    tasa_desempleo: { valor: 9.8, fecha: '2026-09-01' }
+  };
+  var KPIS = [
+    { id: 'dolar', kind: 'clp', label: { es: 'Dólar observado', en: 'US dollar', pt: 'Dólar observado' }, tick: { es: 'Dólar', en: 'Dollar', pt: 'Dólar' } },
+    { id: 'euro', kind: 'clp', label: { es: 'Euro', en: 'Euro', pt: 'Euro' }, tick: { es: 'Euro', en: 'Euro', pt: 'Euro' } },
+    { id: 'uf', kind: 'clp', label: { es: 'UF', en: 'UF (inflation-indexed unit)', pt: 'UF (unidade indexada)' }, tick: { es: 'UF', en: 'UF', pt: 'UF' } },
+    { id: 'utm', kind: 'clp0', monthly: true, label: { es: 'UTM', en: 'UTM (monthly tax unit)', pt: 'UTM (unidade tributária)' }, tick: { es: 'UTM', en: 'UTM', pt: 'UTM' } },
+    { id: 'ipc', kind: 'pct', monthly: true, label: { es: 'IPC del mes', en: 'CPI, monthly change', pt: 'IPC do mês' } },
+    { id: 'tpm', kind: 'pct', label: { es: 'Tasa de política monetaria', en: 'Monetary policy rate', pt: 'Taxa de política monetária' } },
+    { id: 'libra_cobre', kind: 'usdlb', label: { es: 'Cobre', en: 'Copper', pt: 'Cobre' }, tick: { es: 'Cobre', en: 'Copper', pt: 'Cobre' } },
+    { id: 'imacec', kind: 'pct', monthly: true, label: { es: 'Imacec (anual)', en: 'Imacec (activity, y/y)', pt: 'Imacec (anual)' } },
+    { id: 'tasa_desempleo', kind: 'pct', monthly: true, label: { es: 'Desempleo', en: 'Unemployment', pt: 'Desemprego' } }
+  ];
+  var COMMODITIES = [
+    { nombre: { es: 'Petróleo Brent', en: 'Brent crude', pt: 'Petróleo Brent' }, valor: 92.37, fecha: '2026-11-11', fuente: 'euribor.com.es' },
+    { nombre: { es: 'Petróleo WTI', en: 'WTI crude', pt: 'Petróleo WTI' }, valor: 86.85, fecha: '2026-11-09', fuente: 'The Star (NYMEX)' },
+    { nombre: { es: 'Oro', en: 'Gold', pt: 'Ouro' }, valor: 4103.55, fecha: '2026-11-10', fuente: 'Portal Minero (LME)' }
+  ];
+  var FX = [
+    { codigo: 'EUR', clp: 1086.74, moneda: { es: 'Euro', en: 'Euro', pt: 'Euro' } },
+    { codigo: 'GBP', clp: 1299.27, moneda: { es: 'Libra esterlina', en: 'British pound', pt: 'Libra esterlina' } },
+    { codigo: 'BRL', clp: 175.21, moneda: { es: 'Real brasileño', en: 'Brazilian real', pt: 'Real brasileiro' } },
+    { codigo: 'CNY', clp: 146.16, moneda: { es: 'Yuan chino', en: 'Chinese yuan', pt: 'Yuan chinês' } },
+    { codigo: 'PEN', clp: 285.79, moneda: { es: 'Sol peruano', en: 'Peruvian sol', pt: 'Sol peruano' } },
+    { codigo: 'MXN', clp: 52.37, moneda: { es: 'Peso mexicano', en: 'Mexican peso', pt: 'Peso mexicano' } },
+    { codigo: 'JPY', clp: 6.13, moneda: { es: 'Yen japonés', en: 'Japanese yen', pt: 'Iene japonês' } },
+    { codigo: 'ARS', clp: 0.63, moneda: { es: 'Peso argentino', en: 'Argentine peso', pt: 'Peso argentino' } }
+  ];
+  var NEWS = [
+    { fecha: '2026-11-11', fuente: 'BioBioChile', url: 'https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/11/11/quiroz-reconoce-que-chile-esta-tecnicamente-en-recesion-e-insta-a-poner-codelco-en-manos-privadas.shtml',
+      tema: { es: 'Chile', en: 'Chile', pt: 'Chile' },
+      titular: { es: 'Hacienda reconoce que Chile está técnicamente en recesión', en: "Chile's Finance Minister acknowledges a technical recession", pt: 'Fazenda reconhece que o Chile está tecnicamente em recessão' },
+      resumen: { es: 'El ministro Jorge Quiroz lo atribuye a la caída de la producción de cobre y proyecta cerca de 3% de crecimiento para 2027.', en: 'Minister Jorge Quiroz attributes it to the drop in copper output and projects close to 3% growth for 2027.', pt: 'O ministro Jorge Quiroz atribui à queda da produção de cobre e projeta crescimento perto de 3% para 2027.' } },
+    { fecha: '2026-11-10', fuente: 'CV Noticias', url: 'https://cvnoticias.com.co/petroleo-brent-cae-a-91-dolares-tras-anuncio-de-trump-sobre-guerra-en-iran/',
+      tema: { es: 'Petróleo', en: 'Oil', pt: 'Petróleo' },
+      titular: { es: 'Trump da por casi terminada la guerra con Irán y el Brent baja a la zona de US$ 91', en: 'Trump says the Iran war is nearly over; Brent falls to around US$ 91', pt: 'Trump dá a guerra com o Irã como quase encerrada e o Brent cai para perto de US$ 91' },
+      resumen: { es: 'Anticipó un acuerdo con garantías nucleares y la reapertura del estrecho de Ormuz.', en: 'He anticipated a deal with nuclear guarantees and the reopening of the Strait of Hormuz.', pt: 'Antecipou um acordo com garantias nucleares e a reabertura do Estreito de Ormuz.' } },
+    { fecha: '2026-11-10', fuente: 'El Mostrador', url: 'https://www.elmostrador.cl/mercados/2026/11/10/duro-golpe-al-gobierno-de-kast-mercado-proyecta-crecimiento-cero-para-chile-en-2026/',
+      tema: { es: 'Chile', en: 'Chile', pt: 'Chile' },
+      titular: { es: 'El mercado proyecta crecimiento cero para Chile en 2026', en: 'Markets now expect zero growth for Chile in 2026', pt: 'Mercado projeta crescimento zero para o Chile em 2026' },
+      resumen: { es: 'La encuesta de expectativas del Banco Central bajó la proyección de 0,3% a 0%. Para 2027 se espera 3%.', en: "The Central Bank's expectations survey cut its forecast from 0.3% to 0%. Growth of 3% is expected for 2027.", pt: 'A pesquisa de expectativas do Banco Central reduziu a projeção de 0,3% para 0%. Para 2027, espera-se 3%.' } },
+    { fecha: '2026-11-06', fuente: 'Pauta', url: 'https://www.pauta.cl/economia/2026/11/06/combustibles-y-alimentos-impulsan-ipc-de-octubre-a-05-inflacion-anual-llega-a-45.html',
+      tema: { es: 'Inflación', en: 'Inflation', pt: 'Inflação' },
+      titular: { es: 'IPC de octubre sube 0,5% y la inflación anual llega a 4,5%', en: 'October CPI rises 0.5% and annual inflation reaches 4.5%', pt: 'IPC de outubro sobe 0,5% e a inflação anual chega a 4,5%' },
+      resumen: { es: 'El diésel subió 12,3% en el mes y acumula 53,5% en el año.', en: 'Diesel rose 12.3% in the month and 53.5% so far this year.', pt: 'O diesel subiu 12,3% no mês e acumula 53,5% no ano.' } },
+    { fecha: '2026-11-06', fuente: 'Emol', url: 'https://www.emol.com/noticias/Economia/2026/11/06/1216381/camioneros-san-antonio-deponen-paro.html',
+      tema: { es: 'Logística', en: 'Logistics', pt: 'Logística' },
+      titular: { es: 'Camioneros de San Antonio deponen el paro tras nueve días', en: 'San Antonio truckers end nine-day strike', pt: 'Caminhoneiros de San Antonio encerram greve após nove dias' },
+      resumen: { es: 'Los porteadores pasan a ser contratistas directos de los depósitos extraportuarios.', en: 'Port hauliers become direct contractors of the off-dock container depots.', pt: 'Os transportadores passam a ser contratados diretos dos depósitos extraportuários.' } },
+    { fecha: '2026-10-30', fuente: 'Prensa Digital', url: 'https://www.prensadigital.cl/cochilco-proyeccion-cobre-produccion-chile-2026.html',
+      tema: { es: 'Minería', en: 'Mining', pt: 'Mineração' },
+      titular: { es: 'Cochilco: la producción de cobre caería 8,4% en 2026', en: "Cochilco: Chile's copper output to fall 8.4% in 2026", pt: 'Cochilco: produção de cobre do Chile deve cair 8,4% em 2026' },
+      resumen: { es: 'Proyecta 4,94 millones de toneladas y un precio de US$ 6,18 por libra para el año.', en: 'It projects 4.94 million tonnes and a price of US$ 6.18 per pound for the year.', pt: 'Projeta 4,94 milhões de toneladas e preço de US$ 6,18 por libra no ano.' } }
+  ];
+  // ===== Fin de datos editables =====
+
+  var T = {
+    en: {
+      'mm.s.t': 'Three lines of work, one focus: your margin.', 'mm.s.c': 'Request your initial assessment →',
+      'mm.a.t': 'Management experience applied to your operation.', 'mm.a.1': 'Founder', 'mm.a.1p': 'Gerald Ulloa Retamal, industrial engineer and MBA.',
+      'mm.a.2': 'Experience', 'mm.a.2p': 'Production, costs, logistics and projects.', 'mm.a.3': 'How we start', 'mm.a.3p': 'An initial assessment, at no cost or obligation.',
+      'mm.p.t': 'The data that moves operations in Chile, updated every day.', 'mm.p.1': 'Indicators', 'mm.p.1p': 'Dollar, UF, UTM, CPI, copper, oil and currencies.',
+      'mm.p.2': 'News', 'mm.p.2p': 'Economy, mining, logistics and energy.', 'mm.p.3': 'Insights', 'mm.p.3p': 'Our weekly analysis on LinkedIn.',
+      'nav.services': 'Services', 'nav.about': 'About us', 'nav.pulse': 'Economic pulse', 'nav.contact': 'Contact',
+      'nav.express': 'Initial assessment', 'nav.menu': 'Open menu', 'nav.news': 'News',
+      'hero.qe': 'Question of the week',
+      'hero.q': 'When did anyone last review the price-adjustment formula in your transport contracts?',
+      'hero.post': 'Read this week’s LinkedIn post →',
+      'hero.tag': 'We cut costs and risks in <em>logistics, projects and industrial plants.</em>',
+      'hero.lead': 'More than 13 years managing operations, applied to your company’s real problems.',
+      'hero.btn1': 'Request your initial assessment', 'hero.btn2': 'See services',
+      'tick.more': 'Economic pulse →',
+      'srv.h2': 'Three lines of work, <em>one focus: your margin.</em>',
+      'l1.h': 'Logistics, transport and contracts', 'l1.p': 'Freight, rates and contracts that reflect real cost.',
+      'l1.a': 'Review of rates and price-adjustment formulas', 'l1.b': 'Total cost of fleet ownership', 'l1.c': 'Contract tendering and control',
+      'l2.h': 'Project evaluation', 'l2.p': 'Decide with numbers before you invest or award.',
+      'l2.a': 'Economic evaluation and re-evaluation', 'l2.b': 'Quotes and bid comparison', 'l2.c': 'Support for the award decision',
+      'l3.h': 'Plants and start-up', 'l3.p': 'Start up sooner and run with fewer losses.',
+      'l3.a': 'Start-up readiness', 'l3.b': 'Productivity and loss reduction', 'l3.c': 'Operations management, a few days a month',
+      'srv.note': 'In all three we use data analysis and AI so that KPIs and reports build themselves. Fixed price, <b>from UF 40</b>.',
+      'fo.h2': 'Gerald Ulloa Retamal, <em>founder.</em>',
+      'fo.p1': 'More than 13 years managing chemical and manufacturing plants, construction and start-up projects, and the logistics of a supplier to large-scale mining.',
+      'fo.p2': 'Industrial engineer with an MBA. He personally leads every assessment and project.',
+      'res.1k': 'Production', 'res.1h': 'More output in under a year',
+      'res.2k': 'Costs', 'res.2h': 'Less energy and inputs per unit',
+      'res.3k': 'Logistics', 'res.3h': 'More efficient routes, fleets and contracts',
+      'res.4k': 'Projects', 'res.4h': 'Plants built and started up',
+      'about.metis': 'Metis: Greek for practical wisdom. Ops: operations, where it is put to the test.',
+      'c.h2': 'Start with an assessment, <em>at no cost.</em>',
+      'st.1': 'You send us a contract, a rate sheet, a project or a report. If you need one, we sign a confidentiality agreement first.',
+      'st.2': 'We review it within a few days, as an operations manager would.',
+      'st.3': 'You get a short report with the opportunities and what to do. No obligation.',
+      'c.write': 'Write to us at', 'c.send': 'Write an email', 'c.copy': 'Copy email', 'c.sig': 'founder of MetisOps',
+      'ind.h2': 'The pulse of the economy, <em>up to date.</em>', 'ind.com': 'Commodities', 'ind.prod': 'Product', 'ind.date': 'Date', 'ind.price': 'Price',
+      'ind.fx': 'Main currencies', 'ind.cur': 'Currency', 'ind.code': 'Code', 'ind.pesos': 'Chilean pesos',
+      'news.h2': 'What moves <em>operations in Chile.</em>',
+      'f.tag': 'Logistics, project evaluation and industrial plants'
+    },
+    pt: {
+      'mm.s.t': 'Três linhas de trabalho, um só foco: a margem.', 'mm.s.c': 'Peça seu diagnóstico inicial →',
+      'mm.a.t': 'Experiência de gerência aplicada à sua operação.', 'mm.a.1': 'Fundador', 'mm.a.1p': 'Gerald Ulloa Retamal, Engenheiro Civil Industrial e MBA.',
+      'mm.a.2': 'Experiência', 'mm.a.2p': 'Produção, custos, logística e projetos.', 'mm.a.3': 'Como começamos', 'mm.a.3p': 'Um diagnóstico inicial, sem custo nem compromisso.',
+      'mm.p.t': 'Os dados que movem a operação no Chile, atualizados todos os dias.', 'mm.p.1': 'Indicadores', 'mm.p.1p': 'Dólar, UF, UTM, IPC, cobre, petróleo e moedas.',
+      'mm.p.2': 'Notícias', 'mm.p.2p': 'Economia, mineração, logística e energia.', 'mm.p.3': 'Publicações', 'mm.p.3p': 'Nossas análises semanais no LinkedIn.',
+      'nav.services': 'Serviços', 'nav.about': 'Quem somos', 'nav.pulse': 'Pulso econômico', 'nav.contact': 'Contato',
+      'nav.express': 'Diagnóstico inicial', 'nav.menu': 'Abrir menu', 'nav.news': 'Notícias',
+      'hero.qe': 'Pergunta da semana',
+      'hero.q': 'Quando foi a última vez que alguém revisou a fórmula de reajuste dos seus contratos de transporte?',
+      'hero.post': 'Leia a publicação desta semana no LinkedIn →',
+      'hero.tag': 'Reduzimos custos e riscos em <em>logística, projetos e plantas industriais.</em>',
+      'hero.lead': 'Mais de 13 anos gerenciando operações, aplicados aos problemas reais da sua empresa.',
+      'hero.btn1': 'Peça seu diagnóstico inicial', 'hero.btn2': 'Ver serviços',
+      'tick.more': 'Pulso econômico →',
+      'srv.h2': 'Três linhas de trabalho, <em>um só foco: a margem.</em>',
+      'l1.h': 'Logística, transporte e contratos', 'l1.p': 'Fretes, tarifas e contratos que refletem o custo real.',
+      'l1.a': 'Revisão de tarifas e fórmulas de reajuste', 'l1.b': 'Custo total de frotas', 'l1.c': 'Licitação e controle de contratos',
+      'l2.h': 'Avaliação de projetos', 'l2.p': 'Decidir com números antes de investir ou adjudicar.',
+      'l2.a': 'Avaliação e reavaliação econômica', 'l2.b': 'Cotação e comparação de propostas', 'l2.c': 'Apoio à adjudicação',
+      'l3.h': 'Plantas e partida', 'l3.p': 'Partir antes e operar com menos perdas.',
+      'l3.a': 'Preparação da partida', 'l3.b': 'Produtividade e redução de perdas', 'l3.c': 'Gerência de operações por dias ao mês',
+      'srv.note': 'Nas três usamos análise de dados e IA para que indicadores e relatórios se montem sozinhos. Preço fixo, <b>a partir de UF 40</b>.',
+      'fo.h2': 'Gerald Ulloa Retamal, <em>fundador.</em>',
+      'fo.p1': 'Mais de 13 anos gerenciando plantas químicas e de manufatura, projetos de construção e partida, e a logística de uma empresa fornecedora da grande mineração.',
+      'fo.p2': 'Engenheiro Civil Industrial e MBA. Lidera pessoalmente cada diagnóstico e cada projeto.',
+      'res.1k': 'Produção', 'res.1h': 'Mais volume em menos de um ano',
+      'res.2k': 'Custos', 'res.2h': 'Menos energia e insumos por unidade',
+      'res.3k': 'Logística', 'res.3h': 'Rotas, frotas e contratos mais eficientes',
+      'res.4k': 'Projetos', 'res.4h': 'Plantas construídas e em operação',
+      'about.metis': 'Métis: em grego, a sabedoria prática. Ops: a operação, onde ela é posta à prova.',
+      'c.h2': 'Comece com um diagnóstico, <em>sem custo.</em>',
+      'st.1': 'Você nos envia um contrato, uma tabela de fretes, um projeto ou um relatório. Se precisar, assinamos antes um acordo de confidencialidade.',
+      'st.2': 'Analisamos em poucos dias, com olhos de gerente de operações.',
+      'st.3': 'Você recebe um relatório breve com as oportunidades e o que fazer. Sem compromisso.',
+      'c.write': 'Escreva para', 'c.send': 'Escrever um e-mail', 'c.copy': 'Copiar e-mail', 'c.sig': 'fundador da MetisOps',
+      'ind.h2': 'O pulso da economia, <em>em dia.</em>', 'ind.com': 'Commodities', 'ind.prod': 'Produto', 'ind.date': 'Data', 'ind.price': 'Preço',
+      'ind.fx': 'Principais moedas', 'ind.cur': 'Moeda', 'ind.code': 'Código', 'ind.pesos': 'Pesos chilenos',
+      'news.h2': 'O que move <em>a operação no Chile.</em>',
+      'f.tag': 'Logística, avaliação de projetos e plantas industriais'
+    }
+  };
+  var UI = {
+    es: { subject: 'Diagnóstico inicial', watext: 'Hola, vengo del sitio de MetisOps y me interesa el diagnóstico inicial.', src: 'Fuentes', live: 'En vivo · Banco Central, INE y SII vía mindicador.cl', off: 'Valores al {d} · la fuente en vivo no respondió', fx: 'Tipo de cambio de referencia (ExchangeRate-API) al {d}.', news: 'Selección actualizada al {d}.', pending: 'Correo por confirmar', copied: 'Correo copiado' },
+    en: { subject: 'Initial assessment', watext: 'Hello, I found MetisOps online and I am interested in the initial assessment.', src: 'Sources', live: 'Live · Central Bank of Chile, INE and SII via mindicador.cl', off: 'Values as of {d} · the live source did not respond', fx: 'Reference exchange rate (ExchangeRate-API) as of {d}.', news: 'Selection updated {d}.', pending: 'Email to be confirmed', copied: 'Email copied' },
+    pt: { subject: 'Diagnóstico inicial', watext: 'Olá, vi o site da MetisOps e tenho interesse no diagnóstico inicial.', src: 'Fontes', live: 'Ao vivo · Banco Central do Chile, INE e SII via mindicador.cl', off: 'Valores de {d} · a fonte ao vivo não respondeu', fx: 'Taxa de câmbio de referência (ExchangeRate-API) em {d}.', news: 'Seleção atualizada em {d}.', pending: 'E-mail a confirmar', copied: 'E-mail copiado' }
+  };
+  var LOCALE = { es: 'es-CL', en: 'en-US', pt: 'pt-BR' };
+  var MONTHS = {
+    es: ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],
+    en: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+    pt: ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro']
+  };
+
+  var lang = 'es';
+  var SEMANA = null;
+  var liveData = {};
+  var isLive = false;
+
+  function parseDate(s) { var m = String(s).slice(0, 10).split('-'); return { y: +m[0], m: +m[1], d: +m[2] }; }
+  function day(s) { var p = parseDate(s), mo = MONTHS[lang][p.m - 1]; return lang === 'en' ? mo + ' ' + p.d : p.d + ' de ' + mo; }
+  function month(s) { var p = parseDate(s), mo = MONTHS[lang][p.m - 1]; return lang === 'pt' ? mo + ' de ' + p.y : mo + ' ' + p.y; }
+  function num(v, dec) { return Number(v).toLocaleString(LOCALE[lang], { minimumFractionDigits: dec, maximumFractionDigits: dec }); }
+  function fmt(kind, v) {
+    if (kind === 'clp') return '$' + num(v, 2);
+    if (kind === 'clp0') return '$' + num(v, 0);
+    if (kind === 'pct') return num(v, 1) + '%';
+    if (kind === 'usdlb') return 'US$ ' + num(v, 2);
+    return num(v, 2);
+  }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; }
+  function ui(key, d) { return UI[lang][key].replace('{d}', d || ''); }
+
+  function renderIndicators() {
+    var kpis = document.getElementById('kpis');
+    var ticker = document.getElementById('ticker');
+    kpis.replaceChildren(); ticker.replaceChildren();
+    KPIS.forEach(function (k) {
+      var d = liveData[k.id] || FALLBACK[k.id];
+      if (!d) return;
+      var card = el('div', 'kpi');
+      card.append(el('span', 'kpi-label', k.label[lang]), el('span', 'kpi-value', fmt(k.kind, d.valor)), el('span', 'kpi-meta', k.monthly ? month(d.fecha) : day(d.fecha)));
+      kpis.appendChild(card);
+      if (k.tick) {
+        var t = el('div', 'tick');
+        t.append(el('span', null, k.tick[lang]), el('b', null, fmt(k.kind, d.valor)));
+        ticker.appendChild(t);
+      }
+    });
+    var tb = el('div', 'tick'); tb.append(el('span', null, 'Brent'), el('b', null, 'US$ ' + num(COMMODITIES[0].valor, 2))); ticker.appendChild(tb);
+    document.getElementById('status').setAttribute('data-live', isLive ? '1' : '0');
+    document.getElementById('status-text').textContent = isLive ? ui('live') : ui('off', day(ACTUALIZADO));
+  }
+
+  function renderTables() {
+    var c = document.getElementById('commodities'); c.replaceChildren();
+    COMMODITIES.forEach(function (r) {
+      var tr = el('tr');
+      tr.append(el('td', null, r.nombre[lang]), el('td', null, day(r.fecha)), el('td', null, 'US$ ' + num(r.valor, 2)));
+      c.appendChild(tr);
+    });
+    var f = document.getElementById('fx'); f.replaceChildren();
+    FX.forEach(function (r) {
+      var tr = el('tr');
+      tr.append(el('td', null, r.moneda[lang]), el('td', null, r.codigo), el('td', null, '$' + num(r.clp, 2)));
+      f.appendChild(tr);
+    });
+    document.getElementById('fx-note').textContent = ui('fx', day(ACTUALIZADO));
+    document.getElementById('com-note').textContent = ui('src') + ': ' + COMMODITIES.map(function (r) { return r.nombre[lang] + ', ' + (r.fuente || '—'); }).join(' · ') + '.';
+  }
+
+  function isStale() {
+    var p = parseDate(ACTUALIZADO);
+    var d = Date.UTC(p.y, p.m - 1, p.d);
+    return (Date.now() - d) / 86400000 > 4;
+  }
+
+  function renderNews() {
+    var sec = document.getElementById('noticias');
+    if (sec) sec.hidden = isStale();
+    document.getElementById('news-date').textContent = ui('news', day(ACTUALIZADO));
+    var n = document.getElementById('news'); n.replaceChildren();
+    NEWS.forEach(function (r) {
+      var a = el('article');
+      var meta = el('div', 'news-meta');
+      meta.append(el('span', 'chip', r.tema[lang]), el('span', null, day(r.fecha) + ' · ' + r.fuente));
+      var h = el('h3'); var link = el('a', null, r.titular[lang]);
+      link.href = r.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+      if (lang !== 'es') link.title = r.titular.es;
+      h.appendChild(link);
+      a.append(meta, h, el('p', null, r.resumen[lang]));
+      n.appendChild(a);
+    });
+  }
+
+  function renderHero() {
+    if (!SEMANA) return;
+    var q = document.getElementById('hero-q');
+    if (q && SEMANA.pregunta && SEMANA.pregunta[lang]) q.textContent = SEMANA.pregunta[lang];
+    var a = document.getElementById('hero-post');
+    if (a) {
+      var u = String(SEMANA.post_url || '');
+      if (/^https:\/\/(www\.)?linkedin\.com\//.test(u)) { a.href = u; a.hidden = false; var mp = document.getElementById('mm-post'); if (mp) mp.href = u; } else { a.hidden = true; }
+    }
+  }
+
+  function renderMail() {
+    var mail = document.getElementById('mail');
+    var copy = document.getElementById('copy');
+    if (CONTACT_EMAIL) { mail.textContent = CONTACT_EMAIL; copy.hidden = false; }
+    else { mail.textContent = ui('pending'); copy.hidden = true; }
+    var mt = document.getElementById('mailto');
+    if (mt) mt.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(ui('subject'));
+    var wa = document.getElementById('wa');
+    if (wa) wa.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(ui('watext'));
+  }
+
+  // Textos fijos: se guarda el español original y se reemplaza al cambiar de idioma.
+  var ORIG = new Map();
+  document.querySelectorAll('[data-i18n]').forEach(function (n) { ORIG.set(n, n.innerHTML); });
+  var ORIG_ARIA = new Map();
+  document.querySelectorAll('[data-i18n-aria]').forEach(function (n) { ORIG_ARIA.set(n, n.getAttribute('aria-label')); });
+
+  function applyStatic() {
+    ORIG.forEach(function (es, n) {
+      var key = n.getAttribute('data-i18n');
+      n.innerHTML = lang === 'es' ? es : (T[lang][key] || es);
+    });
+    ORIG_ARIA.forEach(function (es, n) {
+      var key = n.getAttribute('data-i18n-aria');
+      n.setAttribute('aria-label', lang === 'es' ? es : (T[lang][key] || es));
+    });
+  }
+
+  function setLang(l, save) {
+    lang = (l === 'en' || l === 'pt') ? l : 'es';
+    document.documentElement.setAttribute('lang', LOCALE[lang]);
+    document.querySelectorAll('.lang').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false'); });
+    applyStatic();
+    renderIndicators(); renderTables(); renderNews(); renderMail(); renderHero();
+    if (save) { try { localStorage.setItem('metisops-lang', lang); } catch (e) {} }
+  }
+
+  document.querySelectorAll('.lang').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.getAttribute('data-lang'), true); });
+  });
+
+  document.getElementById('copy').addEventListener('click', function () {
+    var copy = this, mail = document.getElementById('mail');
+    function selectMail() { var r = document.createRange(); r.selectNodeContents(mail); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+    try {
+      navigator.clipboard.writeText(CONTACT_EMAIL).then(function () { copy.textContent = ui('copied'); }, selectMail);
+    } catch (e) { selectMail(); }
+  });
+
+  var start = 'es';
+  try {
+    var saved = localStorage.getItem('metisops-lang');
+    if (saved) start = saved;
+  } catch (e) {}
+  setLang(start, false);
+
+  // Datos del día (data.json junto al sitio): precios, divisas y noticias que actualiza la tarea diaria.
+  try {
+    fetch('data.json', { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (d) {
+        if (!d || typeof d !== 'object') return;
+        if (typeof d.actualizado === 'string') ACTUALIZADO = d.actualizado;
+        if (d.fallback && typeof d.fallback === 'object') Object.keys(d.fallback).forEach(function (k) { var x = d.fallback[k]; if (x && typeof x.valor === 'number' && x.fecha) FALLBACK[k] = x; });
+        if (Array.isArray(d.commodities) && d.commodities.length) COMMODITIES = d.commodities;
+        if (Array.isArray(d.fx) && d.fx.length) FX = d.fx;
+        if (d.semana && typeof d.semana === 'object') SEMANA = d.semana;
+        if (Array.isArray(d.news) && d.news.length) NEWS = d.news.filter(function (n) { return /^https:\/\//.test(String(n.url)); });
+        renderIndicators(); renderTables(); renderNews(); renderHero();
+      })
+      .catch(function () {});
+  } catch (e) {}
+
+  // Cierra los menús al elegir una opción, al hacer clic fuera o con Escape.
+  var menus = document.querySelectorAll('details.dd, details.burger');
+  function closeAll(except) { menus.forEach(function (d) { if (d !== except) d.removeAttribute('open'); }); }
+  menus.forEach(function (d) {
+    d.addEventListener('toggle', function () { if (d.open) closeAll(d); });
+    d.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { d.removeAttribute('open'); }); });
+  });
+  document.addEventListener('click', function (e) { if (!e.target.closest('details.dd, details.burger')) closeAll(null); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(null); });
+
+
+  // Encabezado: transparente sobre la foto; sólido al bajar, al pasar el mouse o con un menú abierto.
+  var nav = document.querySelector('.nav');
+  var isPulso = document.documentElement.getAttribute('data-page') === 'pulso';
+  var mms = Array.prototype.slice.call(document.querySelectorAll('.mm'));
+  function anyOpen() { return mms.some(function (m) { return m.classList.contains('open'); }); }
+  function updNav() { nav.classList.toggle('solid', isPulso || window.scrollY > 40 || nav.matches(':hover') || anyOpen() || !!nav.querySelector('details.burger[open]')); }
+  function setOpen(m, on) { m.classList.toggle('open', on); var b = m.querySelector('.mm-btn'); if (b) b.setAttribute('aria-expanded', on ? 'true' : 'false'); }
+  function closeMm() { mms.forEach(function (m) { setOpen(m, false); }); updNav(); }
+  var hoverable = window.matchMedia('(hover: hover)').matches;
+  mms.forEach(function (m) {
+    if (hoverable) {
+      m.addEventListener('mouseenter', function () { mms.forEach(function (x) { setOpen(x, x === m); }); updNav(); });
+      m.addEventListener('mouseleave', function () { setOpen(m, false); updNav(); });
+    }
+    m.querySelector('.mm-btn').addEventListener('click', function () { var on = !m.classList.contains('open'); mms.forEach(function (x) { setOpen(x, false); }); setOpen(m, on); updNav(); });
+    m.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMm); });
+  });
+  nav.addEventListener('mouseenter', updNav);
+  nav.addEventListener('mouseleave', function () { closeMm(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMm(); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.mm')) { if (anyOpen()) closeMm(); } });
+  window.addEventListener('scroll', updNav, { passive: true });
+  var bg = document.querySelector('details.burger'); if (bg) bg.addEventListener('toggle', updNav);
+  updNav();
+
+  // Indicadores en vivo desde mindicador.cl (Banco Central, INE, SII).
+  var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+  var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 7000);
+  try {
+    fetch('https://mindicador.cl/api', ctrl ? { signal: ctrl.signal, cache: 'no-store' } : {})
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (j) {
+        clearTimeout(timer);
+        var data = {};
+        KPIS.forEach(function (k) {
+          var x = j && j[k.id];
+          if (x && typeof x.valor === 'number' && x.fecha) data[k.id] = { valor: x.valor, fecha: x.fecha };
+        });
+        if (Object.keys(data).length) { liveData = data; isLive = true; renderIndicators(); }
+      })
+      .catch(function () { clearTimeout(timer); });
+  } catch (e) { clearTimeout(timer); }
+})();
+</script>
+
+</body>
+</html>

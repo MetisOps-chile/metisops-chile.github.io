@@ -1,6 +1,8 @@
 # Sitio web de MetisOps
 
-Sitio estático de una sola página (`index.html`) en español, inglés y portugués.
+Sitio estático en español, inglés y portugués: `index.html` (portada, servicios, quiénes somos y contacto) y `pulso.html` (Pulso económico: indicadores y noticias). Ambos comparten el mismo código; el atributo `data-page` del `<html>` decide qué secciones se muestran.
+
+Foto de portada: `hero-santiago-torre-*.jpg/webp` (foto de Gerald, editada).
 
 ## Qué se actualiza y cómo
 

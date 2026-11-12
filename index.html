@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="es-CL">
+<html lang="es-CL" data-page="home">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MetisOps</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="MetisOps: consultoría en operaciones industriales, logística y gestión en Chile. Diagnóstico inicial sin costo: envíanos un documento real y recibe un informe breve con las principales oportunidades.">
+<meta name="description" content="MetisOps: logística, transporte y contratos; evaluación de proyectos; plantas y puesta en marcha. Diagnóstico inicial sin costo.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MetisOps">
-<meta property="og:title" content="MetisOps · Operaciones industriales, logística y gestión">
-<meta property="og:description" content="Operar bien desde el primer día, con criterio de terreno y herramientas de hoy. Diagnóstico inicial sin costo.">
+<meta property="og:title" content="MetisOps · Logística, proyectos y plantas industriales">
+<meta property="og:description" content="Reducimos costos y riesgos en logística, proyectos y plantas industriales. Diagnóstico inicial sin costo.">
 <meta property="og:url" content="https://metisops-chile.github.io/">
 <meta property="og:image" content="https://metisops-chile.github.io/og.png">
 <meta property="og:image:width" content="1200">
@@ -47,18 +47,6 @@
     --sans: 'Jost', 'Helvetica Neue', Arial, sans-serif;
     --greek: 'Gentium Book Plus', 'Newsreader', Georgia, serif;
     --wrap: 1120px;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #1E1D1B; --fg: #F1EDE6; --muted: #B3ADA3; --muted-strong: #D6D0C6; --line: #3A3835; --panel: #262523;
-      --accent: #D47A63; --band: #141312; --band-fg: #F1EDE6; --band-muted: #A9A398; --band-line: #34322F; --band-panel: #1F1E1C;
-      --ok: #8DB597; color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #1E1D1B; --fg: #F1EDE6; --muted: #B3ADA3; --muted-strong: #D6D0C6; --line: #3A3835; --panel: #262523;
-    --accent: #D47A63; --band: #141312; --band-fg: #F1EDE6; --band-muted: #A9A398; --band-line: #34322F; --band-panel: #1F1E1C;
-    --ok: #8DB597; color-scheme: dark;
   }
   * { box-sizing: border-box; }
   body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-weight: 300; font-size: 17px; line-height: 1.6; }
@@ -256,38 +244,152 @@
   .lang:hover { opacity: .9; }
   .lang[aria-pressed="true"] { opacity: 1; border-color: var(--fg); }
   .lang:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+
+  /* v2: página corta */
+  html:not([data-page="pulso"]) .pulso-only { display: none; }
+  html[data-page="pulso"] .home-only { display: none; }
+  .hero-main { display: flex; flex-direction: column; gap: 22px; }
+  .hero h1 { border-left: 5px solid var(--accent); padding-left: clamp(16px, 2.4vw, 28px); }
+  .hero-tag { font-size: clamp(22px, 2.4vw, 28px); }
+  .ticker { background: var(--carbon); border-color: var(--carbon); color: #FAF8F4; }
+  .ticker .wrap { display: flex; align-items: center; gap: 24px; padding-block: 0; overflow: visible; }
+  .tick-row { display: flex; gap: 28px; overflow-x: auto; padding-block: 14px; scrollbar-width: none; flex: 1; min-width: 0; }
+  .tick-row::-webkit-scrollbar { display: none; }
+  .ticker .tick span { color: #B9B3A9; }
+  .tick-more { color: var(--oxido-claro); font-size: 14px; font-weight: 500; text-decoration: none; white-space: nowrap; }
+  .tick-more:hover, .tick-more:focus-visible { text-decoration: underline; }
+  @media (max-width: 560px) { .tick-more { display: none; } }
+  .lines { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  @media (max-width: 860px) { .lines { grid-template-columns: minmax(0, 1fr); } }
+  .line { background: var(--panel); border: 1px solid var(--line); border-top: 4px solid var(--accent); padding: 26px 24px 22px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .line-n { font-family: var(--serif); font-size: 40px; line-height: 1; color: var(--accent); }
+  .line h3 { font-size: 24px; }
+  .line p { color: var(--muted-strong); font-size: 16px; }
+  .line ul { list-style: none; margin: 6px 0 0; padding: 0; border-top: 1px solid var(--line); }
+  .line li { padding: 9px 0 9px 18px; border-bottom: 1px solid var(--line); font-size: 15px; position: relative; }
+  .line li::before { content: ""; position: absolute; left: 0; top: 17px; width: 8px; height: 2px; background: var(--accent); }
+  .lines-note { margin-top: 22px; font-size: 15px; color: var(--muted); max-width: 70ch; }
+  .lines-note b { color: var(--fg); font-weight: 500; }
+  .exp { list-style: none; margin: 4px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+  @media (max-width: 560px) { .exp { grid-template-columns: minmax(0, 1fr); } }
+  .exp li { padding: 12px 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 2px; }
+  .exp b { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; color: var(--accent); }
+  .exp span { font-family: var(--serif); font-size: 19px; line-height: 1.3; }
+  .metis { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--muted); }
+  .steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .steps li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; padding: 16px 0; border-top: 1px solid var(--line); align-items: baseline; }
+  .steps span { font-family: var(--serif); font-size: 34px; line-height: 1; color: var(--accent); }
+  .steps p { color: var(--muted-strong); }
+  .pulse-h { font-size: clamp(30px, 4.2vw, 46px); line-height: 1.1; }
+  .back { margin-top: 36px; }
+  .founder { grid-template-columns: minmax(0, 200px) minmax(0, 1fr); }
+  .avatar { max-width: 200px; }
+  @media (max-width: 760px) { .avatar { max-width: 140px; } .founder { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 760px) { .band { padding-block: 48px; } }
+  html[data-page="pulso"] .ticker { display: none; }
+
+
+  /* v3: encabezado transparente sobre foto + mega menú */
+  .nav { position: fixed; left: 0; right: 0; top: 0; background: transparent; border-bottom: 1px solid transparent; backdrop-filter: none; transition: background .25s ease, border-color .25s ease, box-shadow .25s ease; }
+  .nav.solid { background: var(--bg); border-color: var(--line); box-shadow: 0 6px 24px rgba(40,39,37,.08); }
+  .nav .wrap { padding-block: 16px; }
+  .nav:not(.solid) .word, .nav:not(.solid) .mu, .nav:not(.solid) .mm-btn, .nav:not(.solid) .nav-a { color: #FAF8F4; }
+  .nav:not(.solid) .word i, .nav:not(.solid) .mono .o { color: var(--oxido-claro); }
+  .nav:not(.solid) .burger summary { border-color: rgba(250,248,244,.5); }
+  .nav:not(.solid) .burger summary span { background: #FAF8F4; }
+  .nav:not(.solid) .nav-cta { background: var(--accent); color: #FFFFFF; }
+  .nav:not(.solid) .lang { opacity: .8; }
+  .nav:not(.solid) .lang[aria-pressed="true"] { border-color: #FAF8F4; opacity: 1; }
+  .nav-links { gap: 6px; }
+  .mm-btn, .nav-a { appearance: none; background: none; border: 0; font: inherit; font-size: 15px; font-weight: 400; color: var(--muted-strong); padding: 10px 12px; cursor: pointer; text-decoration: none; position: relative; }
+  .mm-btn::after, .nav-a::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 2px; height: 2px; background: var(--accent); transform: scaleX(0); transition: transform .2s ease; }
+  .mm.open .mm-btn::after, .mm-btn:hover::after, .nav-a:hover::after, .nav-a:focus-visible::after { transform: scaleX(1); }
+  .mm.open .mm-btn { color: var(--fg); }
+  .mm-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .mm-panel { position: absolute; left: 0; right: 0; top: 100%; background: var(--bg); border-top: 1px solid var(--line); box-shadow: 0 24px 48px rgba(40,39,37,.14); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s; }
+  .mm.open .mm-panel { opacity: 1; visibility: visible; transform: none; transition: opacity .18s ease, transform .18s ease; }
+  .mm-panel .wrap { display: grid; grid-template-columns: minmax(0,1.2fr) repeat(3, minmax(0,1fr)); gap: 36px; padding-block: 36px 40px; align-items: start; }
+  .mm-t { font-family: var(--serif); font-size: 26px; line-height: 1.2; color: var(--fg); }
+  .mm-cta { display: inline-block; margin-top: 16px; color: var(--accent); font-weight: 500; font-size: 15px; text-decoration: none; }
+  .mm-cta:hover { text-decoration: underline; }
+  .mm-link { display: flex; flex-direction: column; gap: 6px; padding-top: 14px; border-top: 2px solid var(--line); text-decoration: none; transition: border-color .2s ease; }
+  .mm-link:hover, .mm-link:focus-visible { border-color: var(--accent); }
+  .mm-link b { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--fg); }
+  .mm-link:hover b { color: var(--accent); }
+  .mm-link span { font-size: 14px; color: var(--muted); line-height: 1.45; }
+  @media (prefers-reduced-motion: reduce) { .nav, .mm-panel { transition: none; } }
+
+  /* Portada con foto */
+  .hero { position: relative; min-height: min(92vh, 820px); padding: 0; display: flex; align-items: center; color: #FAF8F4; overflow: hidden; background: var(--carbon); }
+  .hero-bg, .hero-bg img { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .hero-bg img { object-fit: cover; object-position: 62% 40%; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(28,27,25,.86) 0%, rgba(28,27,25,.72) 36%, rgba(28,27,25,.18) 64%, rgba(28,27,25,0) 78%); }
+  .hero-in { position: relative; z-index: 1; width: 100%; padding-top: 120px; padding-bottom: 72px; display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+  .hero-in > * { max-width: 660px; }
+  .hero .eyebrow { color: var(--oxido-claro); }
+  .hero h1 { color: #FAF8F4; border-left-color: var(--oxido-claro); font-size: clamp(32px, 4.2vw, 56px); }
+  .hero-post { color: #F2C3B6; }
+  .hero-tag { color: #FAF8F4; margin-top: 6px; }
+  .hero-tag em { color: #F0A792; }
+  .hero-lead { font-size: clamp(17px, 1.6vw, 19px); color: #E7E2D9; }
+  .hero .btn-ghost { color: #FAF8F4; border-color: #FAF8F4; }
+  @media (max-width: 760px) {
+    .hero { min-height: 100svh; align-items: flex-end; }
+    .hero::after { background: linear-gradient(180deg, rgba(28,27,25,.55) 0%, rgba(28,27,25,.62) 40%, rgba(28,27,25,.9) 100%); }
+    .hero-bg img { object-position: 70% 30%; }
+    .hero-in { padding-top: 100px; padding-bottom: 40px; }
+  }
+  html[data-page="pulso"] body { padding-top: 74px; }
+  html, body { margin: 0; }
+  .mm-link b { line-height: 1.25; }
 </style>
 </head>
 <body>
 
 
+
 <nav class="nav" aria-label="Principal">
   <div class="wrap">
-    <a class="brand" href="#inicio" aria-label="MetisOps">
+    <a class="brand" href="./" aria-label="MetisOps">
       <span class="mono" aria-hidden="true"><span class="mu">μ</span><span class="o">O</span></span>
       <span class="word">Metis<i>Ops</i></span>
     </a>
     <div class="nav-links">
-      <details class="dd">
-        <summary data-i18n="nav.about">Nosotros</summary>
-        <div class="dd-menu">
-          <a href="#quienes-somos" data-i18n="nav.who">Quiénes somos</a>
-          <a href="#fundador" data-i18n="nav.founder">Quién está detrás</a>
-          <a href="#mision-vision" data-i18n="nav.mv">Misión y visión</a>
-          <a href="#resultados" data-i18n="nav.results">Resultados</a>
-          <a href="#como-trabajamos" data-i18n="nav.how">Para quién y cómo trabajamos</a>
+      <div class="mm">
+        <button type="button" class="mm-btn" aria-expanded="false" data-i18n="nav.services">Servicios</button>
+        <div class="mm-panel">
+          <div class="wrap">
+            <div class="mm-intro"><p class="mm-t" data-i18n="mm.s.t">Tres líneas de trabajo, un mismo foco: el margen.</p><a class="mm-cta" href="./#contacto" data-i18n="mm.s.c">Pide tu diagnóstico inicial →</a></div>
+            <a class="mm-link" href="./#servicios"><b data-i18n="l1.h">Logística, transporte y contratos</b><span data-i18n="l1.p">Fletes, tarifas y contratos que reflejan el costo real.</span></a>
+            <a class="mm-link" href="./#servicios"><b data-i18n="l2.h">Evaluación de proyectos</b><span data-i18n="l2.p">Decidir con números antes de invertir o adjudicar.</span></a>
+            <a class="mm-link" href="./#servicios"><b data-i18n="l3.h">Plantas y puesta en marcha</b><span data-i18n="l3.p">Partir antes y operar con menos pérdidas.</span></a>
+          </div>
         </div>
-      </details>
-      <details class="dd">
-        <summary data-i18n="nav.services">Servicios</summary>
-        <div class="dd-menu">
-          <a href="#revision" data-i18n="nav.express">Diagnóstico inicial</a>
-          <a href="#servicios" data-i18n="nav.all">Todos los servicios</a>
+      </div>
+      <div class="mm">
+        <button type="button" class="mm-btn" aria-expanded="false" data-i18n="nav.about">Quiénes somos</button>
+        <div class="mm-panel">
+          <div class="wrap">
+            <div class="mm-intro"><p class="mm-t" data-i18n="mm.a.t">Experiencia de gerencia aplicada a tu operación.</p></div>
+            <a class="mm-link" href="./#nosotros"><b data-i18n="mm.a.1">Fundador</b><span data-i18n="mm.a.1p">Gerald Ulloa Retamal, Ingeniero Civil Industrial y MBA.</span></a>
+            <a class="mm-link" href="./#nosotros"><b data-i18n="mm.a.2">Experiencia</b><span data-i18n="mm.a.2p">Producción, costos, logística y proyectos.</span></a>
+            <a class="mm-link" href="./#contacto"><b data-i18n="mm.a.3">Cómo empezamos</b><span data-i18n="mm.a.3p">Un diagnóstico inicial, sin costo ni compromiso.</span></a>
+          </div>
         </div>
-      </details>
-      <a href="#indicadores" data-i18n="nav.ind">Indicadores</a>
-      <a href="#noticias" data-i18n="nav.news">Noticias</a>
-      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </div>
+      <div class="mm">
+        <button type="button" class="mm-btn" aria-expanded="false" data-i18n="nav.pulse">Pulso económico</button>
+        <div class="mm-panel">
+          <div class="wrap">
+            <div class="mm-intro"><p class="mm-t" data-i18n="mm.p.t">Los datos que mueven la operación en Chile, actualizados cada día.</p></div>
+            <a class="mm-link" href="pulso.html#indicadores"><b data-i18n="mm.p.1">Indicadores</b><span data-i18n="mm.p.1p">Dólar, UF, UTM, IPC, cobre, petróleo y divisas.</span></a>
+            <a class="mm-link" href="pulso.html#noticias"><b data-i18n="mm.p.2">Noticias</b><span data-i18n="mm.p.2p">Economía, minería, logística y energía.</span></a>
+            <a class="mm-link" id="mm-post" href="https://www.linkedin.com/company/metisops" target="_blank" rel="noopener noreferrer"><b data-i18n="mm.p.3">Publicaciones</b><span data-i18n="mm.p.3p">Nuestros análisis semanales en LinkedIn.</span></a>
+          </div>
+        </div>
+      </div>
+      <a class="nav-a" href="./#contacto" data-i18n="nav.contact">Contacto</a>
     </div>
     <div class="nav-right">
       <div class="langs" role="group" aria-label="Idioma / Language / Idioma">
@@ -295,179 +397,117 @@
         <button type="button" class="lang" data-lang="en" title="English" aria-label="English"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><g fill="#B22234"><rect y="0" width="30" height="1.54"/><rect y="3.08" width="30" height="1.54"/><rect y="6.15" width="30" height="1.54"/><rect y="9.23" width="30" height="1.54"/><rect y="12.31" width="30" height="1.54"/><rect y="15.38" width="30" height="1.54"/><rect y="18.46" width="30" height="1.54"/></g><rect width="13" height="10.77" fill="#3C3B6E"/></svg></button>
         <button type="button" class="lang" data-lang="pt" title="Português" aria-label="Português"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,2 28,10 15,18 2,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.6" fill="#002776"/></svg></button>
       </div>
-      <a class="nav-cta" href="#contacto" data-i18n="nav.express">Diagnóstico inicial</a>
+      <a class="nav-cta" href="./#contacto" data-i18n="nav.express">Diagnóstico inicial</a>
       <details class="burger">
         <summary data-i18n-aria="nav.menu" aria-label="Abrir menú"><span></span><span></span><span></span></summary>
         <div class="burger-menu">
-          <span class="burger-h" data-i18n="nav.about">Nosotros</span>
-          <a href="#quienes-somos" data-i18n="nav.who">Quiénes somos</a>
-          <a href="#fundador" data-i18n="nav.founder">Quién está detrás</a>
-          <a href="#mision-vision" data-i18n="nav.mv">Misión y visión</a>
-          <a href="#resultados" data-i18n="nav.results">Resultados</a>
-          <a href="#como-trabajamos" data-i18n="nav.how">Para quién y cómo trabajamos</a>
-          <span class="burger-h" data-i18n="nav.services">Servicios</span>
-          <a href="#revision" data-i18n="nav.express">Diagnóstico inicial</a>
-          <a href="#servicios" data-i18n="nav.all">Todos los servicios</a>
-          <span class="burger-h" data-i18n="nav.more">Más</span>
-          <a href="#indicadores" data-i18n="nav.ind">Indicadores</a>
-          <a href="#noticias" data-i18n="nav.news">Noticias</a>
-          <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+          <a href="./#servicios" data-i18n="nav.services">Servicios</a>
+          <a href="./#nosotros" data-i18n="nav.about">Quiénes somos</a>
+          <a href="pulso.html" data-i18n="nav.pulse">Pulso económico</a>
+          <a href="./#contacto" data-i18n="nav.contact">Contacto</a>
         </div>
       </details>
     </div>
   </div>
 </nav>
 
-<header class="hero" id="inicio">
-  <div class="wrap hero-grid">
-    <div style="display:flex;flex-direction:column;gap:22px">
-      <p class="eyebrow" data-i18n="hero.qe">Pregunta de la semana</p>
-      <h1 id="hero-q" data-i18n="hero.q">¿Cuándo fue la última vez que alguien revisó la fórmula de reajuste de tus contratos de transporte?</h1>
-      <p class="hero-tag" data-i18n="hero.h1">Operar bien desde el primer día, <em>con criterio de terreno y herramientas de hoy.</em></p>
-      <a class="hero-post" id="hero-post" href="#" target="_blank" rel="noopener noreferrer" data-i18n="hero.post" hidden>Lee la publicación de esta semana en LinkedIn →</a>
-    </div>
-    <div class="hero-side">
-      <p class="lead" data-i18n="hero.lead">Acompañamos a empresas industriales y a inversionistas que llegan a Chile a diseñar, poner en marcha y ordenar su operación. Unimos más de 13 años gerenciando equipos, plantas, logística y proyectos con análisis de datos e inteligencia artificial, para lograr costos claros y contratos que funcionan.</p>
-      <div class="hero-actions">
-        <a class="btn" href="#contacto" data-i18n="hero.btn1">Pide tu diagnóstico inicial</a>
-        <a class="btn btn-ghost" href="#servicios" data-i18n="hero.btn2">Ver servicios</a>
-      </div>
+<header class="hero home-only" id="inicio">
+  <picture class="hero-bg">
+    <source type="image/webp" srcset="hero-santiago-torre-960.webp 960w, hero-santiago-torre-1600.webp 1600w" sizes="100vw">
+    <img src="hero-santiago-torre-1600.jpg" srcset="hero-santiago-torre-960.jpg 960w, hero-santiago-torre-1600.jpg 1600w, hero-santiago-torre-2400.jpg 2400w" sizes="100vw" alt="Santiago de Chile: Gran Torre Santiago y la cordillera de los Andes nevada" fetchpriority="high">
+  </picture>
+  <div class="wrap hero-in">
+    <p class="eyebrow" data-i18n="hero.qe">Pregunta de la semana</p>
+    <h1 id="hero-q" data-i18n="hero.q">¿Cuándo fue la última vez que alguien revisó la fórmula de reajuste de tus contratos de transporte?</h1>
+    <a class="hero-post" id="hero-post" href="#" target="_blank" rel="noopener noreferrer" data-i18n="hero.post" hidden>Lee la publicación de esta semana en LinkedIn →</a>
+    <p class="hero-tag" data-i18n="hero.tag">Reducimos costos y riesgos en <em>logística, proyectos y plantas industriales.</em></p>
+    <p class="hero-lead" data-i18n="hero.lead">Más de 13 años gerenciando operaciones, aplicados a los problemas reales de tu empresa.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#contacto" data-i18n="hero.btn1">Pide tu diagnóstico inicial</a>
+      <a class="btn btn-ghost" href="#servicios" data-i18n="hero.btn2">Ver servicios</a>
     </div>
   </div>
 </header>
 
 <div class="ticker" aria-label="Indicadores">
-  <div class="wrap" id="ticker"></div>
+  <div class="wrap"><div class="tick-row" id="ticker"></div><a class="tick-more" href="pulso.html" data-i18n="tick.more">Pulso económico →</a></div>
 </div>
 
-<section class="band" id="quienes-somos">
-  <div class="wrap about">
-    <div>
-      <div class="section-head">
-        <p class="eyebrow" data-i18n="nav.who">Quiénes somos</p>
-        <h2 data-i18n="about.h2">Sabiduría práctica <em>aplicada a la operación.</em></h2>
-      </div>
-      <div class="about-text">
-        <p data-i18n="about.p1"><strong>MetisOps es una consultoría chilena en operaciones industriales, logística y gestión.</strong> Nace de más de 13 años gerenciando equipos, plantas, bodegas, transporte y proyectos industriales, con experiencia en Chile, México y Brasil.</p>
-        <p data-i18n="about.p2">En la mitología griega, Metis es la diosa de la sabiduría práctica: la inteligencia que encuentra la salida a un problema real. Ops es la operación, el lugar donde esa inteligencia se pone a prueba todos los días.</p>
-        <p data-i18n="about.p3">Por eso trabajamos sobre documentos, datos y procesos reales de cada cliente, y dejamos herramientas que el equipo sigue usando cuando terminamos.</p>
-        <p class="metis" data-i18n="about.metis">μῆτις · métis: astucia, consejo, inteligencia práctica</p>
-      </div>
+<section class="band home-only" id="servicios">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="nav.services">Servicios</p>
+      <h2 data-i18n="srv.h2">Tres líneas de trabajo, <em>un mismo foco: el margen.</em></h2>
     </div>
-    <div class="mv" id="mision-vision">
-      <div>
-        <p class="eyebrow" data-i18n="mv.m">Misión</p>
-        <p data-i18n="mv.mt">Ayudar a empresas industriales e inversionistas a operar bien desde el primer día, con decisiones basadas en datos, contratos que funcionan y equipos que sostienen los resultados.</p>
-      </div>
-      <div>
-        <p class="eyebrow" data-i18n="mv.v">Visión</p>
-        <p data-i18n="mv.vt">Ser el socio de operaciones de referencia para la industria en Chile y para las empresas que conectan Chile con Brasil, reconocido por resultados medibles y herramientas que quedan instaladas.</p>
-      </div>
+    <div class="lines">
+      <article class="line">
+        <span class="line-n">01</span>
+        <h3 data-i18n="l1.h">Logística, transporte y contratos</h3>
+        <p data-i18n="l1.p">Fletes, tarifas y contratos que reflejan el costo real.</p>
+        <ul>
+          <li data-i18n="l1.a">Revisión de tarifas y polinomios de reajuste</li>
+          <li data-i18n="l1.b">Costo total de flotas</li>
+          <li data-i18n="l1.c">Licitación y control de contratos</li>
+        </ul>
+      </article>
+      <article class="line">
+        <span class="line-n">02</span>
+        <h3 data-i18n="l2.h">Evaluación de proyectos</h3>
+        <p data-i18n="l2.p">Decidir con números antes de invertir o adjudicar.</p>
+        <ul>
+          <li data-i18n="l2.a">Evaluación y reevaluación económica</li>
+          <li data-i18n="l2.b">Cotización y comparación de ofertas</li>
+          <li data-i18n="l2.c">Apoyo a la adjudicación</li>
+        </ul>
+      </article>
+      <article class="line">
+        <span class="line-n">03</span>
+        <h3 data-i18n="l3.h">Plantas y puesta en marcha</h3>
+        <p data-i18n="l3.p">Partir antes y operar con menos pérdidas.</p>
+        <ul>
+          <li data-i18n="l3.a">Preparación de la puesta en marcha</li>
+          <li data-i18n="l3.b">Productividad y reducción de pérdidas</li>
+          <li data-i18n="l3.c">Gerencia de operaciones por días al mes</li>
+        </ul>
+      </article>
     </div>
+    <p class="lines-note" data-i18n="srv.note">En las tres usamos análisis de datos e IA para que los indicadores y reportes se armen solos. Precio fijo, <b>desde UF 40</b>.</p>
   </div>
 </section>
 
-<section class="band alt" id="fundador">
+<section class="band alt home-only" id="nosotros">
   <div class="wrap founder">
     <div class="avatar"><span class="ini" aria-hidden="true">G<span>U</span></span><img src="gerald.jpg" alt="Gerald Ulloa Retamal, fundador de MetisOps" width="520" height="520" loading="lazy" onerror="this.remove()"></div>
     <div class="founder-text">
       <div class="section-head" style="margin-bottom:0">
-        <p class="eyebrow" data-i18n="fo.e">Quién está detrás</p>
+        <p class="eyebrow" data-i18n="nav.about">Quiénes somos</p>
         <h2 data-i18n="fo.h2">Gerald Ulloa Retamal, <em>fundador.</em></h2>
       </div>
-      <p data-i18n="fo.p1">Ejecutivo con más de 13 años de experiencia gerenciando plantas industriales en las industrias química y manufacturera, a cargo de proyectos de implementación, construcción, montaje y puesta en marcha, y liderando la gerencia de logística de una empresa proveedora de la gran minería.</p>
-      <p data-i18n="fo.p2">Ingeniero Civil Industrial y MBA, con experiencia en Chile y en grupos multinacionales de Brasil y México. Cada diagnóstico y cada proyecto de MetisOps lo lidera él personalmente.</p>
-    </div>
-  </div>
-</section>
-
-<section class="band" id="revision">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow" data-i18n="nav.express">Diagnóstico inicial</p>
-      <h2 data-i18n="rev.h2">Una primera mirada a tu operación, <em>sin costo.</em></h2>
-      <p class="lead" data-i18n="rev.lead">Antes de proponerte un proyecto, te mostramos lo que vemos en tu propia operación.</p>
-    </div>
-    <div class="express">
-      <div class="step"><span class="step-n">1</span><h3 data-i18n="rev.s1h">Nos envías un documento real</h3><p data-i18n="rev.s1p">Un contrato de transporte, una tarifa, un layout de bodega o un reporte de producción. Envíalo por correo o WhatsApp; si lo necesitas, firmamos antes un acuerdo de confidencialidad.</p></div>
-      <div class="step"><span class="step-n">2</span><h3 data-i18n="rev.s2h">Lo revisamos en pocos días</h3><p data-i18n="rev.s2p">Lo leemos con ojos de gerente de operaciones: costos, cláusulas, indicadores y riesgos.</p></div>
-      <div class="step"><span class="step-n">3</span><h3 data-i18n="rev.s3h">Recibes un informe breve</h3><p data-i18n="rev.s3p">Con las principales oportunidades, su impacto estimado y qué hacer. Sin compromiso de contratar nada después.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="band alt" id="servicios">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow" data-i18n="nav.services">Servicios</p>
-      <h2 data-i18n="srv.h2">Donde se gana o se pierde <em>el margen operacional.</em></h2>
-    </div>
-    <div class="services">
-      <div class="service"><h3 data-i18n="srv.1h">Costo total de flotas</h3><p data-i18n="srv.1p">Cuánto cuesta de verdad cada kilómetro y cuándo conviene renovar, tercerizar o cambiar de tecnología.</p></div>
-      <div class="service"><h3 data-i18n="srv.2h">Tarifas y polinomios de reajuste</h3><p data-i18n="srv.2p">Fórmulas de reajuste de fletes que reflejan el costo real y protegen a las dos partes.</p></div>
-      <div class="service"><h3 data-i18n="srv.3h">Licitación y control de contratos</h3><p data-i18n="srv.3p">Bases, KPI, conciliación mensual de facturas y gobierno del contrato durante su ejecución.</p></div>
-      <div class="service"><h3 data-i18n="srv.4h">Puesta en marcha de plantas y bodegas</h3><p data-i18n="srv.4p">Preparar la operación antes de partir para llegar antes a la capacidad de diseño.</p></div>
-      <div class="service"><h3 data-i18n="srv.5h">Excelencia operacional</h3><p data-i18n="srv.5p">Medir la capacidad que ya existe, atacar las pérdidas y dejar rutinas que se sostienen.</p></div>
-      <div class="service"><h3 data-i18n="srv.6h">Gerencia logística fraccional</h3><p data-i18n="srv.6p">Un gerente de logística con experiencia, por días al mes, sin el costo de una contratación completa.</p></div>
-      <div class="service"><h3 data-i18n="srv.7h">Diseño organizacional</h3><p data-i18n="srv.7p">Roles, dotaciones y responsables claros para que la operación no dependa de una sola persona.</p></div>
-      <div class="service"><h3 data-i18n="srv.8h">Indicadores y reportes con IA</h3><p data-i18n="srv.8p">Tableros con los datos que se usan para decidir y reportes que se arman solos.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="band" id="resultados">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow" data-i18n="nav.results">Resultados</p>
-      <h2 data-i18n="res.h2">Experiencia que se traduce <em>en resultados.</em></h2>
-    </div>
-    <div class="results">
-      <div class="result"><span class="result-k" data-i18n="res.1k">Producción</span><h3 data-i18n="res.1h">Más volumen en menos de un año</h3><p data-i18n="res.1p">Ordenando la planta, su equipo y sus líneas productivas.</p></div>
-      <div class="result"><span class="result-k" data-i18n="res.2k">Fabricación</span><h3 data-i18n="res.2h">Costos más bajos y mejores márgenes</h3><p data-i18n="res.2p">Con menor consumo de energía e insumos.</p></div>
-      <div class="result"><span class="result-k" data-i18n="res.3k">Logística</span><h3 data-i18n="res.3h">Transporte más eficiente</h3><p data-i18n="res.3p">Rutas, flotas y contratos de transporte mejor diseñados.</p></div>
-      <div class="result"><span class="result-k" data-i18n="res.4k">Proyectos</span><h3 data-i18n="res.4h">Plantas en operación</h3><p data-i18n="res.4p">Desde la construcción y el montaje hasta la puesta en marcha.</p></div>
-    </div>
-    <p class="results-note" data-i18n="res.note">Resultados obtenidos por el fundador en cargos anteriores. El detalle lo conversamos en una reunión.</p>
-  </div>
-</section>
-
-<section class="band alt" id="como-trabajamos">
-  <div class="wrap two">
-    <div>
-      <div class="section-head">
-        <p class="eyebrow" data-i18n="who.e">Para quién</p>
-        <h2 data-i18n="who.h2">Empresas que necesitan experiencia senior, <em>no estructura.</em></h2>
-      </div>
-      <ul class="list">
-        <li><strong data-i18n="who.1s">Empresas industriales y logísticas</strong><span data-i18n="who.1p">De cualquier tamaño, en química, minería, manufactura, alimentos y transporte, que quieren bajar costos u ordenar su operación.</span></li>
-        <li><strong data-i18n="who.2s">Proyectos nuevos</strong><span data-i18n="who.2p">Plantas o bodegas que deben licitar su construcción y prepararse para operar.</span></li>
-        <li><strong data-i18n="who.3s">Inversionistas que llegan a Chile</strong><span data-i18n="who.3p">Empresas extranjeras, partiendo por las brasileñas, que necesitan operar en Chile desde el primer día.</span></li>
+      <p data-i18n="fo.p1">Más de 13 años gerenciando plantas químicas y manufactureras, proyectos de construcción y puesta en marcha, y la logística de una empresa proveedora de la gran minería.</p>
+      <p data-i18n="fo.p2">Ingeniero Civil Industrial y MBA. Lidera personalmente cada diagnóstico y cada proyecto.</p>
+      <ul class="exp">
+        <li><b data-i18n="res.1k">Producción</b><span data-i18n="res.1h">Más volumen en menos de un año</span></li>
+        <li><b data-i18n="res.2k">Costos</b><span data-i18n="res.2h">Menos energía e insumos por unidad</span></li>
+        <li><b data-i18n="res.3k">Logística</b><span data-i18n="res.3h">Rutas, flotas y contratos más eficientes</span></li>
+        <li><b data-i18n="res.4k">Proyectos</b><span data-i18n="res.4h">Plantas construidas y puestas en marcha</span></li>
       </ul>
-    </div>
-    <div>
-      <div class="section-head">
-        <p class="eyebrow" data-i18n="how.e">Cómo trabajamos</p>
-        <h2 data-i18n="how.h2">Cuatro compromisos <em>con cada cliente.</em></h2>
-      </div>
-      <ul class="list">
-        <li><strong data-i18n="how.1s">Experiencia gerencial y de terreno</strong><span data-i18n="how.1p">Más de 13 años gerenciando equipos, plantas, operaciones logísticas, contratos y proyectos industriales.</span></li>
-        <li><strong data-i18n="how.2s">Resultados antes de contratar</strong><span data-i18n="how.2p">El diagnóstico inicial es la primera entrega, sin costo.</span></li>
-        <li><strong data-i18n="how.3s">Precio fijo</strong><span data-i18n="how.3p">Alcance, plazo y precio cerrados desde el inicio, sin horas extra sorpresa.</span></li>
-        <li><strong data-i18n="how.4s">Una herramienta que queda</strong><span data-i18n="how.4p">Cada entrega incluye un modelo, tablero o procedimiento que tu equipo sigue usando.</span></li>
-      </ul>
-      <p class="price-note" data-i18n="how.price">Proyectos a precio fijo <b>desde UF 40</b>.</p>
+      <p class="metis" data-i18n="about.metis">Metis: en griego, la sabiduría práctica. Ops: la operación, donde se pone a prueba.</p>
     </div>
   </div>
 </section>
 
-
-
-<section class="band" id="contacto">
+<section class="band home-only" id="contacto">
   <div class="wrap contact">
-    <div class="section-head" style="margin-bottom:0">
-      <p class="eyebrow" data-i18n="nav.contact">Contacto</p>
-      <h2 data-i18n="c.h2">Envíanos un documento real <em>y te mostramos dónde mejorar.</em></h2>
-      <p class="lead" data-i18n="c.lead">Un contrato, una tarifa, un layout o un reporte. Lo tratamos con total confidencialidad y te respondemos dentro de la semana.</p>
+    <div>
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="nav.express">Diagnóstico inicial</p>
+        <h2 data-i18n="c.h2">Empieza con un diagnóstico, <em>sin costo.</em></h2>
+      </div>
+      <ol class="steps">
+        <li><span>1</span><p data-i18n="st.1">Nos envías un contrato, una tarifa, un proyecto o un reporte. Si lo necesitas, firmamos antes un acuerdo de confidencialidad.</p></li>
+        <li><span>2</span><p data-i18n="st.2">Lo revisamos en pocos días, con ojos de gerente de operaciones.</p></li>
+        <li><span>3</span><p data-i18n="st.3">Recibes un informe breve con las oportunidades y qué hacer. Sin compromiso.</p></li>
+      </ol>
     </div>
     <div class="contact-card">
       <span class="kpi-label" style="color:var(--muted)" data-i18n="c.write">Escríbenos a</span>
@@ -484,11 +524,11 @@
   </div>
 </section>
 
-<section class="band indic" id="indicadores">
+<section class="band indic pulso-only" id="indicadores">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow" data-i18n="nav.ind">Indicadores</p>
-      <h2 data-i18n="ind.h2">El pulso de la economía, <em>al día.</em></h2>
+      <p class="eyebrow" data-i18n="nav.pulse">Pulso económico</p>
+      <h1 class="pulse-h" data-i18n="ind.h2">El pulso de la economía, <em>al día.</em></h1>
       <p class="status" id="status" data-live="0"><span class="dot"></span><span id="status-text">—</span></p>
     </div>
     <div class="kpis" id="kpis"></div>
@@ -513,7 +553,7 @@
   </div>
 </section>
 
-<section class="band alt" id="noticias">
+<section class="band alt pulso-only" id="noticias">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-i18n="nav.news">Noticias</p>
@@ -521,13 +561,14 @@
       <p class="lead" id="news-date"></p>
     </div>
     <div class="news" id="news"></div>
+    <p class="back"><a class="btn" href="./#contacto" data-i18n="hero.btn1">Pide tu diagnóstico inicial</a></p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 MetisOps · Santiago, Chile · <a class="foot-li" href="https://www.linkedin.com/company/metisops" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
-    <span data-i18n="f.tag">Consultoría en operaciones industriales, logística y gestión</span>
+    <span>© 2026 MetisOps · Santiago, Chile · <a class="foot-li" href="https://www.linkedin.com/company/metisops" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a class="foot-li" href="pulso.html" data-i18n="nav.pulse">Pulso económico</a></span>
+    <span data-i18n="f.tag">Logística, evaluación de proyectos y plantas industriales</span>
   </div>
 </footer>
 
@@ -606,140 +647,86 @@
 
   var T = {
     en: {
-      'hero.post': 'Read this week’s LinkedIn post →',
-      'hero.q': 'When did anyone last review the price-adjustment formula in your transport contracts?',
+      'mm.s.t': 'Three lines of work, one focus: your margin.', 'mm.s.c': 'Request your initial assessment →',
+      'mm.a.t': 'Management experience applied to your operation.', 'mm.a.1': 'Founder', 'mm.a.1p': 'Gerald Ulloa Retamal, industrial engineer and MBA.',
+      'mm.a.2': 'Experience', 'mm.a.2p': 'Production, costs, logistics and projects.', 'mm.a.3': 'How we start', 'mm.a.3p': 'An initial assessment, at no cost or obligation.',
+      'mm.p.t': 'The data that moves operations in Chile, updated every day.', 'mm.p.1': 'Indicators', 'mm.p.1p': 'Dollar, UF, UTM, CPI, copper, oil and currencies.',
+      'mm.p.2': 'News', 'mm.p.2p': 'Economy, mining, logistics and energy.', 'mm.p.3': 'Insights', 'mm.p.3p': 'Our weekly analysis on LinkedIn.',
+      'nav.services': 'Services', 'nav.about': 'About us', 'nav.pulse': 'Economic pulse', 'nav.contact': 'Contact',
+      'nav.express': 'Initial assessment', 'nav.menu': 'Open menu', 'nav.news': 'News',
       'hero.qe': 'Question of the week',
-      'res.4k': 'Projects',
-      'res.3k': 'Logistics',
-      'res.2k': 'Manufacturing',
-      'res.1k': 'Production',
-      'nav.founder': 'Who is behind it', 'nav.results': 'Results',
-      'fo.e': 'Who is behind it', 'fo.h2': 'Gerald Ulloa Retamal, <em>founder.</em>',
-      'fo.p1': 'An executive with more than 13 years of experience managing industrial plants in the chemical and manufacturing industries, in charge of implementation, construction, installation and start-up projects, and leading the logistics management of a supplier to large-scale mining.',
-      'fo.t1': 'Logistics Manager and Plant Manager at a chemical supplier to large-scale mining. Transport contracts above USD 6 million a year and the start-up of a plant in Antofagasta.',
-      'fo.t2': 'Plant Superintendent at Grupo Lamosa – Adhesivos Crest: three production lines and 52 people.',
-      'fo.t3': 'Plant Manager at Isogama Industria Química, part of a group with operations in Brazil.',
-      'fo.p2': 'Industrial engineer with an MBA, with experience in Chile and in multinational groups from Brazil and Mexico. He personally leads every MetisOps assessment and project.',
-      'res.h2': 'Experience that turns <em>into results.</em>',
-      'res.1h': 'More output in under a year', 'res.1p': 'By organizing the plant, its team and its production lines.',
-      'res.2h': 'Lower costs and better margins', 'res.2p': 'With lower energy and input consumption.',
-      'res.3h': 'More efficient transport', 'res.3p': 'Better-designed routes, fleets and transport contracts.',
-      'res.4h': 'Plants up and running', 'res.4p': 'From construction and installation to start-up.',
-      'res.note': 'Results achieved by the founder in previous roles. We are happy to go through the details in a meeting.',
-      'c.send': 'Write an email', 'c.sig': 'founder of MetisOps',
-      'nav.about': 'About us', 'nav.who': 'Who we are', 'nav.mv': 'Mission and vision', 'nav.how': 'Who we serve and how we work',
-      'nav.services': 'Services', 'nav.express': 'Initial assessment', 'nav.all': 'All services', 'nav.ind': 'Indicators', 'nav.news': 'News',
-      'nav.contact': 'Contact', 'nav.more': 'More', 'nav.menu': 'Open menu',
-      'hero.eyebrow': 'Industrial operations · Logistics · Management',
-      'hero.h1': 'Run well from day one, <em>with field experience and today’s tools.</em>',
-      'hero.lead': 'We help industrial companies and investors arriving in Chile design, start up and organize their operations. We combine more than 13 years managing teams, plants, logistics and projects with data analysis and artificial intelligence, for clear costs and contracts that work.',
+      'hero.q': 'When did anyone last review the price-adjustment formula in your transport contracts?',
+      'hero.post': 'Read this week’s LinkedIn post →',
+      'hero.tag': 'We cut costs and risks in <em>logistics, projects and industrial plants.</em>',
+      'hero.lead': 'More than 13 years managing operations, applied to your company’s real problems.',
       'hero.btn1': 'Request your initial assessment', 'hero.btn2': 'See services',
-      'about.h2': 'Practical wisdom <em>applied to operations.</em>',
-      'about.p1': '<strong>MetisOps is a Chilean consultancy in industrial operations, logistics and management.</strong> It grew out of more than 13 years managing teams, plants, warehouses, transport and industrial projects, with experience in Chile, Mexico and Brazil.',
-      'about.p2': 'In Greek mythology, Metis is the goddess of practical wisdom: the intelligence that finds the way out of a real problem. Ops is operations, where that intelligence is tested every day.',
-      'about.p3': 'That is why we work on each client’s real documents, data and processes, and leave behind tools the team keeps using after we finish.',
-      'about.metis': 'μῆτις · métis: cunning, counsel, practical intelligence',
-      'mv.m': 'Mission', 'mv.mt': 'To help industrial companies and investors run well from day one, with data-driven decisions, contracts that work and teams that sustain the results.',
-      'mv.v': 'Vision', 'mv.vt': 'To be the reference operations partner for industry in Chile and for companies connecting Chile and Brazil, known for measurable results and tools that stay in place.',
-      'rev.h2': 'A first look at your operation, <em>at no cost.</em>', 'rev.lead': 'Before proposing a project, we show you what we see in your own operation.',
-      'rev.s1h': 'You send us a real document', 'rev.s1p': 'A transport contract, a rate sheet, a warehouse layout or a production report. Send it by email or WhatsApp; if you need one, we sign a confidentiality agreement first.',
-      'rev.s2h': 'We review it within a few days', 'rev.s2p': 'We read it as an operations manager would: costs, clauses, indicators and risks.',
-      'rev.s3h': 'You get a short report', 'rev.s3p': 'With the main opportunities, their estimated impact and what to do. No obligation to hire anything afterwards.',
-      'srv.h2': 'Where operating margin <em>is won or lost.</em>',
-      'srv.1h': 'Total cost of fleet ownership', 'srv.1p': 'What each kilometre really costs and when to renew, outsource or switch technology.',
-      'srv.2h': 'Freight rates and price-adjustment formulas', 'srv.2p': 'Freight adjustment formulas that reflect real cost and protect both parties.',
-      'srv.3h': 'Tendering and contract management', 'srv.3p': 'Tender documents, KPIs, monthly invoice reconciliation and contract governance during execution.',
-      'srv.4h': 'Plant and warehouse start-up', 'srv.4p': 'Preparing the operation before start-up to reach design capacity sooner.',
-      'srv.5h': 'Operational excellence', 'srv.5p': 'Measuring the capacity you already have, attacking losses and leaving routines that last.',
-      'srv.6h': 'Fractional logistics management', 'srv.6p': 'An experienced logistics manager, a few days a month, without the cost of a full-time hire.',
-      'srv.7h': 'Organizational design', 'srv.7p': 'Clear roles, staffing and owners so the operation does not depend on a single person.',
-      'srv.8h': 'KPIs and AI-powered reporting', 'srv.8p': 'Dashboards with the data used to decide, and reports that build themselves.',
-      'who.e': 'Who we serve', 'who.h2': 'Companies that need senior experience, <em>not overhead.</em>',
-      'who.1s': 'Industrial and logistics companies', 'who.1p': 'Of any size, in chemicals, mining, manufacturing, food and transport, that want to cut costs or put their operation in order.',
-      'who.2s': 'New projects', 'who.2p': 'Plants or warehouses that must tender their construction and get ready to operate.',
-      'who.3s': 'Investors arriving in Chile', 'who.3p': 'Foreign companies, starting with Brazilian ones, that need to operate in Chile from day one.',
-      'how.e': 'How we work', 'how.h2': 'Four commitments <em>to every client.</em>',
-      'how.1s': 'Management and field experience', 'how.1p': 'More than 13 years managing teams, plants, logistics operations, contracts and industrial projects.',
-      'how.2s': 'Results before you hire', 'how.2p': 'The initial assessment is the first deliverable, at no cost.',
-      'how.3s': 'Fixed price', 'how.3p': 'Scope, timeline and price agreed from the start, with no surprise extra hours.',
-      'how.4s': 'A tool that stays', 'how.4p': 'Every deliverable includes a model, dashboard or procedure your team keeps using.',
-      'how.price': 'Fixed-price projects <b>from UF 40</b>.',
+      'tick.more': 'Economic pulse →',
+      'srv.h2': 'Three lines of work, <em>one focus: your margin.</em>',
+      'l1.h': 'Logistics, transport and contracts', 'l1.p': 'Freight, rates and contracts that reflect real cost.',
+      'l1.a': 'Review of rates and price-adjustment formulas', 'l1.b': 'Total cost of fleet ownership', 'l1.c': 'Contract tendering and control',
+      'l2.h': 'Project evaluation', 'l2.p': 'Decide with numbers before you invest or award.',
+      'l2.a': 'Economic evaluation and re-evaluation', 'l2.b': 'Quotes and bid comparison', 'l2.c': 'Support for the award decision',
+      'l3.h': 'Plants and start-up', 'l3.p': 'Start up sooner and run with fewer losses.',
+      'l3.a': 'Start-up readiness', 'l3.b': 'Productivity and loss reduction', 'l3.c': 'Operations management, a few days a month',
+      'srv.note': 'In all three we use data analysis and AI so that KPIs and reports build themselves. Fixed price, <b>from UF 40</b>.',
+      'fo.h2': 'Gerald Ulloa Retamal, <em>founder.</em>',
+      'fo.p1': 'More than 13 years managing chemical and manufacturing plants, construction and start-up projects, and the logistics of a supplier to large-scale mining.',
+      'fo.p2': 'Industrial engineer with an MBA. He personally leads every assessment and project.',
+      'res.1k': 'Production', 'res.1h': 'More output in under a year',
+      'res.2k': 'Costs', 'res.2h': 'Less energy and inputs per unit',
+      'res.3k': 'Logistics', 'res.3h': 'More efficient routes, fleets and contracts',
+      'res.4k': 'Projects', 'res.4h': 'Plants built and started up',
+      'about.metis': 'Metis: Greek for practical wisdom. Ops: operations, where it is put to the test.',
+      'c.h2': 'Start with an assessment, <em>at no cost.</em>',
+      'st.1': 'You send us a contract, a rate sheet, a project or a report. If you need one, we sign a confidentiality agreement first.',
+      'st.2': 'We review it within a few days, as an operations manager would.',
+      'st.3': 'You get a short report with the opportunities and what to do. No obligation.',
+      'c.write': 'Write to us at', 'c.send': 'Write an email', 'c.copy': 'Copy email', 'c.sig': 'founder of MetisOps',
       'ind.h2': 'The pulse of the economy, <em>up to date.</em>', 'ind.com': 'Commodities', 'ind.prod': 'Product', 'ind.date': 'Date', 'ind.price': 'Price',
-      
       'ind.fx': 'Main currencies', 'ind.cur': 'Currency', 'ind.code': 'Code', 'ind.pesos': 'Chilean pesos',
       'news.h2': 'What moves <em>operations in Chile.</em>',
-      'c.h2': 'Send us a real document <em>and we’ll show you where to improve.</em>',
-      'c.lead': 'A contract, a rate sheet, a layout or a report. We treat it in full confidence and reply within the week.',
-      'c.write': 'Write to us at', 'c.copy': 'Copy email', 'c.li': 'You can also find us on LinkedIn as MetisOps.',
-      'f.tag': 'Consultancy in industrial operations, logistics and management'
+      'f.tag': 'Logistics, project evaluation and industrial plants'
     },
     pt: {
-      'hero.post': 'Leia a publicação desta semana no LinkedIn →',
-      'hero.q': 'Quando foi a última vez que alguém revisou a fórmula de reajuste dos seus contratos de transporte?',
+      'mm.s.t': 'Três linhas de trabalho, um só foco: a margem.', 'mm.s.c': 'Peça seu diagnóstico inicial →',
+      'mm.a.t': 'Experiência de gerência aplicada à sua operação.', 'mm.a.1': 'Fundador', 'mm.a.1p': 'Gerald Ulloa Retamal, Engenheiro Civil Industrial e MBA.',
+      'mm.a.2': 'Experiência', 'mm.a.2p': 'Produção, custos, logística e projetos.', 'mm.a.3': 'Como começamos', 'mm.a.3p': 'Um diagnóstico inicial, sem custo nem compromisso.',
+      'mm.p.t': 'Os dados que movem a operação no Chile, atualizados todos os dias.', 'mm.p.1': 'Indicadores', 'mm.p.1p': 'Dólar, UF, UTM, IPC, cobre, petróleo e moedas.',
+      'mm.p.2': 'Notícias', 'mm.p.2p': 'Economia, mineração, logística e energia.', 'mm.p.3': 'Publicações', 'mm.p.3p': 'Nossas análises semanais no LinkedIn.',
+      'nav.services': 'Serviços', 'nav.about': 'Quem somos', 'nav.pulse': 'Pulso econômico', 'nav.contact': 'Contato',
+      'nav.express': 'Diagnóstico inicial', 'nav.menu': 'Abrir menu', 'nav.news': 'Notícias',
       'hero.qe': 'Pergunta da semana',
-      'res.4k': 'Projetos',
-      'res.3k': 'Logística',
-      'res.2k': 'Fabricação',
-      'res.1k': 'Produção',
-      'nav.founder': 'Quem está por trás', 'nav.results': 'Resultados',
-      'fo.e': 'Quem está por trás', 'fo.h2': 'Gerald Ulloa Retamal, <em>fundador.</em>',
-      'fo.p1': 'Executivo com mais de 13 anos de experiência gerenciando plantas industriais nas indústrias química e de manufatura, à frente de projetos de implantação, construção, montagem e partida, e liderando a gerência de logística de uma empresa fornecedora da grande mineração.',
-      'fo.t1': 'Gerente de Logística e Gerente de Planta em uma empresa química fornecedora da grande mineração. Contratos de transporte acima de USD 6 milhões por ano e a partida de uma planta em Antofagasta.',
-      'fo.t2': 'Superintendente de Planta no Grupo Lamosa – Adhesivos Crest: três linhas de produção e 52 pessoas.',
-      'fo.t3': 'Gerente de Planta na Isogama Industria Química, parte de um grupo com operações no Brasil.',
-      'fo.p2': 'Engenheiro Civil Industrial e MBA, com experiência no Chile e em grupos multinacionais do Brasil e do México. Ele lidera pessoalmente cada diagnóstico e cada projeto da MetisOps.',
-      'res.h2': 'Experiência que se traduz <em>em resultados.</em>',
-      'res.1h': 'Mais volume em menos de um ano', 'res.1p': 'Organizando a planta, sua equipe e suas linhas produtivas.',
-      'res.2h': 'Custos menores e margens melhores', 'res.2p': 'Com menor consumo de energia e insumos.',
-      'res.3h': 'Transporte mais eficiente', 'res.3p': 'Rotas, frotas e contratos de transporte mais bem desenhados.',
-      'res.4h': 'Plantas em operação', 'res.4p': 'Da construção e montagem até a partida.',
-      'res.note': 'Resultados obtidos pelo fundador em cargos anteriores. Os detalhes conversamos em uma reunião.',
-      'c.send': 'Escrever um e-mail', 'c.sig': 'fundador da MetisOps',
-      'nav.about': 'Sobre nós', 'nav.who': 'Quem somos', 'nav.mv': 'Missão e visão', 'nav.how': 'Para quem e como trabalhamos',
-      'nav.services': 'Serviços', 'nav.express': 'Diagnóstico inicial', 'nav.all': 'Todos os serviços', 'nav.ind': 'Indicadores', 'nav.news': 'Notícias',
-      'nav.contact': 'Contato', 'nav.more': 'Mais', 'nav.menu': 'Abrir menu',
-      'hero.eyebrow': 'Operações industriais · Logística · Gestão',
-      'hero.h1': 'Operar bem desde o primeiro dia, <em>com experiência de campo e ferramentas de hoje.</em>',
-      'hero.lead': 'Apoiamos empresas industriais e investidores que chegam ao Chile a projetar, colocar em marcha e organizar sua operação. Unimos mais de 13 anos gerenciando equipes, plantas, logística e projetos com análise de dados e inteligência artificial, para chegar a custos claros e contratos que funcionam.',
+      'hero.q': 'Quando foi a última vez que alguém revisou a fórmula de reajuste dos seus contratos de transporte?',
+      'hero.post': 'Leia a publicação desta semana no LinkedIn →',
+      'hero.tag': 'Reduzimos custos e riscos em <em>logística, projetos e plantas industriais.</em>',
+      'hero.lead': 'Mais de 13 anos gerenciando operações, aplicados aos problemas reais da sua empresa.',
       'hero.btn1': 'Peça seu diagnóstico inicial', 'hero.btn2': 'Ver serviços',
-      'about.h2': 'Sabedoria prática <em>aplicada à operação.</em>',
-      'about.p1': '<strong>A MetisOps é uma consultoria chilena em operações industriais, logística e gestão.</strong> Nasce de mais de 13 anos gerenciando equipes, plantas, armazéns, transporte e projetos industriais, com experiência no Chile, no México e no Brasil.',
-      'about.p2': 'Na mitologia grega, Métis é a deusa da sabedoria prática: a inteligência que encontra a saída para um problema real. Ops é a operação, o lugar onde essa inteligência é posta à prova todos os dias.',
-      'about.p3': 'Por isso trabalhamos com documentos, dados e processos reais de cada cliente, e deixamos ferramentas que a equipe continua usando quando terminamos.',
-      'about.metis': 'μῆτις · métis: astúcia, conselho, inteligência prática',
-      'mv.m': 'Missão', 'mv.mt': 'Ajudar empresas industriais e investidores a operar bem desde o primeiro dia, com decisões baseadas em dados, contratos que funcionam e equipes que sustentam os resultados.',
-      'mv.v': 'Visão', 'mv.vt': 'Ser o parceiro de operações de referência para a indústria no Chile e para as empresas que conectam o Chile e o Brasil, reconhecido por resultados mensuráveis e ferramentas que ficam instaladas.',
-      'rev.h2': 'Um primeiro olhar sobre sua operação, <em>sem custo.</em>', 'rev.lead': 'Antes de propor um projeto, mostramos o que vemos na sua própria operação.',
-      'rev.s1h': 'Você nos envia um documento real', 'rev.s1p': 'Um contrato de transporte, uma tabela de fretes, um layout de armazém ou um relatório de produção. Envie por e-mail ou WhatsApp; se precisar, assinamos antes um acordo de confidencialidade.',
-      'rev.s2h': 'Analisamos em poucos dias', 'rev.s2p': 'Lemos com olhos de gerente de operações: custos, cláusulas, indicadores e riscos.',
-      'rev.s3h': 'Você recebe um relatório breve', 'rev.s3p': 'Com as principais oportunidades, seu impacto estimado e o que fazer. Sem compromisso de contratar nada depois.',
-      'srv.h2': 'Onde a margem operacional <em>é ganha ou perdida.</em>',
-      'srv.1h': 'Custo total de frotas', 'srv.1p': 'Quanto custa de verdade cada quilômetro e quando convém renovar, terceirizar ou mudar de tecnologia.',
-      'srv.2h': 'Fretes e fórmulas de reajuste', 'srv.2p': 'Fórmulas de reajuste de fretes que refletem o custo real e protegem as duas partes.',
-      'srv.3h': 'Licitação e gestão de contratos', 'srv.3p': 'Editais, KPIs, conciliação mensal de faturas e governança do contrato durante a execução.',
-      'srv.4h': 'Partida de plantas e armazéns', 'srv.4p': 'Preparar a operação antes da partida para chegar antes à capacidade de projeto.',
-      'srv.5h': 'Excelência operacional', 'srv.5p': 'Medir a capacidade que já existe, atacar as perdas e deixar rotinas que se sustentam.',
-      'srv.6h': 'Gerência logística fracionada', 'srv.6p': 'Um gerente de logística experiente, alguns dias por mês, sem o custo de uma contratação integral.',
-      'srv.7h': 'Desenho organizacional', 'srv.7p': 'Papéis, quadros e responsáveis claros para que a operação não dependa de uma só pessoa.',
-      'srv.8h': 'Indicadores e relatórios com IA', 'srv.8p': 'Painéis com os dados usados para decidir e relatórios que se montam sozinhos.',
-      'who.e': 'Para quem', 'who.h2': 'Empresas que precisam de experiência sênior, <em>não de estrutura.</em>',
-      'who.1s': 'Empresas industriais e logísticas', 'who.1p': 'De qualquer porte, em química, mineração, manufatura, alimentos e transporte, que querem reduzir custos ou organizar sua operação.',
-      'who.2s': 'Projetos novos', 'who.2p': 'Plantas ou armazéns que precisam licitar a construção e se preparar para operar.',
-      'who.3s': 'Investidores que chegam ao Chile', 'who.3p': 'Empresas estrangeiras, começando pelas brasileiras, que precisam operar no Chile desde o primeiro dia.',
-      'how.e': 'Como trabalhamos', 'how.h2': 'Quatro compromissos <em>com cada cliente.</em>',
-      'how.1s': 'Experiência gerencial e de campo', 'how.1p': 'Mais de 13 anos gerenciando equipes, plantas, operações logísticas, contratos e projetos industriais.',
-      'how.2s': 'Resultados antes de contratar', 'how.2p': 'O diagnóstico inicial é a primeira entrega, sem custo.',
-      'how.3s': 'Preço fixo', 'how.3p': 'Escopo, prazo e preço fechados desde o início, sem horas extras surpresa.',
-      'how.4s': 'Uma ferramenta que fica', 'how.4p': 'Cada entrega inclui um modelo, painel ou procedimento que sua equipe continua usando.',
-      'how.price': 'Projetos a preço fixo <b>a partir de UF 40</b>.',
+      'tick.more': 'Pulso econômico →',
+      'srv.h2': 'Três linhas de trabalho, <em>um só foco: a margem.</em>',
+      'l1.h': 'Logística, transporte e contratos', 'l1.p': 'Fretes, tarifas e contratos que refletem o custo real.',
+      'l1.a': 'Revisão de tarifas e fórmulas de reajuste', 'l1.b': 'Custo total de frotas', 'l1.c': 'Licitação e controle de contratos',
+      'l2.h': 'Avaliação de projetos', 'l2.p': 'Decidir com números antes de investir ou adjudicar.',
+      'l2.a': 'Avaliação e reavaliação econômica', 'l2.b': 'Cotação e comparação de propostas', 'l2.c': 'Apoio à adjudicação',
+      'l3.h': 'Plantas e partida', 'l3.p': 'Partir antes e operar com menos perdas.',
+      'l3.a': 'Preparação da partida', 'l3.b': 'Produtividade e redução de perdas', 'l3.c': 'Gerência de operações por dias ao mês',
+      'srv.note': 'Nas três usamos análise de dados e IA para que indicadores e relatórios se montem sozinhos. Preço fixo, <b>a partir de UF 40</b>.',
+      'fo.h2': 'Gerald Ulloa Retamal, <em>fundador.</em>',
+      'fo.p1': 'Mais de 13 anos gerenciando plantas químicas e de manufatura, projetos de construção e partida, e a logística de uma empresa fornecedora da grande mineração.',
+      'fo.p2': 'Engenheiro Civil Industrial e MBA. Lidera pessoalmente cada diagnóstico e cada projeto.',
+      'res.1k': 'Produção', 'res.1h': 'Mais volume em menos de um ano',
+      'res.2k': 'Custos', 'res.2h': 'Menos energia e insumos por unidade',
+      'res.3k': 'Logística', 'res.3h': 'Rotas, frotas e contratos mais eficientes',
+      'res.4k': 'Projetos', 'res.4h': 'Plantas construídas e em operação',
+      'about.metis': 'Métis: em grego, a sabedoria prática. Ops: a operação, onde ela é posta à prova.',
+      'c.h2': 'Comece com um diagnóstico, <em>sem custo.</em>',
+      'st.1': 'Você nos envia um contrato, uma tabela de fretes, um projeto ou um relatório. Se precisar, assinamos antes um acordo de confidencialidade.',
+      'st.2': 'Analisamos em poucos dias, com olhos de gerente de operações.',
+      'st.3': 'Você recebe um relatório breve com as oportunidades e o que fazer. Sem compromisso.',
+      'c.write': 'Escreva para', 'c.send': 'Escrever um e-mail', 'c.copy': 'Copiar e-mail', 'c.sig': 'fundador da MetisOps',
       'ind.h2': 'O pulso da economia, <em>em dia.</em>', 'ind.com': 'Commodities', 'ind.prod': 'Produto', 'ind.date': 'Data', 'ind.price': 'Preço',
-      
       'ind.fx': 'Principais moedas', 'ind.cur': 'Moeda', 'ind.code': 'Código', 'ind.pesos': 'Pesos chilenos',
       'news.h2': 'O que move <em>a operação no Chile.</em>',
-      'c.h2': 'Envie-nos um documento real <em>e mostramos onde melhorar.</em>',
-      'c.lead': 'Um contrato, uma tabela de fretes, um layout ou um relatório. Tratamos com total confidencialidade e respondemos dentro da semana.',
-      'c.write': 'Escreva para', 'c.copy': 'Copiar e-mail', 'c.li': 'Também estamos no LinkedIn como MetisOps.',
-      'f.tag': 'Consultoria em operações industriais, logística e gestão'
+      'f.tag': 'Logística, avaliação de projetos e plantas industriais'
     }
   };
   var UI = {
@@ -842,7 +829,7 @@
     var a = document.getElementById('hero-post');
     if (a) {
       var u = String(SEMANA.post_url || '');
-      if (/^https:\/\/(www\.)?linkedin\.com\//.test(u)) { a.href = u; a.hidden = false; } else { a.hidden = true; }
+      if (/^https:\/\/(www\.)?linkedin\.com\//.test(u)) { a.href = u; a.hidden = false; var mp = document.getElementById('mm-post'); if (mp) mp.href = u; } else { a.hidden = true; }
     }
   }
 
@@ -928,6 +915,32 @@
   });
   document.addEventListener('click', function (e) { if (!e.target.closest('details.dd, details.burger')) closeAll(null); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(null); });
+
+
+  // Encabezado: transparente sobre la foto; sólido al bajar, al pasar el mouse o con un menú abierto.
+  var nav = document.querySelector('.nav');
+  var isPulso = document.documentElement.getAttribute('data-page') === 'pulso';
+  var mms = Array.prototype.slice.call(document.querySelectorAll('.mm'));
+  function anyOpen() { return mms.some(function (m) { return m.classList.contains('open'); }); }
+  function updNav() { nav.classList.toggle('solid', isPulso || window.scrollY > 40 || nav.matches(':hover') || anyOpen() || !!nav.querySelector('details.burger[open]')); }
+  function setOpen(m, on) { m.classList.toggle('open', on); var b = m.querySelector('.mm-btn'); if (b) b.setAttribute('aria-expanded', on ? 'true' : 'false'); }
+  function closeMm() { mms.forEach(function (m) { setOpen(m, false); }); updNav(); }
+  var hoverable = window.matchMedia('(hover: hover)').matches;
+  mms.forEach(function (m) {
+    if (hoverable) {
+      m.addEventListener('mouseenter', function () { mms.forEach(function (x) { setOpen(x, x === m); }); updNav(); });
+      m.addEventListener('mouseleave', function () { setOpen(m, false); updNav(); });
+    }
+    m.querySelector('.mm-btn').addEventListener('click', function () { var on = !m.classList.contains('open'); mms.forEach(function (x) { setOpen(x, false); }); setOpen(m, on); updNav(); });
+    m.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMm); });
+  });
+  nav.addEventListener('mouseenter', updNav);
+  nav.addEventListener('mouseleave', function () { closeMm(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMm(); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.mm')) { if (anyOpen()) closeMm(); } });
+  window.addEventListener('scroll', updNav, { passive: true });
+  var bg = document.querySelector('details.burger'); if (bg) bg.addEventListener('toggle', updNav);
+  updNav();
 
   // Indicadores en vivo desde mindicador.cl (Banco Central, INE, SII).
   var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
