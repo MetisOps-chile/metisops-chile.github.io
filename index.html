@@ -230,6 +230,7 @@
   /* Results */
   .results { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0; border-top: 1px solid var(--fg); }
   .result { padding: 26px 24px 26px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .result-k { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; color: var(--accent); }
   .result-n { font-family: var(--serif); font-size: clamp(40px, 5vw, 56px); line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
   .result h3 { font-size: 20px; }
   .result p { color: var(--muted); font-size: 15px; }
@@ -411,15 +412,15 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-i18n="nav.results">Resultados</p>
-      <h2 data-i18n="res.h2">Resultados medibles, <em>en operaciones reales.</em></h2>
+      <h2 data-i18n="res.h2">Experiencia que se traduce <em>en resultados.</em></h2>
     </div>
     <div class="results">
-      <div class="result"><span class="result-n">+300%</span><h3 data-i18n="res.1h">Volumen de producción en 10 meses</h3><p data-i18n="res.1p">En una planta de manufactura.</p></div>
-      <div class="result"><span class="result-n">−15%</span><h3 data-i18n="res.2h">Costo de fabricación</h3><p data-i18n="res.2p">En una planta química, con el mejor EBITDA operativo del grupo.</p></div>
-      <div class="result"><span class="result-n">−15%</span><h3 data-i18n="res.3h">Costo de transporte</h3><p data-i18n="res.3p">En la logística de productos químicos para la gran minería.</p></div>
-      <div class="result"><span class="result-n">13 MM</span><h3 data-i18n="res.4h">Dólares en plantas montadas y puestas en marcha</h3><p data-i18n="res.4p">En proyectos de construcción, montaje y puesta en marcha.</p></div>
+      <div class="result"><span class="result-k" data-i18n="res.1k">Producción</span><h3 data-i18n="res.1h">Más volumen en menos de un año</h3><p data-i18n="res.1p">Ordenando la planta, su equipo y sus líneas productivas.</p></div>
+      <div class="result"><span class="result-k" data-i18n="res.2k">Fabricación</span><h3 data-i18n="res.2h">Costos más bajos y mejores márgenes</h3><p data-i18n="res.2p">Con menor consumo de energía e insumos.</p></div>
+      <div class="result"><span class="result-k" data-i18n="res.3k">Logística</span><h3 data-i18n="res.3h">Transporte más eficiente</h3><p data-i18n="res.3p">Rutas, flotas y contratos de transporte mejor diseñados.</p></div>
+      <div class="result"><span class="result-k" data-i18n="res.4k">Proyectos</span><h3 data-i18n="res.4h">Plantas en operación</h3><p data-i18n="res.4p">Desde la construcción y el montaje hasta la puesta en marcha.</p></div>
     </div>
-    <p class="results-note" data-i18n="res.note">Resultados obtenidos por el fundador en sus cargos anteriores. Se omiten los nombres de los clientes.</p>
+    <p class="results-note" data-i18n="res.note">Resultados obtenidos por el fundador en cargos anteriores. El detalle lo conversamos en una reunión.</p>
   </div>
 </section>
 
@@ -597,6 +598,10 @@
 
   var T = {
     en: {
+      'res.4k': 'Projects',
+      'res.3k': 'Logistics',
+      'res.2k': 'Manufacturing',
+      'res.1k': 'Production',
       'nav.founder': 'Who is behind it', 'nav.results': 'Results',
       'fo.e': 'Who is behind it', 'fo.h2': 'Gerald Ulloa Retamal, <em>founder.</em>',
       'fo.p1': 'An executive with more than 13 years of experience managing industrial plants in the chemical and manufacturing industries, in charge of implementation, construction, installation and start-up projects, and leading the logistics management of a supplier to large-scale mining.',
@@ -604,12 +609,12 @@
       'fo.t2': 'Plant Superintendent at Grupo Lamosa – Adhesivos Crest: three production lines and 52 people.',
       'fo.t3': 'Plant Manager at Isogama Industria Química, part of a group with operations in Brazil.',
       'fo.p2': 'Industrial engineer with an MBA, with experience in Chile and in multinational groups from Brazil and Mexico. He personally leads every MetisOps assessment and project.',
-      'res.h2': 'Measurable results, <em>in real operations.</em>',
-      'res.1h': 'Production volume in 10 months', 'res.1p': 'At a manufacturing plant.',
-      'res.2h': 'Manufacturing cost', 'res.2p': 'At a chemical plant, with the group’s best operating EBITDA.',
-      'res.3h': 'Transport cost', 'res.3p': 'In chemical logistics for large-scale mining.',
-      'res.4h': 'US dollars in plants built and started up', 'res.4p': 'In construction, installation and start-up projects.',
-      'res.note': 'Results achieved by the founder in previous roles. Client names are omitted.',
+      'res.h2': 'Experience that turns <em>into results.</em>',
+      'res.1h': 'More output in under a year', 'res.1p': 'By organizing the plant, its team and its production lines.',
+      'res.2h': 'Lower costs and better margins', 'res.2p': 'With lower energy and input consumption.',
+      'res.3h': 'More efficient transport', 'res.3p': 'Better-designed routes, fleets and transport contracts.',
+      'res.4h': 'Plants up and running', 'res.4p': 'From construction and installation to start-up.',
+      'res.note': 'Results achieved by the founder in previous roles. We are happy to go through the details in a meeting.',
       'c.send': 'Write an email', 'c.sig': 'founder of MetisOps',
       'nav.about': 'About us', 'nav.who': 'Who we are', 'nav.mv': 'Mission and vision', 'nav.how': 'Who we serve and how we work',
       'nav.services': 'Services', 'nav.express': 'Initial assessment', 'nav.all': 'All services', 'nav.ind': 'Indicators', 'nav.news': 'News',
@@ -658,6 +663,10 @@
       'f.tag': 'Consultancy in industrial operations, logistics and management'
     },
     pt: {
+      'res.4k': 'Projetos',
+      'res.3k': 'Logística',
+      'res.2k': 'Fabricação',
+      'res.1k': 'Produção',
       'nav.founder': 'Quem está por trás', 'nav.results': 'Resultados',
       'fo.e': 'Quem está por trás', 'fo.h2': 'Gerald Ulloa Retamal, <em>fundador.</em>',
       'fo.p1': 'Executivo com mais de 13 anos de experiência gerenciando plantas industriais nas indústrias química e de manufatura, à frente de projetos de implantação, construção, montagem e partida, e liderando a gerência de logística de uma empresa fornecedora da grande mineração.',
@@ -665,12 +674,12 @@
       'fo.t2': 'Superintendente de Planta no Grupo Lamosa – Adhesivos Crest: três linhas de produção e 52 pessoas.',
       'fo.t3': 'Gerente de Planta na Isogama Industria Química, parte de um grupo com operações no Brasil.',
       'fo.p2': 'Engenheiro Civil Industrial e MBA, com experiência no Chile e em grupos multinacionais do Brasil e do México. Ele lidera pessoalmente cada diagnóstico e cada projeto da MetisOps.',
-      'res.h2': 'Resultados mensuráveis, <em>em operações reais.</em>',
-      'res.1h': 'Volume de produção em 10 meses', 'res.1p': 'Em uma planta de manufatura.',
-      'res.2h': 'Custo de fabricação', 'res.2p': 'Em uma planta química, com o melhor EBITDA operacional do grupo.',
-      'res.3h': 'Custo de transporte', 'res.3p': 'Na logística de produtos químicos para a grande mineração.',
-      'res.4h': 'Dólares em plantas montadas e colocadas em marcha', 'res.4p': 'Em projetos de construção, montagem e partida.',
-      'res.note': 'Resultados obtidos pelo fundador em cargos anteriores. Os nomes dos clientes são omitidos.',
+      'res.h2': 'Experiência que se traduz <em>em resultados.</em>',
+      'res.1h': 'Mais volume em menos de um ano', 'res.1p': 'Organizando a planta, sua equipe e suas linhas produtivas.',
+      'res.2h': 'Custos menores e margens melhores', 'res.2p': 'Com menor consumo de energia e insumos.',
+      'res.3h': 'Transporte mais eficiente', 'res.3p': 'Rotas, frotas e contratos de transporte mais bem desenhados.',
+      'res.4h': 'Plantas em operação', 'res.4p': 'Da construção e montagem até a partida.',
+      'res.note': 'Resultados obtidos pelo fundador em cargos anteriores. Os detalhes conversamos em uma reunião.',
       'c.send': 'Escrever um e-mail', 'c.sig': 'fundador da MetisOps',
       'nav.about': 'Sobre nós', 'nav.who': 'Quem somos', 'nav.mv': 'Missão e visão', 'nav.how': 'Para quem e como trabalhamos',
       'nav.services': 'Serviços', 'nav.express': 'Diagnóstico inicial', 'nav.all': 'Todos os serviços', 'nav.ind': 'Indicadores', 'nav.news': 'Notícias',
