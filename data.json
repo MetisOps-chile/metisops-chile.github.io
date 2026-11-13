@@ -275,5 +275,16 @@
       "pt": "Quando foi a última vez que alguém revisou a fórmula de reajuste dos seus contratos de transporte?"
     },
     "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7526660222606778368"
-  }
+  },
+  "publicaciones": [
+    {
+      "fecha": "2026-11-12",
+      "texto": {
+        "es": "¿Cuándo fue la última vez que alguien revisó la fórmula de reajuste de tus contratos de transporte?",
+        "en": "When did anyone last review the price-adjustment formula in your transport contracts?",
+        "pt": "Quando foi a última vez que alguém revisou a fórmula de reajuste dos seus contratos de transporte?"
+      },
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526660222606778368"
+    }
+  ]
 }

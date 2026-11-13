@@ -343,6 +343,17 @@
   html[data-page="pulso"] body { padding-top: 74px; }
   html, body { margin: 0; }
   .mm-link b { line-height: 1.25; }
+
+
+  /* Portada: publicaciones que rotan */
+  .hero-slide { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; transition: opacity .45s ease; }
+  .hero-slide.fade { opacity: 0; }
+  .hero-dots { display: flex; gap: 8px; margin-top: -6px; }
+  .hero-dots button { appearance: none; border: 0; padding: 10px 0; width: 34px; background: none; cursor: pointer; }
+  .hero-dots button::before { content: ""; display: block; height: 3px; background: rgba(250,248,244,.4); transition: background .2s ease; }
+  .hero-dots button[aria-current="true"]::before { background: var(--oxido-claro); }
+  .hero-dots button:focus-visible { outline: 2px solid #FAF8F4; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { .hero-slide { transition: none; } }
 </style>
 </head>
 <body>
@@ -417,9 +428,12 @@
     <img src="hero-santiago-torre-1600.jpg" srcset="hero-santiago-torre-960.jpg 960w, hero-santiago-torre-1600.jpg 1600w, hero-santiago-torre-2400.jpg 2400w" sizes="100vw" alt="Santiago de Chile: Gran Torre Santiago y la cordillera de los Andes nevada" fetchpriority="high">
   </picture>
   <div class="wrap hero-in">
-    <p class="eyebrow" data-i18n="hero.qe">Pregunta de la semana</p>
-    <h1 id="hero-q" data-i18n="hero.q">¿Cuándo fue la última vez que alguien revisó la fórmula de reajuste de tus contratos de transporte?</h1>
-    <a class="hero-post" id="hero-post" href="#" target="_blank" rel="noopener noreferrer" data-i18n="hero.post" hidden>Lee la publicación de esta semana en LinkedIn →</a>
+    <div class="hero-slide" id="hero-slide" aria-live="polite">
+      <p class="eyebrow" id="hero-eye" data-i18n="hero.qe">Pregunta de la semana</p>
+      <h1 id="hero-q" data-i18n="hero.q">¿Cuándo fue la última vez que alguien revisó la fórmula de reajuste de tus contratos de transporte?</h1>
+      <a class="hero-post" id="hero-post" href="#" target="_blank" rel="noopener noreferrer" data-i18n="hero.post" hidden>Lee la publicación de esta semana en LinkedIn →</a>
+    </div>
+    <div class="hero-dots" id="hero-dots" role="group" aria-label="Publicaciones" hidden></div>
     <p class="hero-tag" data-i18n="hero.tag">Reducimos costos y riesgos en <em>logística, proyectos y plantas industriales.</em></p>
     <p class="hero-lead" data-i18n="hero.lead">Más de 13 años gerenciando operaciones, aplicados a los problemas reales de tu empresa.</p>
     <div class="hero-actions">
@@ -730,9 +744,9 @@
     }
   };
   var UI = {
-    es: { subject: 'Diagnóstico inicial', watext: 'Hola, vengo del sitio de MetisOps y me interesa el diagnóstico inicial.', src: 'Fuentes', live: 'En vivo · Banco Central, INE y SII vía mindicador.cl', off: 'Valores al {d} · la fuente en vivo no respondió', fx: 'Tipo de cambio de referencia (ExchangeRate-API) al {d}.', news: 'Selección actualizada al {d}.', pending: 'Correo por confirmar', copied: 'Correo copiado' },
-    en: { subject: 'Initial assessment', watext: 'Hello, I found MetisOps online and I am interested in the initial assessment.', src: 'Sources', live: 'Live · Central Bank of Chile, INE and SII via mindicador.cl', off: 'Values as of {d} · the live source did not respond', fx: 'Reference exchange rate (ExchangeRate-API) as of {d}.', news: 'Selection updated {d}.', pending: 'Email to be confirmed', copied: 'Email copied' },
-    pt: { subject: 'Diagnóstico inicial', watext: 'Olá, vi o site da MetisOps e tenho interesse no diagnóstico inicial.', src: 'Fontes', live: 'Ao vivo · Banco Central do Chile, INE e SII via mindicador.cl', off: 'Valores de {d} · a fonte ao vivo não respondeu', fx: 'Taxa de câmbio de referência (ExchangeRate-API) em {d}.', news: 'Seleção atualizada em {d}.', pending: 'E-mail a confirmar', copied: 'E-mail copiado' }
+    es: { subject: 'Diagnóstico inicial', watext: 'Hola, vengo del sitio de MetisOps y me interesa el diagnóstico inicial.', src: 'Fuentes', live: 'En vivo · Banco Central, INE y SII vía mindicador.cl', off: 'Valores al {d} · la fuente en vivo no respondió', fx: 'Tipo de cambio de referencia (ExchangeRate-API) al {d}.', news: 'Selección actualizada al {d}.', pending: 'Correo por confirmar', copied: 'Correo copiado', wk: 'Pregunta de la semana', pub: 'Publicación · {d}', read: 'Leer en LinkedIn →', readwk: 'Lee la publicación de esta semana en LinkedIn →', dot: 'Publicación {n}' },
+    en: { subject: 'Initial assessment', watext: 'Hello, I found MetisOps online and I am interested in the initial assessment.', src: 'Sources', live: 'Live · Central Bank of Chile, INE and SII via mindicador.cl', off: 'Values as of {d} · the live source did not respond', fx: 'Reference exchange rate (ExchangeRate-API) as of {d}.', news: 'Selection updated {d}.', pending: 'Email to be confirmed', copied: 'Email copied', wk: 'Question of the week', pub: 'Post · {d}', read: 'Read on LinkedIn →', readwk: 'Read this week’s LinkedIn post →', dot: 'Post {n}' },
+    pt: { subject: 'Diagnóstico inicial', watext: 'Olá, vi o site da MetisOps e tenho interesse no diagnóstico inicial.', src: 'Fontes', live: 'Ao vivo · Banco Central do Chile, INE e SII via mindicador.cl', off: 'Valores de {d} · a fonte ao vivo não respondeu', fx: 'Taxa de câmbio de referência (ExchangeRate-API) em {d}.', news: 'Seleção atualizada em {d}.', pending: 'E-mail a confirmar', copied: 'E-mail copiado', wk: 'Pergunta da semana', pub: 'Publicação · {d}', read: 'Ler no LinkedIn →', readwk: 'Leia a publicação desta semana no LinkedIn →', dot: 'Publicação {n}' }
   };
   var LOCALE = { es: 'es-CL', en: 'en-US', pt: 'pt-BR' };
   var MONTHS = {
@@ -743,6 +757,8 @@
 
   var lang = 'es';
   var SEMANA = null;
+  var PUBS = [];
+  var heroIdx = 0, heroTimer = null, heroPaused = false;
   var liveData = {};
   var isLive = false;
 
@@ -822,16 +838,63 @@
     });
   }
 
-  function renderHero() {
-    if (!SEMANA) return;
-    var q = document.getElementById('hero-q');
-    if (q && SEMANA.pregunta && SEMANA.pregunta[lang]) q.textContent = SEMANA.pregunta[lang];
-    var a = document.getElementById('hero-post');
-    if (a) {
-      var u = String(SEMANA.post_url || '');
-      if (/^https:\/\/(www\.)?linkedin\.com\//.test(u)) { a.href = u; a.hidden = false; var mp = document.getElementById('mm-post'); if (mp) mp.href = u; } else { a.hidden = true; }
-    }
+  var LI_RE = /^https:\/\/(www\.)?linkedin\.com\//;
+  function heroItems() {
+    var list = PUBS.filter(function (p) { return p && p.texto && (p.texto[lang] || p.texto.es); }).slice(0, 4);
+    if (!list.length && SEMANA && SEMANA.pregunta) list = [{ fecha: SEMANA.desde, texto: SEMANA.pregunta, url: SEMANA.post_url }];
+    return list;
   }
+  function showHero(i, animate) {
+    var items = heroItems(); if (!items.length) return;
+    heroIdx = ((i % items.length) + items.length) % items.length;
+    var it = items[heroIdx];
+    var slide = document.getElementById('hero-slide');
+    function paint() {
+      var eye = document.getElementById('hero-eye');
+      if (eye) eye.textContent = heroIdx === 0 ? ui('wk') : ui('pub', it.fecha ? day(it.fecha) : '');
+      var q = document.getElementById('hero-q');
+      if (q) q.textContent = it.texto[lang] || it.texto.es;
+      var a = document.getElementById('hero-post');
+      if (a) {
+        var u = String(it.url || '');
+        if (LI_RE.test(u)) { a.href = u; a.textContent = heroIdx === 0 ? ui('readwk') : ui('read'); a.hidden = false; } else { a.hidden = true; }
+      }
+      document.querySelectorAll('#hero-dots button').forEach(function (b, k) { b.setAttribute('aria-current', k === heroIdx ? 'true' : 'false'); });
+      if (slide) slide.classList.remove('fade');
+    }
+    if (animate && slide && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) { slide.classList.add('fade'); setTimeout(paint, 450); } else { paint(); }
+  }
+  function renderHero() {
+    var items = heroItems(); if (!items.length) return;
+    var first = String(items[0].url || ''), mp = document.getElementById('mm-post');
+    if (mp && LI_RE.test(first)) mp.href = first;
+    var dots = document.getElementById('hero-dots');
+    if (dots) {
+      dots.textContent = '';
+      dots.hidden = items.length < 2;
+      items.forEach(function (_, k) {
+        var b = document.createElement('button'); b.type = 'button';
+        b.setAttribute('aria-label', ui('dot').replace('{n}', k + 1));
+        b.addEventListener('click', function () { showHero(k, true); restartHero(); });
+        dots.appendChild(b);
+      });
+    }
+    showHero(heroIdx, false);
+    restartHero();
+  }
+  function restartHero() {
+    if (heroTimer) clearInterval(heroTimer);
+    heroTimer = null;
+    if (heroItems().length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    heroTimer = setInterval(function () { if (!heroPaused && !document.hidden) showHero(heroIdx + 1, true); }, 8000);
+  }
+  (function () {
+    var h = document.getElementById('inicio'); if (!h) return;
+    h.addEventListener('mouseenter', function () { heroPaused = true; });
+    h.addEventListener('mouseleave', function () { heroPaused = false; });
+    h.addEventListener('focusin', function () { heroPaused = true; });
+    h.addEventListener('focusout', function () { heroPaused = false; });
+  })();
 
   function renderMail() {
     var mail = document.getElementById('mail');
@@ -900,6 +963,7 @@
         if (Array.isArray(d.commodities) && d.commodities.length) COMMODITIES = d.commodities;
         if (Array.isArray(d.fx) && d.fx.length) FX = d.fx;
         if (d.semana && typeof d.semana === 'object') SEMANA = d.semana;
+        if (Array.isArray(d.publicaciones)) PUBS = d.publicaciones.filter(function (p) { return p && typeof p === 'object'; });
         if (Array.isArray(d.news) && d.news.length) NEWS = d.news.filter(function (n) { return /^https:\/\//.test(String(n.url)); });
         renderIndicators(); renderTables(); renderNews(); renderHero();
       })

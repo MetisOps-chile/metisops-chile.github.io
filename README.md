@@ -45,3 +45,15 @@ Las `url` de noticias deben empezar con `https://`. Los textos se muestran como 
 - Solo datos de fuentes públicas verificables, con su fuente y fecha. Nunca inventar cifras.
 - No usar información de Fosfoquim ni de sus clientes, proveedores o transportistas.
 - Noticias: 6, de los últimos 7 días, sobre economía chilena, minería, logística, comercio exterior, energía y combustibles.
+
+## Publicaciones en la portada (`publicaciones`)
+
+Lista de hasta 4 publicaciones de LinkedIn, la más reciente primero. La portada las muestra rotando cada 8 segundos (la primera con el rótulo "Pregunta de la semana"; las demás con "Publicación · fecha").
+
+```json
+"publicaciones": [
+  { "fecha": "AAAA-MM-DD", "texto": { "es": "", "en": "", "pt": "" }, "url": "https://www.linkedin.com/feed/update/urn:li:activity:..." }
+]
+```
+
+`texto` es la pregunta de cierre del post o su titular. `url` debe empezar con `https://www.linkedin.com/` (si no, el enlace se oculta). Si la lista falta o está vacía, la portada usa `semana`.
