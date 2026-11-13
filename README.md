@@ -56,4 +56,4 @@ Lista de hasta 4 publicaciones de LinkedIn, la más reciente primero. La portada
 ]
 ```
 
-`texto` es la pregunta de cierre del post o su titular. `url` debe empezar con `https://www.linkedin.com/` (si no, el enlace se oculta). Si la lista falta o está vacía, la portada usa `semana`.
+`texto` es la pregunta de cierre del post o su titular. `url` debe empezar con `https://www.linkedin.com/` o `https://lnkd.in/` (si no, el enlace se oculta). Si la lista falta o está vacía, la portada usa `semana`.

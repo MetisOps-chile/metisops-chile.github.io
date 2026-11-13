@@ -838,7 +838,7 @@
     });
   }
 
-  var LI_RE = /^https:\/\/(www\.)?linkedin\.com\//;
+  var LI_RE = /^https:\/\/((www\.)?linkedin\.com|lnkd\.in)\//;
   function heroItems() {
     var list = PUBS.filter(function (p) { return p && p.texto && (p.texto[lang] || p.texto.es); }).slice(0, 4);
     if (!list.length && SEMANA && SEMANA.pregunta) list = [{ fecha: SEMANA.desde, texto: SEMANA.pregunta, url: SEMANA.post_url }];
