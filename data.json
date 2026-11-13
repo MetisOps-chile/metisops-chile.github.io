@@ -1,17 +1,17 @@
 {
-  "actualizado": "2026-11-12",
+  "actualizado": "2026-11-13",
   "fallback": {
     "dolar": {
-      "valor": 984.49,
+      "valor": 994.51,
       "fecha": "2026-11-12"
     },
     "euro": {
-      "valor": 1091.23,
-      "fecha": "2026-11-11"
+      "valor": 1088.78,
+      "fecha": "2026-11-13"
     },
     "uf": {
-      "valor": 41316.06,
-      "fecha": "2026-11-12"
+      "valor": 41322.93,
+      "fecha": "2026-11-13"
     },
     "utm": {
       "valor": 72440,
@@ -26,8 +26,8 @@
       "fecha": "2026-10-27"
     },
     "libra_cobre": {
-      "valor": 6.29,
-      "fecha": "2026-11-11"
+      "valor": 6.22,
+      "fecha": "2026-11-12"
     },
     "imacec": {
       "valor": 0.2,
@@ -45,9 +45,9 @@
         "en": "Brent crude",
         "pt": "Petróleo Brent"
       },
-      "valor": 92.76,
-      "fecha": "2026-11-11",
-      "fuente": "EconoTimes (ICE)"
+      "valor": 95.82,
+      "fecha": "2026-11-12",
+      "fuente": "Rigzone (ICE)"
     },
     {
       "nombre": {
@@ -55,9 +55,9 @@
         "en": "WTI crude",
         "pt": "Petróleo WTI"
       },
-      "valor": 86.53,
-      "fecha": "2026-11-11",
-      "fuente": "EconoTimes (NYMEX)"
+      "valor": 88.74,
+      "fecha": "2026-11-12",
+      "fuente": "Rigzone (NYMEX)"
     },
     {
       "nombre": {
@@ -65,15 +65,15 @@
         "en": "Gold",
         "pt": "Ouro"
       },
-      "valor": 4019.98,
-      "fecha": "2026-11-11",
+      "valor": 3999.15,
+      "fecha": "2026-11-12",
       "fuente": "Portal Minero (LME)"
     }
   ],
   "fx": [
     {
       "codigo": "EUR",
-      "clp": 1091.23,
+      "clp": 1088.78,
       "moneda": {
         "es": "Euro",
         "en": "Euro",
@@ -82,7 +82,7 @@
     },
     {
       "codigo": "GBP",
-      "clp": 1306.26,
+      "clp": 1302.5,
       "moneda": {
         "es": "Libra esterlina",
         "en": "British pound",
@@ -91,7 +91,7 @@
     },
     {
       "codigo": "BRL",
-      "clp": 176.9,
+      "clp": 175.36,
       "moneda": {
         "es": "Real brasileño",
         "en": "Brazilian real",
@@ -100,7 +100,7 @@
     },
     {
       "codigo": "CNY",
-      "clp": 147.42,
+      "clp": 147.1,
       "moneda": {
         "es": "Yuan chino",
         "en": "Chinese yuan",
@@ -109,7 +109,7 @@
     },
     {
       "codigo": "PEN",
-      "clp": 287.51,
+      "clp": 288.39,
       "moneda": {
         "es": "Sol peruano",
         "en": "Peruvian sol",
@@ -118,7 +118,7 @@
     },
     {
       "codigo": "MXN",
-      "clp": 52.86,
+      "clp": 52.85,
       "moneda": {
         "es": "Peso mexicano",
         "en": "Mexican peso",
@@ -146,23 +146,43 @@
   ],
   "news": [
     {
-      "fecha": "2026-11-11",
-      "fuente": "EconoTimes",
-      "url": "https://econotimes.com/Oil-Prices-Settle-Higher-as-Iran-Reiterates-Its-Nuclear-Material-Position-1775440",
+      "fecha": "2026-11-12",
+      "fuente": "Rigzone",
+      "url": "https://www.rigzone.com/news/wire/oil_rises_as_trump_dims_iran_deal_hopes-12-nov-2026-185073-article/",
       "tema": {
         "es": "Petróleo",
         "en": "Oil",
         "pt": "Petróleo"
       },
       "titular": {
-        "es": "El petróleo cierra al alza por la tensión con Irán",
-        "en": "Oil settles higher amid Iran tensions",
-        "pt": "Petróleo fecha em alta com tensão envolvendo o Irã"
+        "es": "El petróleo sube más de 3% tras dichos de Trump sobre Irán",
+        "en": "Oil jumps more than 3% after Trump's remarks on Iran",
+        "pt": "Petróleo sobe mais de 3% após declarações de Trump sobre o Irã"
       },
       "resumen": {
-        "es": "El Brent cerró en US$ 92,76 por barril (+1,39%) y el WTI en US$ 86,53 (+0,57%).",
-        "en": "Brent settled at US$ 92.76 per barrel (+1.39%) and WTI at US$ 86.53 (+0.57%).",
-        "pt": "O Brent fechou a US$ 92,76 por barril (+1,39%) e o WTI a US$ 86,53 (+0,57%)."
+        "es": "El Brent cerró en US$ 95,82 por barril (+3,3%) y el WTI en US$ 88,74 (+2,6%).",
+        "en": "Brent settled at US$ 95.82 per barrel (+3.3%) and WTI at US$ 88.74 (+2.6%).",
+        "pt": "O Brent fechou a US$ 95,82 por barril (+3,3%) e o WTI a US$ 88,74 (+2,6%)."
+      }
+    },
+    {
+      "fecha": "2026-11-12",
+      "fuente": "Infobae",
+      "url": "https://www.infobae.com/noticias/2026/11/12/precio-del-dolar-hoy-en-chile-cotizacion-de-cierre-del-12-de-noviembre/",
+      "tema": {
+        "es": "Dólar",
+        "en": "Dollar",
+        "pt": "Dólar"
+      },
+      "titular": {
+        "es": "El dólar sube en Chile y se acerca a los $1.000",
+        "en": "The dollar rises in Chile and nears CLP 1,000",
+        "pt": "O dólar sobe no Chile e se aproxima dos CLP 1.000"
+      },
+      "resumen": {
+        "es": "Cerró en $994,51, un alza de 1,19% frente a los $982,80 del cierre anterior.",
+        "en": "It closed at CLP 994.51, up 1.19% from the previous close of CLP 982.80.",
+        "pt": "Fechou a CLP 994,51, alta de 1,19% frente aos CLP 982,80 do fechamento anterior."
       }
     },
     {
@@ -243,26 +263,6 @@
         "es": "Pese a invertir unos US$ 32.000 millones en ocho años, su producción bajó de cerca de 1,7 a 1,2 millones de toneladas anuales.",
         "en": "Despite investing about US$ 32,000 million over eight years, its output fell from about 1.7 to 1.2 million tonnes a year.",
         "pt": "Apesar de investir cerca de US$ 32.000 milhões em oito anos, sua produção caiu de cerca de 1,7 para 1,2 milhão de toneladas por ano."
-      }
-    },
-    {
-      "fecha": "2026-11-06",
-      "fuente": "BioBioChile",
-      "url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/11/06/paro-de-camioneros-en-puerto-san-antonio-obligo-a-cambiar-zarpe-de-buque-con-cerezas-hacia-china.shtml",
-      "tema": {
-        "es": "Puertos",
-        "en": "Ports",
-        "pt": "Portos"
-      },
-      "titular": {
-        "es": "Paro de camioneros en San Antonio obliga a desviar buque con cerezas a China",
-        "en": "San Antonio truckers' strike forces a cherry ship bound for China to be rerouted",
-        "pt": "Greve de caminhoneiros em San Antonio obriga a desviar navio com cerejas para a China"
-      },
-      "resumen": {
-        "es": "El puerto operaba al 90% de su capacidad de almacenamiento, según Frutas de Chile.",
-        "en": "The port was operating at 90% of its storage capacity, according to Frutas de Chile.",
-        "pt": "O porto operava a 90% de sua capacidade de armazenagem, segundo a Frutas de Chile."
       }
     }
   ],
