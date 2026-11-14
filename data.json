@@ -88,16 +88,6 @@
       "valor": 4305,
       "fecha": "2026-11-12",
       "fuente": "Drewry"
-    },
-    {
-      "nombre": {
-        "es": "Bitcoin",
-        "en": "Bitcoin",
-        "pt": "Bitcoin"
-      },
-      "valor": 69134.72,
-      "fecha": "2026-11-13",
-      "fuente": "Fortune"
     }
   ],
   "fx": [
@@ -171,6 +161,15 @@
         "es": "Peso argentino",
         "en": "Argentine peso",
         "pt": "Peso argentino"
+      }
+    },
+    {
+      "codigo": "BTC",
+      "clp": 68755170.0,
+      "moneda": {
+        "es": "Bitcoin",
+        "en": "Bitcoin",
+        "pt": "Bitcoin"
       }
     }
   ],

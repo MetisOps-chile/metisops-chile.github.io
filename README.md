@@ -58,6 +58,8 @@ Lista de hasta 4 publicaciones de LinkedIn, la más reciente primero. La portada
 
 `texto` es la pregunta de cierre del post o su titular. `url` debe empezar con `https://www.linkedin.com/` o `https://lnkd.in/` (si no, el enlace se oculta). Si la lista falta o está vacía, la portada usa `semana`.
 
-## Materias primas y mercados (`commodities`)
+## Materias primas y fletes (`commodities`)
 
-Seis elementos, en este orden: Petróleo Brent, Petróleo WTI, Oro, Carbonato de litio (US$ por tonelada), Flete contenedor 40' (Drewry WCI, US$ por contenedor, se publica los jueves) y Bitcoin (US$). El primero (Brent) también aparece en la cinta de la portada.
+Cinco elementos, en este orden: Petróleo Brent, Petróleo WTI, Oro, Carbonato de litio (US$ por tonelada) y Flete contenedor 40' (Drewry WCI, US$ por contenedor, se publica los jueves).
+
+En `fx` (divisas, en pesos chilenos) va además Bitcoin con código `BTC`, al final: precio en US$ multiplicado por el dólar del día. El primero (Brent) también aparece en la cinta de la portada.
