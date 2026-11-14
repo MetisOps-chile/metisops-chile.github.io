@@ -236,7 +236,8 @@ s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
 .tv h2{font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 8px}
 .tv .sub{color:#BFE0E8}
 .tvg{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px}
-.vlist{display:flex;flex-direction:column;gap:12px}
+.vlist{display:flex;flex-direction:column;gap:12px;max-height:620px;overflow-y:auto;padding-right:4px}
+.tv .opt{background:#12323F;color:#fff;border-color:#2b5566}.tv .opt[aria-pressed=true]{background:var(--sun);border-color:var(--sun);color:var(--k)}
 .vc2{display:grid;grid-template-columns:140px 1fr;gap:12px;background:#12323F;border:2px solid transparent;border-radius:14px;padding:8px;cursor:pointer;text-align:left;color:#fff;font:inherit}
 .vc2[aria-pressed=true]{border-color:var(--sun)}
 .thumb{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;display:grid;place-items:center;background:linear-gradient(135deg,#0E8A9A,#0A4D68)}
@@ -339,13 +340,15 @@ s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
 </div></div>
 
 <section class="tv band" id="videos"><div class="wrap">
-<h2>Barba Negra TV: salidas de pesca</h2>
-<p class="sub">Salimos a pescar a Coronel, Lota y la costa del golfo. Mira cómo nos fue y llévate el mismo equipo.</p>
+<h2>Barba Negra TV</h2>
+<p class="sub">Salidas de pesca, nudos, consejos, equipos y campeonatos de la zona. Para aprender, entretenerse y salir a pescar mejor.</p>
+<div class="opts" id="vtabs" style="margin-bottom:18px" role="group" aria-label="Tipo de video"></div>
 <div class="tvg">
 <div class="stage">
 <div class="screen" id="screen"></div>
 <h3 class="vt" id="vt"></h3>
-<div class="gear"><h3>Equipo usado en este video</h3><div class="gl" id="gl"></div><button class="btn p" id="gearAll" style="margin-top:12px">Agregar todo el equipo al pedido</button></div>
+<p id="vdesc" style="margin:0;color:#BFE0E8"></p>
+<div class="gear" id="gearBox"><h3>Equipo usado en este video</h3><div class="gl" id="gl"></div><button class="btn p" id="gearAll" style="margin-top:12px">Agregar todo el equipo al pedido</button></div>
 </div>
 <div class="vlist" id="vlist"></div>
 </div>
@@ -649,23 +652,36 @@ $('xToggle').addEventListener('click', ()=>{ const b=$('xBody'), o=b.hidden; b.h
 /* --- Barba Negra TV --- */
 // yt: el código del video de YouTube (lo que va después de v= en el enlace). Vacío = próximamente.
 const VIDEOS = [
-  {yt:'', t:'Róbalo al amanecer en Playa Blanca', tipo:'Salida de pesca', dur:'12 min', gear:['c1','r2','x2','s1','s3','a4']},
-  {yt:'', t:'Lenguado desde las rocas en Lota', tipo:'Salida de pesca', dur:'9 min', gear:['c1','r2','x1','s3','a2']},
-  {yt:'', t:'Pesca de surf: lance largo para principiantes', tipo:'Tutorial', dur:'7 min', gear:['c2','r3','x2','a3','a4']},
-  {yt:'', t:'Carrete 3000 o 5000: cuál elegir', tipo:'Equipo', dur:'5 min', gear:['r2','r3']},
-  {yt:'', t:'Nudo palomar en 60 segundos', tipo:'Nudos', dur:'1 min', gear:['a2','x1','x4']}
+  {yt:'', c:'salidas', t:'Róbalo al amanecer en Playa Blanca', dur:'12 min', d:'Salida completa: dónde nos ubicamos, cómo leímos la marea y qué señuelo funcionó.', gear:['c1','r2','x2','s1','s3','a4']},
+  {yt:'', c:'salidas', t:'Lenguado desde las rocas en Lota', dur:'9 min', d:'Una mañana de roquerío, con devolución de los ejemplares bajo 40 cm.', gear:['c1','r2','x1','s3','a2']},
+  {yt:'', c:'nudos', t:'Nudo palomar en 60 segundos', dur:'1 min', d:'El nudo más firme para atar el anzuelo o el destorcedor.', gear:['a2','a4']},
+  {yt:'', c:'nudos', t:'Nudo clinch mejorado', dur:'1 min', d:'Rápido y seguro para nylon.', gear:[]},
+  {yt:'', c:'nudos', t:'Unir multifilamento con nylon (nudo FG)', dur:'4 min', d:'Para pasar el líder sin que se trabe en las guías.', gear:['x1','x2']},
+  {yt:'', c:'info', t:'Cómo sacar tu licencia de pesca en 3 minutos', dur:'3 min', d:'Paso a paso en el sitio de Sernapesca.', gear:[]},
+  {yt:'', c:'info', t:'Vedas y tallas: lo que tienes que saber antes de salir', dur:'5 min', d:'Corvina, lenguado, merluza y salmónidos, explicado simple.', gear:[]},
+  {yt:'', c:'info', t:'Mareas: cuándo conviene pescar de orilla', dur:'6 min', d:'Cómo leer la tabla del SHOA y elegir la hora.', gear:[]},
+  {yt:'', c:'equipo', t:'Carrete 3000 o 5000: cuál elegir', dur:'5 min', d:'Para qué sirve cada tamaño y con qué caña combinarlo.', gear:['r2','r3']},
+  {yt:'', c:'equipo', t:'Tu primer equipo con menos de $40.000', dur:'6 min', d:'Lo justo para partir pescando de orilla.', gear:['c3','r1','a1','a3']},
+  {yt:'', c:'camp', t:'Campeonato de orilla de verano: resumen', dur:'10 min', d:'Los mejores momentos, el pesaje y los ganadores.', gear:[]},
+  {yt:'', c:'camp', t:'Cómo inscribirte en un campeonato', dur:'3 min', d:'Requisitos, licencia y reglas de devolución.', gear:[]}
 ];
-let vi = 0;
+const VCAT = [['todos','Todos'],['salidas','Salidas de pesca'],['nudos','Nudos'],['info','Informativos'],['equipo','Equipos'],['camp','Campeonatos']];
+let vcat = 'todos', vi = 0;
 const ytOk = location.hostname.endsWith('github.io') || location.hostname.includes('barbanegra');
 function renderTV(){
-  const v = VIDEOS[vi];
-  $('vlist').innerHTML = VIDEOS.map((x,i)=>`<button class="vc2" data-v="${i}" aria-pressed="${i===vi}"><div class="thumb">${x.yt?`<img src="https://i.ytimg.com/vi/${x.yt}/mqdefault.jpg" alt="">`:''}<span class="play"></span></div><div><b>${x.t}</b><small>${x.tipo} · ${x.dur}</small></div></button>`).join('');
+  const list = VIDEOS.map((x,i)=>[x,i]).filter(([x])=>vcat==='todos'||x.c===vcat);
+  if(!list.some(([,i])=>i===vi)) vi = list[0][1];
+  const v = VIDEOS[vi], cname = Object.fromEntries(VCAT);
+  $('vtabs').innerHTML = VCAT.map(([k,l])=>`<button class="opt" data-vc="${k}" aria-pressed="${k===vcat}">${l}</button>`).join('');
+  $('vlist').innerHTML = list.map(([x,i])=>`<button class="vc2" data-v="${i}" aria-pressed="${i===vi}"><div class="thumb">${x.yt?`<img src="https://i.ytimg.com/vi/${x.yt}/mqdefault.jpg" alt="">`:''}<span class="play"></span></div><div><b>${x.t}</b><small>${cname[x.c]} · ${x.dur}</small></div></button>`).join('');
   $('screen').innerHTML = (v.yt && ytOk) ? `<iframe src="https://www.youtube-nocookie.com/embed/${v.yt}" title="${v.t}" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`
     : (v.yt ? `<a class="play" href="https://www.youtube.com/watch?v=${v.yt}" aria-label="Ver en YouTube"></a>` : `<span class="play"></span><p>Video de muestra: pronto en nuestro canal.</p>`);
   $('vt').textContent = v.t;
+  $('vdesc').textContent = v.d;
+  $('gearBox').hidden = !v.gear.length;
   $('gl').innerHTML = v.gear.map(id=>{const x=byId[id];return `<div class="gi"><span><b>${x.n}</b><br>${clp(x.p)}</span><button data-a="${id}">Agregar</button></div>`}).join('');
 }
-document.addEventListener('click', e=>{ const b=e.target.closest('[data-v]'); if(b){ vi=+b.dataset.v; renderTV(); } });
+document.addEventListener('click', e=>{ const b=e.target.closest('[data-v]'), c=e.target.closest('[data-vc]'); if(b){ vi=+b.dataset.v; renderTV(); } else if(c){ vcat=c.dataset.vc; renderTV(); } });
 $('gearAll').addEventListener('click', ()=>{ for(const id of VIDEOS[vi].gear) cart[id]=(cart[id]||0)+1; all(); open(true); });
 renderTV();
 /* --- Calendario de vedas --- */
