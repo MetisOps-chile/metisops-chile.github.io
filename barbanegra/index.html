@@ -235,30 +235,26 @@ s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
 .tv{background:#0B2530;color:#fff}
 .tv h2{font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 8px}
 .tv .sub{color:#BFE0E8}
-.tvg{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px}
-.vlist{display:flex;flex-direction:column;gap:12px;max-height:620px;overflow-y:auto;padding-right:4px}
-.tv .opt{background:#12323F;color:#fff;border-color:#2b5566}.tv .opt[aria-pressed=true]{background:var(--sun);border-color:var(--sun);color:var(--k)}
-.vc2{display:grid;grid-template-columns:140px 1fr;gap:12px;background:#12323F;border:2px solid transparent;border-radius:14px;padding:8px;cursor:pointer;text-align:left;color:#fff;font:inherit}
-.vc2[aria-pressed=true]{border-color:var(--sun)}
-.thumb{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;display:grid;place-items:center;background:linear-gradient(135deg,#0E8A9A,#0A4D68)}
-.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.play{position:relative;width:46px;height:46px;border-radius:50%;background:var(--sun);display:grid;place-items:center}
-.play::after{content:'';border-left:14px solid var(--k);border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
-.vc2 b{display:block;font-size:15px;line-height:1.3}
-.vc2 small{color:#BFE0E8;font-size:13px}
-.stage{display:flex;flex-direction:column;gap:14px}
-.screen{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#0E8A9A,#0A4D68);display:grid;place-items:center}
-.screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.screen .play{width:84px;height:84px}.screen .play::after{border-left-width:26px;border-top-width:16px;border-bottom-width:16px;margin-left:8px}
-.screen p{position:absolute;bottom:12px;left:16px;right:16px;margin:0;font-size:14px;color:#E3F2F5}
-.vt{margin:0;font-size:22px}
+.stage{position:relative;max-width:1000px;margin:0 auto;border-radius:18px;overflow:hidden;background:#12323F}
+.vbar{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding:14px 18px 16px}
+.vbar span{font-size:13px;font-weight:800;color:var(--sun)}
+.vbar p{margin:2px 0 0;color:#BFE0E8;font-size:14px}
+.dots{display:flex;gap:6px;flex:none;flex-wrap:wrap;max-width:240px;justify-content:flex-end}
+.dots button{width:12px;height:12px;border-radius:6px;border:0;background:#3b6475;cursor:pointer;padding:0}
+.dots button[aria-current=true]{width:28px;background:var(--sun)}
+.nav{position:absolute;top:calc(28% );width:48px;height:48px;border-radius:24px;border:0;background:#0B2530cc;color:#fff;font-size:30px;line-height:1;cursor:pointer;z-index:2}
+.nav.prev{left:12px}.nav.next{right:12px}
+.prog{height:4px;background:#0a2833}.prog i{display:block;height:100%;width:0;background:var(--sun)}
+.screen video{position:absolute;inset:0;width:100%;height:100%;background:#000}
+#gearBox{max-width:1000px;margin:16px auto 0}
+.vt{margin:2px 0 0;font-size:20px}
 .gear{background:#fff;color:var(--k);border-radius:16px;padding:16px}
 .gear h3{margin:0 0 8px;font-size:16px}
 .gl{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
 .gi{display:flex;justify-content:space-between;align-items:center;gap:8px;border:1px solid var(--line);border-radius:12px;padding:8px 10px;font-size:14px}
 .gi b{font-size:14px}
 .gi button{min-height:36px;padding:0 12px;border-radius:18px;border:0;background:var(--sun);font-weight:800;cursor:pointer}
-@media(max-width:900px){.tvg{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.vbar{flex-direction:column;align-items:flex-start}.nav{top:22%}}
 @media(max-width:1000px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.vp .in{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:900px){.kg,.vg,.cg,.gg{grid-template-columns:minmax(0,1fr)}.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.vp .in{grid-template-columns:minmax(0,1fr)}.srch button{display:none}}
@@ -292,7 +288,7 @@ s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
 <span>Qué</span><em>Róbalo de orilla (corvina en veda hasta el 30 de noviembre)</em>
 <span>Con qué</span><em>Jig metálico de 30 g, recogida lenta</em>
 </div>
-<p class="demo">Versión de muestra: productos, precios, reporte, horario y WhatsApp son de ejemplo.</p>
+<p class="demo">Versión de muestra: productos, precios, reporte y horario son de ejemplo.</p>
 </div>
 <div class="mark"><svg role="img" aria-label="Símbolo Barba Negra" style="color:#FFF8EC"><use href="#bn"/></svg></div>
 </div>
@@ -343,15 +339,13 @@ s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
 <h2>Barba Negra TV</h2>
 <p class="sub">Salidas de pesca, nudos, consejos, equipos y campeonatos de la zona. Para aprender, entretenerse y salir a pescar mejor.</p>
 <div class="opts" id="vtabs" style="margin-bottom:18px" role="group" aria-label="Tipo de video"></div>
-<div class="tvg">
-<div class="stage">
+<div class="stage" id="stage">
 <div class="screen" id="screen"></div>
-<h3 class="vt" id="vt"></h3>
-<p id="vdesc" style="margin:0;color:#BFE0E8"></p>
+<button class="nav prev" id="vPrev" aria-label="Video anterior">‹</button><button class="nav next" id="vNext" aria-label="Video siguiente">›</button>
+<div class="vbar"><div><span id="vk"></span><h3 class="vt" id="vt"></h3><p id="vdesc"></p></div><div class="dots" id="dots"></div></div>
+<div class="prog"><i id="vprog"></i></div>
+</div>
 <div class="gear" id="gearBox"><h3>Equipo usado en este video</h3><div class="gl" id="gl"></div><button class="btn p" id="gearAll" style="margin-top:12px">Agregar todo el equipo al pedido</button></div>
-</div>
-<div class="vlist" id="vlist"></div>
-</div>
 </div></section>
 
 <section class="kits band" id="kits"><div class="wrap">
@@ -452,7 +446,7 @@ s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
 <h2>Visítanos en Coronel</h2>
 <p class="sub">Atención en tienda, consejo para armar tu equipo y pedidos especiales.</p>
 <div class="vg">
-<div class="vc"><h3>Dirección</h3><p>Coronel, Región del Biobío</p></div>
+<div class="vc"><h3>Dirección</h3><p>Merino Jarpa 705, Coronel, Región del Biobío</p><p style="margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=Merino+Jarpa+705%2C+Coronel%2C+Chile" style="font-weight:700;color:var(--tqD)">Cómo llegar (Google Maps)</a></p></div>
 <div class="vc"><h3>Horario</h3><p>Lunes a sábado, 9:30 a 19:00</p></div>
 <div class="vc"><h3>Redes</h3><p><a href="https://www.instagram.com/barbanegrapescacoronel/">Instagram @barbanegrapescacoronel</a></p></div>
 </div>
@@ -482,7 +476,7 @@ s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
 
 <script>
 {
-const WA = '56900000000'; // número de WhatsApp de la tienda, con 56 y sin +
+const WA = '56984072282'; // número de WhatsApp de la tienda, con 56 y sin +
 const icons = {
 cana:'<path d="M6 42 L42 6"/><circle cx="14" cy="34" r="4"/><path d="M42 6 C46 18 44 30 40 40"/>',
 carrete:'<circle cx="24" cy="26" r="12"/><circle cx="24" cy="26" r="4"/><path d="M24 14 V6 M18 6 H30 M36 26 H44"/>',
@@ -652,6 +646,7 @@ $('xToggle').addEventListener('click', ()=>{ const b=$('xBody'), o=b.hidden; b.h
 /* --- Barba Negra TV --- */
 // yt: el código del video de YouTube (lo que va después de v= en el enlace). Vacío = próximamente.
 const VIDEOS = [
+  {src:'video/barba-negra-promo.mp4', c:'info', t:'Conoce Barba Negra', dur:'35 s', d:'Qué encuentras, dónde estamos, cómo llegar y cómo contactarnos.', gear:[]},
   {yt:'', c:'salidas', t:'Róbalo al amanecer en Playa Blanca', dur:'12 min', d:'Salida completa: dónde nos ubicamos, cómo leímos la marea y qué señuelo funcionó.', gear:['c1','r2','x2','s1','s3','a4']},
   {yt:'', c:'salidas', t:'Lenguado desde las rocas en Lota', dur:'9 min', d:'Una mañana de roquerío, con devolución de los ejemplares bajo 40 cm.', gear:['c1','r2','x1','s3','a2']},
   {yt:'', c:'nudos', t:'Nudo palomar en 60 segundos', dur:'1 min', d:'El nudo más firme para atar el anzuelo o el destorcedor.', gear:['a2','a4']},
@@ -666,24 +661,38 @@ const VIDEOS = [
   {yt:'', c:'camp', t:'Cómo inscribirte en un campeonato', dur:'3 min', d:'Requisitos, licencia y reglas de devolución.', gear:[]}
 ];
 const VCAT = [['todos','Todos'],['salidas','Salidas de pesca'],['nudos','Nudos'],['info','Informativos'],['equipo','Equipos'],['camp','Campeonatos']];
-let vcat = 'todos', vi = 0;
+let vcat = 'todos', vi = 0, auto = true, timer = null, t0 = 0;
 const ytOk = location.hostname.endsWith('github.io') || location.hostname.includes('barbanegra');
+const SLIDE = 7000;
+const vlistNow = () => VIDEOS.map((x,i)=>[x,i]).filter(([x])=>vcat==='todos'||x.c===vcat).map(([,i])=>i);
+function go(step){ const L=vlistNow(); const p=L.indexOf(vi); vi = L[(p+step+L.length)%L.length]; renderTV(); }
+function tick(){ if(!auto) return; const v=VIDEOS[vi]; if(v.src) return; const el=(Date.now()-t0)/SLIDE; $('vprog').style.width=Math.min(100,el*100)+'%'; if(el>=1) go(1); }
 function renderTV(){
-  const list = VIDEOS.map((x,i)=>[x,i]).filter(([x])=>vcat==='todos'||x.c===vcat);
-  if(!list.some(([,i])=>i===vi)) vi = list[0][1];
+  const L = vlistNow(); if(!L.includes(vi)) vi = L[0];
   const v = VIDEOS[vi], cname = Object.fromEntries(VCAT);
   $('vtabs').innerHTML = VCAT.map(([k,l])=>`<button class="opt" data-vc="${k}" aria-pressed="${k===vcat}">${l}</button>`).join('');
-  $('vlist').innerHTML = list.map(([x,i])=>`<button class="vc2" data-v="${i}" aria-pressed="${i===vi}"><div class="thumb">${x.yt?`<img src="https://i.ytimg.com/vi/${x.yt}/mqdefault.jpg" alt="">`:''}<span class="play"></span></div><div><b>${x.t}</b><small>${cname[x.c]} · ${x.dur}</small></div></button>`).join('');
-  $('screen').innerHTML = (v.yt && ytOk) ? `<iframe src="https://www.youtube-nocookie.com/embed/${v.yt}" title="${v.t}" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`
-    : (v.yt ? `<a class="play" href="https://www.youtube.com/watch?v=${v.yt}" aria-label="Ver en YouTube"></a>` : `<span class="play"></span><p>Video de muestra: pronto en nuestro canal.</p>`);
+  $('dots').innerHTML = L.map(i=>`<button data-v="${i}" aria-label="${VIDEOS[i].t}" aria-current="${i===vi}"></button>`).join('');
+  let h;
+  if(v.src) h = `<video src="${v.src}" ${auto?'autoplay muted':''} playsinline controls preload="metadata"></video>`;
+  else if(v.yt && ytOk) h = `<iframe src="https://www.youtube-nocookie.com/embed/${v.yt}" title="${v.t}" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
+  else if(v.yt) h = `<img src="https://i.ytimg.com/vi/${v.yt}/hqdefault.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><a class="play" href="https://www.youtube.com/watch?v=${v.yt}" aria-label="Ver en YouTube"></a>`;
+  else h = `<span class="play"></span><p>Video de muestra: pronto en nuestro canal.</p>`;
+  $('screen').innerHTML = h;
+  const vid = $('screen').querySelector('video'); if(vid){ vid.addEventListener('ended', ()=>{ if(auto) go(1); }); vid.addEventListener('timeupdate', ()=>{ $('vprog').style.width = (vid.currentTime/vid.duration*100||0)+'%'; }); }
+  $('vk').textContent = cname[v.c] + ' · ' + v.dur;
   $('vt').textContent = v.t;
   $('vdesc').textContent = v.d;
   $('gearBox').hidden = !v.gear.length;
   $('gl').innerHTML = v.gear.map(id=>{const x=byId[id];return `<div class="gi"><span><b>${x.n}</b><br>${clp(x.p)}</span><button data-a="${id}">Agregar</button></div>`}).join('');
+  t0 = Date.now(); $('vprog').style.width = '0%';
 }
-document.addEventListener('click', e=>{ const b=e.target.closest('[data-v]'), c=e.target.closest('[data-vc]'); if(b){ vi=+b.dataset.v; renderTV(); } else if(c){ vcat=c.dataset.vc; renderTV(); } });
+document.addEventListener('click', e=>{ const b=e.target.closest('#dots [data-v]'), c=e.target.closest('[data-vc]'); if(b){ vi=+b.dataset.v; auto=false; renderTV(); } else if(c){ vcat=c.dataset.vc; renderTV(); } });
+$('vPrev').addEventListener('click', ()=>{ auto=false; go(-1); });
+$('vNext').addEventListener('click', ()=>{ auto=false; go(1); });
+$('screen').addEventListener('pointerdown', ()=>{ auto=false; });
 $('gearAll').addEventListener('click', ()=>{ for(const id of VIDEOS[vi].gear) cart[id]=(cart[id]||0)+1; all(); open(true); });
 renderTV();
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(tick, 200);
 /* --- Calendario de vedas --- */
 const MES = ['E','F','M','A','M','J','J','A','S','O','N','D'];
 const thirdFri = (y)=>{ const d=new Date(y,9,1); const off=(5-d.getDay()+7)%7; return new Date(y,9,1+off+14); };
