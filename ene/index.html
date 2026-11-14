@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Eñe — испанский</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE occasion: warm, playful, clear — a language school for adults
+   IDEA a travel ticket / passport to the Spanish-speaking world; Ñ's tilde as a smile
+   PICTURE the owners' photo of Moscow and flags as a tilted postcard with speech bubbles
+   COLOUR white ground, chili red field, ink, marigold accent
+   TYPE Unbounded (display, Cyrillic) + Manrope (text)
+   LAYOUT red hero band with title + picture; level form right under it; courses as tickets */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#16100f);--ink:light-dark(#1b1717,#f6efe9);--mute:light-dark(#5c5452,#c4b8b2);--red:light-dark(#e2332a,#b8251d);--red2:light-dark(#c42820,#8f1a14);--gold:#ffb627;--panel:light-dark(#fff6f1,#221816);--line:light-dark(#ecdcd5,#3a2a27)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html:not(.es) .es,html.es .ru{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Manrope,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Unbounded,Manrope,sans-serif;line-height:1.08;letter-spacing:-.02em;text-wrap:balance;margin:0}
+h2{font-size:clamp(26px,3.4vw,40px)}
+h3{font-size:19px}
+p{margin:0}
+a{color:inherit}
+.band{padding-block:clamp(28px,4vw,64px);padding-inline:max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+nav{background:var(--red);color:#fff;padding:12px max(5vw,16px)}
+nav .wrap{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font:800 26px Unbounded,sans-serif;text-decoration:none;margin-right:auto}
+nav a.l{text-decoration:none;font-weight:600;opacity:.9}
+nav a.l:hover{opacity:1;text-decoration:underline}
+.lang{display:flex;border:1.5px solid #fff;border-radius:99px;overflow:hidden}
+.lang button{background:none;border:0;color:#fff;font:700 14px Manrope,system-ui,sans-serif;padding:8px 14px;min-height:40px;cursor:pointer}
+.lang button[aria-pressed=true]{background:#fff;color:var(--red2)}
+.hero{background:var(--red);color:#fff;padding-top:8px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:32px;align-items:center}
+.hero h1{font-size:clamp(34px,4.6vw,56px)}
+.hero p.lead{font-size:18px;margin:18px 0 26px;max-width:34em}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:99px;border:0;font:800 16px Manrope,system-ui,sans-serif;cursor:pointer;text-decoration:none}
+.btn.gold{background:var(--gold);color:#1b1717}
+.btn.ghost{background:transparent;color:inherit;border:2px solid currentColor}
+.btn.ink{background:var(--ink);color:var(--bg)}
+.btn:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,label:focus-within{outline:3px solid var(--gold);outline-offset:2px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;font-weight:600}
+.facts b{display:block;font:800 22px Unbounded,sans-serif}
+.photo{position:relative;justify-self:center;width:min(100%,460px);aspect-ratio:911/1024;border-radius:22px;border:8px solid #fff;box-shadow:0 18px 0 -6px rgba(0,0,0,.18);transform:rotate(1.5deg)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;border-radius:14px}
+.bub{position:absolute;background:#fff;color:#1b1717;font-weight:800;padding:10px 14px;border-radius:16px;box-shadow:0 4px 0 rgba(0,0,0,.18);white-space:nowrap;font-size:16px}
+.bub i{font-style:normal;color:var(--red);font-size:12px;margin-left:6px}
+.bub::after{content:"";position:absolute;left:18px;bottom:-10px;border:10px solid transparent;border-top-color:#fff;border-bottom:0}
+.b1{left:-34px;top:12%}.b2{right:-26px;top:34%}.b3{left:-22px;bottom:16%}
+.seal{position:absolute;right:-18px;bottom:-18px;width:92px;height:92px;border-radius:50%;background:var(--gold);color:#1b1717;display:grid;place-items:center;font:800 24px Unbounded,Manrope,sans-serif;transform:rotate(-10deg);box-shadow:0 6px 0 rgba(0,0,0,.18)}
+@media(prefers-reduced-motion:no-preference){.photo{transition:transform .4s}.photo:hover{transform:rotate(0)}}
+@media(max-width:600px){.b1{left:-6px}.b2{right:-6px}.b3{left:-6px}.seal{right:-6px;width:72px;height:72px;font-size:19px}.photo{width:calc(100% - 12px)}}
+.start{background:var(--panel)}
+.start .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:clamp(18px,3vw,28px)}
+fieldset{border:0;margin:0 0 18px;padding:0}
+legend{font-weight:800;margin-bottom:10px}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5em,1fr));gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0}
+.opt span{display:flex;align-items:center;min-height:48px;padding:8px 14px;border:1.5px solid var(--line);border-radius:12px;cursor:pointer;font-weight:600;line-height:1.25}
+.opt input:checked+span{border-color:var(--red);background:color-mix(in srgb,var(--red) 10%,var(--bg));color:var(--ink)}
+.opt input:focus-visible+span{outline:3px solid var(--gold)}
+.res{position:sticky;top:12px}
+.res h3{font-size:24px;margin:6px 0 10px}
+.res .tag{display:inline-block;background:var(--gold);color:#1b1717;font-weight:800;border-radius:99px;padding:3px 12px;font-size:14px}
+.res ul{padding-left:20px;margin:12px 0}
+.note{font-size:14px;color:var(--mute)}
+.quiz .q{font-weight:800;font-size:18px;margin:8px 0 12px}
+.bar{height:8px;background:var(--line);border-radius:9px;overflow:hidden;margin-bottom:14px}
+.bar i{display:block;height:100%;background:var(--red);transition:width .3s}
+.courses .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:26px}
+.tk{display:flex;flex-direction:column;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--bg)}
+.tk .top{background:var(--red);color:#fff;padding:18px 20px;position:relative}
+.tk .top::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:18px;background:radial-gradient(circle at 9px 9px,var(--bg) 6px,transparent 7px) 0 0/18px 18px repeat-x}
+.tk .n{font:800 15px Manrope,system-ui,sans-serif;opacity:.85}
+.tk h3{font-size:20px;margin-top:6px}
+.tk .body{padding:24px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tk dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;margin:0}
+.tk dt{color:var(--mute)}
+.tk dd{margin:0;font-weight:600}
+.tk ol{margin:0;padding-left:20px}
+.price{font:800 26px Unbounded,sans-serif;margin-top:auto;white-space:nowrap}
+.soon{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
+.soon div{border:1.5px dashed var(--line);border-radius:14px;padding:14px 16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips span{background:var(--panel);border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-weight:600}
+.method{background:var(--ink);color:var(--bg)}
+.method .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15em,1fr));gap:22px 28px;margin-top:26px}
+.method .k{font:800 34px Unbounded,sans-serif;color:var(--gold)}
+.method .src{font-size:13px;opacity:.75;margin-top:6px}
+.week .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px}
+.steps{list-style:none;padding:0;margin:20px 0 0}
+.steps li{display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+.steps b{font:800 20px Unbounded,sans-serif;color:var(--red);white-space:nowrap}
+.class{background:var(--red);color:#fff;border-radius:18px;padding:24px}
+.class ol{padding-left:20px;margin:12px 0 0}
+.us .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.face{display:flex;gap:16px;align-items:flex-start}
+.av{flex:none;width:72px;height:72px;border-radius:50%;display:grid;place-items:center;font:800 28px Unbounded,sans-serif;color:#fff}
+details{border-top:1px solid var(--line);padding:14px 0}
+details summary{font-weight:800;cursor:pointer;min-height:28px}
+details p{margin-top:8px;color:var(--mute)}
+.join{background:var(--gold);color:#1b1717}
+.join .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
+.join label{display:block;font-weight:800;margin:12px 0 6px}
+.join input,.join select{width:100%;min-height:48px;font:16px Manrope,system-ui,sans-serif;padding:8px 12px;border:1.5px solid #1b1717;border-radius:12px;background:#fff;color:#1b1717}
+footer{background:var(--red2);color:#fff}
+footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
+@media(max-width:860px){.hero .wrap,.start .wrap,.week .wrap,.join .wrap{grid-template-columns:minmax(0,1fr)}.courses .grid,.soon{grid-template-columns:minmax(0,1fr)}.res{position:static}}
+@media(max-width:600px){nav a.l{display:none}.us .wrap{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#top">Eñe</a>
+  <a class="l" href="#courses"><span class="ru">Курсы</span><span class="es">Cursos</span></a>
+  <a class="l" href="#method"><span class="ru">Метод</span><span class="es">Método</span></a>
+  <a class="l" href="#us"><span class="ru">О нас</span><span class="es">Nosotros</span></a>
+  <div class="lang" role="group" aria-label="Язык"><button id="lang-ru" aria-pressed="true">RU</button><button id="lang-es" aria-pressed="false">ES</button></div>
+</div></nav>
+
+<header class="hero band" id="top"><div class="wrap">
+  <div>
+    <h1><span class="ru">Живой испанский для жизни, а не для экзамена</span><span class="es">Español vivo para la vida, no para el examen</span></h1>
+    <p class="lead"><span class="ru">Носитель языка из Латинской Америки говорит, а русскоговорящий преподаватель объясняет по-русски. Короткие видео каждый день и разговор в маленькой группе раз в неделю.</span><span class="es">Un nativo latinoamericano habla y una profesora rusa lo explica en ruso. Cápsulas cortas cada día y conversación en grupo pequeño una vez por semana.</span></p>
+    <div class="row">
+      <a class="btn gold" href="#start"><span class="ru">Узнать мой уровень</span><span class="es">Conocer mi nivel</span></a>
+      <a class="btn ghost" href="#courses"><span class="ru">Смотреть курсы</span><span class="es">Ver cursos</span></a>
+    </div>
+    <div class="facts">
+      <div><b>15–20</b><span class="ru">минут в день</span><span class="es">minutos al día</span></div>
+      <div><b>6</b><span class="ru">человек в группе, максимум</span><span class="es">personas por grupo, máximo</span></div>
+      <div><b>21</b><span class="ru">страна говорит по-испански</span><span class="es">países hablan español</span></div>
+    </div>
+  </div>
+  <div class="photo">
+    <img src="hero.jpg" alt="Москва на закате и флаги, переходящие друг в друга" width="911" height="1024">
+    <span class="bub b1">¡Hola! ¿Qué tal? <i>ES</i></span>
+    <span class="bub b2">¿Cachai? <i>CL</i></span>
+    <span class="bub b3">¡Qué padre! <i>MX</i></span>
+    <span class="seal">Eñe</span>
+  </div>
+</div>
+</div></header>
+
+<section class="start band" id="start"><div class="wrap">
+  <form class="card" id="f" novalidate>
+    <h2 style="font-size:28px;margin-bottom:6px"><span class="ru">С чего начать?</span><span class="es">¿Por dónde empezar?</span></h2>
+    <p class="note" style="margin-bottom:18px"><span class="ru">Четыре вопроса — и мы подберём курс. Около минуты.</span><span class="es">Cuatro preguntas y te recomendamos un curso. Un minuto.</span></p>
+    <fieldset id="fs-level"><legend><span class="ru">Сколько испанского вы знаете?</span><span class="es">¿Cuánto español sabes?</span></legend><div class="opts" id="o-level"></div></fieldset>
+    <fieldset id="fs-age"><legend><span class="ru">Ваш возраст</span><span class="es">Tu edad</span></legend><div class="opts" id="o-age"></div></fieldset>
+    <fieldset id="fs-goal"><legend><span class="ru">Зачем вам испанский?</span><span class="es">¿Para qué quieres el español?</span></legend><div class="opts" id="o-goal"></div></fieldset>
+    <fieldset id="fs-time" style="margin-bottom:0"><legend><span class="ru">Сколько времени в день?</span><span class="es">¿Cuánto tiempo al día?</span></legend><div class="opts" id="o-time"></div></fieldset>
+  </form>
+  <div class="res">
+    <div class="card" id="result"></div>
+    <div class="card quiz" id="quiz" style="margin-top:16px"></div>
+  </div>
+</div></section>
+
+<section class="courses band" id="courses"><div class="wrap">
+  <h2><span class="ru">Курсы-ступеньки: каждый ведёт к следующему</span><span class="es">Cursos en escalera: cada uno lleva al siguiente</span></h2>
+  <div class="grid" id="tickets"></div>
+  <h3 style="margin-top:34px"><span class="ru">Скоро</span><span class="es">Próximamente</span></h3>
+  <div class="soon" id="soon"></div>
+  <h3 style="margin-top:28px"><span class="ru">Модули по странам</span><span class="es">Módulos por país</span></h3>
+  <p class="note"><span class="ru">3–4 капсулы о сленге, еде и обычаях каждой страны.</span><span class="es">3 o 4 cápsulas sobre la jerga, la comida y las costumbres de cada país.</span></p>
+  <div class="chips" id="chips"></div>
+  <p class="note" style="margin-top:18px"><span class="ru">Цены указаны как пример и будут уточнены перед запуском.</span><span class="es">Los precios son de ejemplo y se confirmarán antes del lanzamiento.</span></p>
+</div></section>
+
+<section class="method band" id="method"><div class="wrap">
+  <h2><span class="ru">Метод, проверенный исследованиями</span><span class="es">Un método respaldado por la investigación</span></h2>
+  <div class="grid" id="principles"></div>
+</div></section>
+
+<section class="week band"><div class="wrap">
+  <div>
+    <h2><span class="ru">Как проходит ваша неделя</span><span class="es">Cómo es tu semana</span></h2>
+    <ul class="steps" id="steps"></ul>
+  </div>
+  <div class="class">
+    <h3 style="font-size:22px"><span class="ru">Раз в неделю: живое занятие, 60 минут, до 6 человек</span><span class="es">Una vez por semana: clase en vivo, 60 minutos, hasta 6 personas</span></h3>
+    <ol id="classplan"></ol>
+  </div>
+</div></section>
+
+<section class="us band" id="us" style="background:var(--panel)"><div class="wrap">
+  <div>
+    <h2 style="margin-bottom:22px"><span class="ru">Нас двое</span><span class="es">Somos dos</span></h2>
+    <div class="face" style="margin-bottom:20px"><div class="av" style="background:var(--red)">G</div><div><h3>Геральд · Gerald</h3><p><span class="ru">Носитель испанского из Чили. Говорит, показывает произношение и рассказывает, как на самом деле разговаривают в Латинской Америке.</span><span class="es">Nativo de Chile. Habla, muestra la pronunciación y cuenta cómo se habla de verdad en Latinoamérica.</span></p></div></div>
+    <div class="face"><div class="av" style="background:#1b1717">N</div><div><h3>Нинель · Ninel</h3><p><span class="ru">Объясняет всё по-русски: грамматику, ловушки и типичные ошибки русскоговорящих.</span><span class="es">Explica todo en ruso: la gramática, las trampas y los errores típicos de los rusohablantes.</span></p></div></div>
+  </div>
+  <div id="faq">
+    <h2 style="margin-bottom:12px"><span class="ru">Вопросы</span><span class="es">Preguntas</span></h2>
+  </div>
+</div></section>
+
+<section class="join band" id="join"><div class="wrap">
+  <div>
+    <h2><span class="ru">Запишитесь в первую группу</span><span class="es">Inscríbete en el primer grupo</span></h2>
+    <p style="margin-top:12px;font-size:18px"><span class="ru">Первый курс «Выжить в любой испаноязычной стране» — 7 дней, чтобы попробовать метод.</span><span class="es">El primer curso, «Sobrevivir en cualquier país hispano», dura 7 días y sirve para probar el método.</span></p>
+  </div>
+  <form id="jf" novalidate>
+    <label for="jn"><span class="ru">Имя</span><span class="es">Nombre</span></label><input id="jn" autocomplete="given-name">
+    <label for="jc"><span class="ru">Телефон, VK или Max</span><span class="es">Teléfono, VK o Max</span></label><input id="jc">
+    <label for="jk"><span class="ru">Курс</span><span class="es">Curso</span></label><select id="jk"></select>
+    <button class="btn ink" style="margin-top:16px;width:100%" type="submit"><span class="ru">Хочу записаться</span><span class="es">Quiero inscribirme</span></button>
+    <p id="jmsg" style="margin-top:10px;font-weight:600" role="status"></p>
+  </form>
+</div></section>
+
+<footer class="band" style="padding-block:24px"><div class="wrap">
+  <b style="font:800 20px Unbounded,sans-serif">Eñe</b>
+  <span class="ru">Испанский для русскоговорящих · только для взрослых (18+)</span><span class="es">Español para rusohablantes · solo adultos (18+)</span>
+</div></footer>
+
+<script>
+{
+const L=()=>document.documentElement.classList.contains('es')?'es':'ru';
+const t=o=>o[L()];
+const levels=[{v:'A0',ru:'Совсем не знаю',es:'Nada'},{v:'A1',ru:'Знаю приветствия и основы',es:'Saludos y lo básico'},{v:'A2',ru:'Справлюсь в поездке',es:'Me defiendo en un viaje'},{v:'B1',ru:'Говорю, но с ошибками',es:'Converso con errores'}];
+const ages=[{v:'u18',ru:'Младше 18',es:'Menos de 18'},{v:'18',ru:'18–25',es:'18–25'},{v:'26',ru:'26–40',es:'26–40'},{v:'41',ru:'41–60',es:'41–60'},{v:'60',ru:'60+',es:'60+'}];
+const goals=[{v:'trip',ru:'Путешествия',es:'Viajar'},{v:'work',ru:'Работа',es:'Trabajo'},{v:'move',ru:'Переезд',es:'Mudarme'},{v:'love',ru:'Партнёр или друзья',es:'Pareja o amigos'},{v:'fun',ru:'Для себя',es:'Por gusto'}];
+const times=[{v:'10',ru:'10 минут',es:'10 min'},{v:'20',ru:'20 минут',es:'20 min'},{v:'30',ru:'30+ минут',es:'30+ min'}];
+const courses=[
+ {id:1,ru:'Выжить в любой испаноязычной стране',es:'Sobrevivir en cualquier país hispano',d:{ru:'7 дней',es:'7 días'},lv:'A0',f:{ru:'7 капсул + 1 живое занятие',es:'7 cápsulas + 1 clase en vivo'},p:'490 ₽',
+  l:{ru:['Приветствия и вежливость','Аэропорт и транспорт','Отель','Еда и напитки','Как пройти','Деньги и покупки','Экстренные случаи'],es:['Saludos y cortesía','Aeropuerto y transporte','Alojamiento','Comer y beber','Direcciones','Dinero y compras','Emergencias']}},
+ {id:2,ru:'Разговор на 5 минут',es:'Conversación de 5 minutos',d:{ru:'4 недели',es:'4 semanas'},lv:'A0→A1',f:{ru:'20 капсул + 4 занятия в группе',es:'20 cápsulas + 4 clases en grupo'},p:'1 900 ₽',
+  l:{ru:['Кто я','Моя жизнь и что я люблю','Как поддержать разговор','Мой день и мои планы','Финал: 5 минут разговора с Геральдом'],es:['Quién soy','Mi vida y mis gustos','Mantener la conversación','Mi día y mis planes','Final: 5 minutos de conversación con Gerald']}},
+ {id:3,ru:'Разговор на 30 минут',es:'Conversación de 30 minutos',d:{ru:'8 недель',es:'8 semanas'},lv:'A1→A2',f:{ru:'40 капсул + 8 занятий в группе',es:'40 cápsulas + 8 clases en grupo'},p:'3 500 ₽',
+  l:{ru:['Что ты делал: прошедшее время','Самые частые неправильные глаголы','Каким это было','Своё мнение','Сравнить и посоветовать','Рассказать историю','Желания и планы','Финал: 30 минут без русского'],es:['Qué hiciste: el pasado','Los irregulares más usados','Cómo era','Opinar','Comparar y recomendar','Contar una historia','Deseos y planes','Final: 30 minutos sin ruso']}}];
+const soon=[{ru:'Испанский на каждый день',es:'Español del día a día',d:{ru:'8 недель · A2',es:'8 semanas · A2'}},{ru:'Рабочий день на испанском',es:'Un día de trabajo',d:{ru:'6 недель · A2+',es:'6 semanas · A2+'}},{ru:'Интенсив перед поездкой',es:'Intensivo antes del viaje',d:{ru:'2 недели · до 4 человек',es:'2 semanas · hasta 4 personas'}}];
+const countries={ru:['Мексика','Аргентина','Чили','Куба','Испания','Колумбия','Перу'],es:['México','Argentina','Chile','Cuba','España','Colombia','Perú']};
+const principles=[
+ {k:'1·3·7',ru:['Интервальные повторения','Повторяем через 1, 3, 7 и 14 дней — так слова остаются в памяти.'],es:['Repaso espaciado','Repasamos a los 1, 3, 7 y 14 días: así las palabras se quedan.'],s:'Cepeda et al., 2006'},
+ {k:'?',ru:['Вспоминать, а не перечитывать','Каждое занятие начинается с мини-теста на 3 минуты.'],es:['Recordar, no releer','Cada clase empieza con un mini-quiz de 3 minutos.'],s:'Adesope et al., 2017'},
+ {k:'3000',ru:['Сначала самые частые слова','3 000 самых частых слов покрывают около 94% устной речи.'],es:['Primero las palabras frecuentes','Las 3.000 más frecuentes cubren cerca del 94% del habla.'],s:'Davies, 2005'},
+ {k:'¡Hola!',ru:['Разговор с первого занятия','Те, кто общается на языке, учатся заметно быстрее.'],es:['Conversación desde la primera clase','Quien conversa aprende claramente más.'],s:'Mackey & Goo, 2007'},
+ {k:'✓',ru:['Мягкое исправление ошибок','Геральд повторяет фразу правильно, Нинель объясняет частые ошибки.'],es:['Corrección amable','Gerald repite la frase bien; Ninel explica los errores frecuentes.'],s:'Li, 2010'},
+ {k:'CC',ru:['Видео с испанскими субтитрами','Субтитры на испанском помогают понимать на слух и запоминать слова.'],es:['Video con subtítulos en español','Los subtítulos en español ayudan a entender y a recordar palabras.'],s:'Montero Pérez et al., 2013'},
+ {k:'☺',ru:['Без страха ошибиться','Чем меньше тревоги, тем лучше результат. Ошибаться у нас нормально.'],es:['Sin miedo a equivocarse','A menos ansiedad, mejor resultado. Aquí equivocarse es normal.'],s:'Teimouri et al., 2019'}];
+const steps=[{k:'1 мин',ke:'1 min',ru:'Капсула дня с субтитрами',es:'La cápsula del día, con subtítulos'},{k:'2 мин',ke:'2 min',ru:'Повторяете фразу вслух вместе с Геральдом',es:'Repites la frase en voz alta junto a Gerald'},{k:'5–10',ke:'5–10',ru:'Карточки с интервальным повторением',es:'Tarjetas de repaso espaciado'},{k:'2 мин',ke:'2 min',ru:'Задание: своя фраза с новым словом',es:'Desafío: tu propia frase con la palabra nueva'}];
+const classplan={ru:['Мини-тест за неделю — 5 мин','Ситуации в парах: заказать, спросить, договориться — 25 мин','Разбор трёх самых частых ошибок — 15 мин','Сленг и культура одной страны — 10 мин','Задание и вызов недели — 5 мин'],es:['Mini-quiz de la semana (5 min)','Situaciones en parejas: pedir, preguntar, negociar (25 min)','Los 3 errores más comunes (15 min)','Jerga y cultura de un país (10 min)','Tarea y desafío de la semana (5 min)']};
+const faq=[{ru:['Нужно ли что-то знать заранее?','Нет. Курс «Выжить» начинается с нуля.'],es:['¿Necesito saber algo antes?','No. El curso «Sobrevivir» parte desde cero.']},{ru:['Когда я заговорю?','Реальная цель первых трёх месяцев — справиться в поездке и поддержать простой разговор. Свободную речь за 30 дней мы не обещаем.'],es:['¿Cuándo voy a hablar?','La meta realista de los primeros 3 meses es arreglártelas en un viaje y sostener una conversación simple. No prometemos fluidez en 30 días.']},{ru:['Это испанский Испании или Латинской Америки?','Оба. Основа — нейтральный латиноамериканский, а различия мы показываем в отдельных капсулах.'],es:['¿Español de España o de Latinoamérica?','Los dos. La base es latinoamericano neutro y mostramos las diferencias en cápsulas aparte.']},{ru:['Есть ли курсы для детей?','Пока только для взрослых, 18+.'],es:['¿Hay cursos para niños?','Por ahora solo para adultos (18+).']},{ru:['Как оплатить?','Переводом. Нинель работает как самозанятая и отправляет чек из «Мой налог».'],es:['¿Cómo pago?','Por transferencia. Ninel trabaja como autónoma y envía el recibo de «Mi impuesto».']}];
+const quiz=[
+ {q:'«Gracias»',a:{ru:['Привет','Спасибо','Пока','Извините'],es:['Hola','Gracias (спасибо)','Adiós','Perdón']},c:1},
+ {q:'«¿Dónde está el baño?»',a:{ru:['Где туалет?','Сколько стоит?','Который час?','Где банк?'],es:['¿Dónde está el baño?','¿Cuánto cuesta?','¿Qué hora es?','¿Dónde está el banco?']},c:0,show:{ru:['Где туалет?','Сколько стоит?','Который час?','Где банк?'],es:['Где туалет?','Сколько стоит?','Который час?','Где банк?']}},
+ {q:'Yo ___ de Rusia.',a:['soy','estoy','tengo','voy'],c:0},
+ {q:'«La cuenta, por favor»',a:{ru:['Счёт, пожалуйста','Меню, пожалуйста','Воду, пожалуйста','Такси, пожалуйста'],es:['Счёт, пожалуйста','Меню, пожалуйста','Воду, пожалуйста','Такси, пожалуйста']},c:0},
+ {q:'Ella ___ 30 años.',a:['es','tiene','está','hace'],c:1},
+ {q:'«Mañana voy a viajar»',a:{ru:['Вчера я путешествовал','Завтра я поеду в путешествие','Я часто путешествую','Я хочу путешествовать'],es:['Вчера я путешествовал','Завтра я поеду в путешествие','Я часто путешествую','Я хочу путешествовать']},c:1},
+ {q:'Ayer nosotros ___ al cine.',a:['vamos','fuimos','iremos','vayamos'],c:1},
+ {q:'«Me parece que tienes razón»',a:{ru:['Мне кажется, ты прав','Мне нравится твоя идея','Я не понимаю','Ты ошибаешься'],es:['Мне кажется, ты прав','Мне нравится твоя идея','Я не понимаю','Ты ошибаешься']},c:0},
+ {q:'Cuando era niño, siempre ___ al fútbol.',a:['juego','jugaré','jugaba','juegue'],c:2},
+ {q:'Si tengo tiempo, ___ a la playa.',a:['iré','iría','fuera','haya ido'],c:0}];
+const st={level:'',age:'',goal:'',time:'',qi:-1,score:0,qlevel:''};
+const opt=(name,arr)=>arr.map(o=>`<label class="opt"><input type="radio" name="${name}" value="${o.v}" ${st[name]===o.v?'checked':''}><span>${t(o)}</span></label>`).join('');
+const rec=lv=>lv==='A0'?[1,2]:lv==='A1'?[2,3]:[3];
+function renderForm(){[['level',levels],['age',ages],['goal',goals],['time',times]].forEach(([n,a])=>{document.getElementById('o-'+n).innerHTML=opt(n,a)})}
+function renderResult(){
+ const r=document.getElementById('result');const lv=st.qlevel||st.level;
+ if(st.age==='u18'){r.innerHTML=`<span class="tag">18+</span><h3>${t({ru:'Пока курсы только для взрослых',es:'Por ahora los cursos son solo para adultos'})}</h3><p>${t({ru:'Мы готовим отдельную программу для подростков. Оставьте контакт родителей в форме записи ниже, и мы сообщим, когда она откроется.',es:'Estamos preparando un programa aparte para adolescentes. Deja el contacto de tus padres en el formulario de abajo y avisaremos cuando abra.'})}</p>`;return}
+ if(!lv){r.innerHTML=`<span class="tag">${t({ru:'Ваш план',es:'Tu plan'})}</span><h3>${t({ru:'Выберите уровень слева',es:'Elige tu nivel a la izquierda'})}</h3><p class="note">${t({ru:'Сразу покажем подходящий курс и план на день. Уровень можно проверить тестом из 10 вопросов.',es:'Te mostramos al tiro el curso adecuado y tu plan diario. Puedes confirmar el nivel con una prueba de 10 preguntas.'})}</p>`;return}
+ const cs=rec(lv).map(i=>courses[i-1]);const g=goals.find(x=>x.v===st.goal);const a=ages.find(x=>x.v===st.age);
+ const mins=st.time==='10'?t({ru:'10 минут: капсула + 5 карточек',es:'10 min: cápsula + 5 tarjetas'}):st.time==='30'?t({ru:'30 минут: капсула, повтор вслух, 20 карточек и задание',es:'30 min: cápsula, shadowing, 20 tarjetas y desafío'}):t({ru:'20 минут: капсула, повтор вслух, 10 карточек и задание',es:'20 min: cápsula, shadowing, 10 tarjetas y desafío'});
+ r.innerHTML=`<span class="tag">${t({ru:'Ваш уровень',es:'Tu nivel'})}: ${lv}${st.qlevel?' ✓':''}</span>
+ <h3>${t({ru:'Начните с курса',es:'Empieza con'})} «${t(cs[0])}»</h3>
+ <ul>${cs[1]?`<li>${t({ru:'Потом',es:'Después'})}: «${t(cs[1])}»</li>`:''}<li>${t({ru:'Каждый день',es:'Cada día'})}: ${mins}</li>${a?`<li>${t({ru:'Группа с ровесниками',es:'Grupo de tu edad'})}: ${t(a)}</li>`:''}${g?`<li>${t({ru:'Темы под цель',es:'Temas según tu objetivo'})}: ${t(g).toLowerCase()}</li>`:''}</ul>
+ <a class="btn gold" href="#join" data-c="${cs[0].id}">${t({ru:'Записаться',es:'Inscribirme'})}</a>
+ ${st.qlevel&&st.level&&st.qlevel!==st.level?`<p class="note" style="margin-top:10px">${t({ru:'Тест показал другой уровень, чем вы выбрали. Мы ориентируемся на тест.',es:'La prueba dio un nivel distinto al que elegiste. Nos guiamos por la prueba.'})}</p>`:''}`;
+ r.querySelector('[data-c]').onclick=e=>{document.getElementById('jk').value=e.currentTarget.dataset.c};
+}
+function renderQuiz(){
+ const z=document.getElementById('quiz');
+ if(st.qi<0){z.innerHTML=`<h3>${t({ru:'Проверить уровень за 2 минуты',es:'Confirma tu nivel en 2 minutos'})}</h3><p class="note" style="margin:8px 0 14px">${t({ru:'10 вопросов, от простых к сложным. Это ещё и первая тренировка памяти.',es:'10 preguntas, de fácil a difícil. También es tu primera práctica de memoria.'})}</p><button class="btn ink" id="qs" type="button">${t({ru:'Начать тест',es:'Empezar la prueba'})}</button>`;document.getElementById('qs').onclick=()=>{st.qi=0;st.score=0;renderQuiz()};return}
+ if(st.qi>=quiz.length){z.innerHTML=`<h3>${t({ru:'Готово',es:'Listo'})}: ${st.score}/10 → ${st.qlevel}</h3><p class="note" style="margin:8px 0 14px">${t({ru:'Рекомендация выше обновлена.',es:'La recomendación de arriba ya se actualizó.'})}</p><button class="btn ghost" id="qr" type="button">${t({ru:'Пройти заново',es:'Repetir'})}</button>`;document.getElementById('qr').onclick=()=>{st.qi=0;st.score=0;st.qlevel='';renderQuiz();renderResult()};return}
+ const q=quiz[st.qi];const ans=Array.isArray(q.a)?q.a:(q.show?t(q.show):t(q.a));
+ z.innerHTML=`<div class="bar"><i style="width:${st.qi*10}%"></i></div><p class="note">${st.qi+1}/10 · ${t({ru:'Выберите правильный вариант',es:'Elige la opción correcta'})}</p><p class="q">${q.q}</p><div class="opts">${ans.map((x,i)=>`<button type="button" class="btn ghost" data-i="${i}" style="border-radius:12px;justify-content:flex-start">${x}</button>`).join('')}</div>`;
+ z.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>{if(+b.dataset.i===q.c)st.score++;st.qi++;if(st.qi>=quiz.length){st.qlevel=st.score<=3?'A0':st.score<=6?'A1':st.score<=8?'A2':'B1';renderResult()}renderQuiz()});
+}
+function renderStatic(){
+ document.getElementById('tickets').innerHTML=courses.map(c=>`<article class="tk"><div class="top"><div class="n">${t({ru:'Курс',es:'Curso'})} ${c.id}</div><h3>${t(c)}</h3></div><div class="body"><dl><dt>${t({ru:'Срок',es:'Duración'})}</dt><dd>${t(c.d)}</dd><dt>${t({ru:'Уровень',es:'Nivel'})}</dt><dd>${c.lv}</dd><dt>${t({ru:'Формат',es:'Formato'})}</dt><dd>${t(c.f)}</dd></dl><ol>${t(c.l).map(x=>`<li>${x}</li>`).join('')}</ol><div class="price">${c.p}</div></div></article>`).join('');
+ document.getElementById('soon').innerHTML=soon.map(s=>`<div><b>${t(s)}</b><div class="note">${t(s.d)}</div></div>`).join('');
+ document.getElementById('chips').innerHTML=t(countries).map(x=>`<span>${x}</span>`).join('');
+ document.getElementById('principles').innerHTML=principles.map(p=>`<div><div class="k">${p.k}</div><h3 style="margin:6px 0">${t(p)[0]}</h3><p>${t(p)[1]}</p><p class="src">${p.s}</p></div>`).join('');
+ document.getElementById('steps').innerHTML=steps.map(s=>`<li><b>${L()==='es'?s.ke:s.k}</b><span>${t(s)}</span></li>`).join('');
+ document.getElementById('classplan').innerHTML=t(classplan).map(x=>`<li>${x}</li>`).join('');
+ const fq=document.getElementById('faq');fq.querySelectorAll('details').forEach(d=>d.remove());fq.insertAdjacentHTML('beforeend',faq.map(f=>`<details><summary>${t(f)[0]}</summary><p>${t(f)[1]}</p></details>`).join(''));
+ const jk=document.getElementById('jk');const cur=jk.value||'1';jk.innerHTML=courses.map(c=>`<option value="${c.id}">${c.id}. ${t(c)}</option>`).join('');jk.value=cur;
+}
+function bubbles(){
+ const b=[['¡Hola! ¿Qué tal?','ES',18,30],['¿Cachai?','CL',420,24],['¡Qué padre!','MX',400,190],['La cuenta, por favor','CO',6,300],['¿Cuánto cuesta?','AR',392,360],['¡Asere, qué bolá!','CU',150,420]];
+ document.getElementById('bubs').innerHTML=b.map(([s,c,x,y])=>`<g transform="translate(${x},${y})"><use href="#bub" fill="#000" opacity=".15" transform="translate(4,5)"/><use href="#bub" fill="#ffffff"/><text x="16" y="38" font-family="Manrope,sans-serif" font-weight="800" font-size="18" fill="#1b1717">${s}</text><text x="174" y="20" text-anchor="end" font-family="Manrope,sans-serif" font-weight="800" font-size="13" fill="#e2332a">${c}</text></g>`).join('');
+ document.querySelectorAll('#bubs g').forEach(g=>{const w=g.querySelector('text').getComputedTextLength?g.querySelector('text').getComputedTextLength():150;const bw=Math.max(150,w+52);g.querySelectorAll('use').forEach(u=>u.setAttribute('transform',(u.getAttribute('transform')||'')+` scale(${bw/190},1)`));g.querySelectorAll('text')[1].setAttribute('x',bw-14)});
+}
+function all(){renderForm();renderResult();renderQuiz();renderStatic()}
+function setLang(l){document.documentElement.classList.toggle('es',l==='es');document.documentElement.lang=l;document.getElementById('lang-ru').setAttribute('aria-pressed',l==='ru');document.getElementById('lang-es').setAttribute('aria-pressed',l==='es');try{localStorage.setItem('ene-lang',l)}catch(e){}all()}
+document.getElementById('lang-ru').onclick=()=>setLang('ru');
+document.getElementById('lang-es').onclick=()=>setLang('es');
+document.getElementById('f').addEventListener('change',e=>{if(e.target.name){st[e.target.name]=e.target.value;renderResult()}});
+document.getElementById('jf').addEventListener('submit',e=>{e.preventDefault();const n=document.getElementById('jn').value.trim(),c=document.getElementById('jc').value.trim(),m=document.getElementById('jmsg');m.textContent=!n||!c?t({ru:'Укажите имя и контакт.',es:'Escribe tu nombre y un contacto.'}):t({ru:`Спасибо, ${n}! Это демо-версия: заявка пока никуда не отправляется.`,es:`¡Gracias, ${n}! Esta es una versión de prueba: la inscripción todavía no se envía.`})});
+let l0='ru';try{l0=localStorage.getItem('ene-lang')||'ru'}catch(e){}
+setLang(l0);
+}
+</script>
+</body>
+</html>
