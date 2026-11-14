@@ -1,0 +1,9 @@
+LOGOS DE CLIENTES
+Guarda aquí el logo oficial de cada empresa con este nombre exacto (SVG preferido, o PNG con fondo transparente, ~300 px de ancho):
+
+celulosa-arauco.svg   maderas-arauco.svg   oxy.svg        saesa.svg
+frontel.svg           fpc.svg              energia-circular.svg   el-trueno.svg
+
+La página los detecta sola: si el archivo existe, muestra el logo (en gris, a color al pasar el mouse);
+si no existe, muestra el nombre de la empresa. No hay que tocar el código.
+Pide los logos al área de comunicaciones de cada cliente junto con la autorización para usarlos.
