@@ -146,6 +146,66 @@
   ],
   "news": [
     {
+      "fecha": "2026-11-13",
+      "fuente": "El Mostrador",
+      "url": "https://www.elmostrador.cl/noticias/pais/2026/11/13/gobierno-anuncia-fin-del-paro-de-camioneros-con-rebaja-del-diesel-y-congelamiento-de-combustibles/",
+      "tema": {
+        "es": "Combustibles",
+        "en": "Fuel",
+        "pt": "Combustíveis"
+      },
+      "titular": {
+        "es": "Acuerdo con camioneros: el diésel baja $142 por litro",
+        "en": "Truckers' deal: diesel falls CLP 142 per litre",
+        "pt": "Acordo com caminhoneiros: diesel cai CLP 142 por litro"
+      },
+      "resumen": {
+        "es": "El Gobierno revierte el alza de ENAP, rebaja $100 adicionales al diésel y congela los combustibles hasta el 31 de marzo de 2027; grupos independientes mantienen bloqueos.",
+        "en": "The government reverses ENAP's increase, cuts diesel by a further CLP 100 and freezes fuel prices until 31 March 2027; independent groups keep road blockades.",
+        "pt": "O governo reverte a alta da ENAP, reduz mais CLP 100 no diesel e congela os combustíveis até 31 de março de 2027; grupos independentes mantêm bloqueios."
+      }
+    },
+    {
+      "fecha": "2026-11-13",
+      "fuente": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/13/microsoft-hit-by-global-outages-what-happened-and-why",
+      "tema": {
+        "es": "Tecnología",
+        "en": "Technology",
+        "pt": "Tecnologia"
+      },
+      "titular": {
+        "es": "Caída global de Outlook, Teams y OneDrive",
+        "en": "Global outage hits Outlook, Teams and OneDrive",
+        "pt": "Queda global afeta Outlook, Teams e OneDrive"
+      },
+      "resumen": {
+        "es": "Microsoft lleva más de 12 horas restableciendo sus servicios; hubo al menos 43.000 reportes desde 72 países y la empresa descarta un ciberataque.",
+        "en": "Microsoft has spent more than 12 hours restoring its services; there were at least 43,000 reports from 72 countries and the company rules out a cyberattack.",
+        "pt": "A Microsoft leva mais de 12 horas restabelecendo seus serviços; houve pelo menos 43.000 relatos de 72 países e a empresa descarta um ataque cibernético."
+      }
+    },
+    {
+      "fecha": "2026-11-12",
+      "fuente": "Nvidia (SEC)",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+      "tema": {
+        "es": "Mercados",
+        "en": "Markets",
+        "pt": "Mercados"
+      },
+      "titular": {
+        "es": "Jensen Huang deja la presidencia ejecutiva de Nvidia",
+        "en": "Jensen Huang steps down as Nvidia CEO",
+        "pt": "Jensen Huang deixa o comando da Nvidia"
+      },
+      "resumen": {
+        "es": "La directora de finanzas, Colette Kress, asume como CEO interina; la acción del mayor fabricante de chips para IA cayó cerca de 10% al abrir.",
+        "en": "CFO Colette Kress becomes interim CEO; shares of the largest AI chipmaker fell about 10% at the open.",
+        "pt": "A diretora financeira, Colette Kress, assume como CEO interina; as ações da maior fabricante de chips para IA caíram cerca de 10% na abertura."
+      }
+    },
+    {
       "fecha": "2026-11-12",
       "fuente": "Rigzone",
       "url": "https://www.rigzone.com/news/wire/oil_rises_as_trump_dims_iran_deal_hopes-12-nov-2026-185073-article/",
@@ -163,66 +223,6 @@
         "es": "El Brent cerró en US$ 95,82 por barril (+3,3%) y el WTI en US$ 88,74 (+2,6%).",
         "en": "Brent settled at US$ 95.82 per barrel (+3.3%) and WTI at US$ 88.74 (+2.6%).",
         "pt": "O Brent fechou a US$ 95,82 por barril (+3,3%) e o WTI a US$ 88,74 (+2,6%)."
-      }
-    },
-    {
-      "fecha": "2026-11-12",
-      "fuente": "Infobae",
-      "url": "https://www.infobae.com/noticias/2026/11/12/precio-del-dolar-hoy-en-chile-cotizacion-de-cierre-del-12-de-noviembre/",
-      "tema": {
-        "es": "Dólar",
-        "en": "Dollar",
-        "pt": "Dólar"
-      },
-      "titular": {
-        "es": "El dólar sube en Chile y se acerca a los $1.000",
-        "en": "The dollar rises in Chile and nears CLP 1,000",
-        "pt": "O dólar sobe no Chile e se aproxima dos CLP 1.000"
-      },
-      "resumen": {
-        "es": "Cerró en $994,51, un alza de 1,19% frente a los $982,80 del cierre anterior.",
-        "en": "It closed at CLP 994.51, up 1.19% from the previous close of CLP 982.80.",
-        "pt": "Fechou a CLP 994,51, alta de 1,19% frente aos CLP 982,80 do fechamento anterior."
-      }
-    },
-    {
-      "fecha": "2026-11-11",
-      "fuente": "Pauta",
-      "url": "https://www.pauta.cl/actualidad/2026/11/11/enap-confirma-nueva-alza-de-bencinas-y-diesel-desde-este-jueves-12-de-noviembre.html",
-      "tema": {
-        "es": "Combustibles",
-        "en": "Fuels",
-        "pt": "Combustíveis"
-      },
-      "titular": {
-        "es": "ENAP confirma nueva alza de bencinas y diésel desde este jueves",
-        "en": "ENAP confirms new gasoline and diesel price hike from Thursday",
-        "pt": "ENAP confirma nova alta da gasolina e do diesel a partir de quinta-feira"
-      },
-      "resumen": {
-        "es": "Las gasolinas suben $38,7 por litro y el diésel $41,9 por litro desde el 12 de noviembre.",
-        "en": "Gasoline rises CLP 38.7 per liter and diesel CLP 41.9 per liter from November 12.",
-        "pt": "A gasolina sobe CLP 38,7 por litro e o diesel CLP 41,9 por litro a partir de 12 de novembro."
-      }
-    },
-    {
-      "fecha": "2026-11-11",
-      "fuente": "Infobae",
-      "url": "https://www.infobae.com/movant/2026/11/11/exportaciones-chilenas-crecen-166-y-marcan-record-entre-enero-y-octubre/",
-      "tema": {
-        "es": "Comercio exterior",
-        "en": "Foreign trade",
-        "pt": "Comércio exterior"
-      },
-      "titular": {
-        "es": "Exportaciones chilenas marcan récord entre enero y octubre",
-        "en": "Chilean exports hit a record for January–October",
-        "pt": "Exportações chilenas batem recorde entre janeiro e outubro"
-      },
-      "resumen": {
-        "es": "Sumaron US$ 104.124 millones, 16,6% más que en igual período de 2025, aunque los envíos de concentrado de cobre cayeron 15% en octubre.",
-        "en": "They totaled US$ 104,124 million, 16.6% more than in the same period of 2025, although copper concentrate shipments fell 15% in October.",
-        "pt": "Somaram US$ 104.124 milhões, 16,6% a mais que no mesmo período de 2025, embora os embarques de concentrado de cobre tenham caído 15% em outubro."
       }
     },
     {
