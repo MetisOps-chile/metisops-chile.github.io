@@ -151,7 +151,7 @@ label{font-size:14px;font-weight:700;display:flex;flex-direction:column;gap:6px}
 .dhd a{font-weight:800;color:var(--tqD)}
 .badge{position:absolute;z-index:1;top:10px;left:10px;background:var(--co);color:var(--k);font-weight:800;font-size:14px;padding:4px 10px;border-radius:12px}
 .ph{position:relative}
-s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
+s.old{display:block;color:var(--mut);font-size:14px;font-weight:500;line-height:1.1}
 .vp{background:var(--k);color:#fff;padding:22px max(5vw,16px)}
 .vp .in{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
 .vp div div{display:flex;gap:12px;align-items:center;font-size:15px}
@@ -262,6 +262,16 @@ s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
 .gi b{font-size:14px}
 .gi button{min-height:36px;padding:0 12px;border-radius:18px;border:0;background:var(--sun);font-weight:800;cursor:pointer}
 @media(max-width:600px){.vbar{flex-direction:column;align-items:flex-start}.nav{top:22%}}
+.colh{width:100%;display:flex;align-items:center;gap:16px;border:0;background:none;padding:0;cursor:pointer;text-align:left;color:inherit;font:inherit}
+.colh h2{margin:0 !important;font-size:clamp(24px,2.6vw,32px) !important;line-height:1.15}
+.colh small{display:block;font-size:15px;opacity:.8;margin-top:4px;font-weight:500}
+.colh i{margin-left:auto;flex:none;font-style:normal;font-weight:800;font-size:15px;border:2px solid currentColor;border-radius:22px;padding:8px 16px;white-space:nowrap}
+.colh i::after{content:' ▾'}
+.colh[aria-expanded=true] i::after{content:' ▴'}
+section.closed{padding-top:22px !important;padding-bottom:22px !important}
+.cbody{margin-top:22px}
+.cbody[hidden]{display:none !important}
+.more{display:flex;justify-content:center;margin-top:22px}
 @media(max-width:1000px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.vp .in{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:900px){.kg,.vg,.cg,.gg{grid-template-columns:minmax(0,1fr)}.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.vp .in{grid-template-columns:minmax(0,1fr)}.srch button{display:none}}
@@ -535,7 +545,7 @@ const FOTOS_SECCION = {
 P.forEach(x=>{ if(FOTOS[x.id]) x.img = FOTOS[x.id]; });
 const byId = Object.fromEntries(P.map(x=>[x.id,x]));
 const clp = n => '$' + n.toLocaleString('es-CL');
-let cart = {}; let cat = 'todos'; let q = ''; let wrapGift = false;
+let cart = {}; let cat = 'todos'; let q = ''; let showAll = false; let wrapGift = false;
 try{ cart = JSON.parse(localStorage.getItem('bn-cart')||'{}') || {}; }catch(e){ cart = {}; }
 for (const k in cart) if(!byId[k]) delete cart[k];
 const save = () => { try{ localStorage.setItem('bn-cart', JSON.stringify(cart)); }catch(e){} };
@@ -565,7 +575,8 @@ function renderChips(){
 function renderGrid(){
   const t = q.trim().toLowerCase();
   const list = P.filter(x=>x.c!=='kit' && x.c!=='gift' && (cat==='todos'||x.c===cat) && (!t || (x.n+' '+x.d).toLowerCase().includes(t)));
-  $('grid').innerHTML = list.length ? list.map(card).join('')
+  const lim = (cat==='todos' && !t && !showAll) ? 10 : list.length;
+  $('grid').innerHTML = list.length ? list.slice(0,lim).map(card).join('') + (lim<list.length?`<div class="more" style="grid-column:1/-1"><button class="btn d" id="showAll">Ver los ${list.length} productos</button></div>`:'')
     : '<p class="empty">No encontramos ese producto. Pregúntanos por WhatsApp: muchas cosas las conseguimos por encargo.</p>';
 }
 function msg(){
@@ -591,6 +602,7 @@ document.addEventListener('click', e=>{
   const a = e.target.closest('[data-a]'), d = e.target.closest('[data-d]'), c = e.target.closest('[data-c]');
   if(a){ cart[a.dataset.a] = (cart[a.dataset.a]||0)+1; all(); }
   else if(d){ const k=d.dataset.d; cart[k]=(cart[k]||0)-1; if(cart[k]<=0) delete cart[k]; all(); }
+  else if(e.target.closest('#showAll')){ showAll = true; renderGrid(); }
   else if(c){ cat = c.dataset.c; renderChips(); renderGrid(); if(c.dataset.go) document.getElementById('catalogo').scrollIntoView({behavior:'smooth'}); }
   else { const g = e.target.closest('[data-go]'); if(g) document.getElementById(g.dataset.go).scrollIntoView({behavior:'smooth'}); }
 });
@@ -720,6 +732,23 @@ tag('tagCorvina', corvVeda, 'Veda vigente', 'Abierta', 'on');
 tag('tagMerl', merlVeda, 'Veda vigente', 'Abierta', 'on');
 const ts=$('tagSalm'); ts.textContent = salmOpen?'Temporada abierta':'Temporada cerrada'; ts.className='tag '+(salmOpen?'open':'on');
 $('vedaHoy').innerHTML = `<div class="vh"><div><span>Corvina</span><b>${corvVeda?'En veda':'Abierta'}</b></div><div><span>Merluza común</span><b>${merlVeda?'En veda':'Abierta'}</b></div><div><span>Salmónidos Biobío</span><b>${salmOpen?'Temporada abierta':'Cerrada'}</b></div></div>`;
+
+/* --- Secciones plegables --- */
+const COLL = {condiciones:'Luna, mareas, viento y vedas de hoy', licencia:'Obligatoria y se saca en línea en minutos', normativa:'Calendario de vedas, límites diarios y tallas', guias:'Corvina desde la playa, carretes y nudos'};
+function openSec(id, v=true){ const sec=document.getElementById(id); if(!sec||!sec._b) return; sec._b.hidden=!v; sec.classList.toggle('closed',!v); sec._h.setAttribute('aria-expanded',v?'true':'false'); sec._h.querySelector('i').textContent = v?'Cerrar':'Ver'; }
+Object.entries(COLL).forEach(([id,txt])=>{
+  const sec=document.getElementById(id); if(!sec) return; const wrap=sec.querySelector('.wrap'); const h2=wrap.querySelector('h2');
+  const body=document.createElement('div'); body.className='cbody '+[...wrap.classList].filter(c=>c!=='wrap').join(' '); body.id='cb-'+id;
+  wrap.className='wrap';
+  [...wrap.childNodes].forEach(n=>body.appendChild(n));
+  const title=h2.textContent; h2.remove();
+  const btn=document.createElement('button'); btn.className='colh'; btn.setAttribute('aria-controls',body.id);
+  btn.innerHTML=`<div><h2>${title}</h2><small>${txt}</small></div><i>Ver</i>`;
+  wrap.append(btn, body); sec._b=body; sec._h=btn;
+  btn.addEventListener('click',()=>openSec(id, body.hidden));
+  openSec(id,false);
+});
+document.addEventListener('click', e=>{ const g=e.target.closest('[data-go]'); if(g && COLL[g.dataset.go]) openSec(g.dataset.go,true); const a=e.target.closest('a[href^="#"]'); if(a){ const id=a.getAttribute('href').slice(1); if(COLL[id]) openSec(id,true); } }, true);
 /* --- Condiciones: luna (cálculo local) y, opcional, datos en vivo --- */
 const SYN = 29.530588853, NEW0 = Date.UTC(2000,0,6,18,14);
 const phase = d => { const x = ((d - NEW0)/86400000) % SYN; return (x<0?x+SYN:x)/SYN; };
