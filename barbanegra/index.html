@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barba Negra · Tienda de pesca</title>
+<meta name="description" content="Tienda de pesca en Coronel. Cañas, carretes, señuelos, anzuelos, ropa y accesorios. Pide por WhatsApp.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Barba Negra · Tienda de pesca en Coronel">
+<meta property="og:description" content="Cañas, carretes, señuelos y más. Arma tu pedido y confírmalo por WhatsApp.">
+<meta property="og:image" content="https://metisops-chile.github.io/barbanegra/og.png">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Archivo:wght@400;500;600;800&display=swap">
+<style>
+/* VOICE: tienda de playa alegre, para toda la familia, con ganas de salir a pescar
+   IDEA: un día de verano en la costa: cielo turquesa, sol, arena y boyas de colores
+   PICTURE: la foto de la caña sobre el mar abre la página; olas que bajan a la arena
+   COLOUR and TYPE: sol #FFD23F, turquesa #00A6B8, coral #FF6B4A, arena #FFF7E8, tinta #13222B; Cinzel para la marca, Archivo para el resto
+   LAYOUT: portada con foto, kits de colores, catálogo luminoso, condiciones, visita y carro lateral */
+:root{--k:#13222B;--mut:#4a5b63;--sun:#FFD23F;--sunD:#F2B705;--tq:#00A6B8;--tqD:#006D7A;--co:#FF6B4A;--sand:#FFF7E8;--aqua:#E3F8FA;--line:#E6DCC8;--b:#FFFFFF}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:#fff;color:var(--k);font:16px/1.55 Archivo,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+button,input,select{font:inherit}
+.band{padding:clamp(32px,5vw,72px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+:focus-visible{outline:3px solid var(--co);outline-offset:2px}
+header{position:sticky;top:0;z-index:20;background:#fff;color:var(--k);box-shadow:0 2px 0 var(--sun)}
+.hb{display:flex;align-items:center;gap:16px;padding:10px max(5vw,16px);max-width:1340px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:42px;height:42px}
+.brand b{font:700 20px/1 Cinzel,serif;letter-spacing:2px}
+nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav a{padding:10px 12px;text-decoration:none;font-size:15px;font-weight:600;border-radius:20px}
+nav a:hover{background:var(--aqua)}
+.cartbtn{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border:0;border-radius:22px;background:var(--sun);color:var(--k);font-weight:800;cursor:pointer}
+.cartbtn i{font-style:normal;background:var(--k);color:#fff;border-radius:11px;min-width:22px;height:22px;display:grid;place-items:center;font-size:13px;padding:0 6px}
+.hero{background:linear-gradient(90deg,rgba(0,58,72,.78) 0%,rgba(0,90,110,.45) 48%,rgba(0,120,140,0) 80%),url(img/hero.jpg) center 60%/cover no-repeat #0094A8;color:#fff;padding-bottom:0;padding-top:clamp(48px,8vw,120px)}
+.waves{display:block;width:calc(100% + 2*max(5vw,16px));margin-inline:calc(-1*max(5vw,16px));height:clamp(50px,7vw,96px);margin-top:clamp(24px,4vw,48px)}
+.hg{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center}
+.hero h1{font-size:clamp(34px,5vw,52px);line-height:1.05;margin:0 0 16px;text-wrap:balance}
+.hero p.lead{font-size:18px;max-width:34em;margin:0 0 28px;color:#F2FBFC}
+.mark{display:flex;justify-content:center}
+.mark svg{width:min(100%,340px);height:auto;aspect-ratio:1}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:24px;font-weight:800;text-decoration:none;border:2px solid currentColor;cursor:pointer;background:none;color:inherit}
+.btn.p{background:var(--sun);border-color:var(--sun);color:var(--k)}
+.btn.d{background:var(--k);border-color:var(--k);color:#fff}
+.report{margin-top:32px;background:#fff;color:var(--k);border-radius:16px;padding:18px 20px;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;max-width:520px;border-left:8px solid var(--co)}
+.report b{grid-column:1/-1;font-size:16px}
+.report span{color:var(--mut);font-size:15px}
+.report em{font-style:normal;font-size:15px;font-weight:600}
+.demo{font-size:13px;color:#F2FBFC;margin-top:18px}
+.kits{background:#fff}
+.kits h2,.cat h2,.visit h2,.cond h2{font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 8px}
+.sub{color:var(--mut);margin:0 0 28px;max-width:44em}
+.kg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.kit{border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px;color:var(--k)}
+.kit:nth-child(1){background:#FFF0B3}.kit:nth-child(2){background:#CDF4F8}.kit:nth-child(3){background:#FFDCD2}
+.kit h3{margin:0;font-size:22px}
+.kit p{margin:0;color:#34454d;font-size:15px}
+.kit .row{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px}
+.price{font-weight:800;font-size:22px;white-space:nowrap}
+.cat{background:var(--sand)}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:24px}
+.chip{min-height:44px;padding:0 16px;border-radius:22px;border:2px solid var(--k);background:#fff;cursor:pointer;font-weight:700;color:var(--k)}
+.chip[aria-pressed=true]{background:var(--tq);border-color:var(--tq);color:var(--k)}
+.search{margin-left:auto;display:flex;align-items:center;gap:8px;border:2px solid var(--line);border-radius:22px;padding:0 14px;min-height:44px;background:#fff}
+.search input{border:0;background:none;outline:none;font-size:16px;width:200px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.card{background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--line),0 0 0 1px var(--line)}
+.ph{aspect-ratio:4/3;display:grid;place-items:center;color:var(--k)}
+.ph svg{width:44%;height:auto}
+.ph.cana{background:#CDF4F8}.ph.carrete{background:#FFF0B3}.ph.senuelo{background:#FFDCD2}.ph.anzuelo{background:#DDF5D9}.ph.ropa{background:#E4E0FF}.ph.acc{background:#FFE8C2}
+.cb{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
+.cb small{color:var(--tqD);font-weight:800;font-size:13px}
+.cb h3{margin:0;font-size:17px;line-height:1.3}
+.cb p{margin:0;color:var(--mut);font-size:14px}
+.cb .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px}
+.add{min-height:44px;padding:0 18px;border-radius:22px;border:0;background:var(--sun);color:var(--k);font-weight:800;cursor:pointer}
+.add:hover,.btn.p:hover,.cartbtn:hover{background:var(--sunD)}
+.qty{display:flex;align-items:center;border:2px solid var(--k);border-radius:22px;overflow:hidden;background:#fff}
+.qty button{width:40px;height:40px;border:0;background:none;font-size:20px;cursor:pointer;color:var(--k)}
+.qty span{min-width:26px;text-align:center;font-weight:800}
+.empty{padding:40px 0;color:var(--mut)}
+.cond{background:var(--aqua)}
+.cg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.cc{background:#fff;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.cc h3{margin:0;font-size:20px}
+.cc p{margin:0;color:#34454d;font-size:15px}
+.cc .note{color:var(--mut);font-size:13px}
+.lk{color:var(--tqD);font-weight:700;text-underline-offset:3px;min-height:32px;display:inline-flex;align-items:center}
+.mnow{display:flex;align-items:center;gap:18px}
+.mnow svg{width:84px;height:84px;flex:none}
+.mnow b{display:block;font-size:22px}
+.idx{display:inline-block;margin-top:4px;padding:2px 12px;border-radius:12px;font-weight:800;font-size:14px}
+.idx.a{background:var(--sun);color:var(--k)}.idx.m{background:#CDF4F8;color:var(--k)}.idx.b{background:#E8E4DA;color:var(--k)}
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.dy{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:13px;color:var(--mut)}
+.dy svg{width:26px;height:26px}
+.bar{width:100%;height:46px;background:#EAF6F8;border-radius:8px;display:flex;align-items:flex-end;overflow:hidden}
+.bar i{display:block;width:100%;background:var(--tq);border-radius:8px 8px 0 0}
+.bar i.hi{background:var(--sun)}
+.tl{display:grid;grid-template-columns:auto 1fr auto;gap:6px 14px;font-size:15px}
+.tl span{color:var(--mut)}
+.lic{background:#FFF0B3}
+.lic .btn.p{background:var(--k);border-color:var(--k);color:#fff}
+.visit{background:#FFE9E1}
+.vg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.vc{background:#fff;border-radius:18px;padding:22px}
+.vc h3{margin:0 0 6px;font-size:18px}
+.vc p{margin:0;color:var(--mut)}
+footer{background:var(--tqD);color:#E3F8FA;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+footer b{font:700 18px Cinzel,serif;color:#fff;letter-spacing:2px}
+.scrim{position:fixed;inset:0;background:#00303a99;opacity:0;pointer-events:none;transition:opacity .2s;z-index:30}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:#fff;z-index:31;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column}
+.open .scrim{opacity:1;pointer-events:auto}.open .drawer{transform:none}
+.dh{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:var(--tqD);color:#fff}
+.dh h2{margin:0;font-size:20px}
+.x{width:44px;height:44px;border:0;background:none;color:inherit;font-size:26px;cursor:pointer}
+.items{flex:1;overflow:auto;padding:8px 20px}
+.it{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.it b{font-size:15px}.it .price{font-size:16px;text-align:right}
+.df{padding:16px 20px 20px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:12px;background:var(--sand)}
+.tot{display:flex;justify-content:space-between;font-size:18px;font-weight:800}
+label{font-size:14px;font-weight:700;display:flex;flex-direction:column;gap:6px}
+.df input,.df select{min-height:44px;border:2px solid var(--line);border-radius:12px;padding:0 12px;font-size:16px;background:#fff}
+.wa{background:#1f8f4e;border-color:#1f8f4e;color:#fff}
+.note{font-size:13px;color:var(--mut);margin:0}
+.promo{background:var(--k);color:#fff;font-size:14px;font-weight:600;text-align:center;padding:8px 16px;min-height:36px}
+.promo b{color:var(--sun)}
+.srch{flex:1;max-width:520px;display:flex;align-items:center;gap:8px;border:2px solid var(--k);border-radius:24px;padding:0 6px 0 14px;min-height:46px;background:#fff}
+.srch input{flex:1;border:0;outline:none;font-size:16px;background:none}
+.srch button{min-height:36px;padding:0 14px;border:0;border-radius:18px;background:var(--k);color:#fff;font-weight:700;cursor:pointer}
+.catnav{background:var(--sand);border-top:1px solid var(--line)}
+.catnav .in{max-width:1340px;margin:0 auto;padding:0 max(5vw,16px);display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.catnav button{flex:none;min-height:44px;padding:0 14px;border:0;background:none;font-weight:700;font-size:15px;cursor:pointer;color:var(--k);border-bottom:3px solid transparent}
+.catnav button:hover{border-bottom-color:var(--co)}
+.catnav .sale{color:#C2361A}
+.tiles{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.tile{border:0;border-radius:18px;padding:18px 10px 14px;display:flex;flex-direction:column;align-items:center;gap:10px;cursor:pointer;font-weight:800;font-size:15px;color:var(--k);min-height:150px;justify-content:center}
+.tile svg{width:56px;height:56px}
+.tile span{font-size:13px;font-weight:600;color:#34454d}
+.tile:hover{transform:translateY(-2px)}
+.deals{background:#fff}
+.dhd{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.dhd a{font-weight:800;color:var(--tqD)}
+.badge{position:absolute;z-index:1;top:10px;left:10px;background:var(--co);color:var(--k);font-weight:800;font-size:14px;padding:4px 10px;border-radius:12px}
+.ph{position:relative}
+s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
+.vp{background:var(--k);color:#fff;padding:22px max(5vw,16px)}
+.vp .in{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.vp div div{display:flex;gap:12px;align-items:center;font-size:15px}
+.vp svg{width:34px;height:34px;flex:none;color:var(--sun)}
+.vp b{display:block;font-size:16px}
+.guides{background:#fff}
+.gg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.gd{border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:8px;text-decoration:none}
+.gd:nth-child(1){background:#CDF4F8}.gd:nth-child(2){background:#FFF0B3}.gd:nth-child(3){background:#DDF5D9}
+.gd small{font-weight:800;color:#34454d}
+.gd h3{margin:0;font-size:20px;line-height:1.25}
+.gd p{margin:0;color:#34454d;font-size:15px}
+.fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:24px;max-width:1240px;margin:0 auto}
+.fcols h4{margin:0 0 8px;color:#fff;font-size:15px}
+.fcols a{display:block;text-decoration:none;padding:4px 0}
+.fcols a:hover{text-decoration:underline}
+.xmas{background:#fff;padding-top:24px;padding-bottom:8px}
+.xban{width:100%;display:flex;align-items:center;gap:18px;border:0;border-radius:20px;padding:18px 22px;cursor:pointer;text-align:left;color:#fff;background:linear-gradient(110deg,#C2361A 0%,#E2462A 45%,#1f8f4e 100%)}
+.xban svg{width:52px;height:52px;flex:none}
+.xban b{display:block;font-size:clamp(20px,2.4vw,28px);line-height:1.15}
+.xban span{font-size:15px;opacity:.95}
+.xban i{margin-left:auto;flex:none;font-style:normal;font-weight:800;background:#fff;color:var(--k);border-radius:22px;padding:10px 18px;white-space:nowrap}
+.xbody{background:#FFF4EF;border-radius:0 0 20px 20px;padding:24px 22px;margin-top:-10px;padding-top:34px}
+.xbody[hidden]{display:none}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
+.xg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}
+.xmas h2{font-size:22px;line-height:1.2;margin:0 0 6px}
+.step{margin:0 0 18px}
+.step h3{margin:0 0 10px;font-size:17px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{min-height:46px;padding:0 18px;border-radius:23px;border:2px solid var(--k);background:#fff;font-weight:700;cursor:pointer;color:var(--k)}
+.opt[aria-pressed=true]{background:#1f8f4e;border-color:#1f8f4e;color:#fff}
+.box{background:#fff;border-radius:20px;padding:22px;box-shadow:0 0 0 2px #1f8f4e33}
+.box h3{margin:0 0 4px;font-size:20px}
+.kl{list-style:none;margin:12px 0;padding:0}
+.kl li{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.kl input{width:22px;height:22px;accent-color:#1f8f4e;flex:none}
+.kl label{flex:1;flex-direction:row;justify-content:space-between;font-weight:600;font-size:15px;gap:10px}
+.kl .pr{white-space:nowrap;font-weight:800}
+.ktot{display:flex;justify-content:space-between;align-items:center;font-size:20px;font-weight:800;margin:10px 0}
+.over{color:#C2361A;font-size:14px;font-weight:700}
+.gc{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.gcard{min-height:64px;min-width:120px;border:0;border-radius:14px;background:linear-gradient(135deg,#1f8f4e,#0E8A9A);color:#fff;font-weight:800;cursor:pointer;padding:10px 16px;text-align:left}
+.gcard small{display:block;font-weight:600;opacity:.9}
+@media(max-width:900px){.xg{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.xban{flex-wrap:wrap}.xban i{margin-left:0}}
+@media(max-width:1000px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.vp .in{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.kg,.vg,.cg,.gg{grid-template-columns:minmax(0,1fr)}.fcols{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.vp .in{grid-template-columns:minmax(0,1fr)}.srch button{display:none}}
+@media(max-width:760px){.hb{flex-wrap:wrap}.srch{order:3;max-width:none;flex-basis:100%}.hero{background:linear-gradient(180deg,rgba(0,58,72,.45) 0%,rgba(0,58,72,.8) 60%),url(img/hero.jpg) 20% center/cover no-repeat #0094A8}.hg{grid-template-columns:minmax(0,1fr)}.mark{order:-1}.mark svg{width:min(60%,240px)}nav{display:none}.hb{justify-content:space-between}}
+@media(prefers-reduced-motion:reduce){.drawer,.scrim{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="bn" viewBox="292 230 680 680"><path fill="currentColor" fill-rule="evenodd" d="M 492.500 251.992 C 461.150 252.387, 423.462 252.775, 408.750 252.855 C 388.081 252.967, 382.005 253.284, 382.022 254.250 C 382.034 254.938, 386.866 257.750, 392.760 260.500 C 413.214 270.043, 425.787 280.044, 430.812 290.764 L 433.500 296.500 434 379 C 434.275 424.375, 434.666 461.950, 434.868 462.500 C 435.708 464.779, 434.435 466.562, 422.227 480.215 C 391.539 514.536, 365.848 544.181, 366.354 544.687 C 367.740 546.073, 400.804 525.855, 422 510.661 C 442.446 496.004, 464.477 477.482, 495.346 449 C 534.435 412.933, 557.446 400.739, 614.500 385.857 C 640.680 379.028, 652.421 374.939, 665.928 367.943 C 691.516 354.692, 704.224 338.291, 704.241 318.500 C 704.269 285.409, 670.707 260.448, 617 253.618 C 601.506 251.648, 561.380 251.124, 492.500 251.992 M 496.970 291.695 C 496.443 305.638, 497.325 410.725, 497.975 411.375 C 498.528 411.928, 503.163 409.512, 509.695 405.266 C 533.304 389.919, 550.857 380.632, 582.928 366.519 C 626.193 347.479, 637.017 338.322, 636.991 320.782 C 636.973 308.798, 629.119 300.122, 612.944 294.217 L 605.500 291.500 551.250 291.195 C 521.413 291.027, 496.986 291.252, 496.970 291.695 M 784.636 391.781 C 784.269 392.373, 786.395 395.152, 789.360 397.956 C 795.405 403.673, 800.096 411.791, 802.100 420 C 803.951 427.587, 804.120 518.273, 802.286 520.111 C 801.334 521.065, 796.092 516.432, 777.944 498.596 C 743.013 464.265, 703.874 430.065, 684.808 417.213 C 655.863 397.702, 626.493 395.261, 585.175 408.931 C 562.284 416.506, 557.965 419.663, 571.750 418.749 C 615.344 415.857, 643.919 433.935, 717.563 511 C 803.068 600.476, 840.818 661.670, 850.042 725.750 C 851.603 736.590, 853.470 736.800, 854.476 726.250 C 854.882 721.987, 855.504 653.240, 855.857 573.478 L 856.500 428.455 859.792 421.770 C 863.478 414.284, 868.587 409.328, 876.720 405.349 C 885.172 401.213, 885.092 401.166, 863.500 397.537 C 832.960 392.403, 786.353 389.002, 784.636 391.781 M 629.347 459.750 C 629.683 461.813, 630.398 465.525, 630.936 468 C 637.390 497.720, 618.774 527.949, 588.500 536.908 C 580.104 539.393, 566.831 540.981, 554.356 540.992 C 513.409 541.029, 483.476 551.421, 455.861 575.188 C 447.863 582.073, 448 582.038, 448 577.190 C 448 563.967, 455.673 545.770, 479.705 502 C 489.344 484.445, 493.638 475.305, 492.692 474.358 C 492.372 474.039, 485.898 479.415, 478.305 486.306 C 458.843 503.969, 439.653 519.102, 419.411 532.750 C 400.368 545.590, 375.247 596.599, 371.038 630.974 C 369.193 646.036, 370.005 659.328, 372.610 656.724 C 373.005 656.328, 374.744 652.241, 376.475 647.640 C 382.434 631.797, 393.547 616.973, 406.867 607.099 C 415.919 600.388, 419.280 600.139, 414.940 606.500 C 396.138 634.055, 390.577 676.867, 401.690 708.500 C 407.795 725.878, 416.587 740.329, 414.618 729.750 C 411.656 713.840, 411.002 705.553, 411.935 695.755 C 413.282 681.593, 420.566 657.355, 423.209 658.236 C 423.725 658.408, 424.278 667.006, 424.450 677.523 C 424.795 698.658, 426.422 707.429, 433.581 726.757 C 445.176 758.060, 474.781 801.552, 505.901 833 C 516.387 843.596, 517.912 843.568, 513.463 832.859 C 505.540 813.787, 502 797.756, 502 780.949 C 502 766.739, 503.257 766.703, 508.951 780.750 C 528.684 829.433, 562.189 875.160, 587.843 888.420 C 593.222 891.200, 592.744 889.444, 586.291 882.725 C 579.125 875.262, 574.447 868.172, 568.299 855.454 C 561.941 842.304, 562.931 841.179, 573.116 849.980 C 601.726 874.703, 637.065 886.337, 673.098 882.895 C 759.187 874.672, 802.327 788.542, 774.473 680.500 C 767.399 653.063, 751.759 607, 749.517 607 C 748.861 607, 748.498 614.196, 748.495 627.250 C 748.489 650.259, 746.849 661.069, 740.398 680.610 C 736.187 693.366, 724.755 717.496, 716.525 731 C 713.340 736.225, 709.159 743.102, 707.232 746.281 C 705.305 749.461, 703.994 752.328, 704.318 752.652 C 704.642 752.976, 710.270 748.903, 716.825 743.600 C 731.047 732.096, 745.871 722.013, 747.593 722.674 C 749.523 723.415, 750.356 738.267, 749.070 749.033 C 741.989 808.346, 690.675 840.581, 632.332 822.367 C 598.371 811.765, 570.425 781.798, 553.655 738 C 546.280 718.737, 543.634 703.597, 544.149 683.599 C 544.569 667.328, 543.551 666.226, 539.211 678.250 C 530.662 701.937, 530.082 729.606, 537.587 755.750 C 538.939 760.459, 535.410 757.835, 530.846 750.737 C 504.519 709.795, 507.353 666.324, 538.692 630.390 C 545.817 622.221, 545.625 621.637, 537.221 625.907 C 504.408 642.581, 478.032 687.219, 478.004 726.125 C 477.994 739.687, 475.743 741.159, 472.193 729.923 C 463.327 701.865, 465.584 678.008, 479.648 651.122 C 482.634 645.414, 484.815 640.482, 484.495 640.162 C 484.176 639.842, 480.324 643.288, 475.937 647.819 C 467.223 656.818, 465.493 656.897, 468.946 648.136 C 481.380 616.591, 506.946 593.290, 537.107 586.013 C 541.723 584.899, 552.700 583.304, 561.500 582.467 C 570.300 581.630, 580.128 580.480, 583.340 579.912 C 603.603 576.328, 622.990 565.656, 633.444 552.330 C 638.732 545.590, 639.526 546.028, 639.377 555.599 C 639.135 571.188, 630.624 587.469, 614.888 602.443 C 604.213 612.602, 605.243 613.513, 619.540 606.558 C 654.415 589.592, 677.253 556.525, 673.218 528.840 C 670.575 510.709, 656.351 485.099, 636.347 462.455 C 629.765 455.005, 628.495 454.513, 629.347 459.750 M 758.200 810.300 C 746.567 830.912, 722.744 853.230, 703.360 861.674 C 691.849 866.689, 697.319 867.833, 709.782 863.018 C 726.323 856.628, 740.580 846.053, 749.494 833.561 C 754.347 826.760, 763 809.629, 763 806.823 C 763 803.607, 761.270 804.860, 758.200 810.300"/><path fill="#D71920" fill-rule="evenodd" d="M 763.585 340.035 C 746.129 342.793, 726.904 351.152, 706.931 364.670 C 686.220 378.687, 685.016 380.719, 701.251 374.254 C 759.717 350.973, 816.161 352.050, 882.414 377.710 C 887.411 379.645, 893.075 381.595, 895 382.042 L 898.500 382.856 895.302 380.178 C 885.955 372.349, 851.206 355.078, 831.769 348.599 C 809.263 341.098, 780.067 337.431, 763.585 340.035"/></symbol>
+</defs></svg>
+
+<div class="promo" id="promo" aria-live="polite">Navidad: <b>arma tu kit regalo</b> en minutos</div>
+<header><div class="hb">
+<a class="brand" href="#inicio" aria-label="Barba Negra, inicio"><svg aria-hidden="true"><use href="#bn"/></svg><b>BARBA NEGRA</b></a>
+<form class="srch" id="srch" role="search"><label for="q" style="position:absolute;left:-9999px">Buscar productos</label><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" placeholder="Busca cañas, jigs, anzuelos…"><button type="submit">Buscar</button></form>
+<nav aria-label="Secciones"><a href="#condiciones">Mareas</a><a href="#visita">Tienda</a></nav>
+<button class="cartbtn" id="openCart" aria-label="Abrir pedido">Pedido <i id="count">0</i></button>
+</div>
+<div class="catnav"><div class="in" id="catnav"></div></div>
+</header>
+
+<section class="hero band" id="inicio"><div class="wrap hg">
+<div>
+<h1>Todo para pescar en Coronel y Lota</h1>
+<p class="lead">El equipo, la carnada y el dato de dónde está picando. Elige en el catálogo, arma tu pedido y te lo confirmamos por WhatsApp.</p>
+<div class="cta"><a class="btn p" href="#catalogo">Ver catálogo</a><a class="btn" id="waHero" href="#" style="color:#fff">Escríbenos por WhatsApp</a></div>
+<div class="report" aria-label="Reporte de pesca">
+<b>Reporte de pesca de la semana</b>
+<span>Dónde</span><em>Playa Blanca, al atardecer</em>
+<span>Qué</span><em>Corvina y róbalo de orilla</em>
+<span>Con qué</span><em>Jig metálico de 30 g, recogida lenta</em>
+</div>
+<p class="demo">Versión de muestra: productos, precios, reporte, horario y WhatsApp son de ejemplo.</p>
+</div>
+<div class="mark"><svg role="img" aria-label="Símbolo Barba Negra" style="color:#FFF8EC"><use href="#bn"/></svg></div>
+</div>
+<svg class="waves" viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true"><path fill="#7FE0EA" opacity=".7" d="M0 42 C180 78 360 6 540 40 C720 74 900 8 1080 40 C1260 72 1350 30 1440 38 V96 H0Z"/><path fill="#FFFFFF" d="M0 64 C200 96 380 34 600 62 C820 92 1020 36 1220 60 C1320 72 1390 60 1440 56 V96 H0Z"/></svg>
+</section>
+
+<section class="xmas band" id="navidad"><div class="wrap">
+<button class="xban" id="xToggle" aria-expanded="false" aria-controls="xBody"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="18" width="36" height="24" rx="3"/><path d="M4 12h40v8H4zM24 12v30M24 12c-4-8-14-8-12 0M24 12c4-8 14-8 12 0"/></svg><div><b>Arma tu kit para Navidad</b><span>Dinos para quién es y cuánto quieres gastar: te armamos el regalo.</span></div><i id="xLbl">Armar mi kit</i></button>
+<div class="xbody" id="xBody" hidden><div class="xg">
+<div>
+<h2>Elige y ajusta</h2>
+<p class="sub">Te proponemos un kit con lo que funciona en la zona, y tú lo cambias como quieras.</p>
+<div class="step"><h3>1. ¿Para quién es?</h3><div class="opts" id="xWho"></div></div>
+<div class="step"><h3>2. ¿Cuánto quieres gastar?</h3><div class="opts" id="xBud"></div></div>
+<div class="step"><h3>¿No sabes qué elegir? Regala una gift card</h3><div class="gc" id="xGift"></div></div>
+</div>
+<div class="box" aria-live="polite">
+<h3 id="xTitle">Kit sugerido</h3>
+<p class="note">Marca o desmarca productos. Puedes cambiar cualquier cosa.</p>
+<ul class="kl" id="xList"></ul>
+<label style="flex-direction:row;align-items:center;gap:10px;font-weight:600"><input type="checkbox" id="xWrap" style="width:22px;height:22px;accent-color:#1f8f4e"> Envolver para regalo</label>
+<div class="ktot"><span>Total del kit</span><span id="xTot">$0</span></div>
+<p class="over" id="xOver" hidden>Te pasaste del presupuesto: desmarca algo o sube el monto.</p>
+<button class="btn d" id="xAdd" style="width:100%">Agregar kit al pedido</button>
+</div>
+</div></div>
+</div></section>
+
+<section class="band" style="background:#fff;padding-bottom:0"><div class="wrap">
+<h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 20px">Compra por sección</h2>
+<div class="tiles" id="tiles"></div>
+</div></section>
+
+<section class="deals band" id="ofertas"><div class="wrap">
+<div class="dhd"><h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 8px">Ofertas de la semana</h2><a href="#catalogo">Ver todo el catálogo</a></div>
+<p class="sub">Precios rebajados mientras dure el stock.</p>
+<div class="grid" id="deals"></div>
+</div></section>
+
+<div class="vp" aria-label="Por qué comprar en Barba Negra"><div class="in">
+<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 10l9-6 9 6v10H3z"/><path d="M9 20v-6h6v6"/></svg><div><b>Retiro en tienda</b>En Coronel, listo cuando confirmamos</div></div>
+<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20l1.5-4A8 8 0 1 1 8 18.5z"/></svg><div><b>Pedido por WhatsApp</b>Te respondemos y confirmamos stock</div></div>
+<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg><div><b>Asesoría de pescadores</b>Te ayudamos a armar tu equipo</div></div>
+<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V4h8v3"/></svg><div><b>Pedidos especiales</b>Si no lo tenemos, lo conseguimos</div></div>
+</div></div>
+
+<section class="kits band" id="kits"><div class="wrap">
+<h2>Kits probados en Coronel</h2>
+<p class="sub">Armados con lo que está funcionando en la zona. Si no sabes qué llevar, parte por aquí.</p>
+<div class="kg" id="kitGrid"></div>
+</div></section>
+
+<section class="cat band" id="catalogo"><div class="wrap">
+<h2>Catálogo</h2>
+<p class="sub">Precios en pesos chilenos, IVA incluido. El stock se confirma al recibir tu pedido.</p>
+<div class="tools">
+<div id="chips" style="display:flex;flex-wrap:wrap;gap:10px" role="group" aria-label="Filtrar por sección"></div>
+</div>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section class="cond band" id="condiciones"><div class="wrap">
+<h2>Condiciones para pescar</h2>
+<p class="sub">Luna, mareas, viento y clima para Coronel y Lota. Revisa antes de salir.</p>
+<div class="cg">
+<div class="cc">
+<h3>Luna e índice solunar</h3>
+<div class="mnow" id="moonNow"></div>
+<div class="week" id="week" aria-label="Índice de los próximos 7 días"></div>
+<p class="note">Referencial: la tabla solunar es una tradición de pescadores, no un pronóstico de capturas. Lunas nueva y llena suelen dar mejores mareas.</p>
+</div>
+<div class="cc">
+<h3>Mareas</h3>
+<div id="tide"><p>En Coronel la marea es semidiurna: dos pleamares y dos bajamares al día, de distinta altura. Muchos pescadores de orilla prefieren las horas cerca del cambio de marea.</p></div>
+<a class="lk" href="https://www.shoa.cl">Tabla oficial de mareas (SHOA): Servicios › Mareas › Pronóstico</a>
+</div>
+<div class="cc">
+<h3>Viento y clima</h3>
+<div id="wx"><p>Con viento fuerte de frente cuesta lanzar y leer el pique. Mira el viento y las olas antes de ir a la playa.</p></div>
+<a class="lk" href="https://www.windy.com/?-37.030,-73.150,11">Viento y olas en Coronel (Windy)</a>
+<a class="lk" href="https://www.meteochile.gob.cl">Pronóstico oficial (Meteochile)</a>
+</div>
+<div class="cc lic">
+<h3>Licencia de pesca recreativa</h3>
+<p>Se saca en línea en Sernapesca y queda lista al instante. No la necesitan los mayores de 65 años, los menores de 12 ni las personas inscritas en el Registro Nacional de la Discapacidad.</p>
+<a class="btn p" href="https://pescarecreativa.sernapesca.cl/">Sacar mi licencia en Sernapesca</a>
+<p class="note">Temporada de salmónidos en ríos y lagos del Biobío: del tercer viernes de octubre al primer domingo de mayo.</p>
+</div>
+</div>
+</div></section>
+
+<section class="guides band" id="guias"><div class="wrap">
+<h2 style="font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 8px">Aprende a pescar en la zona</h2>
+<p class="sub">Guías cortas escritas por quienes pescan en Coronel y Lota.</p>
+<div class="gg">
+<a class="gd" href="https://www.instagram.com/barbanegrapescacoronel/"><small>Orilla · Principiantes</small><h3>Cómo pescar corvina desde la playa</h3><p>Equipo, horario, señuelo y cómo leer la marea.</p></a>
+<a class="gd" href="https://www.instagram.com/barbanegrapescacoronel/"><small>Equipo</small><h3>Qué carrete elegir para tu caña</h3><p>Tamaños 1000, 3000 y 5000: para qué sirve cada uno.</p></a>
+<a class="gd" href="https://www.instagram.com/barbanegrapescacoronel/"><small>Básicos</small><h3>Tres nudos que todo pescador necesita</h3><p>Clinch, palomar y unión de líneas, paso a paso.</p></a>
+</div>
+</div></section>
+
+<section class="visit band" id="visita"><div class="wrap">
+<h2>Visítanos en Coronel</h2>
+<p class="sub">Atención en tienda, consejo para armar tu equipo y pedidos especiales.</p>
+<div class="vg">
+<div class="vc"><h3>Dirección</h3><p>Coronel, Región del Biobío</p></div>
+<div class="vc"><h3>Horario</h3><p>Lunes a sábado, 9:30 a 19:00</p></div>
+<div class="vc"><h3>Redes</h3><p><a href="https://www.instagram.com/barbanegrapescacoronel/">Instagram @barbanegrapescacoronel</a></p></div>
+</div>
+</div></section>
+
+<footer class="band"><div class="fcols">
+<div><b>BARBA NEGRA</b><p style="margin:8px 0 0">Tienda de pesca · Coronel · Concepción</p></div>
+<div><h4>Comprar</h4><a href="#ofertas">Ofertas</a><a href="#kits">Kits</a><a href="#catalogo">Catálogo</a></div>
+<div><h4>Pescar</h4><a href="#condiciones">Mareas y clima</a><a href="#guias">Guías</a><a href="https://pescarecreativa.sernapesca.cl/">Licencia de pesca</a></div>
+<div><h4>Tienda</h4><a href="#visita">Dirección y horario</a><a href="https://www.instagram.com/barbanegrapescacoronel/">Instagram</a></div>
+</div></footer>
+
+<div id="cart" aria-hidden="true">
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" role="dialog" aria-label="Tu pedido">
+<div class="dh"><h2>Tu pedido</h2><button class="x" id="closeCart" aria-label="Cerrar">×</button></div>
+<div class="items" id="items"></div>
+<div class="df">
+<div class="tot"><span>Total</span><span id="total">$0</span></div>
+<label for="nm">Tu nombre<input id="nm" autocomplete="name"></label>
+<label for="dl">Entrega<select id="dl"><option>Retiro en tienda</option><option>Despacho en Coronel o Lota</option><option>Envío por courier a otra ciudad</option></select></label>
+<a class="btn wa" id="send" href="#">Enviar pedido por WhatsApp</a>
+<p class="note">Se abre WhatsApp con tu pedido escrito. Te confirmamos stock, total y forma de pago antes de cobrar.</p>
+</div>
+</aside>
+</div>
+
+<script>
+{
+const WA = '56900000000'; // número de WhatsApp de la tienda, con 56 y sin +
+const icons = {
+cana:'<path d="M6 42 L42 6"/><circle cx="14" cy="34" r="4"/><path d="M42 6 C46 18 44 30 40 40"/>',
+carrete:'<circle cx="24" cy="26" r="12"/><circle cx="24" cy="26" r="4"/><path d="M24 14 V6 M18 6 H30 M36 26 H44"/>',
+senuelo:'<path d="M6 24 C14 12 30 12 38 24 C30 36 14 36 6 24 Z"/><circle cx="30" cy="22" r="2"/><path d="M38 24 L46 18 M38 24 L46 30"/>',
+anzuelo:'<circle cx="28" cy="8" r="3"/><path d="M28 11 V32 A9 9 0 0 1 10 32 V26 L15 30"/>',
+ropa:'<path d="M16 6 L24 10 L32 6 L42 14 L36 22 L33 20 V42 H15 V20 L12 22 L6 14 Z"/>',
+acc:'<rect x="6" y="14" width="36" height="24" rx="3"/><path d="M6 24 H42 M18 14 V9 H30 V14"/>',
+kit:'<rect x="6" y="12" width="36" height="28" rx="3"/><path d="M18 12 V8 H30 V12 M14 26 L34 26"/>'
+};
+const cats = [['todos','Todos'],['cana','Cañas'],['carrete','Carretes'],['senuelo','Señuelos'],['anzuelo','Anzuelos y plomos'],['ropa','Ropa'],['acc','Accesorios']];
+const P = [
+['k1','kit','Kit orilla principiante','Caña 2,40 m, carrete 3000, nylon, 3 señuelos y anzuelos. Listo para pescar.',49990],
+['k2','kit','Kit corvina surf','Caña surfcasting 3,90 m, carrete 5000, multifilamento, plomos y líneas armadas.',79990],
+['k3','kit','Caja regalo pescador','Caja organizadora con señuelos, anzuelos, destorcedores y alicate.',29990],
+['c1','cana','Caña spinning 2,40 m','Acción media, 10 a 30 g. Para orilla y roquerío.',24990,29990],
+['c2','cana','Caña surfcasting 3,90 m','Lance largo, 100 a 200 g. Para playa.',44990],
+['c3','cana','Caña telescópica 2,10 m','Compacta, cabe en la mochila.',15990],
+['r1','carrete','Carrete frontal 1000','Ultraligero, para pejerrey y río.',22990],
+['r2','carrete','Carrete frontal 3000','5 rodamientos. El más versátil.',29990,36990],
+['r3','carrete','Carrete frontal 5000','Para surf y nylon grueso.',39990],
+['s1','senuelo','Jig metálico 30 g','Corvina y róbalo desde la orilla.',3990,4990],
+['s2','senuelo','Minnow 9 cm flotante','Recogida lenta en roquerío.',5990],
+['s3','senuelo','Vinilos paddle tail 10 cm (5)','Con cabeza plomada de 10 g.',4990],
+['s4','senuelo','Cucharilla rotativa N°3','Trucha y salmón en río.',2990],
+['a1','anzuelo','Anzuelos N°1 (10)','Acero carbono, para carnada.',1990],
+['a2','anzuelo','Anzuelos circle 2/0 (10)','Menos tragados, más devoluciones.',2490],
+['a3','anzuelo','Plomos pera 60 g (3)','Para línea de fondo.',1990],
+['a4','anzuelo','Destorcedores con snap (10)','Tamaño 6, cambio rápido.',1990],
+['w1','ropa','Chaqueta impermeable','Con capucha, para viento y garúa.',34990],
+['w2','ropa','Guantes de pesca','Dedos descubiertos, agarre en mojado.',8990],
+['w3','ropa','Botas de goma','Caña alta, suela antideslizante.',19990],
+['x1','acc','Nylon 0,35 mm, 300 m','Monofilamento para orilla.',5990],
+['x2','acc','Multifilamento PE 1.5, 150 m','Más lance y sensibilidad.',12990,15990],
+['x3','acc','Caja organizadora','Divisiones regulables.',6990],
+['x4','acc','Alicate de pesca','Para sacar anzuelos y cortar.',6990],
+['x5','acc','Linterna frontal','Para pescar al amanecer o de noche.',7990],
+['g1','gift','Gift card $10.000','Para usar en la tienda.',10000],
+['g2','gift','Gift card $25.000','Para usar en la tienda.',25000],
+['g3','gift','Gift card $50.000','Para usar en la tienda.',50000]
+].map(([id,c,n,d,p,o])=>({id,c,n,d,p,o}));
+// FOTOS: guarda cada foto en img/productos/ y escribe aquí  id: 'img/productos/archivo.jpg'
+const FOTOS = {
+  // c1: 'img/productos/cana-spinning-240.jpg',
+};
+// Fotos para las tarjetas de "Compra por sección" (opcional)
+const FOTOS_SECCION = {
+  // cana: 'img/secciones/canas.jpg',
+};
+P.forEach(x=>{ if(FOTOS[x.id]) x.img = FOTOS[x.id]; });
+const byId = Object.fromEntries(P.map(x=>[x.id,x]));
+const clp = n => '$' + n.toLocaleString('es-CL');
+let cart = {}; let cat = 'todos'; let q = ''; let wrapGift = false;
+try{ cart = JSON.parse(localStorage.getItem('bn-cart')||'{}') || {}; }catch(e){ cart = {}; }
+for (const k in cart) if(!byId[k]) delete cart[k];
+const save = () => { try{ localStorage.setItem('bn-cart', JSON.stringify(cart)); }catch(e){} };
+const $ = id => document.getElementById(id);
+const icon = c => `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[c]}</svg>`;
+const ctrl = x => cart[x.id]
+  ? `<div class="qty" aria-label="Cantidad de ${x.n}"><button data-d="${x.id}" aria-label="Quitar uno">−</button><span>${cart[x.id]}</span><button data-a="${x.id}" aria-label="Agregar uno">+</button></div>`
+  : `<button class="add" data-a="${x.id}">Agregar</button>`;
+const catName = Object.fromEntries(cats);
+function card(x){
+  const b = x.o ? `<span class="badge">-${Math.round((1-x.p/x.o)*100)}%</span>` : '';
+  return `<article class="card"><div class="ph ${x.c}">${x.img?`<img src="${x.img}" alt="${x.n}" loading="lazy">`:icon(x.c)}${b}</div><div class="cb"><small>${catName[x.c]}</small><h3>${x.n}</h3><p>${x.d}</p><div class="row"><span class="price">${clp(x.p)}${x.o?`<s class="old">${clp(x.o)}</s>`:''}</span>${ctrl(x)}</div></div></article>`;
+}
+function renderDeals(){ $('deals').innerHTML = P.filter(x=>x.o).map(card).join(''); }
+function renderNav(){
+  $('catnav').innerHTML = cats.slice(1).map(([k,l])=>`<button data-c="${k}" data-go="1">${l}</button>`).join('') + '<button data-go="navidad" class="sale">Navidad</button><button data-go="ofertas" class="sale">Ofertas</button><button data-go="kits">Kits</button>';
+  const tc = {cana:'#CDF4F8',carrete:'#FFF0B3',senuelo:'#FFDCD2',anzuelo:'#DDF5D9',ropa:'#E4E0FF',acc:'#FFE8C2'};
+  const ts = {cana:'Orilla, surf, río',carrete:'1000 a 5000',senuelo:'Jigs, minnows, vinilos',anzuelo:'Terminales',ropa:'Agua y viento',acc:'Líneas y más'};
+  $('tiles').innerHTML = cats.slice(1).map(([k,l])=>`<button class="tile" data-c="${k}" data-go="1" style="background:${tc[k]}">${FOTOS_SECCION[k]?`<img src="${FOTOS_SECCION[k]}" alt="" loading="lazy">`:icon(k)}${l}<span>${ts[k]}</span></button>`).join('');
+}
+function renderKits(){
+  $('kitGrid').innerHTML = P.filter(x=>x.c==='kit').map(x=>`<article class="kit"><h3>${x.n}</h3><p>${x.d}</p><div class="row"><span class="price">${clp(x.p)}</span>${ctrl(x).replace('class="add"','class="btn d"').replace('class="qty"','class="qty"')}</div></article>`).join('');
+}
+function renderChips(){
+  $('chips').innerHTML = cats.map(([k,l])=>`<button class="chip" data-c="${k}" aria-pressed="${k===cat}">${l}</button>`).join('');
+}
+function renderGrid(){
+  const t = q.trim().toLowerCase();
+  const list = P.filter(x=>x.c!=='kit' && x.c!=='gift' && (cat==='todos'||x.c===cat) && (!t || (x.n+' '+x.d).toLowerCase().includes(t)));
+  $('grid').innerHTML = list.length ? list.map(card).join('')
+    : '<p class="empty">No encontramos ese producto. Pregúntanos por WhatsApp: muchas cosas las conseguimos por encargo.</p>';
+}
+function msg(){
+  const lines = Object.entries(cart).map(([k,n])=>`- ${n} x ${byId[k].n} (${clp(byId[k].p*n)})`);
+  const tot = Object.entries(cart).reduce((s,[k,n])=>s+byId[k].p*n,0);
+  const nm = $('nm').value.trim();
+  return `Hola Barba Negra, quiero hacer este pedido:\n${lines.join('\n')}\nTotal referencial: ${clp(tot)}\nEntrega: ${$('dl').value}` + (wrapGift?`\nEnvolver para regalo: sí`:'') + (nm?`\nNombre: ${nm}`:'') + `\n¿Me confirman stock?`;
+}
+function renderCart(){
+  const ent = Object.entries(cart);
+  const n = ent.reduce((s,[,v])=>s+v,0);
+  $('count').textContent = n;
+  const tot = ent.reduce((s,[k,v])=>s+byId[k].p*v,0);
+  $('total').textContent = clp(tot);
+  $('items').innerHTML = ent.length ? ent.map(([k,v])=>{const x=byId[k];return `<div class="it"><b>${x.n}</b><span class="price">${clp(x.p*v)}</span><span style="color:var(--mut);font-size:14px">${clp(x.p)} c/u</span><div class="qty"><button data-d="${k}" aria-label="Quitar uno">−</button><span>${v}</span><button data-a="${k}" aria-label="Agregar uno">+</button></div></div>`}).join('')
+    : '<p class="empty">Tu pedido está vacío. Agrega productos desde el catálogo.</p>';
+  const s = $('send');
+  s.href = ent.length ? `https://wa.me/${WA}?text=${encodeURIComponent(msg())}` : '#catalogo';
+  s.setAttribute('aria-disabled', ent.length ? 'false' : 'true');
+}
+function all(){ renderKits(); renderDeals(); renderGrid(); renderCart(); save(); }
+document.addEventListener('click', e=>{
+  const a = e.target.closest('[data-a]'), d = e.target.closest('[data-d]'), c = e.target.closest('[data-c]');
+  if(a){ cart[a.dataset.a] = (cart[a.dataset.a]||0)+1; all(); }
+  else if(d){ const k=d.dataset.d; cart[k]=(cart[k]||0)-1; if(cart[k]<=0) delete cart[k]; all(); }
+  else if(c){ cat = c.dataset.c; renderChips(); renderGrid(); if(c.dataset.go) document.getElementById('catalogo').scrollIntoView({behavior:'smooth'}); }
+  else { const g = e.target.closest('[data-go]'); if(g) document.getElementById(g.dataset.go).scrollIntoView({behavior:'smooth'}); }
+});
+const open = v => { $('cart').className = v?'open':''; $('cart').setAttribute('aria-hidden', v?'false':'true'); if(v) $('closeCart').focus(); };
+$('openCart').onclick = ()=>open(true);
+$('closeCart').onclick = ()=>open(false);
+$('scrim').onclick = ()=>open(false);
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') open(false); });
+$('q').addEventListener('input', e=>{ q = e.target.value; if(q){ cat='todos'; renderChips(); } renderGrid(); });
+$('srch').addEventListener('submit', e=>{ e.preventDefault(); document.getElementById('catalogo').scrollIntoView({behavior:'smooth'}); });
+const promos = ['Navidad: <b>arma tu kit regalo</b> en minutos','Arma tu pedido aquí y <b>confírmalo por WhatsApp</b>','<b>Retiro en tienda</b> en Coronel','¿No encuentras algo? <b>Lo conseguimos por encargo</b>'];
+let pi = 0; if(!matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(()=>{ pi=(pi+1)%promos.length; $('promo').innerHTML = promos[pi]; }, 5000);
+$('nm').addEventListener('input', renderCart);
+$('dl').addEventListener('change', renderCart);
+$('send').addEventListener('click', e=>{ if(!Object.keys(cart).length){ open(false); } });
+$('waHero').href = `https://wa.me/${WA}?text=${encodeURIComponent('Hola Barba Negra, tengo una consulta.')}`;
+renderNav(); renderChips(); all();
+
+
+/* --- Arma tu kit para Navidad --- */
+const WHO = [['pri','Alguien que parte',['c1','c3'],['r2','r1'],['x1','s1','s3','a1','a3','x3','x4']],['ori','Pescador de orilla',['c2','c1'],['r3','r2'],['x2','s1','s2','a2','a4','x4','w2']],['rio','Pescador de río',['c3','c1'],['r1','r2'],['s4','x1','a4','w2','x3']],['nin','Un niño o niña',['c3'],['r1'],['a1','a3','x3','x5']]];
+const BUD = [[20000,'Hasta $20.000'],[40000,'Hasta $40.000'],[70000,'Hasta $70.000'],[Infinity,'Sin límite']];
+let xw = 0, xb = 1, xsel = new Set();
+let xids = [];
+function suggest(){
+  const [,,rods,reels,extras] = WHO[xw], lim = BUD[xb][0]; let t = 0, pick = null; xsel = new Set();
+  for(const c of rods){ for(const r of reels){ if(!pick && byId[c].p+byId[r].p <= lim) pick=[c,r]; } }
+  if(pick){ pick.forEach(id=>xsel.add(id)); t = byId[pick[0]].p + byId[pick[1]].p; }
+  const base = pick || [rods[rods.length-1], reels[reels.length-1]];
+  xids = [...base, ...extras];
+  for(const id of extras){ const p = byId[id].p; if(t+p<=lim){ xsel.add(id); t+=p; } }
+}
+function renderX(){
+  $('xWho').innerHTML = WHO.map(([k,l],i)=>`<button class="opt" data-xw="${i}" aria-pressed="${i===xw}">${l}</button>`).join('');
+  $('xBud').innerHTML = BUD.map(([v,l],i)=>`<button class="opt" data-xb="${i}" aria-pressed="${i===xb}">${l}</button>`).join('');
+  $('xTitle').textContent = 'Kit sugerido: ' + WHO[xw][1].toLowerCase();
+  $('xList').innerHTML = xids.map(id=>{const x=byId[id];return `<li><input type="checkbox" id="xi-${id}" data-xi="${id}" ${xsel.has(id)?'checked':''}><label for="xi-${id}"><span>${x.n}</span><span class="pr">${clp(x.p)}</span></label></li>`}).join('');
+  const t = [...xsel].reduce((s,id)=>s+byId[id].p,0);
+  $('xTot').textContent = clp(t);
+  $('xOver').hidden = !(t > BUD[xb][0]);
+  $('xAdd').disabled = !xsel.size;
+}
+$('xGift').innerHTML = P.filter(x=>x.c==='gift').map(x=>`<button class="gcard" data-a="${x.id}">${clp(x.p)}<small>Gift card · agregar</small></button>`).join('');
+document.addEventListener('click', e=>{
+  const w = e.target.closest('[data-xw]'), b = e.target.closest('[data-xb]');
+  if(w){ xw = +w.dataset.xw; suggest(); renderX();
+$('xToggle').addEventListener('click', ()=>{ const b=$('xBody'), o=b.hidden; b.hidden=!o; $('xToggle').setAttribute('aria-expanded', o?'true':'false'); $('xLbl').textContent = o?'Cerrar':'Armar mi kit'; }); }
+  else if(b){ xb = +b.dataset.xb; suggest(); renderX();
+$('xToggle').addEventListener('click', ()=>{ const b=$('xBody'), o=b.hidden; b.hidden=!o; $('xToggle').setAttribute('aria-expanded', o?'true':'false'); $('xLbl').textContent = o?'Cerrar':'Armar mi kit'; }); }
+});
+document.addEventListener('change', e=>{
+  const i = e.target.closest('[data-xi]'); if(!i) return;
+  i.checked ? xsel.add(i.dataset.xi) : xsel.delete(i.dataset.xi); renderX();
+});
+$('xAdd').addEventListener('click', ()=>{ for(const id of xsel) cart[id]=(cart[id]||0)+1; if($('xWrap').checked) wrapGift = true; all(); open(true); });
+suggest(); renderX();
+$('xToggle').addEventListener('click', ()=>{ const b=$('xBody'), o=b.hidden; b.hidden=!o; $('xToggle').setAttribute('aria-expanded', o?'true':'false'); $('xLbl').textContent = o?'Cerrar':'Armar mi kit'; });
+/* --- Condiciones: luna (cálculo local) y, opcional, datos en vivo --- */
+const SYN = 29.530588853, NEW0 = Date.UTC(2000,0,6,18,14);
+const phase = d => { const x = ((d - NEW0)/86400000) % SYN; return (x<0?x+SYN:x)/SYN; };
+const moonSvg = p => {
+  const r=20, k=Math.cos(2*Math.PI*p), rx=Math.abs(k)*r, wax=p<0.5;
+  const os = wax?1:0, ts = wax ? (k>0?0:1) : (k>0?1:0);
+  return `<svg viewBox="-22 -22 44 44" aria-hidden="true"><circle r="${r}" fill="#27424D"/><path fill="#FFE07A" d="M0 ${-r} A${r} ${r} 0 0 ${os} 0 ${r} A${rx} ${r} 0 0 ${ts} 0 ${-r}Z"/></svg>`;
+};
+const pname = p => p<0.03||p>0.97?'Luna nueva':p<0.22?'Creciente':p<0.28?'Cuarto creciente':p<0.47?'Gibosa creciente':p<0.53?'Luna llena':p<0.72?'Gibosa menguante':p<0.78?'Cuarto menguante':'Menguante';
+const score = p => 1 - Math.min(Math.abs(p), Math.abs(p-0.5), Math.abs(p-1))*4;
+const lvl = s => s>=0.66?['a','Alta']:s>=0.33?['m','Media']:['b','Baja'];
+const now = new Date(), pn = phase(now), [cls,lab] = lvl(score(pn));
+const illum = Math.round((1-Math.cos(2*Math.PI*pn))/2*100);
+$('moonNow').innerHTML = `${moonSvg(pn)}<div><b>${pname(pn)}</b><span style="color:#4a5b63">${illum}% iluminada</span><br><span class="idx ${cls}">Índice ${lab}</span></div>`;
+const dn = ['dom','lun','mar','mié','jue','vie','sáb'];
+$('week').innerHTML = Array.from({length:7},(_,i)=>{ const d=new Date(now.getTime()+i*86400000), p=phase(d), s=Math.max(0.08,score(p));
+  return `<div class="dy"><span>${i?dn[d.getDay()]:'hoy'}</span>${moonSvg(p)}<div class="bar" title="${lvl(s)[1]}"><i class="${s>=0.66?'hi':''}" style="height:${Math.round(s*100)}%"></i></div></div>`; }).join('');
+
+const LIVE = false; // Open-Meteo gratis es solo para uso no comercial: activar con plan pagado
+const LAT=-37.03, LON=-73.16, TZ='America%2FSantiago';
+const dirs = ['N','NE','E','SE','S','SO','O','NO'];
+if (LIVE) {
+  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&current=temperature_2m,wind_speed_10m,wind_direction_10m,wind_gusts_10m&daily=precipitation_probability_max&timezone=${TZ}&forecast_days=1`)
+  .then(r=>r.json()).then(j=>{ const c=j.current;
+    $('wx').innerHTML = `<div class="tl"><span>Viento</span><b>${Math.round(c.wind_speed_10m)} km/h del ${dirs[Math.round(c.wind_direction_10m/45)%8]}</b><span></span><span>Rachas</span><b>${Math.round(c.wind_gusts_10m)} km/h</b><span></span><span>Temperatura</span><b>${Math.round(c.temperature_2m)} °C</b><span></span><span>Lluvia</span><b>${j.daily.precipitation_probability_max[0]}% de probabilidad</b><span></span></div>`;
+  }).catch(()=>{});
+  fetch(`https://marine-api.open-meteo.com/v1/marine?latitude=${LAT}&longitude=-73.20&hourly=sea_level_height_msl,wave_height&timezone=${TZ}&forecast_days=2`)
+  .then(r=>r.json()).then(j=>{ const t=j.hourly.time, h=j.hourly.sea_level_height_msl, w=j.hourly.wave_height;
+    const i0 = t.findIndex(x=>new Date(x)>=now); const ev=[];
+    for(let i=Math.max(1,i0);i<Math.min(h.length-1,i0+30);i++){ if(h[i]>h[i-1]&&h[i]>=h[i+1]) ev.push(['Pleamar',t[i],h[i]]); else if(h[i]<h[i-1]&&h[i]<=h[i+1]) ev.push(['Bajamar',t[i],h[i]]); }
+    if(!ev.length) return;
+    $('tide').innerHTML = `<div class="tl">${ev.slice(0,4).map(([n,x,v])=>`<span>${n}</span><b>${x.slice(11,16)} h${x.slice(0,10)!==t[i0].slice(0,10)?' (mañana)':''}</b><span>${v.toFixed(1)} m</span>`).join('')}</div><p class="note">Olas: ${w[i0].toFixed(1)} m ahora. Modelo global, no apto para navegación.</p>`;
+  }).catch(()=>{});
+}
+}
+</script>
+</body>
+</html>
