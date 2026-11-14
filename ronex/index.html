@@ -266,7 +266,14 @@
   footer .wrap { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 20px 40px; align-items: center; padding-block: 34px calc(34px + env(safe-area-inset-bottom, 0px)); }
   footer .brand { color: #F7F7F4; }
   footer .legal { line-height: 1.6; }
-  footer .soc { display: flex; gap: 18px; flex-wrap: wrap; }
+  footer .soc { display: flex; flex-direction: column; gap: 10px; }
+  footer .soc a { display: inline-flex; align-items: center; gap: 10px; color: #D5DEE3; }
+  footer .soc svg { width: 18px; height: 18px; flex: none; color: var(--amber); }
+  .wa-float { position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 40; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #fff; display: grid; place-items: center; box-shadow: 0 8px 22px rgba(15,27,36,.28); transition: transform .2s; }
+  @media (min-width: 761px) { footer .soc { margin-right: 76px; } }
+  @media (max-width: 760px) { footer .wrap { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); } }
+  .wa-float:hover { transform: scale(1.06); }
+  .wa-float svg { width: 30px; height: 30px; }
   footer a { text-decoration: none; }
   footer a:hover { color: #F7F7F4; }
   @media (max-width: 760px) { footer .wrap { grid-template-columns: minmax(0, 1fr); } }
@@ -537,13 +544,16 @@
       <div class="reach">
         <a class="btn btn-amber" href="https://wa.me/56966346166?text=Hola%20Ronex%2C%20quisiera%20solicitar%20una%20visita%20t%C3%A9cnica.%20Equipo%3A%20%20%20Ubicaci%C3%B3n%3A%20%20%20Fecha%3A%20" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.6-.4Z"/></svg>Escribir por WhatsApp</a>
         <a class="btn btn-outline" href="mailto:ronex.spa@gmail.com?subject=Solicitud%20de%20visita%20t%C3%A9cnica&amp;body=Equipo%3A%0AUbicaci%C3%B3n%3A%0AFecha%20requerida%3A%0A"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Enviar un correo</a>
-        <div class="line"><small>Teléfono y WhatsApp</small><span>+56 9 6634 6166</span></div>
+        <div class="line"><small>Teléfono y WhatsApp</small><a href="tel:+56966346166">+56 9 6634 6166</a></div>
         <div class="line"><small>Correo</small><span id="mail">ronex.spa@gmail.com</span><button class="copy" id="copy" type="button">Copiar correo</button></div>
+        <div class="line"><small>Instagram</small><a href="https://www.instagram.com/ronexspa/" target="_blank" rel="noopener noreferrer">@ronexspa</a></div>
         <div class="line"><small>Cobertura</small><div class="chips"><span>Santiago</span><span>O’Higgins</span><span>Maule</span><span>Ñuble</span><span>Biobío</span><span>Araucanía</span><span>Los Ríos</span><span>Los Lagos</span><span>Norte, por proyecto</span></div></div>
       </div>
     </div>
   </div>
 </section>
+
+<a class="wa-float" href="https://wa.me/56966346166?text=Hola%20Ronex%2C%20quisiera%20solicitar%20una%20visita%20t%C3%A9cnica." target="_blank" rel="noopener noreferrer" aria-label="Escribir a Ronex por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.6-.4Z"/></svg></a>
 
 <footer>
   <div class="wrap">
@@ -552,7 +562,7 @@
       <span><b>RONEX</b></span>
     </a>
     <p class="legal">RONEX SpA · RUT 77.444.098-4 · Concepción, Chile<br>Ingeniería y servicios eléctricos · © <span id="year">2026</span></p>
-    <div class="soc"><a href="https://www.instagram.com/ronexspa/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://wa.me/56966346166" target="_blank" rel="noopener noreferrer">WhatsApp</a></div>
+    <div class="soc"><a href="https://www.instagram.com/ronexspa/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>@ronexspa</a><a href="https://wa.me/56966346166" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.6-.4Z"/></svg>+56 9 6634 6166</a><a href="mailto:ronex.spa@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>ronex.spa@gmail.com</a></div>
   </div>
 </footer>
 
