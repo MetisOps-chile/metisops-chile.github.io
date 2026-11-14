@@ -199,6 +199,39 @@ s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
 .gcard small{display:block;font-weight:600;opacity:.9}
 @media(max-width:900px){.xg{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:600px){.xban{flex-wrap:wrap}.xban i{margin-left:0}}
+.licb{background:var(--sun)}
+.lg{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:center}
+.licb h2{font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0 0 12px;text-wrap:balance}
+.lead2{font-size:18px;margin:0 0 18px;max-width:36em}
+.steps{margin:0 0 22px;padding-left:22px;display:grid;gap:8px;font-size:16px}
+.licard{background:#fff;border-radius:20px;padding:22px}
+.lc1{margin:0 0 10px;font-weight:800;color:var(--tqD)}
+.lrow{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:16px}
+.lrow b{white-space:nowrap}
+.lfree{margin:12px 0 0;background:#DDF5D9;border-radius:12px;padding:12px;font-size:15px}
+.norm{background:#fff}
+.norm h2{font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 8px}
+.cal{border:2px solid var(--line);border-radius:18px;padding:16px;margin-bottom:24px;overflow-x:auto}
+.crow{display:grid;grid-template-columns:150px minmax(480px,1fr);gap:10px;align-items:center;padding:6px 0}
+.crow>span{font-weight:700;font-size:15px}
+.months{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:3px}
+.months i{display:block;height:26px;border-radius:5px}
+.chead .months span{font-size:12px;text-align:center;color:var(--mut);font-weight:700}
+.c-v{background:var(--co)}.c-t{background:#2FB673}.c-n{background:#E8E4DA}
+.months i.now{outline:3px solid var(--k);outline-offset:-1px}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--mut);margin-top:10px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px}
+.legend .c-now{background:#fff;outline:3px solid var(--k);outline-offset:-3px}
+.ng{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.nc{background:var(--sand);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.nc h3{margin:0;font-size:18px;line-height:1.25}
+.nc p{margin:0;font-size:15px;color:#34454d}
+.tag{align-self:flex-start;font-size:13px;font-weight:800;padding:3px 10px;border-radius:10px;background:#E8E4DA}
+.tag.on{background:var(--co);color:var(--k)}.tag.open{background:#2FB673;color:var(--k)}.tag.t2{background:#CDF4F8}
+.lk2{margin-top:auto;color:var(--tqD);font-weight:700;font-size:14px}
+.vh{display:flex;flex-direction:column;gap:6px;font-size:15px}
+.vh div{display:flex;justify-content:space-between;gap:10px}
+@media(max-width:900px){.lg,.ng{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:1000px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.vp .in{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:900px){.kg,.vg,.cg,.gg{grid-template-columns:minmax(0,1fr)}.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.vp .in{grid-template-columns:minmax(0,1fr)}.srch button{display:none}}
@@ -229,7 +262,7 @@ s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
 <div class="report" aria-label="Reporte de pesca">
 <b>Reporte de pesca de la semana</b>
 <span>Dónde</span><em>Playa Blanca, al atardecer</em>
-<span>Qué</span><em>Corvina y róbalo de orilla</em>
+<span>Qué</span><em>Róbalo de orilla (corvina en veda hasta el 30 de noviembre)</em>
 <span>Con qué</span><em>Jig metálico de 30 g, recogida lenta</em>
 </div>
 <p class="demo">Versión de muestra: productos, precios, reporte, horario y WhatsApp son de ejemplo.</p>
@@ -316,12 +349,51 @@ s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
 <a class="lk" href="https://www.meteochile.gob.cl">Pronóstico oficial (Meteochile)</a>
 </div>
 <div class="cc lic">
-<h3>Licencia de pesca recreativa</h3>
-<p>Se saca en línea en Sernapesca y queda lista al instante. No la necesitan los mayores de 65 años, los menores de 12 ni las personas inscritas en el Registro Nacional de la Discapacidad.</p>
-<a class="btn p" href="https://pescarecreativa.sernapesca.cl/">Sacar mi licencia en Sernapesca</a>
-<p class="note">Temporada de salmónidos en ríos y lagos del Biobío: del tercer viernes de octubre al primer domingo de mayo.</p>
+<h3>Vedas de hoy</h3>
+<div id="vedaHoy"></div>
+<a class="lk" href="#normativa">Ver calendario de vedas y límites</a>
 </div>
 </div>
+</div></section>
+
+<section class="licb band" id="licencia"><div class="wrap lg">
+<div>
+<h2>¡Saca tu licencia y pesca con todas las de la ley!</h2>
+<p class="lead2">Es obligatoria para pescar en el mar, ríos y lagos de Chile. Se saca en línea, en minutos, y te llega al instante.</p>
+<ol class="steps">
+<li><b>Entra al sitio de Sernapesca</b> con tu RUT o ClaveÚnica.</li>
+<li><b>Elige tu licencia:</b> mar, ríos y lagos, o ambas.</li>
+<li><b>Paga y descárgala.</b> Llévala en el celular cada vez que pesques: es personal y te la pueden pedir.</li>
+</ol>
+<div class="cta"><a class="btn d" href="https://pescarecreativa.sernapesca.cl/">Sacar mi licencia ahora</a><a class="btn" href="https://www.chileatiende.gob.cl/fichas/4636-licencia-para-pesca-recreativa" style="border-color:var(--k)">Más información</a></div>
+</div>
+<div class="licard">
+<p class="lc1">Valor referencial anual 2024</p>
+<div class="lrow"><span>Mar</span><b>$7.358</b></div>
+<div class="lrow"><span>Ríos y lagos</span><b>$11.037</b></div>
+<div class="lrow"><span>Mar, ríos y lagos</span><b>$14.716</b></div>
+<p class="note" style="margin-top:12px">El valor se fija cada año en UF. Revisa el precio vigente al sacarla.</p>
+<p class="lfree"><b>No la necesitan:</b> mayores de 65 años, menores de 12 y personas inscritas en el Registro Nacional de la Discapacidad.</p>
+</div>
+</div></section>
+
+<section class="norm band" id="normativa"><div class="wrap">
+<h2>Noticias y normativa</h2>
+<p class="sub">Vedas, temporadas y límites que aplican a la pesca recreativa en la zona. Resumen para orientarte; la norma oficial está en cada enlace.</p>
+<div class="cal" role="table" aria-label="Calendario de vedas y temporadas">
+<div class="crow chead" role="row"><span role="columnheader">Especie</span><div class="months" id="mhead"></div></div>
+<div id="calRows"></div>
+<div class="legend"><span><i class="c-v"></i>Veda</span><span><i class="c-t"></i>Temporada abierta</span><span><i class="c-n"></i>Sin veda</span><span><i class="c-now"></i>Mes actual</span></div>
+</div>
+<div class="ng">
+<article class="nc"><span class="tag" id="tagCorvina">Veda</span><h3>Veda de corvina: 1 de octubre al 30 de noviembre</h3><p>Cada año la corvina queda protegida en esos dos meses. Fuera de la veda, máximo 3 corvinas por día.</p><a class="lk2" href="https://www.sernapesca.cl/manuales_y_publicaciones/temporadas-de-pesca-recreativa-en-chile/">Sernapesca · medidas de pesca recreativa</a></article>
+<article class="nc"><span class="tag t2">Límites diarios</span><h3>Máximo 10 peces por jornada</h3><p>Corvina y lenguado: 3 por día. Sierra y bonito: 6. Lenguado común: mínimo 40 cm. Pejegallo y tollo común se devuelven siempre al agua.</p><a class="lk2" href="https://www.sernapesca.cl/manuales_y_publicaciones/temporadas-de-pesca-recreativa-en-chile/">Res. Exenta N° 443 de 2025</a></article>
+<article class="nc"><span class="tag" id="tagSalm">Temporada</span><h3>Salmónidos en ríos y lagos del Biobío</h3><p>Del tercer viernes de octubre al primer domingo de mayo. Hasta 3 ejemplares o 15 kilos por día, con señuelo artificial y plomada de máximo 100 g.</p><a class="lk2" href="https://www.subpesca.cl/portal/615/articles-127252_documento.pdf">Subpesca · Res. Exenta 2347/2025</a></article>
+<article class="nc"><span class="tag" id="tagMerl">Veda</span><h3>Merluza común: veda todo septiembre</h3><p>Prohibida su captura, transporte y venta en fresco en todo Chile durante el mes. Si ves venta, se denuncia al 800 320 032.</p><a class="lk2" href="https://g5noticias.cl/2026/09/02/sernapesca-lanza-campana-que-no-le-vendan-la-pesca-para-proteger-a-la-merluza-comun-durante-su-periodo-reproductivo/">Sernapesca · campaña 2026</a></article>
+<article class="nc"><span class="tag t2">Campeonatos</span><h3>¿Organizas un campeonato?</h3><p>Necesitas autorización de Sernapesca, y cada participante debe tener su licencia vigente.</p><a class="lk2" href="https://www.chileatiende.gob.cl/fichas/2917/1/pdf">ChileAtiende · autorización</a></article>
+<article class="nc"><span class="tag t2">Buenas prácticas</span><h3>Pesca y devuelve</h3><p>Si un pez está bajo la talla o no lo vas a comer, devuélvelo rápido y con las manos mojadas. Así hay pesca el próximo verano.</p><a class="lk2" href="https://www.sernapesca.cl/manuales_y_publicaciones/temporadas-de-pesca-recreativa-en-chile/">Guías de Sernapesca</a></article>
+</div>
+<p class="note" style="margin-top:16px">Resumen informativo actualizado a noviembre de 2026. Las normas cambian: confirma siempre en Sernapesca o Subpesca.</p>
 </div></section>
 
 <section class="guides band" id="guias"><div class="wrap">
@@ -381,7 +453,7 @@ kit:'<rect x="6" y="12" width="36" height="28" rx="3"/><path d="M18 12 V8 H30 V1
 const cats = [['todos','Todos'],['cana','Cañas'],['carrete','Carretes'],['senuelo','Señuelos'],['anzuelo','Anzuelos y plomos'],['ropa','Ropa'],['acc','Accesorios']];
 const P = [
 ['k1','kit','Kit orilla principiante','Caña 2,40 m, carrete 3000, nylon, 3 señuelos y anzuelos. Listo para pescar.',49990],
-['k2','kit','Kit corvina surf','Caña surfcasting 3,90 m, carrete 5000, multifilamento, plomos y líneas armadas.',79990],
+['k2','kit','Kit surf playa','Caña surfcasting 3,90 m, carrete 5000, multifilamento, plomos y líneas armadas.',79990],
 ['k3','kit','Caja regalo pescador','Caja organizadora con señuelos, anzuelos, destorcedores y alicate.',29990],
 ['c1','cana','Caña spinning 2,40 m','Acción media, 10 a 30 g. Para orilla y roquerío.',24990,29990],
 ['c2','cana','Caña surfcasting 3,90 m','Lance largo, 100 a 200 g. Para playa.',44990],
@@ -436,7 +508,7 @@ function card(x){
 }
 function renderDeals(){ $('deals').innerHTML = P.filter(x=>x.o).map(card).join(''); }
 function renderNav(){
-  $('catnav').innerHTML = cats.slice(1).map(([k,l])=>`<button data-c="${k}" data-go="1">${l}</button>`).join('') + '<button data-go="navidad" class="sale">Navidad</button><button data-go="ofertas" class="sale">Ofertas</button><button data-go="kits">Kits</button>';
+  $('catnav').innerHTML = cats.slice(1).map(([k,l])=>`<button data-c="${k}" data-go="1">${l}</button>`).join('') + '<button data-go="navidad" class="sale">Navidad</button><button data-go="ofertas" class="sale">Ofertas</button><button data-go="kits">Kits</button><button data-go="licencia">Licencia</button><button data-go="normativa">Vedas</button>';
   const tc = {cana:'#CDF4F8',carrete:'#FFF0B3',senuelo:'#FFDCD2',anzuelo:'#DDF5D9',ropa:'#E4E0FF',acc:'#FFE8C2'};
   const ts = {cana:'Orilla, surf, río',carrete:'1000 a 5000',senuelo:'Jigs, minnows, vinilos',anzuelo:'Terminales',ropa:'Agua y viento',acc:'Líneas y más'};
   $('tiles').innerHTML = cats.slice(1).map(([k,l])=>`<button class="tile" data-c="${k}" data-go="1" style="background:${tc[k]}">${FOTOS_SECCION[k]?`<img src="${FOTOS_SECCION[k]}" alt="" loading="lazy">`:icon(k)}${l}<span>${ts[k]}</span></button>`).join('');
@@ -533,6 +605,27 @@ document.addEventListener('change', e=>{
 $('xAdd').addEventListener('click', ()=>{ for(const id of xsel) cart[id]=(cart[id]||0)+1; if($('xWrap').checked) wrapGift = true; all(); open(true); });
 suggest(); renderX();
 $('xToggle').addEventListener('click', ()=>{ const b=$('xBody'), o=b.hidden; b.hidden=!o; $('xToggle').setAttribute('aria-expanded', o?'true':'false'); $('xLbl').textContent = o?'Cerrar':'Armar mi kit'; });
+
+/* --- Calendario de vedas --- */
+const MES = ['E','F','M','A','M','J','J','A','S','O','N','D'];
+const thirdFri = (y)=>{ const d=new Date(y,9,1); const off=(5-d.getDay()+7)%7; return new Date(y,9,1+off+14); };
+const firstSun = (y)=>{ const d=new Date(y,4,1); return new Date(y,4,1+((7-d.getDay())%7)); };
+const today = new Date(); const Y = today.getFullYear(), M = today.getMonth();
+const CAL = [
+  ['Corvina', m=>m===9||m===10?'v':'n'],
+  ['Merluza común', m=>m===8?'v':'n'],
+  ['Salmónidos (ríos y lagos)', m=>(m>=10||m<=3)?'t':(m===9||m===4)?'t':'v'],
+  ['Lenguado (mín. 40 cm)', m=>'n']
+];
+$('mhead').innerHTML = MES.map(x=>`<span>${x}</span>`).join('');
+$('calRows').innerHTML = CAL.map(([n,f])=>`<div class="crow" role="row"><span role="rowheader">${n}</span><div class="months">${MES.map((_,m)=>`<i class="c-${f(m)}${m===M?' now':''}" title="${n}"></i>`).join('')}</div></div>`).join('');
+const corvVeda = (M===9||M===10), merlVeda = (M===8);
+const salmOpen = today >= thirdFri(Y) || today <= firstSun(Y);
+const tag = (id,on,a,b,cls)=>{ const t=$(id); t.textContent = on?a:b; t.className='tag '+(on?cls:'open'); };
+tag('tagCorvina', corvVeda, 'Veda vigente', 'Abierta', 'on');
+tag('tagMerl', merlVeda, 'Veda vigente', 'Abierta', 'on');
+const ts=$('tagSalm'); ts.textContent = salmOpen?'Temporada abierta':'Temporada cerrada'; ts.className='tag '+(salmOpen?'open':'on');
+$('vedaHoy').innerHTML = `<div class="vh"><div><span>Corvina</span><b>${corvVeda?'En veda':'Abierta'}</b></div><div><span>Merluza común</span><b>${merlVeda?'En veda':'Abierta'}</b></div><div><span>Salmónidos Biobío</span><b>${salmOpen?'Temporada abierta':'Cerrada'}</b></div></div>`;
 /* --- Condiciones: luna (cálculo local) y, opcional, datos en vivo --- */
 const SYN = 29.530588853, NEW0 = Date.UTC(2000,0,6,18,14);
 const phase = d => { const x = ((d - NEW0)/86400000) % SYN; return (x<0?x+SYN:x)/SYN; };
