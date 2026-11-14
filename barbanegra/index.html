@@ -232,6 +232,32 @@ s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
 .vh{display:flex;flex-direction:column;gap:6px;font-size:15px}
 .vh div{display:flex;justify-content:space-between;gap:10px}
 @media(max-width:900px){.lg,.ng{grid-template-columns:minmax(0,1fr)}}
+.tv{background:#0B2530;color:#fff}
+.tv h2{font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 8px}
+.tv .sub{color:#BFE0E8}
+.tvg{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px}
+.vlist{display:flex;flex-direction:column;gap:12px}
+.vc2{display:grid;grid-template-columns:140px 1fr;gap:12px;background:#12323F;border:2px solid transparent;border-radius:14px;padding:8px;cursor:pointer;text-align:left;color:#fff;font:inherit}
+.vc2[aria-pressed=true]{border-color:var(--sun)}
+.thumb{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;display:grid;place-items:center;background:linear-gradient(135deg,#0E8A9A,#0A4D68)}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.play{position:relative;width:46px;height:46px;border-radius:50%;background:var(--sun);display:grid;place-items:center}
+.play::after{content:'';border-left:14px solid var(--k);border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.vc2 b{display:block;font-size:15px;line-height:1.3}
+.vc2 small{color:#BFE0E8;font-size:13px}
+.stage{display:flex;flex-direction:column;gap:14px}
+.screen{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#0E8A9A,#0A4D68);display:grid;place-items:center}
+.screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.screen .play{width:84px;height:84px}.screen .play::after{border-left-width:26px;border-top-width:16px;border-bottom-width:16px;margin-left:8px}
+.screen p{position:absolute;bottom:12px;left:16px;right:16px;margin:0;font-size:14px;color:#E3F2F5}
+.vt{margin:0;font-size:22px}
+.gear{background:#fff;color:var(--k);border-radius:16px;padding:16px}
+.gear h3{margin:0 0 8px;font-size:16px}
+.gl{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.gi{display:flex;justify-content:space-between;align-items:center;gap:8px;border:1px solid var(--line);border-radius:12px;padding:8px 10px;font-size:14px}
+.gi b{font-size:14px}
+.gi button{min-height:36px;padding:0 12px;border-radius:18px;border:0;background:var(--sun);font-weight:800;cursor:pointer}
+@media(max-width:900px){.tvg{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:1000px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.vp .in{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:900px){.kg,.vg,.cg,.gg{grid-template-columns:minmax(0,1fr)}.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.vp .in{grid-template-columns:minmax(0,1fr)}.srch button{display:none}}
@@ -311,6 +337,19 @@ s.old{color:var(--mut);font-size:14px;margin-left:6px;font-weight:500}
 <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg><div><b>Asesoría de pescadores</b>Te ayudamos a armar tu equipo</div></div>
 <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V4h8v3"/></svg><div><b>Pedidos especiales</b>Si no lo tenemos, lo conseguimos</div></div>
 </div></div>
+
+<section class="tv band" id="videos"><div class="wrap">
+<h2>Barba Negra TV: salidas de pesca</h2>
+<p class="sub">Salimos a pescar a Coronel, Lota y la costa del golfo. Mira cómo nos fue y llévate el mismo equipo.</p>
+<div class="tvg">
+<div class="stage">
+<div class="screen" id="screen"></div>
+<h3 class="vt" id="vt"></h3>
+<div class="gear"><h3>Equipo usado en este video</h3><div class="gl" id="gl"></div><button class="btn p" id="gearAll" style="margin-top:12px">Agregar todo el equipo al pedido</button></div>
+</div>
+<div class="vlist" id="vlist"></div>
+</div>
+</div></section>
 
 <section class="kits band" id="kits"><div class="wrap">
 <h2>Kits probados en Coronel</h2>
@@ -508,7 +547,7 @@ function card(x){
 }
 function renderDeals(){ $('deals').innerHTML = P.filter(x=>x.o).map(card).join(''); }
 function renderNav(){
-  $('catnav').innerHTML = cats.slice(1).map(([k,l])=>`<button data-c="${k}" data-go="1">${l}</button>`).join('') + '<button data-go="navidad" class="sale">Navidad</button><button data-go="ofertas" class="sale">Ofertas</button><button data-go="kits">Kits</button><button data-go="licencia">Licencia</button><button data-go="normativa">Vedas</button>';
+  $('catnav').innerHTML = cats.slice(1).map(([k,l])=>`<button data-c="${k}" data-go="1">${l}</button>`).join('') + '<button data-go="navidad" class="sale">Navidad</button><button data-go="ofertas" class="sale">Ofertas</button><button data-go="kits">Kits</button><button data-go="videos">Videos</button><button data-go="licencia">Licencia</button><button data-go="normativa">Vedas</button>';
   const tc = {cana:'#CDF4F8',carrete:'#FFF0B3',senuelo:'#FFDCD2',anzuelo:'#DDF5D9',ropa:'#E4E0FF',acc:'#FFE8C2'};
   const ts = {cana:'Orilla, surf, río',carrete:'1000 a 5000',senuelo:'Jigs, minnows, vinilos',anzuelo:'Terminales',ropa:'Agua y viento',acc:'Líneas y más'};
   $('tiles').innerHTML = cats.slice(1).map(([k,l])=>`<button class="tile" data-c="${k}" data-go="1" style="background:${tc[k]}">${FOTOS_SECCION[k]?`<img src="${FOTOS_SECCION[k]}" alt="" loading="lazy">`:icon(k)}${l}<span>${ts[k]}</span></button>`).join('');
@@ -606,6 +645,29 @@ $('xAdd').addEventListener('click', ()=>{ for(const id of xsel) cart[id]=(cart[i
 suggest(); renderX();
 $('xToggle').addEventListener('click', ()=>{ const b=$('xBody'), o=b.hidden; b.hidden=!o; $('xToggle').setAttribute('aria-expanded', o?'true':'false'); $('xLbl').textContent = o?'Cerrar':'Armar mi kit'; });
 
+
+/* --- Barba Negra TV --- */
+// yt: el código del video de YouTube (lo que va después de v= en el enlace). Vacío = próximamente.
+const VIDEOS = [
+  {yt:'', t:'Róbalo al amanecer en Playa Blanca', tipo:'Salida de pesca', dur:'12 min', gear:['c1','r2','x2','s1','s3','a4']},
+  {yt:'', t:'Lenguado desde las rocas en Lota', tipo:'Salida de pesca', dur:'9 min', gear:['c1','r2','x1','s3','a2']},
+  {yt:'', t:'Pesca de surf: lance largo para principiantes', tipo:'Tutorial', dur:'7 min', gear:['c2','r3','x2','a3','a4']},
+  {yt:'', t:'Carrete 3000 o 5000: cuál elegir', tipo:'Equipo', dur:'5 min', gear:['r2','r3']},
+  {yt:'', t:'Nudo palomar en 60 segundos', tipo:'Nudos', dur:'1 min', gear:['a2','x1','x4']}
+];
+let vi = 0;
+const ytOk = location.hostname.endsWith('github.io') || location.hostname.includes('barbanegra');
+function renderTV(){
+  const v = VIDEOS[vi];
+  $('vlist').innerHTML = VIDEOS.map((x,i)=>`<button class="vc2" data-v="${i}" aria-pressed="${i===vi}"><div class="thumb">${x.yt?`<img src="https://i.ytimg.com/vi/${x.yt}/mqdefault.jpg" alt="">`:''}<span class="play"></span></div><div><b>${x.t}</b><small>${x.tipo} · ${x.dur}</small></div></button>`).join('');
+  $('screen').innerHTML = (v.yt && ytOk) ? `<iframe src="https://www.youtube-nocookie.com/embed/${v.yt}" title="${v.t}" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`
+    : (v.yt ? `<a class="play" href="https://www.youtube.com/watch?v=${v.yt}" aria-label="Ver en YouTube"></a>` : `<span class="play"></span><p>Video de muestra: pronto en nuestro canal.</p>`);
+  $('vt').textContent = v.t;
+  $('gl').innerHTML = v.gear.map(id=>{const x=byId[id];return `<div class="gi"><span><b>${x.n}</b><br>${clp(x.p)}</span><button data-a="${id}">Agregar</button></div>`}).join('');
+}
+document.addEventListener('click', e=>{ const b=e.target.closest('[data-v]'); if(b){ vi=+b.dataset.v; renderTV(); } });
+$('gearAll').addEventListener('click', ()=>{ for(const id of VIDEOS[vi].gear) cart[id]=(cart[id]||0)+1; all(); open(true); });
+renderTV();
 /* --- Calendario de vedas --- */
 const MES = ['E','F','M','A','M','J','J','A','S','O','N','D'];
 const thirdFri = (y)=>{ const d=new Date(y,9,1); const off=(5-d.getDay()+7)%7; return new Date(y,9,1+off+14); };
