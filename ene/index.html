@@ -33,7 +33,8 @@ nav .wrap{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 nav a.l{text-decoration:none;font-weight:600;opacity:.9}
 nav a.l:hover{opacity:1;text-decoration:underline}
 .lang{display:flex;border:1.5px solid #fff;border-radius:99px;overflow:hidden}
-.lang button{background:none;border:0;color:#fff;font:700 14px Manrope,system-ui,sans-serif;padding:8px 14px;min-height:40px;cursor:pointer}
+.lang button{display:flex;align-items:center;gap:7px;background:none;border:0;color:#fff;font:700 14px Manrope,system-ui,sans-serif;padding:8px 14px;min-height:44px;cursor:pointer}
+.lang svg{border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
 .lang button[aria-pressed=true]{background:#fff;color:var(--red2)}
 .hero{background:var(--red);color:#fff;padding-top:8px}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:32px;align-items:center}
@@ -123,7 +124,7 @@ footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
   <a class="l" href="#courses"><span class="ru">Курсы</span><span class="es">Cursos</span></a>
   <a class="l" href="#method"><span class="ru">Метод</span><span class="es">Método</span></a>
   <a class="l" href="#us"><span class="ru">О нас</span><span class="es">Nosotros</span></a>
-  <div class="lang" role="group" aria-label="Язык"><button id="lang-ru" aria-pressed="true">RU</button><button id="lang-es" aria-pressed="false">ES</button></div>
+  <div class="lang" role="group" aria-label="Язык"><button id="lang-ru" aria-pressed="true" aria-label="Русский"><svg width="22" height="15" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#fff"/><rect y=".667" width="3" height=".667" fill="#0039a6"/><rect y="1.333" width="3" height=".667" fill="#d52b1e"/></svg><span>RU</span></button><button id="lang-es" aria-pressed="false" aria-label="Español"><svg width="22" height="15" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg><span>ES</span></button></div>
 </div></nav>
 
 <header class="hero band" id="top"><div class="wrap">
