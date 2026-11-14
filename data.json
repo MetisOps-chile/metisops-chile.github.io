@@ -68,6 +68,36 @@
       "valor": 3999.15,
       "fecha": "2026-11-12",
       "fuente": "Portal Minero (LME)"
+    },
+    {
+      "nombre": {
+        "es": "Carbonato de litio (por tonelada)",
+        "en": "Lithium carbonate (per tonne)",
+        "pt": "Carbonato de lítio (por tonelada)"
+      },
+      "valor": 13855.21,
+      "fecha": "2026-11-13",
+      "fuente": "Metalcharts, futuros de Guangzhou (GFEX)"
+    },
+    {
+      "nombre": {
+        "es": "Flete contenedor 40' (Drewry WCI)",
+        "en": "40ft container freight (Drewry WCI)",
+        "pt": "Frete contêiner 40' (Drewry WCI)"
+      },
+      "valor": 4305,
+      "fecha": "2026-11-12",
+      "fuente": "Drewry"
+    },
+    {
+      "nombre": {
+        "es": "Bitcoin",
+        "en": "Bitcoin",
+        "pt": "Bitcoin"
+      },
+      "valor": 69134.72,
+      "fecha": "2026-11-13",
+      "fuente": "Fortune"
     }
   ],
   "fx": [
