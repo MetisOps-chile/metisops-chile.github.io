@@ -1,17 +1,17 @@
 {
-  "actualizado": "2026-11-13",
+  "actualizado": "2026-11-14",
   "fallback": {
     "dolar": {
-      "valor": 994.51,
-      "fecha": "2026-11-12"
+      "valor": 992.48,
+      "fecha": "2026-11-13"
     },
     "euro": {
-      "valor": 1088.78,
+      "valor": 1096.91,
       "fecha": "2026-11-13"
     },
     "uf": {
-      "valor": 41322.93,
-      "fecha": "2026-11-13"
+      "valor": 41329.8,
+      "fecha": "2026-11-14"
     },
     "utm": {
       "valor": 72440,
@@ -26,8 +26,8 @@
       "fecha": "2026-10-27"
     },
     "libra_cobre": {
-      "valor": 6.22,
-      "fecha": "2026-11-12"
+      "valor": 6.17,
+      "fecha": "2026-11-13"
     },
     "imacec": {
       "valor": 0.2,
@@ -45,8 +45,8 @@
         "en": "Brent crude",
         "pt": "Petróleo Brent"
       },
-      "valor": 95.82,
-      "fecha": "2026-11-12",
+      "valor": 95.84,
+      "fecha": "2026-11-13",
       "fuente": "Rigzone (ICE)"
     },
     {
@@ -55,8 +55,8 @@
         "en": "WTI crude",
         "pt": "Petróleo WTI"
       },
-      "valor": 88.74,
-      "fecha": "2026-11-12",
+      "valor": 88.56,
+      "fecha": "2026-11-13",
       "fuente": "Rigzone (NYMEX)"
     },
     {
@@ -65,8 +65,8 @@
         "en": "Gold",
         "pt": "Ouro"
       },
-      "valor": 3999.15,
-      "fecha": "2026-11-12",
+      "valor": 3874.29,
+      "fecha": "2026-11-13",
       "fuente": "Portal Minero (LME)"
     },
     {
@@ -93,7 +93,7 @@
   "fx": [
     {
       "codigo": "EUR",
-      "clp": 1088.78,
+      "clp": 1096.91,
       "moneda": {
         "es": "Euro",
         "en": "Euro",
@@ -102,7 +102,7 @@
     },
     {
       "codigo": "GBP",
-      "clp": 1302.5,
+      "clp": 1315.79,
       "moneda": {
         "es": "Libra esterlina",
         "en": "British pound",
@@ -111,7 +111,7 @@
     },
     {
       "codigo": "BRL",
-      "clp": 175.36,
+      "clp": 175.72,
       "moneda": {
         "es": "Real brasileño",
         "en": "Brazilian real",
@@ -120,7 +120,7 @@
     },
     {
       "codigo": "CNY",
-      "clp": 147.1,
+      "clp": 149.16,
       "moneda": {
         "es": "Yuan chino",
         "en": "Chinese yuan",
@@ -129,7 +129,7 @@
     },
     {
       "codigo": "PEN",
-      "clp": 288.39,
+      "clp": 292.4,
       "moneda": {
         "es": "Sol peruano",
         "en": "Peruvian sol",
@@ -138,7 +138,7 @@
     },
     {
       "codigo": "MXN",
-      "clp": 52.85,
+      "clp": 53.68,
       "moneda": {
         "es": "Peso mexicano",
         "en": "Mexican peso",
@@ -147,7 +147,7 @@
     },
     {
       "codigo": "JPY",
-      "clp": 6.15,
+      "clp": 6.23,
       "moneda": {
         "es": "Yen japonés",
         "en": "Japanese yen",
@@ -165,7 +165,7 @@
     },
     {
       "codigo": "BTC",
-      "clp": 68755170.0,
+      "clp": 66334783.0,
       "moneda": {
         "es": "Bitcoin",
         "en": "Bitcoin",
@@ -176,82 +176,102 @@
   "news": [
     {
       "fecha": "2026-11-13",
-      "fuente": "El Mostrador",
-      "url": "https://www.elmostrador.cl/noticias/pais/2026/11/13/gobierno-anuncia-fin-del-paro-de-camioneros-con-rebaja-del-diesel-y-congelamiento-de-combustibles/",
+      "fuente": "Infobae (EFE)",
+      "url": "https://www.infobae.com/america/agencias/2026/11/13/camioneros-en-chile-levantan-el-paro-tras-la-advertencia-del-gobierno-de-usar-la-fuerza/",
       "tema": {
-        "es": "Combustibles",
-        "en": "Fuel",
-        "pt": "Combustíveis"
+        "es": "Transporte",
+        "en": "Transport",
+        "pt": "Transporte"
       },
       "titular": {
-        "es": "Acuerdo con camioneros: el diésel baja $142 por litro",
-        "en": "Truckers' deal: diesel falls CLP 142 per litre",
-        "pt": "Acordo com caminhoneiros: diesel cai CLP 142 por litro"
+        "es": "Camioneros levantan los bloqueos tras la advertencia del Gobierno",
+        "en": "Truckers lift blockades after government warning",
+        "pt": "Caminhoneiros suspendem bloqueios após advertência do governo"
       },
       "resumen": {
-        "es": "El Gobierno revierte el alza de ENAP, rebaja $100 adicionales al diésel y congela los combustibles hasta el 31 de marzo de 2027; grupos independientes mantienen bloqueos.",
-        "en": "The government reverses ENAP's increase, cuts diesel by a further CLP 100 and freezes fuel prices until 31 March 2027; independent groups keep road blockades.",
-        "pt": "O governo reverte a alta da ENAP, reduz mais CLP 100 no diesel e congela os combustíveis até 31 de março de 2027; grupos independentes mantêm bloqueios."
+        "es": "De 2.800 camiones movilizados quedaban cerca de 1.000 en ruta; el acuerdo congela los combustibles hasta marzo y rebaja $100 adicionales el diésel.",
+        "en": "Of 2,800 trucks mobilised, about 1,000 remained on the roads; the deal freezes fuel prices until March and cuts diesel by a further CLP 100.",
+        "pt": "Dos 2.800 caminhões mobilizados, cerca de 1.000 seguiam nas estradas; o acordo congela os combustíveis até março e reduz mais CLP 100 no diesel."
       }
     },
     {
       "fecha": "2026-11-13",
-      "fuente": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/11/13/microsoft-hit-by-global-outages-what-happened-and-why",
+      "fuente": "PortalPortuario",
+      "url": "https://portalportuario.cl/puerto-de-arica-normaliza-recepcion-de-camiones-bolivianos-tras-fin-de-bloqueos-de-transportistas",
       "tema": {
-        "es": "Tecnología",
-        "en": "Technology",
-        "pt": "Tecnologia"
+        "es": "Puertos",
+        "en": "Ports",
+        "pt": "Portos"
       },
       "titular": {
-        "es": "Caída global de Outlook, Teams y OneDrive",
-        "en": "Global outage hits Outlook, Teams and OneDrive",
-        "pt": "Queda global afeta Outlook, Teams e OneDrive"
+        "es": "Puerto de Arica normaliza la llegada de camiones bolivianos",
+        "en": "Port of Arica resumes normal intake of Bolivian trucks",
+        "pt": "Porto de Arica normaliza a chegada de caminhões bolivianos"
       },
       "resumen": {
-        "es": "Microsoft lleva más de 12 horas restableciendo sus servicios; hubo al menos 43.000 reportes desde 72 países y la empresa descarta un ciberataque.",
-        "en": "Microsoft has spent more than 12 hours restoring its services; there were at least 43,000 reports from 72 countries and the company rules out a cyberattack.",
-        "pt": "A Microsoft leva mais de 12 horas restabelecendo seus serviços; houve pelo menos 43.000 relatos de 72 países e a empresa descarta um ataque cibernético."
+        "es": "Tras los bloqueos iniciados el 10 de noviembre en sus accesos, el puerto vuelve a recibir carga boliviana por el fin del paro.",
+        "en": "After blockades of its access roads began on 10 November, the port is again receiving Bolivian cargo as the strike ends.",
+        "pt": "Após os bloqueios iniciados em 10 de novembro nos acessos, o porto volta a receber carga boliviana com o fim da greve."
       }
     },
     {
-      "fecha": "2026-11-12",
-      "fuente": "Nvidia (SEC)",
-      "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+      "fecha": "2026-11-13",
+      "fuente": "Diario El Día (BioBioChile)",
+      "url": "https://www.diarioeldia.cl/noticias/2026/11/13/156728-dolar-supera-los-1000-por-fortaleza-global-de-la-divisa-y-cobre-a-la-baja",
       "tema": {
-        "es": "Mercados",
-        "en": "Markets",
-        "pt": "Mercados"
+        "es": "Dólar",
+        "en": "Dollar",
+        "pt": "Dólar"
       },
       "titular": {
-        "es": "Jensen Huang deja la presidencia ejecutiva de Nvidia",
-        "en": "Jensen Huang steps down as Nvidia CEO",
-        "pt": "Jensen Huang deixa o comando da Nvidia"
+        "es": "El dólar supera los $1.000 en Chile",
+        "en": "The dollar tops CLP 1,000 in Chile",
+        "pt": "O dólar supera CLP 1.000 no Chile"
       },
       "resumen": {
-        "es": "La directora de finanzas, Colette Kress, asume como CEO interina; la acción del mayor fabricante de chips para IA cayó cerca de 10% al abrir.",
-        "en": "CFO Colette Kress becomes interim CEO; shares of the largest AI chipmaker fell about 10% at the open.",
-        "pt": "A diretora financeira, Colette Kress, assume como CEO interina; as ações da maior fabricante de chips para IA caíram cerca de 10% na abertura."
+        "es": "La inflación de EE.UU. de 3,7% en octubre aviva apuestas de alza de tasas de la Fed y el cobre cae 0,7% en Londres.",
+        "en": "US inflation of 3.7% in October fuels bets on a Fed rate hike, while copper falls 0.7% in London.",
+        "pt": "A inflação de 3,7% dos EUA em outubro reforça apostas de alta de juros do Fed, e o cobre cai 0,7% em Londres."
       }
     },
     {
-      "fecha": "2026-11-12",
+      "fecha": "2026-11-13",
+      "fuente": "Emol (Bloomberg)",
+      "url": "https://www.emol.com/noticias/Economia/2026/11/13/1217004/cobre-quinta-semana-caida.html",
+      "tema": {
+        "es": "Cobre",
+        "en": "Copper",
+        "pt": "Cobre"
+      },
+      "titular": {
+        "es": "El cobre va a su quinta semana seguida de caídas",
+        "en": "Copper heads for a fifth straight weekly loss",
+        "pt": "Cobre caminha para a quinta queda semanal seguida"
+      },
+      "resumen": {
+        "es": "Cae 0,6% a US$ 6,15 la libra y los futuros a tres meses bajan de US$ 13.500 por tonelada, su menor nivel desde julio.",
+        "en": "It falls 0.6% to US$ 6.15 per pound and three-month futures drop below US$ 13,500 per tonne, the lowest since July.",
+        "pt": "Cai 0,6% para US$ 6,15 por libra e os futuros de três meses ficam abaixo de US$ 13.500 por tonelada, o menor nível desde julho."
+      }
+    },
+    {
+      "fecha": "2026-11-13",
       "fuente": "Rigzone",
-      "url": "https://www.rigzone.com/news/wire/oil_rises_as_trump_dims_iran_deal_hopes-12-nov-2026-185073-article/",
+      "url": "https://www.rigzone.com/news/crude_fluctuates_as_iran_tensions_persist-13-nov-2026-185085-article",
       "tema": {
         "es": "Petróleo",
         "en": "Oil",
         "pt": "Petróleo"
       },
       "titular": {
-        "es": "El petróleo sube más de 3% tras dichos de Trump sobre Irán",
-        "en": "Oil jumps more than 3% after Trump's remarks on Iran",
-        "pt": "Petróleo sobe mais de 3% após declarações de Trump sobre o Irã"
+        "es": "El petróleo cierra estable y suma su segunda semana a la baja",
+        "en": "Oil ends flat, posting a second weekly loss",
+        "pt": "Petróleo fecha estável e registra a segunda queda semanal"
       },
       "resumen": {
-        "es": "El Brent cerró en US$ 95,82 por barril (+3,3%) y el WTI en US$ 88,74 (+2,6%).",
-        "en": "Brent settled at US$ 95.82 per barrel (+3.3%) and WTI at US$ 88.74 (+2.6%).",
-        "pt": "O Brent fechou a US$ 95,82 por barril (+3,3%) e o WTI a US$ 88,74 (+2,6%)."
+        "es": "El Brent cerró en US$ 95,84 por barril y el WTI en US$ 88,56, entre señales contradictorias sobre Irán.",
+        "en": "Brent settled at US$ 95.84 per barrel and WTI at US$ 88.56 amid mixed signals on Iran.",
+        "pt": "O Brent fechou a US$ 95,84 por barril e o WTI a US$ 88,56, em meio a sinais contraditórios sobre o Irã."
       }
     },
     {
@@ -272,26 +292,6 @@
         "es": "El PIB cayó 0,25% en el primer trimestre y 0,02% en el segundo; el ministro Quiroz proyecta crecer cerca de 4% en 2028.",
         "en": "GDP fell 0.25% in the first quarter and 0.02% in the second; Minister Quiroz projects growth near 4% in 2028.",
         "pt": "O PIB caiu 0,25% no primeiro trimestre e 0,02% no segundo; o ministro Quiroz projeta crescimento perto de 4% em 2028."
-      }
-    },
-    {
-      "fecha": "2026-11-09",
-      "fuente": "Minería & Desarrollo",
-      "url": "https://www.mineriaydesarrollo.com/noticias/2026/11/09/27755-la-estatal-chilena-codelco-advirtio-que-necesitara-de-socios-privados-para-frenar-la-caida-en-su-produccion",
-      "tema": {
-        "es": "Minería",
-        "en": "Mining",
-        "pt": "Mineração"
-      },
-      "titular": {
-        "es": "Codelco advierte que necesitará socios privados para frenar la caída de su producción",
-        "en": "Codelco warns it will need private partners to halt its output decline",
-        "pt": "Codelco alerta que precisará de sócios privados para conter a queda da produção"
-      },
-      "resumen": {
-        "es": "Pese a invertir unos US$ 32.000 millones en ocho años, su producción bajó de cerca de 1,7 a 1,2 millones de toneladas anuales.",
-        "en": "Despite investing about US$ 32,000 million over eight years, its output fell from about 1.7 to 1.2 million tonnes a year.",
-        "pt": "Apesar de investir cerca de US$ 32.000 milhões em oito anos, sua produção caiu de cerca de 1,7 para 1,2 milhão de toneladas por ano."
       }
     }
   ],
