@@ -1,17 +1,17 @@
 {
-  "actualizado": "2026-11-14",
+  "actualizado": "2026-11-15",
   "fallback": {
     "dolar": {
-      "valor": 992.48,
-      "fecha": "2026-11-13"
+      "valor": 999.1,
+      "fecha": "2026-11-16"
     },
     "euro": {
       "valor": 1096.91,
       "fecha": "2026-11-13"
     },
     "uf": {
-      "valor": 41329.8,
-      "fecha": "2026-11-14"
+      "valor": 41336.67,
+      "fecha": "2026-11-15"
     },
     "utm": {
       "valor": 72440,
@@ -165,7 +165,7 @@
     },
     {
       "codigo": "BTC",
-      "clp": 66334783.0,
+      "clp": 65496470,
       "moneda": {
         "es": "Bitcoin",
         "en": "Bitcoin",
