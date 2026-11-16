@@ -67,7 +67,11 @@
   .nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
   .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
   .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .mono { position: relative; display: inline-block; width: 26px; height: 26px; }
+  .mono { display: inline-flex; align-items: center; }
+  .mono .mk { height: 34px; width: auto; display: block; }
+  .mono .mk-l { display: none; }
+  .nav:not(.solid) .mono .mk-d { display: none; }
+  .nav:not(.solid) .mono .mk-l { display: block; }
   .mono .mu { position: absolute; left: 0; top: -5px; font-family: var(--greek); font-size: 28px; line-height: 1; color: var(--fg); }
   .mono .o { position: absolute; left: 10px; top: -3px; font-family: var(--serif); font-style: italic; font-size: 23px; line-height: 1; color: var(--accent); }
   .word { font-family: var(--serif); font-size: 19px; letter-spacing: .01em; }
@@ -373,7 +377,7 @@
 <nav class="nav" aria-label="Principal">
   <div class="wrap">
     <a class="brand" href="./" aria-label="MetisOps">
-      <span class="mono" aria-hidden="true"><span class="mu">μ</span><span class="o">O</span></span>
+      <span class="mono" aria-hidden="true"><img class="mk mk-d" src="logo-mark-96.png" alt=""><img class="mk mk-l" src="logo-mark-light-96.png" alt=""></span>
       <span class="word">Metis<i>Ops</i></span>
     </a>
     <div class="nav-links">
