@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400&family=Jost:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400&family=Jost:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@300;400;500&family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <style>
   /* Layout: a single editorial column with full-width bands; the indicators band is the one dark surface. */
   :root {
@@ -439,6 +439,25 @@
   .dx-card { background: transparent !important; border: 0 !important; border-top: 1px solid var(--fg) !important; padding: 24px 0 0 !important; }
   .dx-sym { font-size: 24px !important; }
   .who { border-top: 0 !important; }
+
+  /* ===== blanco y negro, tipografía nueva ===== */
+  :root { --bg:#FFFFFF; --fg:#0F0F0F; --muted:#6E6E6E; --muted-strong:#3C3C3C; --line:#E5E5E5; --panel:#FFFFFF; --accent:#0F0F0F; --oxido-claro:#0F0F0F;
+          --serif:'Inter Tight','Helvetica Neue',Arial,sans-serif; --sans:'Inter','Helvetica Neue',Arial,sans-serif; }
+  body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, .hero-one, .section-head h2 { font-family: var(--serif) !important; font-weight: 500 !important; letter-spacing: -.025em !important; }
+  h1 em, h2 em, h3 em, .hero-one em { font-style: normal !important; color: #9A9A9A !important; }
+  .hero-one { font-size: clamp(48px, 7.4vw, 112px) !important; line-height: 1.0 !important; max-width: 13ch; }
+  .eyebrow { color: var(--muted) !important; font-family: var(--sans); font-weight: 500; }
+  .word { font-family: 'Newsreader', Georgia, serif !important; letter-spacing: 0 !important; }
+  .word i { color: #A44735 !important; font-style: italic !important; }
+  .btn-primary, .hero-actions a, .dx-cta { background: #0F0F0F !important; color: #fff !important; border-color: #0F0F0F !important; border-radius: 0 !important; }
+  .dx-sym, .dx-note { font-family: var(--serif) !important; font-style: normal !important; font-weight: 400 !important; letter-spacing: -.01em; }
+  .dx-steps .n, .line .num, .line b:first-child { font-family: var(--serif) !important; font-style: normal !important; }
+  .dx-steps .tag, .dx-menu h4 { color: var(--muted) !important; }
+  .dx-menu button[aria-selected="true"] { background: #F4F4F4 !important; color: #0F0F0F !important; border-left-color: #0F0F0F !important; }
+  .dx-areas button[aria-selected="true"] { color: #0F0F0F !important; border-bottom-color: #0F0F0F !important; }
+  .who summary { color: var(--fg) !important; }
+  a { text-decoration-color: #BDBDBD; }
 </style>
 </head>
 <body>
