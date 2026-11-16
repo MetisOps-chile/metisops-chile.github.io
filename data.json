@@ -1,17 +1,17 @@
 {
-  "actualizado": "2026-11-15",
+  "actualizado": "2026-11-16",
   "fallback": {
     "dolar": {
       "valor": 999.1,
       "fecha": "2026-11-16"
     },
     "euro": {
-      "valor": 1096.91,
-      "fecha": "2026-11-13"
+      "valor": 1098.9,
+      "fecha": "2026-11-16"
     },
     "uf": {
-      "valor": 41336.67,
-      "fecha": "2026-11-15"
+      "valor": 41343.55,
+      "fecha": "2026-11-16"
     },
     "utm": {
       "valor": 72440,
@@ -45,9 +45,9 @@
         "en": "Brent crude",
         "pt": "Petróleo Brent"
       },
-      "valor": 95.84,
-      "fecha": "2026-11-13",
-      "fuente": "Rigzone (ICE)"
+      "valor": 95.89,
+      "fecha": "2026-11-16",
+      "fuente": "RTÉ (Reuters, ICE)"
     },
     {
       "nombre": {
@@ -55,9 +55,9 @@
         "en": "WTI crude",
         "pt": "Petróleo WTI"
       },
-      "valor": 88.56,
-      "fecha": "2026-11-13",
-      "fuente": "Rigzone (NYMEX)"
+      "valor": 88.65,
+      "fecha": "2026-11-16",
+      "fuente": "RTÉ (Reuters, NYMEX)"
     },
     {
       "nombre": {
@@ -65,9 +65,9 @@
         "en": "Gold",
         "pt": "Ouro"
       },
-      "valor": 3874.29,
-      "fecha": "2026-11-13",
-      "fuente": "Portal Minero (LME)"
+      "valor": 3862.05,
+      "fecha": "2026-11-16",
+      "fuente": "Metalcharts"
     },
     {
       "nombre": {
@@ -75,8 +75,8 @@
         "en": "Lithium carbonate (per tonne)",
         "pt": "Carbonato de lítio (por tonelada)"
       },
-      "valor": 13855.21,
-      "fecha": "2026-11-13",
+      "valor": 13420.55,
+      "fecha": "2026-11-16",
       "fuente": "Metalcharts, futuros de Guangzhou (GFEX)"
     },
     {
@@ -93,7 +93,7 @@
   "fx": [
     {
       "codigo": "EUR",
-      "clp": 1096.91,
+      "clp": 1098.9,
       "moneda": {
         "es": "Euro",
         "en": "Euro",
@@ -102,7 +102,7 @@
     },
     {
       "codigo": "GBP",
-      "clp": 1315.79,
+      "clp": 1316.83,
       "moneda": {
         "es": "Libra esterlina",
         "en": "British pound",
@@ -111,7 +111,7 @@
     },
     {
       "codigo": "BRL",
-      "clp": 175.72,
+      "clp": 175.6,
       "moneda": {
         "es": "Real brasileño",
         "en": "Brazilian real",
@@ -120,7 +120,7 @@
     },
     {
       "codigo": "CNY",
-      "clp": 149.16,
+      "clp": 149.59,
       "moneda": {
         "es": "Yuan chino",
         "en": "Chinese yuan",
@@ -129,7 +129,7 @@
     },
     {
       "codigo": "PEN",
-      "clp": 292.4,
+      "clp": 292.59,
       "moneda": {
         "es": "Sol peruano",
         "en": "Peruvian sol",
@@ -138,7 +138,7 @@
     },
     {
       "codigo": "MXN",
-      "clp": 53.68,
+      "clp": 53.73,
       "moneda": {
         "es": "Peso mexicano",
         "en": "Mexican peso",
@@ -147,7 +147,7 @@
     },
     {
       "codigo": "JPY",
-      "clp": 6.23,
+      "clp": 6.25,
       "moneda": {
         "es": "Yen japonés",
         "en": "Japanese yen",
@@ -156,7 +156,7 @@
     },
     {
       "codigo": "ARS",
-      "clp": 0.64,
+      "clp": 0.65,
       "moneda": {
         "es": "Peso argentino",
         "en": "Argentine peso",
@@ -165,7 +165,7 @@
     },
     {
       "codigo": "BTC",
-      "clp": 65496470,
+      "clp": 64969475,
       "moneda": {
         "es": "Bitcoin",
         "en": "Bitcoin",
@@ -174,6 +174,26 @@
     }
   ],
   "news": [
+    {
+      "fecha": "2026-11-16",
+      "fuente": "RTÉ (Reuters)",
+      "url": "https://www.rte.ie/news/business/2026/1116/1599343-oil-prices/",
+      "tema": {
+        "es": "Petróleo",
+        "en": "Oil",
+        "pt": "Petróleo"
+      },
+      "titular": {
+        "es": "El petróleo sube levemente tras reportes de minas en Ormuz",
+        "en": "Oil edges up after reports of mines in Hormuz",
+        "pt": "Petróleo sobe levemente após relatos de minas em Ormuz"
+      },
+      "resumen": {
+        "es": "El Brent sube a US$ 95,89 y el WTI a US$ 88,65 tras reportes no verificados de dos petroleros dañados, aunque la AIE prevé un excedente de 1,7 millones de barriles diarios.",
+        "en": "Brent rises to US$ 95.89 and WTI to US$ 88.65 after unverified reports of two damaged tankers, though the IEA expects a surplus of 1.7 million barrels per day.",
+        "pt": "O Brent sobe para US$ 95,89 e o WTI para US$ 88,65 após relatos não verificados de dois petroleiros danificados, embora a AIE preveja excedente de 1,7 milhão de barris por dia."
+      }
+    },
     {
       "fecha": "2026-11-13",
       "fuente": "Infobae (EFE)",
@@ -252,26 +272,6 @@
         "es": "Cae 0,6% a US$ 6,15 la libra y los futuros a tres meses bajan de US$ 13.500 por tonelada, su menor nivel desde julio.",
         "en": "It falls 0.6% to US$ 6.15 per pound and three-month futures drop below US$ 13,500 per tonne, the lowest since July.",
         "pt": "Cai 0,6% para US$ 6,15 por libra e os futuros de três meses ficam abaixo de US$ 13.500 por tonelada, o menor nível desde julho."
-      }
-    },
-    {
-      "fecha": "2026-11-13",
-      "fuente": "Rigzone",
-      "url": "https://www.rigzone.com/news/crude_fluctuates_as_iran_tensions_persist-13-nov-2026-185085-article",
-      "tema": {
-        "es": "Petróleo",
-        "en": "Oil",
-        "pt": "Petróleo"
-      },
-      "titular": {
-        "es": "El petróleo cierra estable y suma su segunda semana a la baja",
-        "en": "Oil ends flat, posting a second weekly loss",
-        "pt": "Petróleo fecha estável e registra a segunda queda semanal"
-      },
-      "resumen": {
-        "es": "El Brent cerró en US$ 95,84 por barril y el WTI en US$ 88,56, entre señales contradictorias sobre Irán.",
-        "en": "Brent settled at US$ 95.84 per barrel and WTI at US$ 88.56 amid mixed signals on Iran.",
-        "pt": "O Brent fechou a US$ 95,84 por barril e o WTI a US$ 88,56, em meio a sinais contraditórios sobre o Irã."
       }
     },
     {
