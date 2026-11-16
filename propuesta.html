@@ -370,6 +370,14 @@
   .hero-dots button:focus-visible { outline: 2px solid #FAF8F4; outline-offset: 2px; }
   @media (prefers-reduced-motion: reduce) { .hero-slide { transition: none; } }
 
+  .dx-pick { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 20px; }
+  .dx-pick button { appearance: none; font: inherit; font-size: 15px; padding: 9px 14px; border: 1px solid var(--line); background: #fff; color: var(--fg); border-radius: 999px; cursor: pointer; transition: all .15s; }
+  .dx-pick button:hover { border-color: var(--accent); }
+  .dx-pick button[aria-selected="true"] { background: var(--fg); border-color: var(--fg); color: #FAF8F4; }
+  .steps.dx li { animation: dxin .35s ease both; }
+  .steps.dx li:nth-child(2) { animation-delay: .06s; } .steps.dx li:nth-child(3) { animation-delay: .12s; }
+  @keyframes dxin { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .steps.dx li { animation: none; } }
   /* propuesta minimalista */
   .dx-lead { margin: 0 0 8px; font-size: 18px; color: var(--muted-strong); max-width: 46ch; }
   .steps.dx b { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; color: var(--fg); margin-bottom: 4px; }
@@ -541,15 +549,11 @@
     <div>
       <div class="section-head">
         <p class="eyebrow" data-i18n="nav.express">Diagnóstico inicial</p>
-        <h2>Empieza con una revisión concreta, <em>sin costo.</em></h2>
+        <h2>¿Qué quieres revisar? <em>Empecemos por ahí.</em></h2>
       </div>
-      <p class="dx-lead">Elige un tema. En 5 días hábiles te decimos, con números, si hay algo que mejorar.</p>
-      <ol class="steps dx">
-        <li><span>1</span><p><b>Contrato de transporte</b>Envíanos el contrato y 6 meses de facturas. Revisamos si el reajuste está bien aplicado y cuánto estás pagando de más.</p></li>
-        <li><span>2</span><p><b>Proyecto o inversión</b>Envíanos la evaluación o las cotizaciones. Revisamos supuestos, rentabilidad y riesgos antes de que decidas.</p></li>
-        <li><span>3</span><p><b>Indicadores de planta</b>Envíanos 6 meses de producción, consumos y mermas. Te mostramos dónde están las mayores pérdidas.</p></li>
-      </ol>
-      <p class="dx-note">Recibes un informe de una página y una reunión de 30 minutos. Tomamos cuatro revisiones al mes, bajo acuerdo de confidencialidad.</p>
+      <div class="dx-pick" role="tablist" aria-label="Tema a revisar"></div>
+      <ol class="steps dx" id="dx-steps" aria-live="polite"></ol>
+      <p class="dx-note">En 5 días hábiles recibes un informe de una página y una reunión de 30 minutos. Sin costo y bajo acuerdo de confidencialidad.</p>
     </div>
     <div class="contact-card">
       <span class="kpi-label" style="color:var(--muted)">Pide tu diagnóstico</span>
@@ -1052,5 +1056,46 @@
 })();
 </script>
 
+<script>
+(function(){
+  var T=[
+   {k:'Contrato de transporte',s:[
+    ['Nos envías el contrato','Y las facturas de los últimos 6 meses, con su fórmula de reajuste.'],
+    ['Recalculamos cada reajuste','Con los índices oficiales de IPC, diésel y dólar de cada período.'],
+    ['Sabes cuánto pagaste de más','La diferencia en pesos, mes a mes, y qué corregir con tu transportista.']]},
+   {k:'Presupuesto anual',s:[
+    ['Nos envías el gasto real','Del último año, y tu borrador de presupuesto si ya lo tienes.'],
+    ['Revisamos partidas y supuestos','Precios, IPC, dólar y volúmenes, y la brecha entre lo presupuestado y lo real.'],
+    ['Sabes dónde está el riesgo','Las partidas que se pueden desviar, dónde hay holgura y una estructura para armarlo.']]},
+   {k:'Proyecto o inversión',s:[
+    ['Nos envías la evaluación','O las cotizaciones y los números que tengas, aunque estén en borrador.'],
+    ['Probamos los supuestos','Flujo de caja, VAN y TIR, en un escenario base y uno pesimista.'],
+    ['Sabes si el proyecto resiste','Qué supuestos son débiles y qué verificar antes de invertir.']]},
+   {k:'Pérdidas en planta',s:[
+    ['Nos envías tus registros','6 meses de producción, consumos, mermas y detenciones.'],
+    ['Calculamos los indicadores','Rendimiento, consumo por unidad y disponibilidad, mes a mes.'],
+    ['Sabes dónde se pierde','Las mayores pérdidas y cuánto valen en pesos al año.']]},
+   {k:'Licitación o cotizaciones',s:[
+    ['Nos envías las ofertas','O las bases de la licitación que estás preparando.'],
+    ['Comparamos el costo total','No solo el precio: condiciones, reajustes, plazos y riesgos del contrato.'],
+    ['Sabes a quién adjudicar','Un cuadro comparativo y una recomendación fundada.']]}
+  ];
+  var pick=document.querySelector('.dx-pick'), ol=document.getElementById('dx-steps'), cur=0;
+  function links(){
+    var k=T[cur].k, mt=document.getElementById('mailto'), wa=document.getElementById('wa');
+    if(mt) mt.href='mailto:gerald.ulloa@metisops.cl?subject='+encodeURIComponent('Diagnóstico inicial: '+k);
+    if(wa) wa.href='https://wa.me/56998153074?text='+encodeURIComponent('Hola, me interesa el diagnóstico inicial de MetisOps: '+k+'.');
+  }
+  function show(i){
+    cur=i;
+    [].forEach.call(pick.children,function(b,j){b.setAttribute('aria-selected',j===i?'true':'false');});
+    ol.innerHTML=T[i].s.map(function(x,j){return '<li><span>'+(j+1)+'</span><p><b>'+x[0]+'</b>'+x[1]+'</p></li>';}).join('');
+    links();
+  }
+  T.forEach(function(t,i){var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.textContent=t.k;b.onclick=function(){show(i);};pick.appendChild(b);});
+  show(0);
+  document.querySelectorAll('.lang').forEach(function(b){b.addEventListener('click',function(){setTimeout(links,50);});});
+})();
+</script>
 </body>
 </html>
