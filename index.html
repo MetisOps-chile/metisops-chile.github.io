@@ -205,6 +205,16 @@
 
 
   /* Founder */
+  #nosotros .founder-text { margin-bottom: 8px; }
+  .who { margin-top: 36px; border-top: 1px solid var(--line); }
+  .who summary { cursor: pointer; list-style: none; padding: 18px 0; font-size: 15px; letter-spacing: .04em; color: var(--accent); display: flex; align-items: center; gap: 10px; }
+  .who summary::-webkit-details-marker { display: none; }
+  .who summary::after { content: "+"; font-family: var(--serif); font-size: 22px; line-height: 1; }
+  .who[open] summary::after { content: "–"; }
+  .who .founder { padding: 8px 0 12px; grid-template-columns: minmax(0, 140px) minmax(0, 1fr); align-items: center; }
+  .who .avatar { max-width: 140px; font-size: 40px; }
+  @media (max-width: 480px) { .who .founder { grid-template-columns: 96px minmax(0,1fr); gap: 20px; } .who .avatar { max-width: 96px; font-size: 30px; } }
+  .who-name { font-family: var(--serif); font-weight: 400; font-size: 26px; margin: 0; }
   .founder { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
   @media (max-width: 760px) { .founder { grid-template-columns: minmax(0, 1fr); } }
   .avatar { width: 100%; max-width: 220px; aspect-ratio: 1; border-radius: 50%; background: var(--carbon); color: #FAF8F4; display: grid; place-items: center; font-family: var(--serif); font-size: 64px; position: relative; overflow: hidden; }
@@ -383,7 +393,7 @@
         <div class="mm-panel">
           <div class="wrap">
             <div class="mm-intro"><p class="mm-t" data-i18n="mm.a.t">Experiencia de gerencia aplicada a tu operación.</p></div>
-            <a class="mm-link" href="./#nosotros"><b data-i18n="mm.a.1">Fundador</b><span data-i18n="mm.a.1p">Gerald Ulloa Retamal, Ingeniero Civil Industrial y MBA.</span></a>
+            <a class="mm-link" href="./#nosotros"><b data-i18n="mm.a.1">Equipo</b><span data-i18n="mm.a.1p">Ingeniería industrial y MBA al frente de cada proyecto.</span></a>
             <a class="mm-link" href="./#nosotros"><b data-i18n="mm.a.2">Experiencia</b><span data-i18n="mm.a.2p">Producción, costos, logística y proyectos.</span></a>
             <a class="mm-link" href="./#contacto"><b data-i18n="mm.a.3">Cómo empezamos</b><span data-i18n="mm.a.3p">Un diagnóstico inicial, sin costo ni compromiso.</span></a>
           </div>
@@ -490,15 +500,13 @@
 </section>
 
 <section class="band alt home-only" id="nosotros">
-  <div class="wrap founder">
-    <div class="avatar"><span class="ini" aria-hidden="true">G<span>U</span></span><img src="gerald.jpg" alt="Gerald Ulloa Retamal, fundador de MetisOps" width="520" height="520" loading="lazy" onerror="this.remove()"></div>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="nav.about">Quiénes somos</p>
+      <h2 data-i18n="ab.h2">Experiencia de gerencia, <em>aplicada a tu operación.</em></h2>
+    </div>
     <div class="founder-text">
-      <div class="section-head" style="margin-bottom:0">
-        <p class="eyebrow" data-i18n="nav.about">Quiénes somos</p>
-        <h2 data-i18n="fo.h2">Gerald Ulloa Retamal, <em>fundador.</em></h2>
-      </div>
       <p data-i18n="fo.p1">Más de 13 años gerenciando plantas químicas y manufactureras, proyectos de construcción y puesta en marcha, y la logística de una empresa proveedora de la gran minería.</p>
-      <p data-i18n="fo.p2">Ingeniero Civil Industrial y MBA. Lidera personalmente cada diagnóstico y cada proyecto.</p>
       <ul class="exp">
         <li><b data-i18n="res.1k">Producción</b><span data-i18n="res.1h">Más volumen en menos de un año</span></li>
         <li><b data-i18n="res.2k">Costos</b><span data-i18n="res.2h">Menos energía e insumos por unidad</span></li>
@@ -507,6 +515,16 @@
       </ul>
       <p class="metis" data-i18n="about.metis">Metis: en griego, la sabiduría práctica. Ops: la operación, donde se pone a prueba.</p>
     </div>
+    <details class="who">
+      <summary data-i18n="ab.who">Conoce a quien lidera MetisOps</summary>
+      <div class="founder">
+        <div class="avatar"><span class="ini" aria-hidden="true">G<span>U</span></span><img src="gerald.jpg" alt="Gerald Ulloa Retamal" width="520" height="520" loading="lazy" onerror="this.remove()"></div>
+        <div class="founder-text">
+          <h3 class="who-name">Gerald Ulloa Retamal</h3>
+          <p data-i18n="fo.p2">Ingeniero Civil Industrial y MBA. Lidera personalmente cada diagnóstico y cada proyecto.</p>
+        </div>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -533,7 +551,6 @@
       </div>
       <span class="phone">WhatsApp: +56 9 9815 3074</span>
       <button class="copy" id="copy" type="button" data-i18n="c.copy">Copiar correo</button>
-      <p class="signature">Gerald Ulloa · <span data-i18n="c.sig">fundador de MetisOps</span></p>
     </div>
   </div>
 </section>
@@ -662,7 +679,7 @@
   var T = {
     en: {
       'mm.s.t': 'Three lines of work, one focus: your margin.', 'mm.s.c': 'Request your initial assessment →',
-      'mm.a.t': 'Management experience applied to your operation.', 'mm.a.1': 'Founder', 'mm.a.1p': 'Gerald Ulloa Retamal, industrial engineer and MBA.',
+      'mm.a.t': 'Management experience applied to your operation.', 'mm.a.1': 'Team', 'mm.a.1p': 'Industrial engineering and an MBA leading every project.',
       'mm.a.2': 'Experience', 'mm.a.2p': 'Production, costs, logistics and projects.', 'mm.a.3': 'How we start', 'mm.a.3p': 'An initial assessment, at no cost or obligation.',
       'mm.p.t': 'The data that moves operations in Chile, updated every day.', 'mm.p.1': 'Indicators', 'mm.p.1p': 'Dollar, UF, UTM, CPI, copper, oil and currencies.',
       'mm.p.2': 'News', 'mm.p.2p': 'Economy, mining, logistics and energy.', 'mm.p.3': 'Insights', 'mm.p.3p': 'Our weekly analysis on LinkedIn.',
@@ -683,7 +700,7 @@
       'l3.h': 'Plants and start-up', 'l3.p': 'Start up sooner and run with fewer losses.',
       'l3.a': 'Start-up readiness', 'l3.b': 'Productivity and loss reduction', 'l3.c': 'Operations management, a few days a month',
       'srv.note': 'In all three we use data analysis and AI so that KPIs and reports build themselves. Fixed price, <b>from UF 40</b>.',
-      'fo.h2': 'Gerald Ulloa Retamal, <em>founder.</em>',
+      'ab.h2': 'Management experience, <em>applied to your operation.</em>', 'ab.who': 'Meet who leads MetisOps',
       'fo.p1': 'More than 13 years managing chemical and manufacturing plants, construction and start-up projects, and the logistics of a supplier to large-scale mining.',
       'fo.p2': 'Industrial engineer with an MBA. He personally leads every assessment and project.',
       'res.1k': 'Production', 'res.1h': 'More output in under a year',
@@ -703,7 +720,7 @@
     },
     pt: {
       'mm.s.t': 'Três linhas de trabalho, um só foco: a margem.', 'mm.s.c': 'Solicite seu diagnóstico inicial →',
-      'mm.a.t': 'Experiência de gerência aplicada à sua operação.', 'mm.a.1': 'Fundador', 'mm.a.1p': 'Gerald Ulloa Retamal, Engenheiro Civil Industrial e MBA.',
+      'mm.a.t': 'Experiência de gerência aplicada à sua operação.', 'mm.a.1': 'Equipe', 'mm.a.1p': 'Engenharia industrial e MBA à frente de cada projeto.',
       'mm.a.2': 'Experiência', 'mm.a.2p': 'Produção, custos, logística e projetos.', 'mm.a.3': 'Como começamos', 'mm.a.3p': 'Um diagnóstico inicial, sem custo nem compromisso.',
       'mm.p.t': 'Os dados que movem a operação no Chile, atualizados todos os dias.', 'mm.p.1': 'Indicadores', 'mm.p.1p': 'Dólar, UF, UTM, IPC, cobre, petróleo e moedas.',
       'mm.p.2': 'Notícias', 'mm.p.2p': 'Economia, mineração, logística e energia.', 'mm.p.3': 'Publicações', 'mm.p.3p': 'Nossas análises semanais no LinkedIn.',
@@ -724,7 +741,7 @@
       'l3.h': 'Plantas e partida', 'l3.p': 'Partir antes e operar com menos perdas.',
       'l3.a': 'Preparação da partida', 'l3.b': 'Produtividade e redução de perdas', 'l3.c': 'Gerência de operações por dias ao mês',
       'srv.note': 'Nas três usamos análise de dados e IA para que indicadores e relatórios se montem sozinhos. Preço fixo, <b>a partir de UF 40</b>.',
-      'fo.h2': 'Gerald Ulloa Retamal, <em>fundador.</em>',
+      'ab.h2': 'Experiência de gerência, <em>aplicada à sua operação.</em>', 'ab.who': 'Conheça quem lidera a MetisOps',
       'fo.p1': 'Mais de 13 anos gerenciando plantas químicas e de manufatura, projetos de construção e partida, e a logística de uma empresa fornecedora da grande mineração.',
       'fo.p2': 'Engenheiro Civil Industrial e MBA. Lidera pessoalmente cada diagnóstico e cada projeto.',
       'res.1k': 'Produção', 'res.1h': 'Mais volume em menos de um ano',
