@@ -371,6 +371,9 @@
   @media (prefers-reduced-motion: reduce) { .hero-slide { transition: none; } }
 
   /* propuesta minimalista */
+  .dx-lead { margin: 0 0 8px; font-size: 18px; color: var(--muted-strong); max-width: 46ch; }
+  .steps.dx b { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; color: var(--fg); margin-bottom: 4px; }
+  .dx-note { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--fg); max-width: 46ch; }
   .hero-slide, .hero-dots, .ticker, .btn-ghost, .line ul, .contact-card .phone, .contact-card .copy { display: none !important; }
   .hero-one { font-family: var(--serif); font-weight: 400; color: #FAF8F4; font-size: clamp(40px, 5.4vw, 68px); line-height: 1.05; max-width: 15ch; margin: 0; }
   .hero-one em { color: #F0A792; }
@@ -538,16 +541,18 @@
     <div>
       <div class="section-head">
         <p class="eyebrow" data-i18n="nav.express">Diagnóstico inicial</p>
-        <h2 data-i18n="c.h2">Empieza con un diagnóstico, <em>sin costo.</em></h2>
+        <h2>Antes de contratarnos, <em>sabrás cuánto puedes ganar.</em></h2>
       </div>
-      <ol class="steps">
-        <li><span>1</span><p data-i18n="st.1">Nos envías un contrato, una tarifa, un proyecto o un reporte. Si lo necesitas, firmamos antes un acuerdo de confidencialidad.</p></li>
-        <li><span>2</span><p data-i18n="st.2">Lo revisamos en pocos días, con ojos de gerente de operaciones.</p></li>
-        <li><span>3</span><p data-i18n="st.3">Recibes un informe breve con las oportunidades y qué hacer. Sin compromiso.</p></li>
+      <p class="dx-lead">Revisamos tu operación sin costo y en 10 días hábiles te entregamos:</p>
+      <ol class="steps dx">
+        <li><span>1</span><p><b>Dónde se pierde margen</b>Las tres oportunidades más grandes en tus contratos, fletes, flota o planta.</p></li>
+        <li><span>2</span><p><b>Cuánto vale cada una</b>El impacto estimado en pesos al año y el esfuerzo para capturarlo.</p></li>
+        <li><span>3</span><p><b>Por dónde empezar</b>Un plan priorizado, para ejecutarlo con tu equipo o con nosotros.</p></li>
       </ol>
+      <p class="dx-note">Si no encontramos una oportunidad que valga la pena, te lo decimos. Todo bajo acuerdo de confidencialidad.</p>
     </div>
     <div class="contact-card">
-      <span class="kpi-label" style="color:var(--muted)" data-i18n="c.write">Escríbenos a</span>
+      <span class="kpi-label" style="color:var(--muted)">Pide tu diagnóstico</span>
       <span class="mail" id="mail"></span>
       <div class="actions">
         <a class="btn-sm btn-mail" id="mailto" href="mailto:gerald.ulloa@metisops.cl" data-i18n="c.send">Escribir un correo</a>
