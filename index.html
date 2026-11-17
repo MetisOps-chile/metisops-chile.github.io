@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MetisOps</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="MetisOps: logística, transporte y contratos; evaluación de proyectos; plantas y puesta en marcha. Diagnóstico inicial sin costo.">
+<meta name="description" content="MetisOps · Sabiduría práctica para la industria. Consultoría en operaciones industriales: logística, proyectos, plantas y gestión. Diagnóstico inicial sin costo.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MetisOps">
-<meta property="og:title" content="MetisOps · Logística, proyectos y plantas industriales">
-<meta property="og:description" content="Reducimos costos y riesgos en logística, proyectos y plantas industriales. Diagnóstico inicial sin costo.">
+<meta property="og:title" content="MetisOps · Sabiduría práctica para la industria">
+<meta property="og:description" content="Consultoría en operaciones industriales. Elige qué revisar y recibe un diagnóstico sin costo.">
 <meta property="og:url" content="https://www.metisops.cl/">
 <meta property="og:image" content="https://www.metisops.cl/og.png">
 <meta property="og:image:width" content="1200">
@@ -409,6 +409,12 @@
   .dx-act { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
   .dx-wa { color: var(--fg); text-decoration: none; border: 1px solid var(--fg); padding: 11px 16px; font-size: 15px; }
   @media (max-width: 900px) { .dx-card { position: static; } .dx-tool { grid-template-columns: minmax(0,1fr); gap: 0; margin-top: 8px; } .dx-menu { display: none; } .dx-m { display: block; } .dx-card { margin-top: 18px !important; } }
+  .lines { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  @media (max-width: 1100px) { .lines { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+  @media (max-width: 600px) { .lines { grid-template-columns: minmax(0, 1fr) !important; } }
+  a.line { text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+  a.line:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .line-go { margin-top: auto; padding-top: 8px; font-size: 14px; color: var(--accent); }
   /* propuesta minimalista */
   .dx-lead { margin: 0 0 8px; font-size: 18px; color: var(--muted-strong); max-width: 46ch; }
   .steps.dx b { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; color: var(--fg); margin-bottom: 4px; }
@@ -436,10 +442,11 @@
         <button type="button" class="mm-btn" aria-expanded="false" data-i18n="nav.services">Servicios</button>
         <div class="mm-panel">
           <div class="wrap">
-            <div class="mm-intro"><p class="mm-t" data-i18n="mm.s.t">Tres líneas de trabajo, un mismo foco: el margen.</p><a class="mm-cta" href="./#contacto" data-i18n="mm.s.c">Solicita tu diagnóstico inicial →</a></div>
-            <a class="mm-link" href="./#servicios"><b data-i18n="l1.h">Logística, transporte y contratos</b><span data-i18n="l1.p">Fletes, tarifas y contratos que reflejan el costo real.</span></a>
-            <a class="mm-link" href="./#servicios"><b data-i18n="l2.h">Evaluación de proyectos</b><span data-i18n="l2.p">Decidir con números antes de invertir o adjudicar.</span></a>
-            <a class="mm-link" href="./#servicios"><b data-i18n="l3.h">Plantas y puesta en marcha</b><span data-i18n="l3.p">Partir antes y operar con menos pérdidas.</span></a>
+            <div class="mm-intro"><p class="mm-t" data-i18n="mm.s.t">Cuatro áreas, un mismo método.</p><a class="mm-cta" href="./#contacto" data-i18n="mm.s.c">Solicita tu diagnóstico inicial →</a></div>
+            <a class="mm-link" href="./#area-1" data-area="0"><b data-i18n="l1.h">Logística y transporte</b><span data-i18n="l1.p">Tarifas, flotas y licitaciones de transporte.</span></a>
+            <a class="mm-link" href="./#area-2" data-area="1"><b data-i18n="l2.h">Proyectos e inversión</b><span data-i18n="l2.p">Evaluaciones, propuestas, cotizaciones y presupuestos.</span></a>
+            <a class="mm-link" href="./#area-3" data-area="2"><b data-i18n="l3.h">Plantas y operación</b><span data-i18n="l3.p">Presupuesto, productividad y puesta en marcha.</span></a>
+            <a class="mm-link" href="./#area-4" data-area="3"><b data-i18n="l4.h">Gestión e indicadores</b><span data-i18n="l4.p">Reportes automatizados y control de contratos.</span></a>
           </div>
         </div>
       </div>
@@ -516,39 +523,33 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-i18n="nav.services">Servicios</p>
-      <h2 data-i18n="srv.h2">Tres líneas de trabajo, <em>un mismo foco: el margen.</em></h2>
+      <h2 data-i18n="srv.h2">Cuatro áreas, <em>un mismo método.</em></h2>
     </div>
     <div class="lines">
-      <article class="line">
+      <a class="line" href="#contacto" data-area="0">
         <span class="line-n">01</span>
-        <h3 data-i18n="l1.h">Logística, transporte y contratos</h3>
-        <p data-i18n="l1.p">Fletes, tarifas y contratos que reflejan el costo real.</p>
-        <ul>
-          <li data-i18n="l1.a">Revisión de tarifas y polinomios de reajuste</li>
-          <li data-i18n="l1.b">Costo total de flotas</li>
-          <li data-i18n="l1.c">Licitación y control de contratos</li>
-        </ul>
-      </article>
-      <article class="line">
+        <h3 data-i18n="l1.h">Logística y transporte</h3>
+        <p data-i18n="l1.p">Tarifas, flotas y licitaciones de transporte.</p>
+        <span class="line-go" data-i18n="l.go">Ver diagnósticos →</span>
+      </a>
+      <a class="line" href="#contacto" data-area="1">
         <span class="line-n">02</span>
-        <h3 data-i18n="l2.h">Evaluación de proyectos</h3>
-        <p data-i18n="l2.p">Decidir con números antes de invertir o adjudicar.</p>
-        <ul>
-          <li data-i18n="l2.a">Evaluación y reevaluación económica</li>
-          <li data-i18n="l2.b">Cotización y comparación de ofertas</li>
-          <li data-i18n="l2.c">Apoyo a la adjudicación</li>
-        </ul>
-      </article>
-      <article class="line">
+        <h3 data-i18n="l2.h">Proyectos e inversión</h3>
+        <p data-i18n="l2.p">Evaluaciones, propuestas, cotizaciones y presupuestos.</p>
+        <span class="line-go" data-i18n="l.go">Ver diagnósticos →</span>
+      </a>
+      <a class="line" href="#contacto" data-area="2">
         <span class="line-n">03</span>
-        <h3 data-i18n="l3.h">Plantas y puesta en marcha</h3>
-        <p data-i18n="l3.p">Partir antes y operar con menos pérdidas.</p>
-        <ul>
-          <li data-i18n="l3.a">Preparación de la puesta en marcha</li>
-          <li data-i18n="l3.b">Productividad y reducción de pérdidas</li>
-          <li data-i18n="l3.c">Gerencia de operaciones por días al mes</li>
-        </ul>
-      </article>
+        <h3 data-i18n="l3.h">Plantas y operación</h3>
+        <p data-i18n="l3.p">Presupuesto, productividad y puesta en marcha.</p>
+        <span class="line-go" data-i18n="l.go">Ver diagnósticos →</span>
+      </a>
+      <a class="line" href="#contacto" data-area="3">
+        <span class="line-n">04</span>
+        <h3 data-i18n="l4.h">Gestión e indicadores</h3>
+        <p data-i18n="l4.p">Reportes automatizados y control de contratos.</p>
+        <span class="line-go" data-i18n="l.go">Ver diagnósticos →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -734,7 +735,7 @@
 
   var T = {
     en: {
-      'mm.s.t': 'Three lines of work, one focus: your margin.', 'mm.s.c': 'Request your initial assessment →',
+      'mm.s.t': 'Four areas, one method.', 'mm.s.c': 'Request your initial assessment →',
       'mm.a.t': 'Management experience applied to your operation.', 'mm.a.1': 'Team', 'mm.a.1p': 'Industrial engineering and an MBA leading every project.',
       'mm.a.2': 'Experience', 'mm.a.2p': 'Production, costs, logistics and projects.', 'mm.a.3': 'How we start', 'mm.a.3p': 'An initial assessment, at no cost or obligation.',
       'mm.p.t': 'The data that moves operations in Chile, updated every day.', 'mm.p.1': 'Indicators', 'mm.p.1p': 'Dollar, UF, UTM, CPI, copper, oil and currencies.',
@@ -748,12 +749,12 @@
       'hero.lead': 'Industrial operations consulting. Initial assessment at no cost.',
       'hero.btn1': 'Request an assessment', 'hero.btn2': 'See services',
       'tick.more': 'Economic pulse →',
-      'srv.h2': 'Three lines of work, <em>one focus: your margin.</em>',
-      'l1.h': 'Logistics, transport and contracts', 'l1.p': 'Freight, rates and contracts that reflect real cost.',
+      'srv.h2': 'Four areas, <em>one method.</em>',
+      'l1.h': 'Logistics and transport', 'l1.p': 'Rates, fleets and transport tenders.',
       'l1.a': 'Review of rates and price-adjustment formulas', 'l1.b': 'Total cost of fleet ownership', 'l1.c': 'Contract tendering and control',
-      'l2.h': 'Project evaluation', 'l2.p': 'Decide with numbers before you invest or award.',
+      'l2.h': 'Projects and investment', 'l2.p': 'Evaluations, proposals, quotes and budgets.',
       'l2.a': 'Economic evaluation and re-evaluation', 'l2.b': 'Quotes and bid comparison', 'l2.c': 'Support for the award decision',
-      'l3.h': 'Plants and start-up', 'l3.p': 'Start up sooner and run with fewer losses.',
+      'l3.h': 'Plants and operations', 'l3.p': 'Budgets, productivity and start-up.',
       'l3.a': 'Start-up readiness', 'l3.b': 'Productivity and loss reduction', 'l3.c': 'Operations management, a few days a month',
       'srv.note': 'In all three we use data analysis and AI so that KPIs and reports build themselves. Fixed price, <b>from UF 40</b>.',
       'ab.h2': 'Management experience, <em>applied to your operation.</em>', 'ab.who': 'Meet who leads MetisOps',
@@ -772,10 +773,10 @@
       'ind.h2': 'The pulse of the economy, <em>up to date.</em>', 'ind.com': 'Commodities and freight', 'ind.prod': 'Product', 'ind.date': 'Date', 'ind.price': 'Price',
       'ind.fx': 'Main currencies', 'ind.cur': 'Currency', 'ind.code': 'Code', 'ind.pesos': 'Chilean pesos',
       'news.h2': 'What moves <em>operations in Chile.</em>',
-      'dx.note': 'We start with a 20-minute call and a confidentiality agreement. The assessment takes 5 business days and ends with a meeting covering the findings and a fixed-price proposal. At no cost, for companies, up to four assessments per month.', 'dx.lead': 'Pick a topic and see the plan: a no-cost assessment, a fixed-price solution and the result you will measure.', 'f.tag': 'Industrial operations consulting'
+      'dx.note': 'We start with a 20-minute call and a confidentiality agreement. The assessment takes 5 business days and ends with a meeting covering the findings and a fixed-price proposal. At no cost, for companies, up to four assessments per month.', 'dx.lead': 'Pick a topic and see the plan: a no-cost assessment, a fixed-price solution and the result you will measure.', 'l.go': 'See assessments →', 'l4.h': 'Management and KPIs', 'l4.p': 'Automated reporting and contract control.', 'f.tag': 'Industrial operations consulting'
     },
     pt: {
-      'mm.s.t': 'Três linhas de trabalho, um só foco: a margem.', 'mm.s.c': 'Solicite seu diagnóstico inicial →',
+      'mm.s.t': 'Quatro áreas, um só método.', 'mm.s.c': 'Solicite seu diagnóstico inicial →',
       'mm.a.t': 'Experiência de gerência aplicada à sua operação.', 'mm.a.1': 'Equipe', 'mm.a.1p': 'Engenharia industrial e MBA à frente de cada projeto.',
       'mm.a.2': 'Experiência', 'mm.a.2p': 'Produção, custos, logística e projetos.', 'mm.a.3': 'Como começamos', 'mm.a.3p': 'Um diagnóstico inicial, sem custo nem compromisso.',
       'mm.p.t': 'Os dados que movem a operação no Chile, atualizados todos os dias.', 'mm.p.1': 'Indicadores', 'mm.p.1p': 'Dólar, UF, UTM, IPC, cobre, petróleo e moedas.',
@@ -789,12 +790,12 @@
       'hero.lead': 'Consultoria em operações industriais. Diagnóstico inicial sem custo.',
       'hero.btn1': 'Solicitar diagnóstico', 'hero.btn2': 'Ver serviços',
       'tick.more': 'Pulso econômico →',
-      'srv.h2': 'Três linhas de trabalho, <em>um só foco: a margem.</em>',
-      'l1.h': 'Logística, transporte e contratos', 'l1.p': 'Fretes, tarifas e contratos que refletem o custo real.',
+      'srv.h2': 'Quatro áreas, <em>um só método.</em>',
+      'l1.h': 'Logística e transporte', 'l1.p': 'Tarifas, frotas e licitações de transporte.',
       'l1.a': 'Revisão de tarifas e fórmulas de reajuste', 'l1.b': 'Custo total de frotas', 'l1.c': 'Licitação e controle de contratos',
-      'l2.h': 'Avaliação de projetos', 'l2.p': 'Decidir com números antes de investir ou adjudicar.',
+      'l2.h': 'Projetos e investimento', 'l2.p': 'Avaliações, propostas, cotações e orçamentos.',
       'l2.a': 'Avaliação e reavaliação econômica', 'l2.b': 'Cotação e comparação de propostas', 'l2.c': 'Apoio à adjudicação',
-      'l3.h': 'Plantas e partida', 'l3.p': 'Partir antes e operar com menos perdas.',
+      'l3.h': 'Plantas e operação', 'l3.p': 'Orçamento, produtividade e partida.',
       'l3.a': 'Preparação da partida', 'l3.b': 'Produtividade e redução de perdas', 'l3.c': 'Gerência de operações por dias ao mês',
       'srv.note': 'Nas três usamos análise de dados e IA para que indicadores e relatórios se montem sozinhos. Preço fixo, <b>a partir de UF 40</b>.',
       'ab.h2': 'Experiência de gerência, <em>aplicada à sua operação.</em>', 'ab.who': 'Conheça quem lidera a MetisOps',
@@ -813,7 +814,7 @@
       'ind.h2': 'O pulso da economia, <em>em dia.</em>', 'ind.com': 'Commodities e fretes', 'ind.prod': 'Produto', 'ind.date': 'Data', 'ind.price': 'Preço',
       'ind.fx': 'Principais moedas', 'ind.cur': 'Moeda', 'ind.code': 'Código', 'ind.pesos': 'Pesos chilenos',
       'news.h2': 'O que move <em>a operação no Chile.</em>',
-      'dx.note': 'Começamos com uma conversa de 20 minutos e um acordo de confidencialidade. O diagnóstico leva 5 dias úteis e termina com uma reunião com os achados e uma proposta a preço fixo. Sem custo, para empresas, com no máximo quatro diagnósticos por mês.', 'dx.lead': 'Escolha um tema e veja o plano: um diagnóstico sem custo, a solução a preço fixo e o resultado que você vai medir.', 'f.tag': 'Consultoria em operações industriais'
+      'dx.note': 'Começamos com uma conversa de 20 minutos e um acordo de confidencialidade. O diagnóstico leva 5 dias úteis e termina com uma reunião com os achados e uma proposta a preço fixo. Sem custo, para empresas, com no máximo quatro diagnósticos por mês.', 'dx.lead': 'Escolha um tema e veja o plano: um diagnóstico sem custo, a solução a preço fixo e o resultado que você vai medir.', 'l.go': 'Ver diagnósticos →', 'l4.h': 'Gestão e indicadores', 'l4.p': 'Relatórios automatizados e controle de contratos.', 'f.tag': 'Consultoria em operações industriais'
     }
   };
   var UI = {
@@ -1187,6 +1188,8 @@
   }
   build();
   document.querySelectorAll('.lang').forEach(function(b){b.addEventListener('click',function(){setTimeout(build,30);});});
+  var hm=/^#area-([1-4])$/.exec(location.hash);if(hm){area(+hm[1]-1);setTimeout(function(){var t=document.getElementById('contacto');if(t)t.scrollIntoView();},300);}
+  document.querySelectorAll('[data-area]').forEach(function(el){el.addEventListener('click',function(e){if(document.documentElement.getAttribute('data-page')==='pulso')return;var i=+el.dataset.area;e.preventDefault();area(i);var t=document.getElementById('contacto');if(t)t.scrollIntoView({behavior:'smooth'});var mm=el.closest('.mm');if(mm){var bt=mm.querySelector('.mm-btn');if(bt)bt.setAttribute('aria-expanded','false');}});});
 })();
 </script>
 </body>

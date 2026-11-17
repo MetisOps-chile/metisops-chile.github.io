@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pulso económico · MetisOps</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="MetisOps: logística, transporte y contratos; evaluación de proyectos; plantas y puesta en marcha. Diagnóstico inicial sin costo.">
+<meta name="description" content="MetisOps · Sabiduría práctica para la industria. Consultoría en operaciones industriales: logística, proyectos, plantas y gestión. Diagnóstico inicial sin costo.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MetisOps">
-<meta property="og:title" content="MetisOps · Logística, proyectos y plantas industriales">
-<meta property="og:description" content="Reducimos costos y riesgos en logística, proyectos y plantas industriales. Diagnóstico inicial sin costo.">
+<meta property="og:title" content="MetisOps · Sabiduría práctica para la industria">
+<meta property="og:description" content="Consultoría en operaciones industriales. Elige qué revisar y recibe un diagnóstico sin costo.">
 <meta property="og:url" content="https://www.metisops.cl/pulso.html">
 <meta property="og:image" content="https://www.metisops.cl/og.png">
 <meta property="og:image:width" content="1200">
@@ -209,6 +209,16 @@
 
 
   /* Founder */
+  #nosotros .founder-text { margin-bottom: 8px; }
+  .who { margin-top: 36px; border-top: 1px solid var(--line); }
+  .who summary { cursor: pointer; list-style: none; padding: 18px 0; font-size: 15px; letter-spacing: .04em; color: var(--accent); display: flex; align-items: center; gap: 10px; }
+  .who summary::-webkit-details-marker { display: none; }
+  .who summary::after { content: "+"; font-family: var(--serif); font-size: 22px; line-height: 1; }
+  .who[open] summary::after { content: "–"; }
+  .who .founder { padding: 8px 0 12px; grid-template-columns: minmax(0, 140px) minmax(0, 1fr); align-items: center; }
+  .who .avatar { max-width: 140px; font-size: 40px; }
+  @media (max-width: 480px) { .who .founder { grid-template-columns: 96px minmax(0,1fr); gap: 20px; } .who .avatar { max-width: 96px; font-size: 30px; } }
+  .who-name { font-family: var(--serif); font-weight: 400; font-size: 26px; margin: 0; }
   .founder { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
   @media (max-width: 760px) { .founder { grid-template-columns: minmax(0, 1fr); } }
   .avatar { width: 100%; max-width: 220px; aspect-ratio: 1; border-radius: 50%; background: var(--carbon); color: #FAF8F4; display: grid; place-items: center; font-family: var(--serif); font-size: 64px; position: relative; overflow: hidden; }
@@ -358,6 +368,63 @@
   .hero-dots button[aria-current="true"]::before { background: var(--oxido-claro); }
   .hero-dots button:focus-visible { outline: 2px solid #FAF8F4; outline-offset: 2px; }
   @media (prefers-reduced-motion: reduce) { .hero-slide { transition: none; } }
+
+  .dx-pick { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 20px; }
+  .dx-pick button { appearance: none; font: inherit; font-size: 15px; padding: 9px 14px; border: 1px solid var(--line); background: #fff; color: var(--fg); border-radius: 999px; cursor: pointer; transition: all .15s; }
+  .dx-pick button:hover { border-color: var(--accent); }
+  .dx-pick button[aria-selected="true"] { background: var(--fg); border-color: var(--fg); color: #FAF8F4; }
+  .steps.dx li { animation: dxin .35s ease both; }
+  .steps.dx li:nth-child(2) { animation-delay: .06s; } .steps.dx li:nth-child(3) { animation-delay: .12s; }
+  @keyframes dxin { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .steps.dx li { animation: none; } }
+  .dx-areas { display: flex; gap: 22px; margin: 18px 0 14px; border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; }
+  .dx-areas::-webkit-scrollbar { display: none; }
+  .dx-areas button { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; padding: 10px 0; font: inherit; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); cursor: pointer; white-space: nowrap; margin-bottom: -1px; }
+  .dx-areas button[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+  .dx-card { margin-top: 18px; background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--accent); padding: 26px 28px 24px; }
+  .dx-sym { margin: 0 0 18px; font-family: var(--serif); font-style: italic; font-size: 21px; line-height: 1.35; color: var(--fg); }
+  .dx-steps { list-style: none; margin: 0; padding: 0; }
+  .dx-steps li { display: grid; grid-template-columns: 40px minmax(0,1fr); gap: 12px; padding: 16px 0; border-top: 1px solid var(--line); animation: dxin .35s ease both; }
+  .dx-steps li:nth-child(2) { animation-delay: .06s; } .dx-steps li:nth-child(3) { animation-delay: .12s; }
+  .dx-steps .n { font-family: var(--serif); font-size: 32px; line-height: 1; color: var(--accent); }
+  .dx-steps .tag { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+  .dx-steps p { margin: 0; color: var(--muted-strong); }
+  .dx-need { margin: 6px 0 18px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+  .dx-need b { color: var(--fg); font-weight: 500; }
+  .dx-cta { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; padding: 12px 18px; font-size: 15px; }
+  .dx-cta:hover { filter: brightness(1.08); }
+  @media (max-width: 560px) { .dx-card { padding: 20px 18px; } .dx-sym { font-size: 19px; } }
+  #contacto .contact { grid-template-columns: minmax(0,1fr) !important; }
+  #contacto .contact-card { display: none; }
+  #contacto .section-head, .dx-lead, .dx-note { max-width: 760px; }
+  .dx-tool { display: grid; grid-template-columns: 290px minmax(0,1fr); gap: 36px; margin-top: 28px; align-items: start; }
+  .dx-m { display: none; }
+  .dx-card { position: sticky; top: 96px; }
+  .dx-menu h4 { margin: 0 0 6px; font-size: 12px; font-weight: 500; line-height: 1.4; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .dx-menu div + div { margin-top: 22px; }
+  .dx-menu button { display: block; width: 100%; text-align: left; appearance: none; background: none; border: 0; border-left: 2px solid var(--line); padding: 8px 0 8px 14px; font: inherit; font-size: 16px; color: var(--fg); cursor: pointer; }
+  .dx-menu button:hover { color: var(--accent); }
+  .dx-menu button[aria-selected="true"] { border-left-color: var(--accent); color: var(--accent); background: rgba(164,71,53,.05); }
+  .dx-card { margin-top: 0 !important; }
+  .dx-act { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .dx-wa { color: var(--fg); text-decoration: none; border: 1px solid var(--fg); padding: 11px 16px; font-size: 15px; }
+  @media (max-width: 900px) { .dx-card { position: static; } .dx-tool { grid-template-columns: minmax(0,1fr); gap: 0; margin-top: 8px; } .dx-menu { display: none; } .dx-m { display: block; } .dx-card { margin-top: 18px !important; } }
+  .lines { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  @media (max-width: 1100px) { .lines { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+  @media (max-width: 600px) { .lines { grid-template-columns: minmax(0, 1fr) !important; } }
+  a.line { text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+  a.line:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .line-go { margin-top: auto; padding-top: 8px; font-size: 14px; color: var(--accent); }
+  /* propuesta minimalista */
+  .dx-lead { margin: 0 0 8px; font-size: 18px; color: var(--muted-strong); max-width: 46ch; }
+  .steps.dx b { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; color: var(--fg); margin-bottom: 4px; }
+  .dx-note { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--fg); max-width: 46ch; }
+  .hero-slide, .hero-dots, .ticker, .btn-ghost, .line ul, .contact-card .phone, .contact-card .copy { display: none !important; }
+  .hero-one { font-family: var(--serif); font-weight: 400; color: #FAF8F4; font-size: clamp(40px, 5.4vw, 68px); line-height: 1.05; max-width: 15ch; margin: 0; }
+  .hero-one em { color: #F0A792; }
+  .lang, .nav:not(.solid) .lang { font-family: inherit; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: .08em; color: inherit; padding: 2px 4px; border: 0 !important; border-bottom: 1px solid transparent !important; border-radius: 0; }
+  .lang[aria-pressed="true"] { border-bottom-color: currentColor !important; }
+  .nav:not(.solid) .lang { color: #FAF8F4; }
 </style>
 </head>
 <body>
@@ -375,10 +442,11 @@
         <button type="button" class="mm-btn" aria-expanded="false" data-i18n="nav.services">Servicios</button>
         <div class="mm-panel">
           <div class="wrap">
-            <div class="mm-intro"><p class="mm-t" data-i18n="mm.s.t">Tres líneas de trabajo, un mismo foco: el margen.</p><a class="mm-cta" href="./#contacto" data-i18n="mm.s.c">Solicita tu diagnóstico inicial →</a></div>
-            <a class="mm-link" href="./#servicios"><b data-i18n="l1.h">Logística, transporte y contratos</b><span data-i18n="l1.p">Fletes, tarifas y contratos que reflejan el costo real.</span></a>
-            <a class="mm-link" href="./#servicios"><b data-i18n="l2.h">Evaluación de proyectos</b><span data-i18n="l2.p">Decidir con números antes de invertir o adjudicar.</span></a>
-            <a class="mm-link" href="./#servicios"><b data-i18n="l3.h">Plantas y puesta en marcha</b><span data-i18n="l3.p">Partir antes y operar con menos pérdidas.</span></a>
+            <div class="mm-intro"><p class="mm-t" data-i18n="mm.s.t">Cuatro áreas, un mismo método.</p><a class="mm-cta" href="./#contacto" data-i18n="mm.s.c">Solicita tu diagnóstico inicial →</a></div>
+            <a class="mm-link" href="./#area-1" data-area="0"><b data-i18n="l1.h">Logística y transporte</b><span data-i18n="l1.p">Tarifas, flotas y licitaciones de transporte.</span></a>
+            <a class="mm-link" href="./#area-2" data-area="1"><b data-i18n="l2.h">Proyectos e inversión</b><span data-i18n="l2.p">Evaluaciones, propuestas, cotizaciones y presupuestos.</span></a>
+            <a class="mm-link" href="./#area-3" data-area="2"><b data-i18n="l3.h">Plantas y operación</b><span data-i18n="l3.p">Presupuesto, productividad y puesta en marcha.</span></a>
+            <a class="mm-link" href="./#area-4" data-area="3"><b data-i18n="l4.h">Gestión e indicadores</b><span data-i18n="l4.p">Reportes automatizados y control de contratos.</span></a>
           </div>
         </div>
       </div>
@@ -387,7 +455,7 @@
         <div class="mm-panel">
           <div class="wrap">
             <div class="mm-intro"><p class="mm-t" data-i18n="mm.a.t">Experiencia de gerencia aplicada a tu operación.</p></div>
-            <a class="mm-link" href="./#nosotros"><b data-i18n="mm.a.1">Fundador</b><span data-i18n="mm.a.1p">Gerald Ulloa Retamal, Ingeniero Civil Industrial y MBA.</span></a>
+            <a class="mm-link" href="./#nosotros"><b data-i18n="mm.a.1">Equipo</b><span data-i18n="mm.a.1p">Ingeniería industrial y MBA al frente de cada proyecto.</span></a>
             <a class="mm-link" href="./#nosotros"><b data-i18n="mm.a.2">Experiencia</b><span data-i18n="mm.a.2p">Producción, costos, logística y proyectos.</span></a>
             <a class="mm-link" href="./#contacto"><b data-i18n="mm.a.3">Cómo empezamos</b><span data-i18n="mm.a.3p">Un diagnóstico inicial, sin costo ni compromiso.</span></a>
           </div>
@@ -408,9 +476,9 @@
     </div>
     <div class="nav-right">
       <div class="langs" role="group" aria-label="Idioma / Language / Idioma">
-        <button type="button" class="lang" data-lang="es" title="Español" aria-label="Español"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#D52B1E"/><rect width="30" height="10" fill="#FFFFFF"/><rect width="10" height="10" fill="#0039A6"/><polygon points="5,2 5.9,4.3 8.3,4.3 6.4,5.8 7.1,8.1 5,6.7 2.9,8.1 3.6,5.8 1.7,4.3 4.1,4.3" fill="#FFFFFF"/></svg></button>
-        <button type="button" class="lang" data-lang="en" title="English" aria-label="English"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><g fill="#B22234"><rect y="0" width="30" height="1.54"/><rect y="3.08" width="30" height="1.54"/><rect y="6.15" width="30" height="1.54"/><rect y="9.23" width="30" height="1.54"/><rect y="12.31" width="30" height="1.54"/><rect y="15.38" width="30" height="1.54"/><rect y="18.46" width="30" height="1.54"/></g><rect width="13" height="10.77" fill="#3C3B6E"/></svg></button>
-        <button type="button" class="lang" data-lang="pt" title="Português" aria-label="Português"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#009C3B"/><polygon points="15,2 28,10 15,18 2,10" fill="#FFDF00"/><circle cx="15" cy="10" r="4.6" fill="#002776"/></svg></button>
+        <button type="button" class="lang" data-lang="es" title="Español" aria-label="Español">ES</button>
+        <button type="button" class="lang" data-lang="en" title="English" aria-label="English">EN</button>
+        <button type="button" class="lang" data-lang="pt" title="Português" aria-label="Português">PT</button>
       </div>
       <a class="nav-cta" href="./#contacto" data-i18n="nav.express">Diagnóstico inicial</a>
       <details class="burger">
@@ -438,10 +506,10 @@
       <a class="hero-post" id="hero-post" href="#" target="_blank" rel="noopener noreferrer" data-i18n="hero.post" hidden>Lee la publicación de esta semana en LinkedIn →</a>
     </div>
     <div class="hero-dots" id="hero-dots" role="group" aria-label="Publicaciones" hidden></div>
-    <p class="hero-tag" data-i18n="hero.tag">Reducimos costos y riesgos en <em>logística, proyectos y plantas industriales.</em></p>
-    <p class="hero-lead" data-i18n="hero.lead">Más de 13 años gerenciando operaciones, aplicados a los problemas reales de tu empresa.</p>
+    <h1 class="hero-one" data-i18n="hero.tag">Sabiduría práctica <em>para la industria.</em></h1>
+    <p class="hero-lead" data-i18n="hero.lead">Consultoría en operaciones industriales. Diagnóstico inicial sin costo.</p>
     <div class="hero-actions">
-      <a class="btn" href="#contacto" data-i18n="hero.btn1">Solicita tu diagnóstico inicial</a>
+      <a class="btn" href="#contacto" data-i18n="hero.btn1">Solicitar diagnóstico</a>
       <a class="btn btn-ghost" href="#servicios" data-i18n="hero.btn2">Ver servicios</a>
     </div>
   </div>
@@ -455,62 +523,56 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-i18n="nav.services">Servicios</p>
-      <h2 data-i18n="srv.h2">Tres líneas de trabajo, <em>un mismo foco: el margen.</em></h2>
+      <h2 data-i18n="srv.h2">Cuatro áreas, <em>un mismo método.</em></h2>
     </div>
     <div class="lines">
-      <article class="line">
+      <a class="line" href="#contacto" data-area="0">
         <span class="line-n">01</span>
-        <h3 data-i18n="l1.h">Logística, transporte y contratos</h3>
-        <p data-i18n="l1.p">Fletes, tarifas y contratos que reflejan el costo real.</p>
-        <ul>
-          <li data-i18n="l1.a">Revisión de tarifas y polinomios de reajuste</li>
-          <li data-i18n="l1.b">Costo total de flotas</li>
-          <li data-i18n="l1.c">Licitación y control de contratos</li>
-        </ul>
-      </article>
-      <article class="line">
+        <h3 data-i18n="l1.h">Logística y transporte</h3>
+        <p data-i18n="l1.p">Tarifas, flotas y licitaciones de transporte.</p>
+        <span class="line-go" data-i18n="l.go">Ver diagnósticos →</span>
+      </a>
+      <a class="line" href="#contacto" data-area="1">
         <span class="line-n">02</span>
-        <h3 data-i18n="l2.h">Evaluación de proyectos</h3>
-        <p data-i18n="l2.p">Decidir con números antes de invertir o adjudicar.</p>
-        <ul>
-          <li data-i18n="l2.a">Evaluación y reevaluación económica</li>
-          <li data-i18n="l2.b">Cotización y comparación de ofertas</li>
-          <li data-i18n="l2.c">Apoyo a la adjudicación</li>
-        </ul>
-      </article>
-      <article class="line">
+        <h3 data-i18n="l2.h">Proyectos e inversión</h3>
+        <p data-i18n="l2.p">Evaluaciones, propuestas, cotizaciones y presupuestos.</p>
+        <span class="line-go" data-i18n="l.go">Ver diagnósticos →</span>
+      </a>
+      <a class="line" href="#contacto" data-area="2">
         <span class="line-n">03</span>
-        <h3 data-i18n="l3.h">Plantas y puesta en marcha</h3>
-        <p data-i18n="l3.p">Partir antes y operar con menos pérdidas.</p>
-        <ul>
-          <li data-i18n="l3.a">Preparación de la puesta en marcha</li>
-          <li data-i18n="l3.b">Productividad y reducción de pérdidas</li>
-          <li data-i18n="l3.c">Gerencia de operaciones por días al mes</li>
-        </ul>
-      </article>
+        <h3 data-i18n="l3.h">Plantas y operación</h3>
+        <p data-i18n="l3.p">Presupuesto, productividad y puesta en marcha.</p>
+        <span class="line-go" data-i18n="l.go">Ver diagnósticos →</span>
+      </a>
+      <a class="line" href="#contacto" data-area="3">
+        <span class="line-n">04</span>
+        <h3 data-i18n="l4.h">Gestión e indicadores</h3>
+        <p data-i18n="l4.p">Reportes automatizados y control de contratos.</p>
+        <span class="line-go" data-i18n="l.go">Ver diagnósticos →</span>
+      </a>
     </div>
-    <p class="lines-note" data-i18n="srv.note">En las tres usamos análisis de datos e IA para que los indicadores y reportes se armen solos. Precio fijo, <b>desde UF 40</b>.</p>
   </div>
 </section>
 
 <section class="band alt home-only" id="nosotros">
-  <div class="wrap founder">
-    <div class="avatar"><span class="ini" aria-hidden="true">G<span>U</span></span><img src="gerald.jpg" alt="Gerald Ulloa Retamal, fundador de MetisOps" width="520" height="520" loading="lazy" onerror="this.remove()"></div>
-    <div class="founder-text">
-      <div class="section-head" style="margin-bottom:0">
-        <p class="eyebrow" data-i18n="nav.about">Quiénes somos</p>
-        <h2 data-i18n="fo.h2">Gerald Ulloa Retamal, <em>fundador.</em></h2>
-      </div>
-      <p data-i18n="fo.p1">Más de 13 años gerenciando plantas químicas y manufactureras, proyectos de construcción y puesta en marcha, y la logística de una empresa proveedora de la gran minería.</p>
-      <p data-i18n="fo.p2">Ingeniero Civil Industrial y MBA. Lidera personalmente cada diagnóstico y cada proyecto.</p>
-      <ul class="exp">
-        <li><b data-i18n="res.1k">Producción</b><span data-i18n="res.1h">Más volumen en menos de un año</span></li>
-        <li><b data-i18n="res.2k">Costos</b><span data-i18n="res.2h">Menos energía e insumos por unidad</span></li>
-        <li><b data-i18n="res.3k">Logística</b><span data-i18n="res.3h">Rutas, flotas y contratos más eficientes</span></li>
-        <li><b data-i18n="res.4k">Proyectos</b><span data-i18n="res.4h">Plantas construidas y puestas en marcha</span></li>
-      </ul>
-      <p class="metis" data-i18n="about.metis">Metis: en griego, la sabiduría práctica. Ops: la operación, donde se pone a prueba.</p>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="nav.about">Quiénes somos</p>
+      <h2 data-i18n="ab.h2">Experiencia de gerencia, <em>aplicada a tu operación.</em></h2>
     </div>
+    <div class="founder-text">
+      <p data-i18n="fo.p1">Más de 13 años gerenciando plantas químicas y manufactureras, proyectos de construcción y puesta en marcha, y la logística de una empresa proveedora de la gran minería.</p>
+    </div>
+    <details class="who">
+      <summary data-i18n="ab.who">Conoce a quien lidera MetisOps</summary>
+      <div class="founder">
+        <div class="avatar"><span class="ini" aria-hidden="true">G<span>U</span></span><img src="gerald.jpg" alt="Gerald Ulloa Retamal" width="520" height="520" loading="lazy" onerror="this.remove()"></div>
+        <div class="founder-text">
+          <h3 class="who-name">Gerald Ulloa Retamal</h3>
+          <p data-i18n="fo.p2">Ingeniero Civil Industrial y MBA. Lidera personalmente cada diagnóstico y cada proyecto.</p>
+        </div>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -519,25 +581,33 @@
     <div>
       <div class="section-head">
         <p class="eyebrow" data-i18n="nav.express">Diagnóstico inicial</p>
-        <h2 data-i18n="c.h2">Empieza con un diagnóstico, <em>sin costo.</em></h2>
+        <h2 data-i18n="c.h2">¿Qué necesitas resolver? <em>Te mostramos el camino completo.</em></h2>
       </div>
-      <ol class="steps">
-        <li><span>1</span><p data-i18n="st.1">Nos envías un contrato, una tarifa, un proyecto o un reporte. Si lo necesitas, firmamos antes un acuerdo de confidencialidad.</p></li>
-        <li><span>2</span><p data-i18n="st.2">Lo revisamos en pocos días, con ojos de gerente de operaciones.</p></li>
-        <li><span>3</span><p data-i18n="st.3">Recibes un informe breve con las oportunidades y qué hacer. Sin compromiso.</p></li>
-      </ol>
+      <p class="dx-lead" data-i18n="dx.lead">Elige un tema y ve el plan: un diagnóstico sin costo, la solución a precio fijo y el resultado que vas a medir.</p>
+      <div class="dx-tool">
+      <nav class="dx-menu" aria-label="Temas"></nav>
+      <div class="dx-m">
+      <div class="dx-areas" role="tablist" aria-label="Área"></div>
+      <div class="dx-pick" aria-label="Tema"></div>
+      </div>
+      <div class="dx-card" aria-live="polite">
+        <p class="dx-sym"></p>
+        <ol class="dx-steps"></ol>
+        <p class="dx-need"></p>
+        <div class="dx-act"><a class="dx-cta" href="#">Pedir este diagnóstico →</a><a class="dx-wa" href="#" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a></div>
+      </div>
+      </div>
+      <p class="dx-note" data-i18n="dx.note">Partimos con una conversación de 20 minutos y un acuerdo de confidencialidad. El diagnóstico toma 5 días hábiles y termina en una reunión con los hallazgos y una propuesta a precio fijo. Sin costo, para empresas, con un máximo de cuatro diagnósticos al mes.</p>
     </div>
     <div class="contact-card">
-      <span class="kpi-label" style="color:var(--muted)" data-i18n="c.write">Escríbenos a</span>
+      <span class="kpi-label" style="color:var(--muted)" data-i18n="c.write">Pide tu diagnóstico</span>
       <span class="mail" id="mail"></span>
       <div class="actions">
         <a class="btn-sm btn-mail" id="mailto" href="mailto:gerald.ulloa@metisops.cl" data-i18n="c.send">Escribir un correo</a>
         <a class="btn-sm btn-wa" id="wa" href="https://wa.me/56998153074" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <a class="btn-sm btn-wa" href="https://www.linkedin.com/company/metisops" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
       <span class="phone">WhatsApp: +56 9 9815 3074</span>
       <button class="copy" id="copy" type="button" data-i18n="c.copy">Copiar correo</button>
-      <p class="signature">Gerald Ulloa · <span data-i18n="c.sig">fundador de MetisOps</span></p>
     </div>
   </div>
 </section>
@@ -579,14 +649,14 @@
       <p class="lead" id="news-date"></p>
     </div>
     <div class="news" id="news"></div>
-    <p class="back"><a class="btn" href="./#contacto" data-i18n="hero.btn1">Solicita tu diagnóstico inicial</a></p>
+    <p class="back"><a class="btn" href="./#contacto" data-i18n="hero.btn1">Solicitar diagnóstico</a></p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
     <span>© 2026 MetisOps · Santiago, Chile · <a class="foot-li" href="https://www.linkedin.com/company/metisops" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a class="foot-li" href="pulso.html" data-i18n="nav.pulse">Pulso económico</a></span>
-    <span data-i18n="f.tag">Logística, evaluación de proyectos y plantas industriales</span>
+    <span data-i18n="f.tag">Consultoría en operaciones industriales</span>
   </div>
 </footer>
 
@@ -665,8 +735,8 @@
 
   var T = {
     en: {
-      'mm.s.t': 'Three lines of work, one focus: your margin.', 'mm.s.c': 'Request your initial assessment →',
-      'mm.a.t': 'Management experience applied to your operation.', 'mm.a.1': 'Founder', 'mm.a.1p': 'Gerald Ulloa Retamal, industrial engineer and MBA.',
+      'mm.s.t': 'Four areas, one method.', 'mm.s.c': 'Request your initial assessment →',
+      'mm.a.t': 'Management experience applied to your operation.', 'mm.a.1': 'Team', 'mm.a.1p': 'Industrial engineering and an MBA leading every project.',
       'mm.a.2': 'Experience', 'mm.a.2p': 'Production, costs, logistics and projects.', 'mm.a.3': 'How we start', 'mm.a.3p': 'An initial assessment, at no cost or obligation.',
       'mm.p.t': 'The data that moves operations in Chile, updated every day.', 'mm.p.1': 'Indicators', 'mm.p.1p': 'Dollar, UF, UTM, CPI, copper, oil and currencies.',
       'mm.p.2': 'News', 'mm.p.2p': 'Economy, mining, logistics and energy.', 'mm.p.3': 'Insights', 'mm.p.3p': 'Our weekly analysis on LinkedIn.',
@@ -675,19 +745,19 @@
       'hero.qe': 'Question of the week',
       'hero.q': 'When did anyone last review the price-adjustment formula in your transport contracts?',
       'hero.post': 'Read this week’s LinkedIn post →',
-      'hero.tag': 'We cut costs and risks in <em>logistics, projects and industrial plants.</em>',
-      'hero.lead': 'More than 13 years managing operations, applied to your company’s real problems.',
-      'hero.btn1': 'Request your initial assessment', 'hero.btn2': 'See services',
+      'hero.tag': 'Practical wisdom <em>for industry.</em>',
+      'hero.lead': 'Industrial operations consulting. Initial assessment at no cost.',
+      'hero.btn1': 'Request an assessment', 'hero.btn2': 'See services',
       'tick.more': 'Economic pulse →',
-      'srv.h2': 'Three lines of work, <em>one focus: your margin.</em>',
-      'l1.h': 'Logistics, transport and contracts', 'l1.p': 'Freight, rates and contracts that reflect real cost.',
+      'srv.h2': 'Four areas, <em>one method.</em>',
+      'l1.h': 'Logistics and transport', 'l1.p': 'Rates, fleets and transport tenders.',
       'l1.a': 'Review of rates and price-adjustment formulas', 'l1.b': 'Total cost of fleet ownership', 'l1.c': 'Contract tendering and control',
-      'l2.h': 'Project evaluation', 'l2.p': 'Decide with numbers before you invest or award.',
+      'l2.h': 'Projects and investment', 'l2.p': 'Evaluations, proposals, quotes and budgets.',
       'l2.a': 'Economic evaluation and re-evaluation', 'l2.b': 'Quotes and bid comparison', 'l2.c': 'Support for the award decision',
-      'l3.h': 'Plants and start-up', 'l3.p': 'Start up sooner and run with fewer losses.',
+      'l3.h': 'Plants and operations', 'l3.p': 'Budgets, productivity and start-up.',
       'l3.a': 'Start-up readiness', 'l3.b': 'Productivity and loss reduction', 'l3.c': 'Operations management, a few days a month',
       'srv.note': 'In all three we use data analysis and AI so that KPIs and reports build themselves. Fixed price, <b>from UF 40</b>.',
-      'fo.h2': 'Gerald Ulloa Retamal, <em>founder.</em>',
+      'ab.h2': 'Management experience, <em>applied to your operation.</em>', 'ab.who': 'Meet who leads MetisOps',
       'fo.p1': 'More than 13 years managing chemical and manufacturing plants, construction and start-up projects, and the logistics of a supplier to large-scale mining.',
       'fo.p2': 'Industrial engineer with an MBA. He personally leads every assessment and project.',
       'res.1k': 'Production', 'res.1h': 'More output in under a year',
@@ -695,19 +765,19 @@
       'res.3k': 'Logistics', 'res.3h': 'More efficient routes, fleets and contracts',
       'res.4k': 'Projects', 'res.4h': 'Plants built and started up',
       'about.metis': 'Metis: Greek for practical wisdom. Ops: operations, where it is put to the test.',
-      'c.h2': 'Start with an assessment, <em>at no cost.</em>',
+      'c.h2': 'What do you need to solve? <em>We show you the whole path.</em>',
       'st.1': 'You send us a contract, a rate sheet, a project or a report. If you need one, we sign a confidentiality agreement first.',
       'st.2': 'We review it within a few days, as an operations manager would.',
       'st.3': 'You get a short report with the opportunities and what to do. No obligation.',
-      'c.write': 'Write to us at', 'c.send': 'Write an email', 'c.copy': 'Copy email', 'c.sig': 'founder of MetisOps',
+      'c.write': 'Request your assessment', 'c.send': 'Write an email', 'c.copy': 'Copy email', 'c.sig': 'founder of MetisOps',
       'ind.h2': 'The pulse of the economy, <em>up to date.</em>', 'ind.com': 'Commodities and freight', 'ind.prod': 'Product', 'ind.date': 'Date', 'ind.price': 'Price',
       'ind.fx': 'Main currencies', 'ind.cur': 'Currency', 'ind.code': 'Code', 'ind.pesos': 'Chilean pesos',
       'news.h2': 'What moves <em>operations in Chile.</em>',
-      'f.tag': 'Logistics, project evaluation and industrial plants'
+      'dx.note': 'We start with a 20-minute call and a confidentiality agreement. The assessment takes 5 business days and ends with a meeting covering the findings and a fixed-price proposal. At no cost, for companies, up to four assessments per month.', 'dx.lead': 'Pick a topic and see the plan: a no-cost assessment, a fixed-price solution and the result you will measure.', 'l.go': 'See assessments →', 'l4.h': 'Management and KPIs', 'l4.p': 'Automated reporting and contract control.', 'f.tag': 'Industrial operations consulting'
     },
     pt: {
-      'mm.s.t': 'Três linhas de trabalho, um só foco: a margem.', 'mm.s.c': 'Solicite seu diagnóstico inicial →',
-      'mm.a.t': 'Experiência de gerência aplicada à sua operação.', 'mm.a.1': 'Fundador', 'mm.a.1p': 'Gerald Ulloa Retamal, Engenheiro Civil Industrial e MBA.',
+      'mm.s.t': 'Quatro áreas, um só método.', 'mm.s.c': 'Solicite seu diagnóstico inicial →',
+      'mm.a.t': 'Experiência de gerência aplicada à sua operação.', 'mm.a.1': 'Equipe', 'mm.a.1p': 'Engenharia industrial e MBA à frente de cada projeto.',
       'mm.a.2': 'Experiência', 'mm.a.2p': 'Produção, custos, logística e projetos.', 'mm.a.3': 'Como começamos', 'mm.a.3p': 'Um diagnóstico inicial, sem custo nem compromisso.',
       'mm.p.t': 'Os dados que movem a operação no Chile, atualizados todos os dias.', 'mm.p.1': 'Indicadores', 'mm.p.1p': 'Dólar, UF, UTM, IPC, cobre, petróleo e moedas.',
       'mm.p.2': 'Notícias', 'mm.p.2p': 'Economia, mineração, logística e energia.', 'mm.p.3': 'Publicações', 'mm.p.3p': 'Nossas análises semanais no LinkedIn.',
@@ -716,19 +786,19 @@
       'hero.qe': 'Pergunta da semana',
       'hero.q': 'Quando foi a última vez que alguém revisou a fórmula de reajuste dos seus contratos de transporte?',
       'hero.post': 'Leia a publicação desta semana no LinkedIn →',
-      'hero.tag': 'Reduzimos custos e riscos em <em>logística, projetos e plantas industriais.</em>',
-      'hero.lead': 'Mais de 13 anos gerenciando operações, aplicados aos problemas reais da sua empresa.',
-      'hero.btn1': 'Solicite seu diagnóstico inicial', 'hero.btn2': 'Ver serviços',
+      'hero.tag': 'Sabedoria prática <em>para a indústria.</em>',
+      'hero.lead': 'Consultoria em operações industriais. Diagnóstico inicial sem custo.',
+      'hero.btn1': 'Solicitar diagnóstico', 'hero.btn2': 'Ver serviços',
       'tick.more': 'Pulso econômico →',
-      'srv.h2': 'Três linhas de trabalho, <em>um só foco: a margem.</em>',
-      'l1.h': 'Logística, transporte e contratos', 'l1.p': 'Fretes, tarifas e contratos que refletem o custo real.',
+      'srv.h2': 'Quatro áreas, <em>um só método.</em>',
+      'l1.h': 'Logística e transporte', 'l1.p': 'Tarifas, frotas e licitações de transporte.',
       'l1.a': 'Revisão de tarifas e fórmulas de reajuste', 'l1.b': 'Custo total de frotas', 'l1.c': 'Licitação e controle de contratos',
-      'l2.h': 'Avaliação de projetos', 'l2.p': 'Decidir com números antes de investir ou adjudicar.',
+      'l2.h': 'Projetos e investimento', 'l2.p': 'Avaliações, propostas, cotações e orçamentos.',
       'l2.a': 'Avaliação e reavaliação econômica', 'l2.b': 'Cotação e comparação de propostas', 'l2.c': 'Apoio à adjudicação',
-      'l3.h': 'Plantas e partida', 'l3.p': 'Partir antes e operar com menos perdas.',
+      'l3.h': 'Plantas e operação', 'l3.p': 'Orçamento, produtividade e partida.',
       'l3.a': 'Preparação da partida', 'l3.b': 'Produtividade e redução de perdas', 'l3.c': 'Gerência de operações por dias ao mês',
       'srv.note': 'Nas três usamos análise de dados e IA para que indicadores e relatórios se montem sozinhos. Preço fixo, <b>a partir de UF 40</b>.',
-      'fo.h2': 'Gerald Ulloa Retamal, <em>fundador.</em>',
+      'ab.h2': 'Experiência de gerência, <em>aplicada à sua operação.</em>', 'ab.who': 'Conheça quem lidera a MetisOps',
       'fo.p1': 'Mais de 13 anos gerenciando plantas químicas e de manufatura, projetos de construção e partida, e a logística de uma empresa fornecedora da grande mineração.',
       'fo.p2': 'Engenheiro Civil Industrial e MBA. Lidera pessoalmente cada diagnóstico e cada projeto.',
       'res.1k': 'Produção', 'res.1h': 'Mais volume em menos de um ano',
@@ -736,15 +806,15 @@
       'res.3k': 'Logística', 'res.3h': 'Rotas, frotas e contratos mais eficientes',
       'res.4k': 'Projetos', 'res.4h': 'Plantas construídas e em operação',
       'about.metis': 'Métis: em grego, a sabedoria prática. Ops: a operação, onde ela é posta à prova.',
-      'c.h2': 'Comece com um diagnóstico, <em>sem custo.</em>',
+      'c.h2': 'O que você precisa resolver? <em>Mostramos o caminho completo.</em>',
       'st.1': 'Você nos envia um contrato, uma tabela de fretes, um projeto ou um relatório. Se precisar, assinamos antes um acordo de confidencialidade.',
       'st.2': 'Analisamos em poucos dias, com olhos de gerente de operações.',
       'st.3': 'Você recebe um relatório breve com as oportunidades e o que fazer. Sem compromisso.',
-      'c.write': 'Escreva para', 'c.send': 'Escrever um e-mail', 'c.copy': 'Copiar e-mail', 'c.sig': 'fundador da MetisOps',
+      'c.write': 'Peça seu diagnóstico', 'c.send': 'Escrever um e-mail', 'c.copy': 'Copiar e-mail', 'c.sig': 'fundador da MetisOps',
       'ind.h2': 'O pulso da economia, <em>em dia.</em>', 'ind.com': 'Commodities e fretes', 'ind.prod': 'Produto', 'ind.date': 'Data', 'ind.price': 'Preço',
       'ind.fx': 'Principais moedas', 'ind.cur': 'Moeda', 'ind.code': 'Código', 'ind.pesos': 'Pesos chilenos',
       'news.h2': 'O que move <em>a operação no Chile.</em>',
-      'f.tag': 'Logística, avaliação de projetos e plantas industriais'
+      'dx.note': 'Começamos com uma conversa de 20 minutos e um acordo de confidencialidade. O diagnóstico leva 5 dias úteis e termina com uma reunião com os achados e uma proposta a preço fixo. Sem custo, para empresas, com no máximo quatro diagnósticos por mês.', 'dx.lead': 'Escolha um tema e veja o plano: um diagnóstico sem custo, a solução a preço fixo e o resultado que você vai medir.', 'l.go': 'Ver diagnósticos →', 'l4.h': 'Gestão e indicadores', 'l4.p': 'Relatórios automatizados e controle de contratos.', 'f.tag': 'Consultoria em operações industriais'
     }
   };
   var UI = {
@@ -1030,5 +1100,97 @@
 })();
 </script>
 
+<script>
+(function(){
+  var D={es:[
+  {a:'Logística y transporte',t:[
+   {k:'Reajuste de tarifas',sym:'Las tarifas de transporte suben cada período y nadie verifica si el cálculo es correcto.',s:['Recalculamos cada reajuste con los índices oficiales de IPC, diésel y dólar, y cuantificamos las diferencias en pesos.','Corregimos la fórmula, respaldamos técnicamente la negociación con tu transportista y te dejamos una planilla de control.','Pagas lo que corresponde y verificas cada reajuste en minutos.'],n:'el contrato, su fórmula de reajuste y 6 meses de facturas.'},
+   {k:'Flota propia o tercerizada',sym:'No sabes si te conviene tener camiones, arrendarlos o contratar el servicio.',s:['Calculamos el costo total por kilómetro y por tonelada de tu operación actual.','Comparamos flota propia, arriendo y tercerización, incluyendo combustibles alternativos, con escenarios a 5 años.','Decides con el costo total de cada alternativa sobre la mesa.'],n:'costos de la flota, kilómetros, rutas y tonelajes.'},
+   {k:'Licitación de transporte',sym:'Tu contrato vence y quieres comparar ofertas de verdad, no solo precios.',s:['Revisamos tu contrato vigente, tus volúmenes y tu estructura de costos.','Preparamos las bases y la matriz de evaluación, y comparamos las ofertas en costo total.','Adjudicas un contrato con reajustes claros, indicadores de servicio y multas.'],n:'el contrato vigente, volúmenes y rutas.'}]},
+  {a:'Proyectos e inversión',t:[
+   {k:'Evaluar una inversión',sym:'Tienes que decidir una inversión y los números no te convencen del todo.',s:['Revisamos supuestos, flujo de caja, VAN y TIR, y probamos el proyecto en un escenario pesimista.','Rehacemos el modelo financiero con sensibilidades, riesgos y condiciones que invalidarían la inversión.','Llegas al directorio con un caso de negocio sólido y defendible.'],n:'la evaluación o las cotizaciones y los supuestos que tengas.'},
+   {k:'Propuestas técnicas y económicas',sym:'Tienes que presentar una propuesta a una licitación grande y no sabes si está a la altura.',s:['Revisamos las bases, los requisitos y los criterios de evaluación, y te decimos si te conviene participar y qué te falta.','Armamos contigo la oferta técnica y económica, la matriz de cumplimiento, y preparamos a tu equipo para la presentación o entrevista.','Presentas una propuesta completa y competitiva, a tiempo y sin errores que te dejen fuera.'],n:'las bases de la licitación y la experiencia de tu empresa.'},
+   {k:'Comparar cotizaciones',sym:'Tienes varias ofertas y no son comparables entre sí.',s:['Normalizamos las ofertas y detectamos lo que cada una deja fuera.','Construimos la comparación en costo total y te apoyamos en la negociación de condiciones.','Adjudicas sabiendo exactamente qué compras y a qué precio final.'],n:'las ofertas recibidas y lo que pediste a los proveedores.'},
+   {k:'Presupuesto de proyecto',sym:'El proyecto parte y el presupuesto se ve corto o poco respaldado.',s:['Revisamos partidas, cotizaciones y contingencias del presupuesto.','Armamos el presupuesto detallado y el control de avance físico y financiero.','Controlas el gasto mes a mes y anticipas desviaciones antes de que ocurran.'],n:'el presupuesto actual y las cotizaciones que lo respaldan.'}]},
+  {a:'Plantas y operación',t:[
+   {k:'Presupuesto anual',sym:'Hay que presentar el presupuesto y el del año pasado no se cumplió.',s:['Comparamos el gasto real con lo presupuestado y revisamos los supuestos de precios y volúmenes.','Construimos el presupuesto por partida, con escenarios de IPC, dólar y demanda.','Presentas un presupuesto defendible y lo controlas mes a mes.'],n:'el gasto real del último año y tu borrador, si lo tienes.'},
+   {k:'Productividad y pérdidas',sym:'Produces lo mismo con más costo y no está claro dónde se pierde.',s:['Calculamos rendimiento, consumo por unidad y disponibilidad con tus registros.','Visitamos la planta, priorizamos las pérdidas y armamos el plan de mejora con tu equipo.','Bajas el costo por unidad, con indicadores semanales que lo demuestran.'],n:'6 meses de producción, consumos, mermas y detenciones.'},
+   {k:'Puesta en marcha',sym:'Viene una planta, línea o equipo nuevo y la operación todavía no está lista.',s:['Revisamos la preparación: personas, procedimientos, repuestos, permisos y contratos.','Armamos el plan de puesta en marcha y lo acompañamos en terreno.','Partes a tiempo, con operadores preparados y menos fallas en los primeros meses.'],n:'el cronograma del proyecto y lo que ya tienes preparado.'}]},
+  {a:'Gestión e indicadores',t:[
+   {k:'Indicadores y reportes',sym:'Tu equipo pierde días armando reportes a mano.',s:['Revisamos tus reportes y definimos los pocos indicadores que realmente importan.','Automatizamos la carga de datos y el tablero, con inteligencia artificial donde aporta.','Tienes los números al día, sin armarlos a mano.'],n:'tus reportes actuales y de dónde salen los datos.'},
+   {k:'Control de contratos',sym:'Tienes muchos contratos de servicio y nadie controla vencimientos, reajustes ni cumplimiento.',s:['Inventariamos contratos, vencimientos, reajustes y garantías.','Armamos el sistema de control con alertas e indicadores de cumplimiento.','Ningún contrato se vence ni se reajusta sin que lo sepas.'],n:'la lista de contratos vigentes o las copias que tengas.'}]}],
+  en:[
+  {a:'Logistics and transport',t:[
+   {k:'Rate adjustments',sym:'Transport rates go up every period and nobody checks whether the calculation is right.',s:['We recalculate every adjustment with the official CPI, diesel and exchange-rate indices, and quantify the differences.','We correct the formula, give you technical backing to negotiate with your carrier and leave you a control sheet.','You pay what is fair and can check every adjustment in minutes.'],n:'the contract, its adjustment formula and 6 months of invoices.'},
+   {k:'Own or outsourced fleet',sym:'You are not sure whether to own trucks, lease them or contract the service.',s:['We calculate the total cost per kilometre and per tonne of your current operation.','We compare own fleet, leasing and outsourcing, including alternative fuels, with 5-year scenarios.','You decide with the total cost of each option on the table.'],n:'fleet costs, kilometres, routes and tonnages.'},
+   {k:'Transport tender',sym:'Your contract is expiring and you want to compare real offers, not just prices.',s:['We review your current contract, volumes and cost structure.','We prepare the tender terms and the evaluation matrix, and compare bids on total cost.','You award a contract with clear adjustments, service indicators and penalties.'],n:'the current contract, volumes and routes.'}]},
+  {a:'Projects and investment',t:[
+   {k:'Evaluate an investment',sym:'You have to decide on an investment and the numbers do not fully convince you.',s:['We review assumptions, cash flow, NPV and IRR, and test the project in a downside case.','We rebuild the financial model with sensitivities, risks and the conditions that would invalidate the investment.','You take a solid, defensible business case to the board.'],n:'the evaluation or quotes and the assumptions you have.'},
+   {k:'Technical and commercial proposals',sym:'You have to submit a proposal for a large tender and are not sure it is up to standard.',s:['We review the terms, requirements and evaluation criteria, and tell you whether to bid and what you are missing.','We build the technical and commercial offer and the compliance matrix with you, and prepare your team for the presentation or interview.','You submit a complete, competitive offer, on time and without errors that would rule you out.'],n:'the tender terms and your company’s track record.'},
+   {k:'Compare quotes',sym:'You have several bids and they are not comparable.',s:['We normalise the bids and spot what each one leaves out.','We build the total-cost comparison and support you in negotiating terms.','You award knowing exactly what you are buying and at what final price.'],n:'the bids received and what you asked suppliers for.'},
+   {k:'Project budget',sym:'The project is starting and the budget looks short or poorly supported.',s:['We review budget lines, quotes and contingencies.','We build the detailed budget and the physical and financial progress control.','You control spending month by month and anticipate deviations before they happen.'],n:'the current budget and the quotes behind it.'}]},
+  {a:'Plants and operations',t:[
+   {k:'Annual budget',sym:'The budget is due and last year’s was not met.',s:['We compare actual spending with the budget and review the price and volume assumptions.','We build the budget line by line, with CPI, exchange-rate and demand scenarios.','You present a defensible budget and control it month by month.'],n:'last year’s actual spending and your draft, if you have one.'},
+   {k:'Productivity and losses',sym:'You produce the same at a higher cost and it is unclear where it is being lost.',s:['We calculate yield, consumption per unit and availability from your records.','We visit the plant, prioritise the losses and build the improvement plan with your team.','You lower the cost per unit, with weekly indicators that prove it.'],n:'6 months of production, consumption, waste and downtime.'},
+   {k:'Start-up',sym:'A new plant, line or piece of equipment is coming and operations are not ready yet.',s:['We review readiness: people, procedures, spare parts, permits and contracts.','We build the start-up plan and support it on site.','You start on time, with trained operators and fewer failures in the first months.'],n:'the project schedule and what you have already prepared.'}]},
+  {a:'Management and KPIs',t:[
+   {k:'KPIs and reporting',sym:'Your team loses days building reports by hand.',s:['We review your reports and define the few indicators that really matter.','We automate data loading and the dashboard, using artificial intelligence where it adds value.','You have up-to-date numbers without building them by hand.'],n:'your current reports and where the data comes from.'},
+   {k:'Contract control',sym:'You have many service contracts and nobody tracks expiry dates, adjustments or compliance.',s:['We inventory contracts, expiry dates, adjustments and guarantees.','We set up a control system with alerts and compliance indicators.','No contract expires or gets adjusted without you knowing.'],n:'the list of current contracts or the copies you have.'}]}],
+  pt:[
+  {a:'Logística e transporte',t:[
+   {k:'Reajuste de tarifas',sym:'As tarifas de transporte sobem a cada período e ninguém verifica se o cálculo está correto.',s:['Recalculamos cada reajuste com os índices oficiais de inflação, diesel e dólar e quantificamos as diferenças.','Corrigimos a fórmula, damos respaldo técnico à negociação com sua transportadora e deixamos uma planilha de controle.','Você paga o que é justo e confere cada reajuste em minutos.'],n:'o contrato, a fórmula de reajuste e 6 meses de faturas.'},
+   {k:'Frota própria ou terceirizada',sym:'Você não sabe se compensa ter caminhões, alugá-los ou contratar o serviço.',s:['Calculamos o custo total por quilômetro e por tonelada da sua operação atual.','Comparamos frota própria, aluguel e terceirização, incluindo combustíveis alternativos, com cenários de 5 anos.','Você decide com o custo total de cada alternativa na mesa.'],n:'custos da frota, quilômetros, rotas e tonelagens.'},
+   {k:'Licitação de transporte',sym:'Seu contrato está vencendo e você quer comparar ofertas de verdade, não só preços.',s:['Revisamos seu contrato atual, seus volumes e sua estrutura de custos.','Preparamos o edital e a matriz de avaliação e comparamos as propostas pelo custo total.','Você adjudica um contrato com reajustes claros, indicadores de serviço e multas.'],n:'o contrato atual, volumes e rotas.'}]},
+  {a:'Projetos e investimento',t:[
+   {k:'Avaliar um investimento',sym:'Você precisa decidir um investimento e os números não convencem totalmente.',s:['Revisamos premissas, fluxo de caixa, VPL e TIR e testamos o projeto em um cenário pessimista.','Refazemos o modelo financeiro com sensibilidades, riscos e as condições que invalidariam o investimento.','Você leva à diretoria um caso de negócio sólido e defensável.'],n:'a avaliação ou as cotações e as premissas que tiver.'},
+   {k:'Propostas técnicas e comerciais',sym:'Você quer participar de uma licitação grande e não sabe se sua proposta está à altura.',s:['Revisamos o edital, os requisitos e os critérios de avaliação, e dizemos se vale a pena participar e o que falta.','Montamos com você a proposta técnica e comercial e a matriz de conformidade, e preparamos sua equipe para a apresentação ou entrevista.','Você apresenta uma proposta completa e competitiva, no prazo e sem erros que a eliminem.'],n:'o edital da licitação e a experiência da sua empresa.'},
+   {k:'Comparar cotações',sym:'Você tem várias propostas e elas não são comparáveis.',s:['Normalizamos as propostas e identificamos o que cada uma deixa de fora.','Montamos a comparação pelo custo total e apoiamos a negociação das condições.','Você adjudica sabendo exatamente o que compra e a que preço final.'],n:'as propostas recebidas e o que foi pedido aos fornecedores.'},
+   {k:'Orçamento de projeto',sym:'O projeto está começando e o orçamento parece curto ou pouco fundamentado.',s:['Revisamos rubricas, cotações e contingências do orçamento.','Montamos o orçamento detalhado e o controle de avanço físico e financeiro.','Você controla o gasto mês a mês e antecipa desvios antes que aconteçam.'],n:'o orçamento atual e as cotações que o sustentam.'}]},
+  {a:'Plantas e operação',t:[
+   {k:'Orçamento anual',sym:'É hora de apresentar o orçamento e o do ano passado não foi cumprido.',s:['Comparamos o gasto real com o orçado e revisamos as premissas de preços e volumes.','Montamos o orçamento por rubrica, com cenários de inflação, dólar e demanda.','Você apresenta um orçamento defensável e o controla mês a mês.'],n:'o gasto real do último ano e seu rascunho, se tiver.'},
+   {k:'Produtividade e perdas',sym:'Você produz o mesmo com mais custo e não está claro onde se perde.',s:['Calculamos rendimento, consumo por unidade e disponibilidade com seus registros.','Visitamos a planta, priorizamos as perdas e montamos o plano de melhoria com sua equipe.','Você reduz o custo por unidade, com indicadores semanais que comprovam.'],n:'6 meses de produção, consumos, perdas e paradas.'},
+   {k:'Partida (start-up)',sym:'Vem uma planta, linha ou equipamento novo e a operação ainda não está pronta.',s:['Revisamos a preparação: pessoas, procedimentos, peças de reposição, licenças e contratos.','Montamos o plano de partida e o acompanhamos em campo.','Você parte no prazo, com operadores preparados e menos falhas nos primeiros meses.'],n:'o cronograma do projeto e o que já está preparado.'}]},
+  {a:'Gestão e indicadores',t:[
+   {k:'Indicadores e relatórios',sym:'Sua equipe perde dias montando relatórios à mão.',s:['Revisamos seus relatórios e definimos os poucos indicadores que realmente importam.','Automatizamos a carga de dados e o painel, com inteligência artificial onde agrega valor.','Você tem os números em dia, sem montá-los à mão.'],n:'seus relatórios atuais e de onde vêm os dados.'},
+   {k:'Controle de contratos',sym:'Você tem muitos contratos de serviço e ninguém controla vencimentos, reajustes ou cumprimento.',s:['Inventariamos contratos, vencimentos, reajustes e garantias.','Montamos o sistema de controle com alertas e indicadores de cumprimento.','Nenhum contrato vence ou é reajustado sem que você saiba.'],n:'a lista de contratos vigentes ou as cópias que tiver.'}]}]};
+  var UI={es:{tags:['Diagnóstico · sin costo · 5 días hábiles','Solución · precio fijo','Resultado'],need:'Para el diagnóstico necesitamos:',cta:'Pedir este diagnóstico →',wa:'Consultar por WhatsApp',sub:'Diagnóstico inicial: ',msg:'Hola, me interesa el diagnóstico inicial de MetisOps: '},
+   en:{tags:['Assessment · no cost · 5 business days','Solution · fixed price','Result'],need:'For the assessment we need:',cta:'Request this assessment →',wa:'Ask on WhatsApp',sub:'Initial assessment: ',msg:'Hello, I am interested in the MetisOps initial assessment: '},
+   pt:{tags:['Diagnóstico · sem custo · 5 dias úteis','Solução · preço fixo','Resultado'],need:'Para o diagnóstico precisamos de:',cta:'Pedir este diagnóstico →',wa:'Consultar pelo WhatsApp',sub:'Diagnóstico inicial: ',msg:'Olá, tenho interesse no diagnóstico inicial da MetisOps: '}};
+  function L(){var l=(document.documentElement.lang||'es').slice(0,2);return D[l]?l:'es';}
+  var M=document.querySelector('.dx-menu'),A=document.querySelector('.dx-areas'),P=document.querySelector('.dx-pick'),C=document.querySelector('.dx-card'),ai=0,ti=0;
+  function links(k){
+    var u=UI[L()], mail='mailto:gerald.ulloa@metisops.cl?subject='+encodeURIComponent(u.sub+k), wa='https://wa.me/56998153074?text='+encodeURIComponent(u.msg+k+'.');
+    C.querySelector('.dx-cta').href=mail; C.querySelector('.dx-wa').href=wa;
+    var mt=document.getElementById('mailto'),w=document.getElementById('wa'); if(mt) mt.href=mail; if(w) w.href=wa;
+  }
+  function card(){
+    var l=L(),u=UI[l],t=D[l][ai].t[ti];
+    [].forEach.call(P.children,function(b,j){b.setAttribute('aria-selected',j===ti?'true':'false');});
+    M.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-selected',(+b.dataset.a===ai&&+b.dataset.t===ti)?'true':'false');});
+    C.querySelector('.dx-sym').textContent='«'+t.sym+'»';
+    C.querySelector('.dx-steps').innerHTML=t.s.map(function(x,j){return '<li><span class="n">'+(j+1)+'</span><p><span class="tag">'+u.tags[j]+'</span>'+x+'</p></li>';}).join('');
+    C.querySelector('.dx-need').innerHTML='<b>'+u.need+'</b> '+t.n;
+    C.querySelector('.dx-cta').textContent=u.cta; C.querySelector('.dx-wa').textContent=u.wa;
+    links(t.k);
+  }
+  function area(i){
+    ai=i;ti=0;var l=L();
+    [].forEach.call(A.children,function(b,j){b.setAttribute('aria-selected',j===i?'true':'false');});
+    P.innerHTML='';
+    D[l][i].t.forEach(function(t,j){var b=document.createElement('button');b.type='button';b.textContent=t.k;b.onclick=function(){ti=j;card();};P.appendChild(b);});
+    card();
+  }
+  function build(){
+    var l=L(),keep=[ai,ti]; M.innerHTML='';A.innerHTML='';
+    D[l].forEach(function(d,i){var g=document.createElement('div');g.innerHTML='<h4>'+d.a+'</h4>';d.t.forEach(function(t,j){var b=document.createElement('button');b.type='button';b.textContent=t.k;b.dataset.a=i;b.dataset.t=j;b.onclick=function(){if(ai!==i)area(i);ti=j;card();};g.appendChild(b);});M.appendChild(g);});
+    D[l].forEach(function(d,i){var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.textContent=d.a;b.onclick=function(){area(i);};A.appendChild(b);});
+    area(keep[0]); ti=keep[1]; card();
+  }
+  build();
+  document.querySelectorAll('.lang').forEach(function(b){b.addEventListener('click',function(){setTimeout(build,30);});});
+  var hm=/^#area-([1-4])$/.exec(location.hash);if(hm){area(+hm[1]-1);setTimeout(function(){var t=document.getElementById('contacto');if(t)t.scrollIntoView();},300);}
+  document.querySelectorAll('[data-area]').forEach(function(el){el.addEventListener('click',function(e){if(document.documentElement.getAttribute('data-page')==='pulso')return;var i=+el.dataset.area;e.preventDefault();area(i);var t=document.getElementById('contacto');if(t)t.scrollIntoView({behavior:'smooth'});var mm=el.closest('.mm');if(mm){var bt=mm.querySelector('.mm-btn');if(bt)bt.setAttribute('aria-expanded','false');}});});
+})();
+</script>
 </body>
 </html>
