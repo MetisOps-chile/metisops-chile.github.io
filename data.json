@@ -296,16 +296,25 @@
     }
   ],
   "semana": {
-    "desde": "2026-11-10",
-    "tema": "Polinomios de reajuste de fletes",
+    "desde": "2026-11-17",
+    "tema": "Puesta en marcha y operational readiness",
     "pregunta": {
-      "es": "¿Cuándo fue la última vez que alguien revisó la fórmula de reajuste de tus contratos de transporte?",
-      "en": "When did anyone last review the price-adjustment formula in your transport contracts?",
-      "pt": "Quando foi a última vez que alguém revisou a fórmula de reajuste dos seus contratos de transporte?"
+      "es": "¿Qué parte de tu próxima puesta en marcha todavía no tiene responsable ni fecha?",
+      "en": "Which part of your next plant start-up still has no owner and no date?",
+      "pt": "Que parte da sua próxima partida de planta ainda não tem responsável nem data?"
     },
-    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7526660222606778368"
+    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7528550827116879872"
   },
   "publicaciones": [
+    {
+      "fecha": "2026-11-17",
+      "texto": {
+        "es": "¿Qué parte de tu próxima puesta en marcha todavía no tiene responsable ni fecha?",
+        "en": "Which part of your next plant start-up still has no owner and no date?",
+        "pt": "Que parte da sua próxima partida de planta ainda não tem responsável nem data?"
+      },
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528550827116879872"
+    },
     {
       "fecha": "2026-11-12",
       "texto": {
