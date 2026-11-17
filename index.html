@@ -433,6 +433,9 @@
     .nav-cta { transition: transform .18s ease; } .nav-cta:hover { transform: scale(1.04); }
   }
   @media (prefers-reduced-motion: reduce) { .mm-btn, .nav-a, .lang, .nav-cta { transition: none; transform: none !important; } }
+  .nav .brand { display: inline-flex; transition: transform .2s ease; transform-origin: left center; }
+  @media (hover: hover) { .nav .brand:hover { transform: scale(1.07); } }
+  @media (prefers-reduced-motion: reduce) { .nav .brand { transition: none; transform: none !important; } }
   /* propuesta minimalista */
   .dx-lead { margin: 0 0 8px; font-size: 18px; color: var(--muted-strong); max-width: 46ch; }
   .steps.dx b { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; color: var(--fg); margin-bottom: 4px; }
