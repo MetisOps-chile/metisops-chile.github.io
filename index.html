@@ -391,6 +391,15 @@
   .dx-steps p { margin: 0; color: var(--muted-strong); }
   .dx-need { margin: 6px 0 18px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
   .dx-need b { color: var(--fg); font-weight: 500; }
+  .dx-price { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border: 1px solid var(--line); margin: 0 0 6px; }
+  .dx-price div { padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+  .dx-price div + div { border-left: 1px solid var(--line); }
+  .dx-price div:nth-child(2) { background: rgba(164,71,53,.06); }
+  .dx-price span { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .dx-price b { font-family: var(--serif); font-weight: 400; font-size: 22px; color: var(--fg); }
+  .dx-price div:nth-child(2) b { color: var(--accent); }
+  @media (max-width: 560px) { .dx-price b { font-size: 15px; white-space: nowrap; } .dx-price span { font-size: 9.5px; letter-spacing: .06em; } .dx-price div { padding: 10px 8px; } }
+  .dx-pn { display: inline-block; margin-top: 6px; font-size: 13px; color: var(--muted); }
   .dx-cta { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; padding: 12px 18px; font-size: 15px; }
   .dx-cta:hover { filter: brightness(1.08); }
   @media (max-width: 560px) { .dx-card { padding: 20px 18px; } .dx-sym { font-size: 19px; } }
@@ -592,6 +601,7 @@
       </div>
       <div class="dx-card" aria-live="polite">
         <p class="dx-sym"></p>
+        <div class="dx-price"></div>
         <ol class="dx-steps"></ol>
         <p class="dx-need"></p>
         <div class="dx-act"><a class="dx-cta" href="#">Pedir este diagnóstico →</a><a class="dx-wa" href="#" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a></div>
@@ -1153,9 +1163,10 @@
   {a:'Gestão e indicadores',t:[
    {k:'Indicadores e relatórios',sym:'Sua equipe perde dias montando relatórios à mão.',s:['Revisamos seus relatórios e definimos os poucos indicadores que realmente importam.','Automatizamos a carga de dados e o painel, com inteligência artificial onde agrega valor.','Você tem os números em dia, sem montá-los à mão.'],n:'seus relatórios atuais e de onde vêm os dados.'},
    {k:'Controle de contratos',sym:'Você tem muitos contratos de serviço e ninguém controla vencimentos, reajustes ou cumprimento.',s:['Inventariamos contratos, vencimentos, reajustes e garantias.','Montamos o sistema de controle com alertas e indicadores de cumprimento.','Nenhum contrato vence ou é reajustado sem que você saiba.'],n:'a lista de contratos vigentes ou as cópias que tiver.'}]}]};
-  var UI={es:{tags:['Diagnóstico · sin costo · 5 días hábiles','Solución · precio fijo','Resultado'],need:'Para el diagnóstico necesitamos:',cta:'Pedir este diagnóstico →',wa:'Consultar por WhatsApp',sub:'Diagnóstico inicial: ',msg:'Hola, me interesa el diagnóstico inicial de MetisOps: '},
-   en:{tags:['Assessment · no cost · 5 business days','Solution · fixed price','Result'],need:'For the assessment we need:',cta:'Request this assessment →',wa:'Ask on WhatsApp',sub:'Initial assessment: ',msg:'Hello, I am interested in the MetisOps initial assessment: '},
-   pt:{tags:['Diagnóstico · sem custo · 5 dias úteis','Solução · preço fixo','Resultado'],need:'Para o diagnóstico precisamos de:',cta:'Pedir este diagnóstico →',wa:'Consultar pelo WhatsApp',sub:'Diagnóstico inicial: ',msg:'Olá, tenho interesse no diagnóstico inicial da MetisOps: '}};
+  var PR=[[30,60,100],[40,40,30,60],[40,80,150],[60,50]];
+  var UI={es:{tags:['Diagnóstico · 5 días hábiles','Solución · precio fijo','Resultado'],pr:['Diagnóstico','Sin costo','Solución','Desde {p} UF','Resultado','Incluido'],pn:'El precio final se cierra en la propuesta, según el alcance acordado. Viajes fuera de la ciudad se cobran aparte.',need:'Para el diagnóstico necesitamos:',cta:'Pedir este diagnóstico →',wa:'Consultar por WhatsApp',sub:'Diagnóstico inicial: ',msg:'Hola, me interesa el diagnóstico inicial de MetisOps: '},
+   en:{tags:['Assessment · 5 business days','Solution · fixed price','Result'],pr:['Assessment','No cost','Solution','From {p} UF','Result','Included'],pn:'The final price is set in the proposal, based on the agreed scope. Travel outside the city is charged separately.',need:'For the assessment we need:',cta:'Request this assessment →',wa:'Ask on WhatsApp',sub:'Initial assessment: ',msg:'Hello, I am interested in the MetisOps initial assessment: '},
+   pt:{tags:['Diagnóstico · 5 dias úteis','Solução · preço fixo','Resultado'],pr:['Diagnóstico','Sem custo','Solução','A partir de {p} UF','Resultado','Incluído'],pn:'O preço final é fechado na proposta, conforme o escopo acordado. Viagens fora da cidade são cobradas à parte.',need:'Para o diagnóstico precisamos de:',cta:'Pedir este diagnóstico →',wa:'Consultar pelo WhatsApp',sub:'Diagnóstico inicial: ',msg:'Olá, tenho interesse no diagnóstico inicial da MetisOps: '}};
   function L(){var l=(document.documentElement.lang||'es').slice(0,2);return D[l]?l:'es';}
   var M=document.querySelector('.dx-menu'),A=document.querySelector('.dx-areas'),P=document.querySelector('.dx-pick'),C=document.querySelector('.dx-card'),ai=0,ti=0;
   function links(k){
@@ -1168,8 +1179,9 @@
     [].forEach.call(P.children,function(b,j){b.setAttribute('aria-selected',j===ti?'true':'false');});
     M.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-selected',(+b.dataset.a===ai&&+b.dataset.t===ti)?'true':'false');});
     C.querySelector('.dx-sym').textContent='«'+t.sym+'»';
-    C.querySelector('.dx-steps').innerHTML=t.s.map(function(x,j){return '<li><span class="n">'+(j+1)+'</span><p><span class="tag">'+u.tags[j]+'</span>'+x+'</p></li>';}).join('');
-    C.querySelector('.dx-need').innerHTML='<b>'+u.need+'</b> '+t.n;
+    C.querySelector('.dx-steps').innerHTML=t.s.map(function(x,j){return '<li><span class="n">'+(j+1)+'</span><p><span class="tag">'+u.tags[j].replace('{p}',PR[ai][ti])+'</span>'+x+'</p></li>';}).join('');
+    var q=u.pr; C.querySelector('.dx-price').innerHTML=[0,2,4].map(function(k){return '<div><span>'+q[k]+'</span><b>'+q[k+1].replace('{p}',PR[ai][ti])+'</b></div>';}).join('');
+    C.querySelector('.dx-need').innerHTML='<b>'+u.need+'</b> '+t.n+'<br><span class="dx-pn">'+u.pn+'</span>';
     C.querySelector('.dx-cta').textContent=u.cta; C.querySelector('.dx-wa').textContent=u.wa;
     links(t.k);
   }
