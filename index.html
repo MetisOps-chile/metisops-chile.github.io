@@ -424,6 +424,15 @@
   a.line { text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
   a.line:hover { border-color: var(--accent); transform: translateY(-2px); }
   .line-go { margin-top: auto; padding-top: 8px; font-size: 14px; color: var(--accent); }
+  /* realce al pasar el mouse por el menú */
+  .mm-btn, .nav-a, .lang { display: inline-block; transition: transform .18s ease, color .18s ease, opacity .18s ease; transform-origin: center bottom; }
+  @media (hover: hover) {
+    .mm-btn:hover, .nav-a:hover, .mm.open .mm-btn { transform: scale(1.08); color: var(--fg); }
+    .nav:not(.solid) .mm-btn:hover, .nav:not(.solid) .nav-a:hover { color: #FFFFFF; }
+    .lang:hover { transform: scale(1.18); opacity: 1 !important; }
+    .nav-cta { transition: transform .18s ease; } .nav-cta:hover { transform: scale(1.04); }
+  }
+  @media (prefers-reduced-motion: reduce) { .mm-btn, .nav-a, .lang, .nav-cta { transition: none; transform: none !important; } }
   /* propuesta minimalista */
   .dx-lead { margin: 0 0 8px; font-size: 18px; color: var(--muted-strong); max-width: 46ch; }
   .steps.dx b { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; color: var(--fg); margin-bottom: 4px; }
