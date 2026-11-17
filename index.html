@@ -1034,6 +1034,7 @@
     var saved = localStorage.getItem('metisops-lang');
     if (saved) start = saved;
   } catch (e) {}
+  var qp = /[?&]lang=(es|en|pt)\b/.exec(location.search); if (qp) start = qp[1];
   setLang(start, false);
 
   // Datos del día (data.json junto al sitio): precios, divisas y noticias que actualiza la tarea diaria.
