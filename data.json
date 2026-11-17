@@ -1,17 +1,17 @@
 {
-  "actualizado": "2026-11-16",
+  "actualizado": "2026-11-17",
   "fallback": {
     "dolar": {
-      "valor": 999.1,
+      "valor": 997.71,
       "fecha": "2026-11-16"
     },
     "euro": {
-      "valor": 1098.9,
-      "fecha": "2026-11-16"
+      "valor": 1095.79,
+      "fecha": "2026-11-17"
     },
     "uf": {
-      "valor": 41343.55,
-      "fecha": "2026-11-16"
+      "valor": 41350.42,
+      "fecha": "2026-11-17"
     },
     "utm": {
       "valor": 72440,
@@ -26,8 +26,8 @@
       "fecha": "2026-10-27"
     },
     "libra_cobre": {
-      "valor": 6.17,
-      "fecha": "2026-11-13"
+      "valor": 6.06,
+      "fecha": "2026-11-16"
     },
     "imacec": {
       "valor": 0.2,
@@ -45,9 +45,9 @@
         "en": "Brent crude",
         "pt": "Petróleo Brent"
       },
-      "valor": 95.89,
-      "fecha": "2026-11-16",
-      "fuente": "RTÉ (Reuters, ICE)"
+      "valor": 91.62,
+      "fecha": "2026-11-17",
+      "fuente": "Offshore Technology (ICE)"
     },
     {
       "nombre": {
@@ -55,9 +55,9 @@
         "en": "WTI crude",
         "pt": "Petróleo WTI"
       },
-      "valor": 88.65,
-      "fecha": "2026-11-16",
-      "fuente": "RTÉ (Reuters, NYMEX)"
+      "valor": 84.89,
+      "fecha": "2026-11-17",
+      "fuente": "Offshore Technology (NYMEX)"
     },
     {
       "nombre": {
@@ -65,9 +65,9 @@
         "en": "Gold",
         "pt": "Ouro"
       },
-      "valor": 3862.05,
-      "fecha": "2026-11-16",
-      "fuente": "Metalcharts"
+      "valor": 3874.41,
+      "fecha": "2026-11-17",
+      "fuente": "MarketScreener (Reuters)"
     },
     {
       "nombre": {
@@ -75,8 +75,8 @@
         "en": "Lithium carbonate (per tonne)",
         "pt": "Carbonato de lítio (por tonelada)"
       },
-      "valor": 13420.55,
-      "fecha": "2026-11-16",
+      "valor": 13363.08,
+      "fecha": "2026-11-17",
       "fuente": "Metalcharts, futuros de Guangzhou (GFEX)"
     },
     {
@@ -93,7 +93,7 @@
   "fx": [
     {
       "codigo": "EUR",
-      "clp": 1098.9,
+      "clp": 1095.79,
       "moneda": {
         "es": "Euro",
         "en": "Euro",
@@ -102,7 +102,7 @@
     },
     {
       "codigo": "GBP",
-      "clp": 1316.83,
+      "clp": 1312.99,
       "moneda": {
         "es": "Libra esterlina",
         "en": "British pound",
@@ -111,7 +111,7 @@
     },
     {
       "codigo": "BRL",
-      "clp": 175.6,
+      "clp": 174.33,
       "moneda": {
         "es": "Real brasileño",
         "en": "Brazilian real",
@@ -120,7 +120,7 @@
     },
     {
       "codigo": "CNY",
-      "clp": 149.59,
+      "clp": 149.02,
       "moneda": {
         "es": "Yuan chino",
         "en": "Chinese yuan",
@@ -129,7 +129,7 @@
     },
     {
       "codigo": "PEN",
-      "clp": 292.59,
+      "clp": 291.96,
       "moneda": {
         "es": "Sol peruano",
         "en": "Peruvian sol",
@@ -138,7 +138,7 @@
     },
     {
       "codigo": "MXN",
-      "clp": 53.73,
+      "clp": 53.71,
       "moneda": {
         "es": "Peso mexicano",
         "en": "Mexican peso",
@@ -147,7 +147,7 @@
     },
     {
       "codigo": "JPY",
-      "clp": 6.25,
+      "clp": 6.24,
       "moneda": {
         "es": "Yen japonés",
         "en": "Japanese yen",
@@ -156,7 +156,7 @@
     },
     {
       "codigo": "ARS",
-      "clp": 0.65,
+      "clp": 0.64,
       "moneda": {
         "es": "Peso argentino",
         "en": "Argentine peso",
@@ -165,7 +165,7 @@
     },
     {
       "codigo": "BTC",
-      "clp": 64969475,
+      "clp": 64689521,
       "moneda": {
         "es": "Bitcoin",
         "en": "Bitcoin",
@@ -175,23 +175,63 @@
   ],
   "news": [
     {
-      "fecha": "2026-11-16",
-      "fuente": "RTÉ (Reuters)",
-      "url": "https://www.rte.ie/news/business/2026/1116/1599343-oil-prices/",
+      "fecha": "2026-11-17",
+      "fuente": "Offshore Technology",
+      "url": "https://www.offshore-technology.com/news/oil-prices-fall-supply-surplus-gulf-tensions/",
       "tema": {
         "es": "Petróleo",
         "en": "Oil",
         "pt": "Petróleo"
       },
       "titular": {
-        "es": "El petróleo sube levemente tras reportes de minas en Ormuz",
-        "en": "Oil edges up after reports of mines in Hormuz",
-        "pt": "Petróleo sobe levemente após relatos de minas em Ormuz"
+        "es": "El petróleo cae por previsiones de excedente pese a tensiones en el Golfo",
+        "en": "Oil falls on surplus forecasts despite Gulf tensions",
+        "pt": "Petróleo cai com previsões de excedente apesar de tensões no Golfo"
       },
       "resumen": {
-        "es": "El Brent sube a US$ 95,89 y el WTI a US$ 88,65 tras reportes no verificados de dos petroleros dañados, aunque la AIE prevé un excedente de 1,7 millones de barriles diarios.",
-        "en": "Brent rises to US$ 95.89 and WTI to US$ 88.65 after unverified reports of two damaged tankers, though the IEA expects a surplus of 1.7 million barrels per day.",
-        "pt": "O Brent sobe para US$ 95,89 e o WTI para US$ 88,65 após relatos não verificados de dois petroleiros danificados, embora a AIE preveja excedente de 1,7 milhão de barris por dia."
+        "es": "El Brent baja 0,9% a US$ 91,62 y el WTI a US$ 84,89, mientras la reserva estratégica de EE.UU. cae a 276,4 millones de barriles, su menor nivel desde 1982.",
+        "en": "Brent falls 0.9% to US$ 91.62 and WTI to US$ 84.89, while the US strategic reserve drops to 276.4 million barrels, its lowest since 1982.",
+        "pt": "O Brent cai 0,9% para US$ 91,62 e o WTI para US$ 84,89, enquanto a reserva estratégica dos EUA cai para 276,4 milhões de barris, o menor nível desde 1982."
+      }
+    },
+    {
+      "fecha": "2026-11-17",
+      "fuente": "MarketScreener (Reuters)",
+      "url": "https://www.marketscreener.com/news/gold-lingers-near-more-than-one-year-low-on-fed-hike-bets-ce785edfde8ffe21",
+      "tema": {
+        "es": "Oro",
+        "en": "Gold",
+        "pt": "Ouro"
+      },
+      "titular": {
+        "es": "El oro sigue cerca de su menor nivel en más de un año",
+        "en": "Gold lingers near its lowest level in more than a year",
+        "pt": "Ouro segue perto do menor nível em mais de um ano"
+      },
+      "resumen": {
+        "es": "El oro sube 0,5% a US$ 3.874 la onza, pero el mercado asigna 95,4% de probabilidad a un alza de tasas de la Fed en diciembre.",
+        "en": "Gold rises 0.5% to US$ 3,874 an ounce, but markets price a 95.4% chance of a Fed rate hike in December.",
+        "pt": "O ouro sobe 0,5% para US$ 3.874 a onça, mas o mercado atribui 95,4% de probabilidade a uma alta de juros do Fed em dezembro."
+      }
+    },
+    {
+      "fecha": "2026-11-16",
+      "fuente": "La Conexión (Cochilco)",
+      "url": "https://laconexion.cl/cobre-cae-a-su-nivel-mas-bajo-en-cuatro-meses-y-se-acerca-a-los-us-6/",
+      "tema": {
+        "es": "Cobre",
+        "en": "Copper",
+        "pt": "Cobre"
+      },
+      "titular": {
+        "es": "El cobre cae a su menor nivel en cuatro meses",
+        "en": "Copper falls to a four-month low",
+        "pt": "Cobre cai ao menor nível em quatro meses"
+      },
+      "resumen": {
+        "es": "El metal baja 1,73% en Londres y cierra en US$ 6,06 la libra, acercándose al umbral de US$ 6.",
+        "en": "The metal falls 1.73% in London to close at US$ 6.06 per pound, nearing the US$ 6 threshold.",
+        "pt": "O metal cai 1,73% em Londres e fecha a US$ 6,06 por libra, aproximando-se do patamar de US$ 6."
       }
     },
     {
@@ -232,46 +272,6 @@
         "es": "Tras los bloqueos iniciados el 10 de noviembre en sus accesos, el puerto vuelve a recibir carga boliviana por el fin del paro.",
         "en": "After blockades of its access roads began on 10 November, the port is again receiving Bolivian cargo as the strike ends.",
         "pt": "Após os bloqueios iniciados em 10 de novembro nos acessos, o porto volta a receber carga boliviana com o fim da greve."
-      }
-    },
-    {
-      "fecha": "2026-11-13",
-      "fuente": "Diario El Día (BioBioChile)",
-      "url": "https://www.diarioeldia.cl/noticias/2026/11/13/156728-dolar-supera-los-1000-por-fortaleza-global-de-la-divisa-y-cobre-a-la-baja",
-      "tema": {
-        "es": "Dólar",
-        "en": "Dollar",
-        "pt": "Dólar"
-      },
-      "titular": {
-        "es": "El dólar supera los $1.000 en Chile",
-        "en": "The dollar tops CLP 1,000 in Chile",
-        "pt": "O dólar supera CLP 1.000 no Chile"
-      },
-      "resumen": {
-        "es": "La inflación de EE.UU. de 3,7% en octubre aviva apuestas de alza de tasas de la Fed y el cobre cae 0,7% en Londres.",
-        "en": "US inflation of 3.7% in October fuels bets on a Fed rate hike, while copper falls 0.7% in London.",
-        "pt": "A inflação de 3,7% dos EUA em outubro reforça apostas de alta de juros do Fed, e o cobre cai 0,7% em Londres."
-      }
-    },
-    {
-      "fecha": "2026-11-13",
-      "fuente": "Emol (Bloomberg)",
-      "url": "https://www.emol.com/noticias/Economia/2026/11/13/1217004/cobre-quinta-semana-caida.html",
-      "tema": {
-        "es": "Cobre",
-        "en": "Copper",
-        "pt": "Cobre"
-      },
-      "titular": {
-        "es": "El cobre va a su quinta semana seguida de caídas",
-        "en": "Copper heads for a fifth straight weekly loss",
-        "pt": "Cobre caminha para a quinta queda semanal seguida"
-      },
-      "resumen": {
-        "es": "Cae 0,6% a US$ 6,15 la libra y los futuros a tres meses bajan de US$ 13.500 por tonelada, su menor nivel desde julio.",
-        "en": "It falls 0.6% to US$ 6.15 per pound and three-month futures drop below US$ 13,500 per tonne, the lowest since July.",
-        "pt": "Cai 0,6% para US$ 6,15 por libra e os futuros de três meses ficam abaixo de US$ 13.500 por tonelada, o menor nível desde julho."
       }
     },
     {
