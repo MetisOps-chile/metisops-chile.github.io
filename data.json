@@ -1,17 +1,17 @@
 {
-  "actualizado": "2026-11-17",
+  "actualizado": "2026-11-18",
   "fallback": {
     "dolar": {
-      "valor": 997.71,
-      "fecha": "2026-11-16"
+      "valor": 996.68,
+      "fecha": "2026-11-18"
     },
     "euro": {
-      "valor": 1095.79,
-      "fecha": "2026-11-17"
+      "valor": 1086.95,
+      "fecha": "2026-11-18"
     },
     "uf": {
-      "valor": 41350.42,
-      "fecha": "2026-11-17"
+      "valor": 41357.3,
+      "fecha": "2026-11-18"
     },
     "utm": {
       "valor": 72440,
@@ -26,8 +26,8 @@
       "fecha": "2026-10-27"
     },
     "libra_cobre": {
-      "valor": 6.06,
-      "fecha": "2026-11-16"
+      "valor": 5.99,
+      "fecha": "2026-11-17"
     },
     "imacec": {
       "valor": 0.2,
@@ -45,9 +45,9 @@
         "en": "Brent crude",
         "pt": "Petróleo Brent"
       },
-      "valor": 91.62,
+      "valor": 93.14,
       "fecha": "2026-11-17",
-      "fuente": "Offshore Technology (ICE)"
+      "fuente": "Rigzone (ICE)"
     },
     {
       "nombre": {
@@ -55,9 +55,9 @@
         "en": "WTI crude",
         "pt": "Petróleo WTI"
       },
-      "valor": 84.89,
+      "valor": 86.01,
       "fecha": "2026-11-17",
-      "fuente": "Offshore Technology (NYMEX)"
+      "fuente": "Rigzone (NYMEX)"
     },
     {
       "nombre": {
@@ -65,9 +65,9 @@
         "en": "Gold",
         "pt": "Ouro"
       },
-      "valor": 3874.41,
+      "valor": 3858.19,
       "fecha": "2026-11-17",
-      "fuente": "MarketScreener (Reuters)"
+      "fuente": "Kitco (Reuters)"
     },
     {
       "nombre": {
@@ -75,8 +75,8 @@
         "en": "Lithium carbonate (per tonne)",
         "pt": "Carbonato de lítio (por tonelada)"
       },
-      "valor": 13363.08,
-      "fecha": "2026-11-17",
+      "valor": 13776.45,
+      "fecha": "2026-11-18",
       "fuente": "Metalcharts, futuros de Guangzhou (GFEX)"
     },
     {
@@ -93,7 +93,7 @@
   "fx": [
     {
       "codigo": "EUR",
-      "clp": 1095.79,
+      "clp": 1086.95,
       "moneda": {
         "es": "Euro",
         "en": "Euro",
@@ -102,7 +102,7 @@
     },
     {
       "codigo": "GBP",
-      "clp": 1312.99,
+      "clp": 1304.94,
       "moneda": {
         "es": "Libra esterlina",
         "en": "British pound",
@@ -111,7 +111,7 @@
     },
     {
       "codigo": "BRL",
-      "clp": 174.33,
+      "clp": 171.2,
       "moneda": {
         "es": "Real brasileño",
         "en": "Brazilian real",
@@ -120,7 +120,7 @@
     },
     {
       "codigo": "CNY",
-      "clp": 149.02,
+      "clp": 148.62,
       "moneda": {
         "es": "Yuan chino",
         "en": "Chinese yuan",
@@ -129,7 +129,7 @@
     },
     {
       "codigo": "PEN",
-      "clp": 291.96,
+      "clp": 290.11,
       "moneda": {
         "es": "Sol peruano",
         "en": "Peruvian sol",
@@ -138,7 +138,7 @@
     },
     {
       "codigo": "MXN",
-      "clp": 53.71,
+      "clp": 53.56,
       "moneda": {
         "es": "Peso mexicano",
         "en": "Mexican peso",
@@ -147,7 +147,7 @@
     },
     {
       "codigo": "JPY",
-      "clp": 6.24,
+      "clp": 6.22,
       "moneda": {
         "es": "Yen japonés",
         "en": "Japanese yen",
@@ -165,7 +165,7 @@
     },
     {
       "codigo": "BTC",
-      "clp": 64689521,
+      "clp": 64122404,
       "moneda": {
         "es": "Bitcoin",
         "en": "Bitcoin",
@@ -176,122 +176,122 @@
   "news": [
     {
       "fecha": "2026-11-17",
-      "fuente": "Offshore Technology",
-      "url": "https://www.offshore-technology.com/news/oil-prices-fall-supply-surplus-gulf-tensions/",
+      "fuente": "Rigzone",
+      "url": "https://www.rigzone.com/news/wire/oil_prices_swing_as_gulf_attacks_continue-17-nov-2026-185107-article/",
       "tema": {
         "es": "Petróleo",
         "en": "Oil",
         "pt": "Petróleo"
       },
       "titular": {
-        "es": "El petróleo cae por previsiones de excedente pese a tensiones en el Golfo",
-        "en": "Oil falls on surplus forecasts despite Gulf tensions",
-        "pt": "Petróleo cai com previsões de excedente apesar de tensões no Golfo"
+        "es": "El petróleo sube en una jornada volátil por ataques en el Golfo",
+        "en": "Oil rises in a volatile session amid Gulf attacks",
+        "pt": "Petróleo sobe em sessão volátil com ataques no Golfo"
       },
       "resumen": {
-        "es": "El Brent baja 0,9% a US$ 91,62 y el WTI a US$ 84,89, mientras la reserva estratégica de EE.UU. cae a 276,4 millones de barriles, su menor nivel desde 1982.",
-        "en": "Brent falls 0.9% to US$ 91.62 and WTI to US$ 84.89, while the US strategic reserve drops to 276.4 million barrels, its lowest since 1982.",
-        "pt": "O Brent cai 0,9% para US$ 91,62 e o WTI para US$ 84,89, enquanto a reserva estratégica dos EUA cai para 276,4 milhões de barris, o menor nível desde 1982."
+        "es": "El Brent sube 0,8% a US$ 93,14 y el WTI cierra en US$ 86,01, aunque la AIE prevé un excedente de unos 2 millones de barriles diarios este trimestre.",
+        "en": "Brent rises 0.8% to US$ 93.14 and WTI settles at US$ 86.01, although the IEA expects a surplus of about 2 million barrels a day this quarter.",
+        "pt": "O Brent sobe 0,8% para US$ 93,14 e o WTI fecha a US$ 86,01, embora a AIE preveja um excedente de cerca de 2 milhões de barris por dia neste trimestre."
       }
     },
     {
       "fecha": "2026-11-17",
-      "fuente": "MarketScreener (Reuters)",
-      "url": "https://www.marketscreener.com/news/gold-lingers-near-more-than-one-year-low-on-fed-hike-bets-ce785edfde8ffe21",
+      "fuente": "Kitco (Reuters)",
+      "url": "https://www.kitco.com/news/off-the-wire/2026-11-17/gold-struggles-rebound-one-year-low-us-dollar-yields-advance",
       "tema": {
         "es": "Oro",
         "en": "Gold",
         "pt": "Ouro"
       },
       "titular": {
-        "es": "El oro sigue cerca de su menor nivel en más de un año",
-        "en": "Gold lingers near its lowest level in more than a year",
-        "pt": "Ouro segue perto do menor nível em mais de um ano"
+        "es": "El oro no logra repuntar desde su menor nivel en un año",
+        "en": "Gold struggles to rebound from a one-year low",
+        "pt": "Ouro não consegue se recuperar do menor nível em um ano"
       },
       "resumen": {
-        "es": "El oro sube 0,5% a US$ 3.874 la onza, pero el mercado asigna 95,4% de probabilidad a un alza de tasas de la Fed en diciembre.",
-        "en": "Gold rises 0.5% to US$ 3,874 an ounce, but markets price a 95.4% chance of a Fed rate hike in December.",
-        "pt": "O ouro sobe 0,5% para US$ 3.874 a onça, mas o mercado atribui 95,4% de probabilidade a uma alta de juros do Fed em dezembro."
+        "es": "El oro se mantiene en US$ 3.858 la onza con el dólar en máximos de 19 meses y 92% de probabilidad de un alza de tasas de la Fed en diciembre.",
+        "en": "Gold holds at US$ 3,858 an ounce with the dollar at a 19-month high and a 92% chance of a Fed rate hike in December.",
+        "pt": "O ouro se mantém em US$ 3.858 a onça, com o dólar no maior nível em 19 meses e 92% de probabilidade de alta de juros do Fed em dezembro."
       }
     },
     {
-      "fecha": "2026-11-16",
-      "fuente": "La Conexión (Cochilco)",
-      "url": "https://laconexion.cl/cobre-cae-a-su-nivel-mas-bajo-en-cuatro-meses-y-se-acerca-a-los-us-6/",
+      "fecha": "2026-11-17",
+      "fuente": "CNN Chile (Cochilco)",
+      "url": "https://www.cnnchile.com/negocios/cobre-cae-bajo-us6-libra-bolsa-metales-londres/",
       "tema": {
         "es": "Cobre",
         "en": "Copper",
         "pt": "Cobre"
       },
       "titular": {
-        "es": "El cobre cae a su menor nivel en cuatro meses",
-        "en": "Copper falls to a four-month low",
-        "pt": "Cobre cai ao menor nível em quatro meses"
+        "es": "El cobre pierde los US$ 6 la libra por primera vez desde julio",
+        "en": "Copper falls below US$ 6 a pound for the first time since July",
+        "pt": "Cobre perde os US$ 6 por libra pela primeira vez desde julho"
       },
       "resumen": {
-        "es": "El metal baja 1,73% en Londres y cierra en US$ 6,06 la libra, acercándose al umbral de US$ 6.",
-        "en": "The metal falls 1.73% in London to close at US$ 6.06 per pound, nearing the US$ 6 threshold.",
-        "pt": "O metal cai 1,73% em Londres e fecha a US$ 6,06 por libra, aproximando-se do patamar de US$ 6."
+        "es": "El metal cae 1,12% en Londres y cierra en US$ 5,99 la libra, cerca de 9% bajo el promedio de octubre.",
+        "en": "The metal falls 1.12% in London to close at US$ 5.99 a pound, about 9% below the October average.",
+        "pt": "O metal cai 1,12% em Londres e fecha a US$ 5,99 por libra, cerca de 9% abaixo da média de outubro."
+      }
+    },
+    {
+      "fecha": "2026-11-16",
+      "fuente": "El Dínamo",
+      "url": "https://www.eldinamo.cl/politica/2026/11/16/senado-despacha-a-ley-congelamiento-de-precios-de-combustibles-para-frenar-alza-del-diesel",
+      "tema": {
+        "es": "Combustibles",
+        "en": "Fuels",
+        "pt": "Combustíveis"
+      },
+      "titular": {
+        "es": "El Congreso despacha la ley que congela los precios de los combustibles",
+        "en": "Congress passes law freezing fuel prices",
+        "pt": "Congresso aprova lei que congela os preços dos combustíveis"
+      },
+      "resumen": {
+        "es": "Los precios quedan congelados hasta el 7 de abril de 2027 y el diésel baja $100 por litro adicionales, además de revertir el alza de $40 de la semana previa.",
+        "en": "Prices are frozen until 7 April 2027 and diesel drops a further CLP 100 per litre, on top of reversing the previous week's CLP 40 increase.",
+        "pt": "Os preços ficam congelados até 7 de abril de 2027 e o diesel cai mais CLP 100 por litro, além de reverter a alta de CLP 40 da semana anterior."
+      }
+    },
+    {
+      "fecha": "2026-11-16",
+      "fuente": "Pauta",
+      "url": "https://www.pauta.cl/actualidad/2026/11/16/gira-por-asia-kast-busca-fortalecer-la-relacion-comercial-de-chile-con-vietnam.html",
+      "tema": {
+        "es": "Comercio",
+        "en": "Trade",
+        "pt": "Comércio"
+      },
+      "titular": {
+        "es": "Chile y Vietnam elevan su relación a asociación estratégica",
+        "en": "Chile and Vietnam upgrade ties to a strategic partnership",
+        "pt": "Chile e Vietnã elevam relação a parceria estratégica"
+      },
+      "resumen": {
+        "es": "En Hanói, Kast promovió cobre, litio y carnes chilenas; el comercio bilateral superó US$ 2.100 millones en 2025, 39% más que el año anterior.",
+        "en": "In Hanoi, Kast promoted Chilean copper, lithium and meat; bilateral trade exceeded US$ 2.1 billion in 2025, up 39% on the previous year.",
+        "pt": "Em Hanói, Kast promoveu cobre, lítio e carnes chilenas; o comércio bilateral superou US$ 2,1 bilhões em 2025, alta de 39% sobre o ano anterior."
       }
     },
     {
       "fecha": "2026-11-13",
-      "fuente": "Infobae (EFE)",
-      "url": "https://www.infobae.com/america/agencias/2026/11/13/camioneros-en-chile-levantan-el-paro-tras-la-advertencia-del-gobierno-de-usar-la-fuerza/",
+      "fuente": "El Desconcierto",
+      "url": "https://eldesconcierto.cl/medio-ambiente/magallanes-fin-al-mayor-proyecto-hidrogeno-verde-chile-reabre-debate-viabilidad-real-la-industria-n5464059",
       "tema": {
-        "es": "Transporte",
-        "en": "Transport",
-        "pt": "Transporte"
+        "es": "Energía",
+        "en": "Energy",
+        "pt": "Energia"
       },
       "titular": {
-        "es": "Camioneros levantan los bloqueos tras la advertencia del Gobierno",
-        "en": "Truckers lift blockades after government warning",
-        "pt": "Caminhoneiros suspendem bloqueios após advertência do governo"
+        "es": "TotalEnergies desiste de H2 Magallanes, el mayor proyecto de hidrógeno verde de Chile",
+        "en": "TotalEnergies drops H2 Magallanes, Chile's largest green hydrogen project",
+        "pt": "TotalEnergies desiste do H2 Magallanes, maior projeto de hidrogênio verde do Chile"
       },
       "resumen": {
-        "es": "De 2.800 camiones movilizados quedaban cerca de 1.000 en ruta; el acuerdo congela los combustibles hasta marzo y rebaja $100 adicionales el diésel.",
-        "en": "Of 2,800 trucks mobilised, about 1,000 remained on the roads; the deal freezes fuel prices until March and cuts diesel by a further CLP 100.",
-        "pt": "Dos 2.800 caminhões mobilizados, cerca de 1.000 seguiam nas estradas; o acordo congela os combustíveis até março e reduz mais CLP 100 no diesel."
-      }
-    },
-    {
-      "fecha": "2026-11-13",
-      "fuente": "PortalPortuario",
-      "url": "https://portalportuario.cl/puerto-de-arica-normaliza-recepcion-de-camiones-bolivianos-tras-fin-de-bloqueos-de-transportistas",
-      "tema": {
-        "es": "Puertos",
-        "en": "Ports",
-        "pt": "Portos"
-      },
-      "titular": {
-        "es": "Puerto de Arica normaliza la llegada de camiones bolivianos",
-        "en": "Port of Arica resumes normal intake of Bolivian trucks",
-        "pt": "Porto de Arica normaliza a chegada de caminhões bolivianos"
-      },
-      "resumen": {
-        "es": "Tras los bloqueos iniciados el 10 de noviembre en sus accesos, el puerto vuelve a recibir carga boliviana por el fin del paro.",
-        "en": "After blockades of its access roads began on 10 November, the port is again receiving Bolivian cargo as the strike ends.",
-        "pt": "Após os bloqueios iniciados em 10 de novembro nos acessos, o porto volta a receber carga boliviana com o fim da greve."
-      }
-    },
-    {
-      "fecha": "2026-11-11",
-      "fuente": "Emol",
-      "url": "https://www.emol.com/noticias/Economia/2026/11/11/1216736/quiroz-recesion-tecnica.html",
-      "tema": {
-        "es": "Chile",
-        "en": "Chile",
-        "pt": "Chile"
-      },
-      "titular": {
-        "es": "Hacienda reconoce que Chile está en recesión técnica",
-        "en": "Chile's Finance Minister acknowledges a technical recession",
-        "pt": "Fazenda reconhece que o Chile está em recessão técnica"
-      },
-      "resumen": {
-        "es": "El PIB cayó 0,25% en el primer trimestre y 0,02% en el segundo; el ministro Quiroz proyecta crecer cerca de 4% en 2028.",
-        "en": "GDP fell 0.25% in the first quarter and 0.02% in the second; Minister Quiroz projects growth near 4% in 2028.",
-        "pt": "O PIB caiu 0,25% no primeiro trimestre e 0,02% no segundo; o ministro Quiroz projeta crescimento perto de 4% em 2028."
+        "es": "El proyecto de US$ 16.000 millones se retira por la baja demanda de moléculas verdes y equipos que no bajaron de precio.",
+        "en": "The US$ 16 billion project is withdrawn due to weak demand for green molecules and equipment costs that did not fall.",
+        "pt": "O projeto de US$ 16 bilhões é retirado pela baixa demanda por moléculas verdes e equipamentos que não ficaram mais baratos."
       }
     }
   ],
