@@ -1,17 +1,17 @@
 {
-  "actualizado": "2026-11-18",
+  "actualizado": "2026-11-19",
   "fallback": {
     "dolar": {
       "valor": 996.68,
       "fecha": "2026-11-18"
     },
     "euro": {
-      "valor": 1086.95,
+      "valor": 1098.03,
       "fecha": "2026-11-18"
     },
     "uf": {
-      "valor": 41357.3,
-      "fecha": "2026-11-18"
+      "valor": 41364.17,
+      "fecha": "2026-11-19"
     },
     "utm": {
       "valor": 72440,
@@ -26,8 +26,8 @@
       "fecha": "2026-10-27"
     },
     "libra_cobre": {
-      "valor": 5.99,
-      "fecha": "2026-11-17"
+      "valor": 5.78,
+      "fecha": "2026-11-18"
     },
     "imacec": {
       "valor": 0.2,
@@ -45,8 +45,8 @@
         "en": "Brent crude",
         "pt": "Petróleo Brent"
       },
-      "valor": 93.14,
-      "fecha": "2026-11-17",
+      "valor": 91.95,
+      "fecha": "2026-11-18",
       "fuente": "Rigzone (ICE)"
     },
     {
@@ -55,8 +55,8 @@
         "en": "WTI crude",
         "pt": "Petróleo WTI"
       },
-      "valor": 86.01,
-      "fecha": "2026-11-17",
+      "valor": 83.26,
+      "fecha": "2026-11-18",
       "fuente": "Rigzone (NYMEX)"
     },
     {
@@ -65,9 +65,9 @@
         "en": "Gold",
         "pt": "Ouro"
       },
-      "valor": 3858.19,
-      "fecha": "2026-11-17",
-      "fuente": "Kitco (Reuters)"
+      "valor": 3722.6,
+      "fecha": "2026-11-18",
+      "fuente": "Kitco"
     },
     {
       "nombre": {
@@ -75,8 +75,8 @@
         "en": "Lithium carbonate (per tonne)",
         "pt": "Carbonato de lítio (por tonelada)"
       },
-      "valor": 13776.45,
-      "fecha": "2026-11-18",
+      "valor": 13698.96,
+      "fecha": "2026-11-19",
       "fuente": "Metalcharts, futuros de Guangzhou (GFEX)"
     },
     {
@@ -93,7 +93,7 @@
   "fx": [
     {
       "codigo": "EUR",
-      "clp": 1086.95,
+      "clp": 1098.03,
       "moneda": {
         "es": "Euro",
         "en": "Euro",
@@ -102,7 +102,7 @@
     },
     {
       "codigo": "GBP",
-      "clp": 1304.94,
+      "clp": 1319.09,
       "moneda": {
         "es": "Libra esterlina",
         "en": "British pound",
@@ -111,7 +111,7 @@
     },
     {
       "codigo": "BRL",
-      "clp": 171.2,
+      "clp": 172.2,
       "moneda": {
         "es": "Real brasileño",
         "en": "Brazilian real",
@@ -120,7 +120,7 @@
     },
     {
       "codigo": "CNY",
-      "clp": 148.62,
+      "clp": 150.39,
       "moneda": {
         "es": "Yuan chino",
         "en": "Chinese yuan",
@@ -129,7 +129,7 @@
     },
     {
       "codigo": "PEN",
-      "clp": 290.11,
+      "clp": 293.71,
       "moneda": {
         "es": "Sol peruano",
         "en": "Peruvian sol",
@@ -138,7 +138,7 @@
     },
     {
       "codigo": "MXN",
-      "clp": 53.56,
+      "clp": 54.06,
       "moneda": {
         "es": "Peso mexicano",
         "en": "Mexican peso",
@@ -147,7 +147,7 @@
     },
     {
       "codigo": "JPY",
-      "clp": 6.22,
+      "clp": 6.29,
       "moneda": {
         "es": "Yen japonés",
         "en": "Japanese yen",
@@ -156,7 +156,7 @@
     },
     {
       "codigo": "ARS",
-      "clp": 0.64,
+      "clp": 0.65,
       "moneda": {
         "es": "Peso argentino",
         "en": "Argentine peso",
@@ -165,7 +165,7 @@
     },
     {
       "codigo": "BTC",
-      "clp": 64122404,
+      "clp": 62467377,
       "moneda": {
         "es": "Bitcoin",
         "en": "Bitcoin",
@@ -175,63 +175,83 @@
   ],
   "news": [
     {
-      "fecha": "2026-11-17",
-      "fuente": "Rigzone",
-      "url": "https://www.rigzone.com/news/wire/oil_prices_swing_as_gulf_attacks_continue-17-nov-2026-185107-article/",
+      "fecha": "2026-11-18",
+      "fuente": "Diario Financiero",
+      "url": "https://www.df.cl/mercados/bolsa-monedas/dolar-hoy-ji6d7",
       "tema": {
-        "es": "Petróleo",
-        "en": "Oil",
-        "pt": "Petróleo"
+        "es": "Economía",
+        "en": "Economy",
+        "pt": "Economia"
       },
       "titular": {
-        "es": "El petróleo sube en una jornada volátil por ataques en el Golfo",
-        "en": "Oil rises in a volatile session amid Gulf attacks",
-        "pt": "Petróleo sobe em sessão volátil com ataques no Golfo"
+        "es": "El PIB de Chile cae 1,1% en el tercer trimestre y el dólar vuelve sobre $1.000",
+        "en": "Chile's GDP falls 1.1% in the third quarter and the dollar climbs back above CLP 1,000",
+        "pt": "PIB do Chile cai 1,1% no terceiro trimestre e o dólar volta a superar CLP 1.000"
       },
       "resumen": {
-        "es": "El Brent sube 0,8% a US$ 93,14 y el WTI cierra en US$ 86,01, aunque la AIE prevé un excedente de unos 2 millones de barriles diarios este trimestre.",
-        "en": "Brent rises 0.8% to US$ 93.14 and WTI settles at US$ 86.01, although the IEA expects a surplus of about 2 million barrels a day this quarter.",
-        "pt": "O Brent sobe 0,8% para US$ 93,14 e o WTI fecha a US$ 86,01, embora a AIE preveja um excedente de cerca de 2 milhões de barris por dia neste trimestre."
+        "es": "La contracción anual de 1,1%, peor que el -0,8% esperado, y la caída del cobre llevan al dólar a su mayor nivel desde abril de 2025.",
+        "en": "The 1.1% annual contraction, worse than the expected -0.8%, and falling copper push the dollar to its highest level since April 2025.",
+        "pt": "A contração anual de 1,1%, pior que os -0,8% esperados, e a queda do cobre levam o dólar ao maior nível desde abril de 2025."
       }
     },
     {
-      "fecha": "2026-11-17",
-      "fuente": "Kitco (Reuters)",
-      "url": "https://www.kitco.com/news/off-the-wire/2026-11-17/gold-struggles-rebound-one-year-low-us-dollar-yields-advance",
-      "tema": {
-        "es": "Oro",
-        "en": "Gold",
-        "pt": "Ouro"
-      },
-      "titular": {
-        "es": "El oro no logra repuntar desde su menor nivel en un año",
-        "en": "Gold struggles to rebound from a one-year low",
-        "pt": "Ouro não consegue se recuperar do menor nível em um ano"
-      },
-      "resumen": {
-        "es": "El oro se mantiene en US$ 3.858 la onza con el dólar en máximos de 19 meses y 92% de probabilidad de un alza de tasas de la Fed en diciembre.",
-        "en": "Gold holds at US$ 3,858 an ounce with the dollar at a 19-month high and a 92% chance of a Fed rate hike in December.",
-        "pt": "O ouro se mantém em US$ 3.858 a onça, com o dólar no maior nível em 19 meses e 92% de probabilidade de alta de juros do Fed em dezembro."
-      }
-    },
-    {
-      "fecha": "2026-11-17",
+      "fecha": "2026-11-18",
       "fuente": "CNN Chile (Cochilco)",
-      "url": "https://www.cnnchile.com/negocios/cobre-cae-bajo-us6-libra-bolsa-metales-londres/",
+      "url": "https://www.cnnchile.com/negocios/cobre-siete-sesiones-caida-14-maximo-historico/",
       "tema": {
         "es": "Cobre",
         "en": "Copper",
         "pt": "Cobre"
       },
       "titular": {
-        "es": "El cobre pierde los US$ 6 la libra por primera vez desde julio",
-        "en": "Copper falls below US$ 6 a pound for the first time since July",
-        "pt": "Cobre perde os US$ 6 por libra pela primeira vez desde julho"
+        "es": "El cobre encadena siete sesiones a la baja y cae 14% desde su máximo histórico",
+        "en": "Copper falls for a seventh straight session, down 14% from its all-time high",
+        "pt": "Cobre cai pela sétima sessão seguida e recua 14% desde a máxima histórica"
       },
       "resumen": {
-        "es": "El metal cae 1,12% en Londres y cierra en US$ 5,99 la libra, cerca de 9% bajo el promedio de octubre.",
-        "en": "The metal falls 1.12% in London to close at US$ 5.99 a pound, about 9% below the October average.",
-        "pt": "O metal cai 1,12% em Londres e fecha a US$ 5,99 por libra, cerca de 9% abaixo da média de outubro."
+        "es": "El metal se desploma 3,6% en Londres a US$ 5,78 la libra, su menor nivel desde el 10 de abril, con inventarios en la LME 41% más altos que hace un mes.",
+        "en": "The metal slumps 3.6% in London to US$ 5.78 a pound, its lowest since 10 April, with LME inventories 41% higher than a month ago.",
+        "pt": "O metal despenca 3,6% em Londres para US$ 5,78 por libra, o menor nível desde 10 de abril, com estoques na LME 41% maiores que há um mês."
+      }
+    },
+    {
+      "fecha": "2026-11-18",
+      "fuente": "Rigzone (Bloomberg)",
+      "url": "https://www.rigzone.com/news/wire/oil_falls_3_despite_middle_east_attacks-18-nov-2026-185118-article/",
+      "tema": {
+        "es": "Petróleo",
+        "en": "Oil",
+        "pt": "Petróleo"
+      },
+      "titular": {
+        "es": "El petróleo cae pese a nuevos ataques en el Golfo Pérsico",
+        "en": "Oil falls despite new attacks in the Persian Gulf",
+        "pt": "Petróleo cai apesar de novos ataques no Golfo Pérsico"
+      },
+      "resumen": {
+        "es": "El WTI baja 3,2% a US$ 83,26 y el Brent 1,3% a US$ 91,95, tras un alza de 3,4 millones de barriles en los inventarios de crudo de EE.UU.",
+        "en": "WTI drops 3.2% to US$ 83.26 and Brent 1.3% to US$ 91.95, after US crude inventories rose by 3.4 million barrels.",
+        "pt": "O WTI cai 3,2% para US$ 83,26 e o Brent 1,3% para US$ 91,95, após alta de 3,4 milhões de barris nos estoques de petróleo dos EUA."
+      }
+    },
+    {
+      "fecha": "2026-11-18",
+      "fuente": "Kitco",
+      "url": "https://www.kitco.com/news/article/2026-11-18/gold-plunges-below-3750-silver-tumbles-hawkish-fed-minutes-pressure-metals",
+      "tema": {
+        "es": "Oro",
+        "en": "Gold",
+        "pt": "Ouro"
+      },
+      "titular": {
+        "es": "El oro se hunde bajo US$ 3.750 tras las minutas de la Fed",
+        "en": "Gold sinks below US$ 3,750 after the Fed minutes",
+        "pt": "Ouro afunda abaixo de US$ 3.750 após a ata do Fed"
+      },
+      "resumen": {
+        "es": "El oro cae 3,3% a cerca de US$ 3.723 la onza, su menor nivel desde septiembre de 2025, con 95% de probabilidad de un alza de tasas de la Fed en diciembre.",
+        "en": "Gold falls 3.3% to about US$ 3,723 an ounce, its lowest since September 2025, with a 95% chance of a Fed rate hike in December.",
+        "pt": "O ouro cai 3,3% para cerca de US$ 3.723 a onça, o menor nível desde setembro de 2025, com 95% de probabilidade de alta de juros do Fed em dezembro."
       }
     },
     {
@@ -272,26 +292,6 @@
         "es": "En Hanói, Kast promovió cobre, litio y carnes chilenas; el comercio bilateral superó US$ 2.100 millones en 2025, 39% más que el año anterior.",
         "en": "In Hanoi, Kast promoted Chilean copper, lithium and meat; bilateral trade exceeded US$ 2.1 billion in 2025, up 39% on the previous year.",
         "pt": "Em Hanói, Kast promoveu cobre, lítio e carnes chilenas; o comércio bilateral superou US$ 2,1 bilhões em 2025, alta de 39% sobre o ano anterior."
-      }
-    },
-    {
-      "fecha": "2026-11-13",
-      "fuente": "El Desconcierto",
-      "url": "https://eldesconcierto.cl/medio-ambiente/magallanes-fin-al-mayor-proyecto-hidrogeno-verde-chile-reabre-debate-viabilidad-real-la-industria-n5464059",
-      "tema": {
-        "es": "Energía",
-        "en": "Energy",
-        "pt": "Energia"
-      },
-      "titular": {
-        "es": "TotalEnergies desiste de H2 Magallanes, el mayor proyecto de hidrógeno verde de Chile",
-        "en": "TotalEnergies drops H2 Magallanes, Chile's largest green hydrogen project",
-        "pt": "TotalEnergies desiste do H2 Magallanes, maior projeto de hidrogênio verde do Chile"
-      },
-      "resumen": {
-        "es": "El proyecto de US$ 16.000 millones se retira por la baja demanda de moléculas verdes y equipos que no bajaron de precio.",
-        "en": "The US$ 16 billion project is withdrawn due to weak demand for green molecules and equipment costs that did not fall.",
-        "pt": "O projeto de US$ 16 bilhões é retirado pela baixa demanda por moléculas verdes e equipamentos que não ficaram mais baratos."
       }
     }
   ],
