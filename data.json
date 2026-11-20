@@ -1,17 +1,17 @@
 {
-  "actualizado": "2026-11-19",
+  "actualizado": "2026-11-20",
   "fallback": {
     "dolar": {
-      "valor": 996.68,
-      "fecha": "2026-11-18"
+      "valor": 1012.1,
+      "fecha": "2026-11-19"
     },
     "euro": {
-      "valor": 1098.03,
-      "fecha": "2026-11-18"
+      "valor": 1113.8,
+      "fecha": "2026-11-20"
     },
     "uf": {
-      "valor": 41364.17,
-      "fecha": "2026-11-19"
+      "valor": 41371.05,
+      "fecha": "2026-11-20"
     },
     "utm": {
       "valor": 72440,
@@ -26,8 +26,8 @@
       "fecha": "2026-10-27"
     },
     "libra_cobre": {
-      "valor": 5.78,
-      "fecha": "2026-11-18"
+      "valor": 5.7,
+      "fecha": "2026-11-19"
     },
     "imacec": {
       "valor": 0.2,
@@ -45,8 +45,8 @@
         "en": "Brent crude",
         "pt": "Petróleo Brent"
       },
-      "valor": 91.95,
-      "fecha": "2026-11-18",
+      "valor": 91.98,
+      "fecha": "2026-11-19",
       "fuente": "Rigzone (ICE)"
     },
     {
@@ -55,8 +55,8 @@
         "en": "WTI crude",
         "pt": "Petróleo WTI"
       },
-      "valor": 83.26,
-      "fecha": "2026-11-18",
+      "valor": 83.21,
+      "fecha": "2026-11-19",
       "fuente": "Rigzone (NYMEX)"
     },
     {
@@ -65,9 +65,9 @@
         "en": "Gold",
         "pt": "Ouro"
       },
-      "valor": 3722.6,
-      "fecha": "2026-11-18",
-      "fuente": "Kitco"
+      "valor": 3603.42,
+      "fecha": "2026-11-20",
+      "fuente": "JM Bullion"
     },
     {
       "nombre": {
@@ -75,9 +75,9 @@
         "en": "Lithium carbonate (per tonne)",
         "pt": "Carbonato de lítio (por tonelada)"
       },
-      "valor": 13698.96,
-      "fecha": "2026-11-19",
-      "fuente": "Metalcharts, futuros de Guangzhou (GFEX)"
+      "valor": 13484,
+      "fecha": "2026-11-20",
+      "fuente": "SMM, futuros de Guangzhou (GFEX)"
     },
     {
       "nombre": {
@@ -85,15 +85,15 @@
         "en": "40ft container freight (Drewry WCI)",
         "pt": "Frete contêiner 40' (Drewry WCI)"
       },
-      "valor": 4305,
-      "fecha": "2026-11-12",
+      "valor": 4176,
+      "fecha": "2026-11-19",
       "fuente": "Drewry"
     }
   ],
   "fx": [
     {
       "codigo": "EUR",
-      "clp": 1098.03,
+      "clp": 1113.8,
       "moneda": {
         "es": "Euro",
         "en": "Euro",
@@ -102,7 +102,7 @@
     },
     {
       "codigo": "GBP",
-      "clp": 1319.09,
+      "clp": 1331.11,
       "moneda": {
         "es": "Libra esterlina",
         "en": "British pound",
@@ -111,7 +111,7 @@
     },
     {
       "codigo": "BRL",
-      "clp": 172.2,
+      "clp": 171.22,
       "moneda": {
         "es": "Real brasileño",
         "en": "Brazilian real",
@@ -120,7 +120,7 @@
     },
     {
       "codigo": "CNY",
-      "clp": 150.39,
+      "clp": 152.12,
       "moneda": {
         "es": "Yuan chino",
         "en": "Chinese yuan",
@@ -129,7 +129,7 @@
     },
     {
       "codigo": "PEN",
-      "clp": 293.71,
+      "clp": 296.74,
       "moneda": {
         "es": "Sol peruano",
         "en": "Peruvian sol",
@@ -138,7 +138,7 @@
     },
     {
       "codigo": "MXN",
-      "clp": 54.06,
+      "clp": 53.31,
       "moneda": {
         "es": "Peso mexicano",
         "en": "Mexican peso",
@@ -147,7 +147,7 @@
     },
     {
       "codigo": "JPY",
-      "clp": 6.29,
+      "clp": 6.39,
       "moneda": {
         "es": "Yen japonés",
         "en": "Japanese yen",
@@ -165,7 +165,7 @@
     },
     {
       "codigo": "BTC",
-      "clp": 62467377,
+      "clp": 62644000,
       "moneda": {
         "es": "Bitcoin",
         "en": "Bitcoin",
@@ -174,6 +174,66 @@
     }
   ],
   "news": [
+    {
+      "fecha": "2026-11-20",
+      "fuente": "MundoMarítimo",
+      "url": "https://www.mundomaritimo.cl/noticias/sector-portacontenedor-tarifas-toman-rumbos-opuestos-en-el-transpacifico-y-asia-europa",
+      "tema": {
+        "es": "Fletes",
+        "en": "Freight",
+        "pt": "Fretes"
+      },
+      "titular": {
+        "es": "El índice Drewry de contenedores baja 3% y las rutas Asia-EE.UU. y Asia-Europa se separan",
+        "en": "Drewry container index falls 3% as Asia-US and Asia-Europe routes diverge",
+        "pt": "Índice Drewry de contêineres cai 3% e rotas Ásia-EUA e Ásia-Europa se separam"
+      },
+      "resumen": {
+        "es": "El WCI cae a US$ 4.176 por contenedor de 40 pies; Shanghái-Nueva York baja 9% a US$ 8.194 y Shanghái-Génova sube 6% a US$ 4.436.",
+        "en": "The WCI drops to US$ 4,176 per 40ft container; Shanghai-New York falls 9% to US$ 8,194 and Shanghai-Genoa rises 6% to US$ 4,436.",
+        "pt": "O WCI cai para US$ 4.176 por contêiner de 40 pés; Xangai-Nova York recua 9% para US$ 8.194 e Xangai-Gênova sobe 6% para US$ 4.436."
+      }
+    },
+    {
+      "fecha": "2026-11-19",
+      "fuente": "BioBioChile",
+      "url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/11/19/asi-queda-el-precio-de-los-combustibles-a-nivel-nacional-tras-acuerdo-que-frena-alzas-hasta-abril-2027.shtml",
+      "tema": {
+        "es": "Combustibles",
+        "en": "Fuels",
+        "pt": "Combustíveis"
+      },
+      "titular": {
+        "es": "Bajan los combustibles tras el acuerdo que frena las alzas hasta abril de 2027",
+        "en": "Fuel prices fall after the deal that halts increases until April 2027",
+        "pt": "Combustíveis caem após acordo que freia altas até abril de 2027"
+      },
+      "resumen": {
+        "es": "ENAP rebaja el diésel en $141,9 por litro y las gasolinas 93 y 97 en $38,7; la bencina 93 promedia $1.589 por litro en el país.",
+        "en": "ENAP cuts diesel by CLP 141.9 per litre and 93 and 97 gasoline by CLP 38.7; 93 gasoline now averages CLP 1,589 per litre nationwide.",
+        "pt": "A ENAP reduz o diesel em CLP 141,9 por litro e as gasolinas 93 e 97 em CLP 38,7; a gasolina 93 tem média de CLP 1.589 por litro no país."
+      }
+    },
+    {
+      "fecha": "2026-11-19",
+      "fuente": "Emol",
+      "url": "https://www.emol.com/noticias/Economia/2026/11/19/1217553/dolar-cotizacion-manana.html",
+      "tema": {
+        "es": "Dólar y cobre",
+        "en": "Dollar and copper",
+        "pt": "Dólar e cobre"
+      },
+      "titular": {
+        "es": "El dólar roza los $1.010 por la debilidad del cobre",
+        "en": "The dollar nears CLP 1,010 on weak copper",
+        "pt": "Dólar se aproxima de CLP 1.010 com fraqueza do cobre"
+      },
+      "resumen": {
+        "es": "El dólar sube $3,33 a $1.009,43, su mayor nivel desde enero de 2025, mientras el cobre cae 1,4% en Londres a US$ 5,7 la libra.",
+        "en": "The dollar rises CLP 3.33 to CLP 1,009.43, its highest since January 2025, while copper falls 1.4% in London to US$ 5.7 a pound.",
+        "pt": "O dólar sobe CLP 3,33 para CLP 1.009,43, o maior nível desde janeiro de 2025, enquanto o cobre cai 1,4% em Londres para US$ 5,7 a libra."
+      }
+    },
     {
       "fecha": "2026-11-18",
       "fuente": "Diario Financiero",
@@ -196,102 +256,42 @@
     },
     {
       "fecha": "2026-11-18",
-      "fuente": "CNN Chile (Cochilco)",
-      "url": "https://www.cnnchile.com/negocios/cobre-siete-sesiones-caida-14-maximo-historico/",
+      "fuente": "MundoMarítimo",
+      "url": "https://www.mundomaritimo.cl/noticias/maersk-reestructura-conexion-entre-asia-y-la-costa-este-de-sudamerica-y-mantiene-cobertura-comercial",
       "tema": {
-        "es": "Cobre",
-        "en": "Copper",
-        "pt": "Cobre"
+        "es": "Navieras",
+        "en": "Shipping lines",
+        "pt": "Armadores"
       },
       "titular": {
-        "es": "El cobre encadena siete sesiones a la baja y cae 14% desde su máximo histórico",
-        "en": "Copper falls for a seventh straight session, down 14% from its all-time high",
-        "pt": "Cobre cai pela sétima sessão seguida e recua 14% desde a máxima histórica"
+        "es": "Maersk reestructura su conexión entre Asia y la costa este de Sudamérica",
+        "en": "Maersk restructures its Asia-East Coast South America link",
+        "pt": "Maersk reestrutura sua ligação entre a Ásia e a costa leste da América do Sul"
       },
       "resumen": {
-        "es": "El metal se desploma 3,6% en Londres a US$ 5,78 la libra, su menor nivel desde el 10 de abril, con inventarios en la LME 41% más altos que hace un mes.",
-        "en": "The metal slumps 3.6% in London to US$ 5.78 a pound, its lowest since 10 April, with LME inventories 41% higher than a month ago.",
-        "pt": "O metal despenca 3,6% em Londres para US$ 5,78 por libra, o menor nível desde 10 de abril, com estoques na LME 41% maiores que há um mês."
-      }
-    },
-    {
-      "fecha": "2026-11-18",
-      "fuente": "Rigzone (Bloomberg)",
-      "url": "https://www.rigzone.com/news/wire/oil_falls_3_despite_middle_east_attacks-18-nov-2026-185118-article/",
-      "tema": {
-        "es": "Petróleo",
-        "en": "Oil",
-        "pt": "Petróleo"
-      },
-      "titular": {
-        "es": "El petróleo cae pese a nuevos ataques en el Golfo Pérsico",
-        "en": "Oil falls despite new attacks in the Persian Gulf",
-        "pt": "Petróleo cai apesar de novos ataques no Golfo Pérsico"
-      },
-      "resumen": {
-        "es": "El WTI baja 3,2% a US$ 83,26 y el Brent 1,3% a US$ 91,95, tras un alza de 3,4 millones de barriles en los inventarios de crudo de EE.UU.",
-        "en": "WTI drops 3.2% to US$ 83.26 and Brent 1.3% to US$ 91.95, after US crude inventories rose by 3.4 million barrels.",
-        "pt": "O WTI cai 3,2% para US$ 83,26 e o Brent 1,3% para US$ 91,95, após alta de 3,4 milhões de barris nos estoques de petróleo dos EUA."
-      }
-    },
-    {
-      "fecha": "2026-11-18",
-      "fuente": "Kitco",
-      "url": "https://www.kitco.com/news/article/2026-11-18/gold-plunges-below-3750-silver-tumbles-hawkish-fed-minutes-pressure-metals",
-      "tema": {
-        "es": "Oro",
-        "en": "Gold",
-        "pt": "Ouro"
-      },
-      "titular": {
-        "es": "El oro se hunde bajo US$ 3.750 tras las minutas de la Fed",
-        "en": "Gold sinks below US$ 3,750 after the Fed minutes",
-        "pt": "Ouro afunda abaixo de US$ 3.750 após a ata do Fed"
-      },
-      "resumen": {
-        "es": "El oro cae 3,3% a cerca de US$ 3.723 la onza, su menor nivel desde septiembre de 2025, con 95% de probabilidad de un alza de tasas de la Fed en diciembre.",
-        "en": "Gold falls 3.3% to about US$ 3,723 an ounce, its lowest since September 2025, with a 95% chance of a Fed rate hike in December.",
-        "pt": "O ouro cai 3,3% para cerca de US$ 3.723 a onça, o menor nível desde setembro de 2025, com 95% de probabilidade de alta de juros do Fed em dezembro."
+        "es": "Tras terminar su cooperación con CMA CGM en el servicio ASAS2, la última salida conjunta desde Shanghái será el 8 de diciembre.",
+        "en": "After ending its cooperation with CMA CGM on the ASAS2 service, the last joint departure from Shanghai will be on 8 December.",
+        "pt": "Após encerrar a cooperação com a CMA CGM no serviço ASAS2, a última saída conjunta de Xangai será em 8 de dezembro."
       }
     },
     {
       "fecha": "2026-11-16",
-      "fuente": "El Dínamo",
-      "url": "https://www.eldinamo.cl/politica/2026/11/16/senado-despacha-a-ley-congelamiento-de-precios-de-combustibles-para-frenar-alza-del-diesel",
+      "fuente": "Emol",
+      "url": "https://www.emol.com/noticias/Economia/2026/11/16/1217052/lastre-minero-calculo-expertos.html",
       "tema": {
-        "es": "Combustibles",
-        "en": "Fuels",
-        "pt": "Combustíveis"
+        "es": "Minería",
+        "en": "Mining",
+        "pt": "Mineração"
       },
       "titular": {
-        "es": "El Congreso despacha la ley que congela los precios de los combustibles",
-        "en": "Congress passes law freezing fuel prices",
-        "pt": "Congresso aprova lei que congela os preços dos combustíveis"
+        "es": "La menor producción de cobre le resta crecimiento al PIB",
+        "en": "Lower copper output drags on GDP growth",
+        "pt": "Menor produção de cobre reduz o crescimento do PIB"
       },
       "resumen": {
-        "es": "Los precios quedan congelados hasta el 7 de abril de 2027 y el diésel baja $100 por litro adicionales, además de revertir el alza de $40 de la semana previa.",
-        "en": "Prices are frozen until 7 April 2027 and diesel drops a further CLP 100 per litre, on top of reversing the previous week's CLP 40 increase.",
-        "pt": "Os preços ficam congelados até 7 de abril de 2027 e o diesel cai mais CLP 100 por litro, além de reverter a alta de CLP 40 da semana anterior."
-      }
-    },
-    {
-      "fecha": "2026-11-16",
-      "fuente": "Pauta",
-      "url": "https://www.pauta.cl/actualidad/2026/11/16/gira-por-asia-kast-busca-fortalecer-la-relacion-comercial-de-chile-con-vietnam.html",
-      "tema": {
-        "es": "Comercio",
-        "en": "Trade",
-        "pt": "Comércio"
-      },
-      "titular": {
-        "es": "Chile y Vietnam elevan su relación a asociación estratégica",
-        "en": "Chile and Vietnam upgrade ties to a strategic partnership",
-        "pt": "Chile e Vietnã elevam relação a parceria estratégica"
-      },
-      "resumen": {
-        "es": "En Hanói, Kast promovió cobre, litio y carnes chilenas; el comercio bilateral superó US$ 2.100 millones en 2025, 39% más que el año anterior.",
-        "en": "In Hanoi, Kast promoted Chilean copper, lithium and meat; bilateral trade exceeded US$ 2.1 billion in 2025, up 39% on the previous year.",
-        "pt": "Em Hanói, Kast promoveu cobre, lítio e carnes chilenas; o comércio bilateral superou US$ 2,1 bilhões em 2025, alta de 39% sobre o ano anterior."
+        "es": "Hacienda prevé cerca de 4,9 millones de toneladas de cobre en 2026, la menor desde 2003; una caída de casi 9% resta 1,6 puntos al PIB.",
+        "en": "The Finance Ministry expects about 4.9 million tonnes of copper in 2026, the lowest since 2003; a drop of nearly 9% takes 1.6 points off GDP.",
+        "pt": "O Ministério da Fazenda prevê cerca de 4,9 milhões de toneladas de cobre em 2026, a menor desde 2003; uma queda de quase 9% tira 1,6 ponto do PIB."
       }
     }
   ],
