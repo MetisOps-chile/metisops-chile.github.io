@@ -1,17 +1,17 @@
 {
-  "actualizado": "2026-11-20",
+  "actualizado": "2026-11-21",
   "fallback": {
     "dolar": {
-      "valor": 1012.1,
-      "fecha": "2026-11-19"
+      "valor": 1020.4,
+      "fecha": "2026-11-20"
     },
     "euro": {
-      "valor": 1113.8,
+      "valor": 1121.89,
       "fecha": "2026-11-20"
     },
     "uf": {
-      "valor": 41371.05,
-      "fecha": "2026-11-20"
+      "valor": 41377.93,
+      "fecha": "2026-11-21"
     },
     "utm": {
       "valor": 72440,
@@ -26,8 +26,8 @@
       "fecha": "2026-10-27"
     },
     "libra_cobre": {
-      "valor": 5.7,
-      "fecha": "2026-11-19"
+      "valor": 5.55,
+      "fecha": "2026-11-20"
     },
     "imacec": {
       "valor": 0.2,
@@ -45,9 +45,9 @@
         "en": "Brent crude",
         "pt": "Petróleo Brent"
       },
-      "valor": 91.98,
-      "fecha": "2026-11-19",
-      "fuente": "Rigzone (ICE)"
+      "valor": 92.57,
+      "fecha": "2026-11-20",
+      "fuente": "Yahoo Finance (ICE)"
     },
     {
       "nombre": {
@@ -55,9 +55,9 @@
         "en": "WTI crude",
         "pt": "Petróleo WTI"
       },
-      "valor": 83.21,
-      "fecha": "2026-11-19",
-      "fuente": "Rigzone (NYMEX)"
+      "valor": 83.98,
+      "fecha": "2026-11-20",
+      "fuente": "Yahoo Finance (NYMEX)"
     },
     {
       "nombre": {
@@ -75,9 +75,9 @@
         "en": "Lithium carbonate (per tonne)",
         "pt": "Carbonato de lítio (por tonelada)"
       },
-      "valor": 13484,
+      "valor": 13716,
       "fecha": "2026-11-20",
-      "fuente": "SMM, futuros de Guangzhou (GFEX)"
+      "fuente": "Metalcharts, futuros de Guangzhou (GFEX)"
     },
     {
       "nombre": {
@@ -93,7 +93,7 @@
   "fx": [
     {
       "codigo": "EUR",
-      "clp": 1113.8,
+      "clp": 1121.89,
       "moneda": {
         "es": "Euro",
         "en": "Euro",
@@ -102,7 +102,7 @@
     },
     {
       "codigo": "GBP",
-      "clp": 1331.11,
+      "clp": 1338.8,
       "moneda": {
         "es": "Libra esterlina",
         "en": "British pound",
@@ -111,7 +111,7 @@
     },
     {
       "codigo": "BRL",
-      "clp": 171.22,
+      "clp": 171.96,
       "moneda": {
         "es": "Real brasileño",
         "en": "Brazilian real",
@@ -120,7 +120,7 @@
     },
     {
       "codigo": "CNY",
-      "clp": 152.12,
+      "clp": 153.32,
       "moneda": {
         "es": "Yuan chino",
         "en": "Chinese yuan",
@@ -138,7 +138,7 @@
     },
     {
       "codigo": "MXN",
-      "clp": 53.31,
+      "clp": 53.4,
       "moneda": {
         "es": "Peso mexicano",
         "en": "Mexican peso",
@@ -147,7 +147,7 @@
     },
     {
       "codigo": "JPY",
-      "clp": 6.39,
+      "clp": 6.45,
       "moneda": {
         "es": "Yen japonés",
         "en": "Japanese yen",
@@ -165,7 +165,7 @@
     },
     {
       "codigo": "BTC",
-      "clp": 62644000,
+      "clp": 59083405,
       "moneda": {
         "es": "Bitcoin",
         "en": "Bitcoin",
@@ -176,122 +176,122 @@
   "news": [
     {
       "fecha": "2026-11-20",
-      "fuente": "MundoMarítimo",
-      "url": "https://www.mundomaritimo.cl/noticias/sector-portacontenedor-tarifas-toman-rumbos-opuestos-en-el-transpacifico-y-asia-europa",
+      "fuente": "Reporte Minero",
+      "url": "https://www.reporteminero.cl/noticia/noticias/2026/11/cobre-mercado-bajista-20-porciento-ai-desplome-2026",
       "tema": {
-        "es": "Fletes",
-        "en": "Freight",
-        "pt": "Fretes"
+        "es": "Cobre",
+        "en": "Copper",
+        "pt": "Cobre"
       },
       "titular": {
-        "es": "El índice Drewry de contenedores baja 3% y las rutas Asia-EE.UU. y Asia-Europa se separan",
-        "en": "Drewry container index falls 3% as Asia-US and Asia-Europe routes diverge",
-        "pt": "Índice Drewry de contêineres cai 3% e rotas Ásia-EUA e Ásia-Europa se separam"
+        "es": "El cobre entra en mercado bajista tras caer 20% desde su récord",
+        "en": "Copper enters a bear market after falling 20% from its record",
+        "pt": "Cobre entra em mercado de baixa após cair 20% desde o recorde"
       },
       "resumen": {
-        "es": "El WCI cae a US$ 4.176 por contenedor de 40 pies; Shanghái-Nueva York baja 9% a US$ 8.194 y Shanghái-Génova sube 6% a US$ 4.436.",
-        "en": "The WCI drops to US$ 4,176 per 40ft container; Shanghai-New York falls 9% to US$ 8,194 and Shanghai-Genoa rises 6% to US$ 4,436.",
-        "pt": "O WCI cai para US$ 4.176 por contêiner de 40 pés; Xangai-Nova York recua 9% para US$ 8.194 e Xangai-Gênova sobe 6% para US$ 4.436."
+        "es": "En COMEX tocó US$ 5,44 la libra, 20,2% bajo el récord de US$ 6,89 del 9 de septiembre, por dudas sobre la demanda ligada a la inteligencia artificial.",
+        "en": "On COMEX it touched US$ 5.44 a pound, 20.2% below the US$ 6.89 record of 9 September, on doubts over AI-related demand.",
+        "pt": "Na COMEX tocou US$ 5,44 a libra, 20,2% abaixo do recorde de US$ 6,89 de 9 de setembro, por dúvidas sobre a demanda ligada à inteligência artificial."
       }
     },
     {
-      "fecha": "2026-11-19",
+      "fecha": "2026-11-20",
       "fuente": "BioBioChile",
-      "url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/11/19/asi-queda-el-precio-de-los-combustibles-a-nivel-nacional-tras-acuerdo-que-frena-alzas-hasta-abril-2027.shtml",
+      "url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/11/20/peso-chileno-cede-ante-un-dolar-que-despide-la-semana-con-ganancias-y-sobre-la-luca.shtml",
       "tema": {
-        "es": "Combustibles",
-        "en": "Fuels",
-        "pt": "Combustíveis"
+        "es": "Dólar",
+        "en": "Dollar",
+        "pt": "Dólar"
       },
       "titular": {
-        "es": "Bajan los combustibles tras el acuerdo que frena las alzas hasta abril de 2027",
-        "en": "Fuel prices fall after the deal that halts increases until April 2027",
-        "pt": "Combustíveis caem após acordo que freia altas até abril de 2027"
+        "es": "El dólar cierra la semana sobre los $1.020 por la caída del cobre",
+        "en": "The dollar ends the week above CLP 1,020 as copper falls",
+        "pt": "Dólar fecha a semana acima de CLP 1.020 com a queda do cobre"
       },
       "resumen": {
-        "es": "ENAP rebaja el diésel en $141,9 por litro y las gasolinas 93 y 97 en $38,7; la bencina 93 promedia $1.589 por litro en el país.",
-        "en": "ENAP cuts diesel by CLP 141.9 per litre and 93 and 97 gasoline by CLP 38.7; 93 gasoline now averages CLP 1,589 per litre nationwide.",
-        "pt": "A ENAP reduz o diesel em CLP 141,9 por litro e as gasolinas 93 e 97 em CLP 38,7; a gasolina 93 tem média de CLP 1.589 por litro no país."
+        "es": "El peso chileno cede y el dólar acumula un alza semanal de 2,31%, presionado por el desplome del metal rojo.",
+        "en": "The Chilean peso weakens and the dollar posts a weekly gain of 2.31%, pressured by the slump in copper.",
+        "pt": "O peso chileno cede e o dólar acumula alta semanal de 2,31%, pressionado pela queda do cobre."
       }
     },
     {
-      "fecha": "2026-11-19",
-      "fuente": "Emol",
-      "url": "https://www.emol.com/noticias/Economia/2026/11/19/1217553/dolar-cotizacion-manana.html",
-      "tema": {
-        "es": "Dólar y cobre",
-        "en": "Dollar and copper",
-        "pt": "Dólar e cobre"
-      },
-      "titular": {
-        "es": "El dólar roza los $1.010 por la debilidad del cobre",
-        "en": "The dollar nears CLP 1,010 on weak copper",
-        "pt": "Dólar se aproxima de CLP 1.010 com fraqueza do cobre"
-      },
-      "resumen": {
-        "es": "El dólar sube $3,33 a $1.009,43, su mayor nivel desde enero de 2025, mientras el cobre cae 1,4% en Londres a US$ 5,7 la libra.",
-        "en": "The dollar rises CLP 3.33 to CLP 1,009.43, its highest since January 2025, while copper falls 1.4% in London to US$ 5.7 a pound.",
-        "pt": "O dólar sobe CLP 3,33 para CLP 1.009,43, o maior nível desde janeiro de 2025, enquanto o cobre cai 1,4% em Londres para US$ 5,7 a libra."
-      }
-    },
-    {
-      "fecha": "2026-11-18",
-      "fuente": "Diario Financiero",
-      "url": "https://www.df.cl/mercados/bolsa-monedas/dolar-hoy-ji6d7",
-      "tema": {
-        "es": "Economía",
-        "en": "Economy",
-        "pt": "Economia"
-      },
-      "titular": {
-        "es": "El PIB de Chile cae 1,1% en el tercer trimestre y el dólar vuelve sobre $1.000",
-        "en": "Chile's GDP falls 1.1% in the third quarter and the dollar climbs back above CLP 1,000",
-        "pt": "PIB do Chile cai 1,1% no terceiro trimestre e o dólar volta a superar CLP 1.000"
-      },
-      "resumen": {
-        "es": "La contracción anual de 1,1%, peor que el -0,8% esperado, y la caída del cobre llevan al dólar a su mayor nivel desde abril de 2025.",
-        "en": "The 1.1% annual contraction, worse than the expected -0.8%, and falling copper push the dollar to its highest level since April 2025.",
-        "pt": "A contração anual de 1,1%, pior que os -0,8% esperados, e a queda do cobre levam o dólar ao maior nível desde abril de 2025."
-      }
-    },
-    {
-      "fecha": "2026-11-18",
-      "fuente": "MundoMarítimo",
-      "url": "https://www.mundomaritimo.cl/noticias/maersk-reestructura-conexion-entre-asia-y-la-costa-este-de-sudamerica-y-mantiene-cobertura-comercial",
-      "tema": {
-        "es": "Navieras",
-        "en": "Shipping lines",
-        "pt": "Armadores"
-      },
-      "titular": {
-        "es": "Maersk reestructura su conexión entre Asia y la costa este de Sudamérica",
-        "en": "Maersk restructures its Asia-East Coast South America link",
-        "pt": "Maersk reestrutura sua ligação entre a Ásia e a costa leste da América do Sul"
-      },
-      "resumen": {
-        "es": "Tras terminar su cooperación con CMA CGM en el servicio ASAS2, la última salida conjunta desde Shanghái será el 8 de diciembre.",
-        "en": "After ending its cooperation with CMA CGM on the ASAS2 service, the last joint departure from Shanghai will be on 8 December.",
-        "pt": "Após encerrar a cooperação com a CMA CGM no serviço ASAS2, a última saída conjunta de Xangai será em 8 de dezembro."
-      }
-    },
-    {
-      "fecha": "2026-11-16",
-      "fuente": "Emol",
-      "url": "https://www.emol.com/noticias/Economia/2026/11/16/1217052/lastre-minero-calculo-expertos.html",
+      "fecha": "2026-11-20",
+      "fuente": "BioBioChile",
+      "url": "https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/11/20/codelco-cerraria-2026-con-su-produccion-mas-baja-en-tres-decadas-pese-a-precios-historicos-del-cobre.shtml",
       "tema": {
         "es": "Minería",
         "en": "Mining",
         "pt": "Mineração"
       },
       "titular": {
-        "es": "La menor producción de cobre le resta crecimiento al PIB",
-        "en": "Lower copper output drags on GDP growth",
-        "pt": "Menor produção de cobre reduz o crescimento do PIB"
+        "es": "Codelco cerraría 2026 con su producción más baja en tres décadas",
+        "en": "Codelco set to end 2026 with its lowest output in three decades",
+        "pt": "Codelco deve fechar 2026 com a menor produção em três décadas"
       },
       "resumen": {
-        "es": "Hacienda prevé cerca de 4,9 millones de toneladas de cobre en 2026, la menor desde 2003; una caída de casi 9% resta 1,6 puntos al PIB.",
-        "en": "The Finance Ministry expects about 4.9 million tonnes of copper in 2026, the lowest since 2003; a drop of nearly 9% takes 1.6 points off GDP.",
-        "pt": "O Ministério da Fazenda prevê cerca de 4,9 milhões de toneladas de cobre em 2026, a menor desde 2003; uma queda de quase 9% tira 1,6 ponto do PIB."
+        "es": "La estatal proyecta cerca de 1,2 millones de toneladas, su menor nivel en 31 años y unas 534 mil toneladas menos que en 2017.",
+        "en": "The state miner expects about 1.2 million tonnes, its lowest in 31 years and some 534,000 tonnes less than in 2017.",
+        "pt": "A estatal projeta cerca de 1,2 milhão de toneladas, o menor nível em 31 anos e cerca de 534 mil toneladas a menos que em 2017."
+      }
+    },
+    {
+      "fecha": "2026-11-20",
+      "fuente": "Reporte Minero",
+      "url": "https://www.reporteminero.cl/noticia/noticias/2026/11/cuentas-de-la-luz-enero-2027-bajas-12-4-norte-alzas-sur",
+      "tema": {
+        "es": "Energía",
+        "en": "Energy",
+        "pt": "Energia"
+      },
+      "titular": {
+        "es": "Las cuentas de la luz bajarán en promedio 3,7% en enero de 2027",
+        "en": "Electricity bills to fall 3.7% on average in January 2027",
+        "pt": "Contas de luz vão cair em média 3,7% em janeiro de 2027"
+      },
+      "resumen": {
+        "es": "La cuenta promedio pasa de $40.627 a $39.064 y baja en 80,6% de las combinaciones comuna-distribuidora; Calama tiene la mayor rebaja (-12,4%).",
+        "en": "The average bill goes from CLP 40,627 to CLP 39,064 and falls in 80.6% of municipality-distributor combinations; Calama sees the largest cut (-12.4%).",
+        "pt": "A conta média passa de CLP 40.627 para CLP 39.064 e cai em 80,6% das combinações município-distribuidora; Calama tem a maior redução (-12,4%)."
+      }
+    },
+    {
+      "fecha": "2026-11-20",
+      "fuente": "Bloomberg Línea",
+      "url": "https://www.bloomberglinea.com/mercados/sp-500-y-nasdaq-caen-tras-retroceso-de-anthropic-y-temor-a-nuevas-alzas-de-tasas-de-la-fed/",
+      "tema": {
+        "es": "Mercados",
+        "en": "Markets",
+        "pt": "Mercados"
+      },
+      "titular": {
+        "es": "Wall Street cae por dudas sobre la IA y temor a alzas de tasas de la Fed",
+        "en": "Wall Street falls on AI doubts and fears of Fed rate hikes",
+        "pt": "Wall Street cai com dúvidas sobre IA e temor de alta de juros do Fed"
+      },
+      "resumen": {
+        "es": "El Nasdaq caía más de 1,3% y el mercado asignaba sobre 94% de probabilidad a un alza de tasas de la Fed el 9 de diciembre.",
+        "en": "The Nasdaq was down more than 1.3% and markets priced a more than 94% probability of a Fed rate hike on 9 December.",
+        "pt": "O Nasdaq caía mais de 1,3% e o mercado atribuía mais de 94% de probabilidade a uma alta de juros do Fed em 9 de dezembro."
+      }
+    },
+    {
+      "fecha": "2026-11-17",
+      "fuente": "Diario Financiero",
+      "url": "https://www.df.cl/empresas/industria/gremios-salmoneros-chilenos-en-alerta-por-ofensiva-de-noruega-para-disputar",
+      "tema": {
+        "es": "Chile-Brasil",
+        "en": "Chile-Brazil",
+        "pt": "Chile-Brasil"
+      },
+      "titular": {
+        "es": "Salmoneros chilenos en alerta por la ofensiva de Noruega en Brasil",
+        "en": "Chilean salmon farmers on alert over Norway’s push into Brazil",
+        "pt": "Salmonicultores chilenos em alerta com ofensiva da Noruega no Brasil"
+      },
+      "resumen": {
+        "es": "Las exportaciones de salmón y trucha a Brasil suman US$ 866,5 millones a octubre (+20,9%), pero el acuerdo EFTA-Mercosur eliminó el arancel de 10% al salmón noruego.",
+        "en": "Salmon and trout exports to Brazil total US$ 866.5 million through October (+20.9%), but the EFTA-Mercosur agreement removed the 10% tariff on Norwegian salmon.",
+        "pt": "As exportações de salmão e truta ao Brasil somam US$ 866,5 milhões até outubro (+20,9%), mas o acordo EFTA-Mercosul eliminou a tarifa de 10% sobre o salmão norueguês."
       }
     }
   ],
