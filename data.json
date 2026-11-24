@@ -1,17 +1,17 @@
 {
-  "actualizado": "2026-11-23",
+  "actualizado": "2026-11-24",
   "fallback": {
     "dolar": {
-      "valor": 1017.17,
-      "fecha": "2026-11-23"
+      "valor": 1017.66,
+      "fecha": "2026-11-24"
     },
     "euro": {
-      "valor": 1121.89,
-      "fecha": "2026-11-20"
+      "valor": 1107.84,
+      "fecha": "2026-11-24"
     },
     "uf": {
-      "valor": 41384.81,
-      "fecha": "2026-11-23"
+      "valor": 41398.57,
+      "fecha": "2026-11-24"
     },
     "utm": {
       "valor": 72440,
@@ -26,8 +26,8 @@
       "fecha": "2026-10-27"
     },
     "libra_cobre": {
-      "valor": 5.55,
-      "fecha": "2026-11-20"
+      "valor": 5.51,
+      "fecha": "2026-11-23"
     },
     "imacec": {
       "valor": 0.2,
@@ -45,9 +45,9 @@
         "en": "Brent crude",
         "pt": "Petróleo Brent"
       },
-      "valor": 92.57,
-      "fecha": "2026-11-20",
-      "fuente": "Yahoo Finance (ICE)"
+      "valor": 89.37,
+      "fecha": "2026-11-23",
+      "fuente": "Newsquawk (ICE)"
     },
     {
       "nombre": {
@@ -55,9 +55,9 @@
         "en": "WTI crude",
         "pt": "Petróleo WTI"
       },
-      "valor": 83.98,
-      "fecha": "2026-11-20",
-      "fuente": "Yahoo Finance (NYMEX)"
+      "valor": 80.17,
+      "fecha": "2026-11-23",
+      "fuente": "Newsquawk (NYMEX)"
     },
     {
       "nombre": {
@@ -65,9 +65,9 @@
         "en": "Gold",
         "pt": "Ouro"
       },
-      "valor": 3603.42,
-      "fecha": "2026-11-20",
-      "fuente": "JM Bullion"
+      "valor": 3620.2,
+      "fecha": "2026-11-24",
+      "fuente": "Kitco"
     },
     {
       "nombre": {
@@ -75,8 +75,8 @@
         "en": "Lithium carbonate (per tonne)",
         "pt": "Carbonato de lítio (por tonelada)"
       },
-      "valor": 13693,
-      "fecha": "2026-11-22",
+      "valor": 13576,
+      "fecha": "2026-11-23",
       "fuente": "Metalcharts, futuros de Guangzhou (GFEX)"
     },
     {
@@ -93,7 +93,7 @@
   "fx": [
     {
       "codigo": "EUR",
-      "clp": 1121.89,
+      "clp": 1107.84,
       "moneda": {
         "es": "Euro",
         "en": "Euro",
@@ -102,7 +102,7 @@
     },
     {
       "codigo": "GBP",
-      "clp": 1338.8,
+      "clp": 1325.67,
       "moneda": {
         "es": "Libra esterlina",
         "en": "British pound",
@@ -111,7 +111,7 @@
     },
     {
       "codigo": "BRL",
-      "clp": 171.96,
+      "clp": 171.63,
       "moneda": {
         "es": "Real brasileño",
         "en": "Brazilian real",
@@ -120,7 +120,7 @@
     },
     {
       "codigo": "CNY",
-      "clp": 153.32,
+      "clp": 152.74,
       "moneda": {
         "es": "Yuan chino",
         "en": "Chinese yuan",
@@ -129,7 +129,7 @@
     },
     {
       "codigo": "PEN",
-      "clp": 296.74,
+      "clp": 294.58,
       "moneda": {
         "es": "Sol peruano",
         "en": "Peruvian sol",
@@ -138,7 +138,7 @@
     },
     {
       "codigo": "MXN",
-      "clp": 53.4,
+      "clp": 53.07,
       "moneda": {
         "es": "Peso mexicano",
         "en": "Mexican peso",
@@ -147,7 +147,7 @@
     },
     {
       "codigo": "JPY",
-      "clp": 6.45,
+      "clp": 6.39,
       "moneda": {
         "es": "Yen japonés",
         "en": "Japanese yen",
@@ -156,7 +156,7 @@
     },
     {
       "codigo": "ARS",
-      "clp": 0.65,
+      "clp": 0.64,
       "moneda": {
         "es": "Peso argentino",
         "en": "Argentine peso",
@@ -165,7 +165,7 @@
     },
     {
       "codigo": "BTC",
-      "clp": 62763987,
+      "clp": 61507370,
       "moneda": {
         "es": "Bitcoin",
         "en": "Bitcoin",
@@ -176,122 +176,122 @@
   "news": [
     {
       "fecha": "2026-11-23",
-      "fuente": "Publimicro (vía El Mercurio)",
-      "url": "https://publimicro.cl/banco-central-advierte-que-la-caida-de-la-mineria-y-la-inversion-supero-las-expectativas-en-chile/",
+      "fuente": "Bloomberg (vía Rigzone)",
+      "url": "https://www.rigzone.com/news/wire/oil_falls_as_trump_signals_iran_talks-23-nov-2026-185152-article/",
       "tema": {
-        "es": "Economía",
-        "en": "Economy",
-        "pt": "Economia"
+        "es": "Petróleo",
+        "en": "Oil",
+        "pt": "Petróleo"
       },
       "titular": {
-        "es": "Banco Central: la caída de la minería y la inversión superó lo previsto",
-        "en": "Central Bank: the fall in mining and investment exceeded forecasts",
-        "pt": "Banco Central: a queda da mineração e do investimento superou o previsto"
+        "es": "El petróleo cae mientras Trump da señales de diálogo con Irán",
+        "en": "Oil falls as Trump signals Iran talks",
+        "pt": "Petróleo cai enquanto Trump sinaliza negociações com o Irã"
       },
       "resumen": {
-        "es": "Rosanna Costa dijo que el retroceso fue mayor a lo esperado, tras un PIB que cayó 1,1% anual en el tercer trimestre, arrastrado por la minería.",
-        "en": "Rosanna Costa said the decline was larger than expected, after GDP fell 1.1% year on year in the third quarter, dragged down by mining.",
-        "pt": "Rosanna Costa disse que o recuo foi maior que o esperado, após o PIB cair 1,1% em termos anuais no terceiro trimestre, puxado pela mineração."
+        "es": "El WTI cayó 4,5% hasta US$ 80,17 por barril y el Brent 3,5% hasta US$ 89,37, al deshacer los inversionistas sus coberturas ante una escalada militar de EE.UU. en Irán.",
+        "en": "WTI fell 4.5% to US$ 80.17 a barrel and Brent dropped 3.5% to US$ 89.37 as investors unwound hedges against a US military escalation in Iran.",
+        "pt": "O WTI caiu 4,5%, para US$ 80,17 por barril, e o Brent recuou 3,5%, para US$ 89,37, com investidores desfazendo proteções contra uma escalada militar dos EUA no Irã."
       }
     },
     {
-      "fecha": "2026-11-20",
-      "fuente": "Reporte Minero",
-      "url": "https://www.reporteminero.cl/noticia/noticias/2026/11/cobre-mercado-bajista-20-porciento-ai-desplome-2026",
+      "fecha": "2026-11-23",
+      "fuente": "Diario Financiero (Bloomberg)",
+      "url": "https://www.df.cl/economia-y-politica/actualidad/el-desplome-del-cobre-pone-a-prueba-la-ofensiva-de-kast-para-contener-el",
       "tema": {
         "es": "Cobre",
         "en": "Copper",
         "pt": "Cobre"
       },
       "titular": {
-        "es": "El cobre entra en mercado bajista tras caer 20% desde su récord",
-        "en": "Copper enters a bear market after falling 20% from its record",
-        "pt": "Cobre entra em mercado de baixa após cair 20% desde o recorde"
+        "es": "El desplome del cobre pone a prueba la ofensiva de Kast para contener el déficit fiscal",
+        "en": "Copper slump tests Kast’s push to contain Chile’s fiscal deficit",
+        "pt": "Queda do cobre põe à prova a ofensiva de Kast para conter o déficit fiscal"
       },
       "resumen": {
-        "es": "En COMEX tocó US$ 5,44 la libra, 20,2% bajo el récord de US$ 6,89 del 9 de septiembre, por dudas sobre la demanda ligada a la inteligencia artificial.",
-        "en": "On COMEX it touched US$ 5.44 a pound, 20.2% below the US$ 6.89 record of 9 September, on doubts over AI-related demand.",
-        "pt": "Na COMEX tocou US$ 5,44 a libra, 20,2% abaixo do recorde de US$ 6,89 de 9 de setembro, por dúvidas sobre a demanda ligada à inteligência artificial."
+        "es": "El cobre cayó cerca de 10% en Nueva York la semana pasada y queda más de 20% bajo su récord del 9 de septiembre, amenazando los ingresos mineros que ayudaron a contener el déficit en 0,9% del PIB.",
+        "en": "Copper fell about 10% in New York last week and is more than 20% below its 9 September record, threatening the mining revenue that helped hold the deficit to 0.9% of GDP.",
+        "pt": "O cobre caiu cerca de 10% em Nova York na semana passada e está mais de 20% abaixo do recorde de 9 de setembro, ameaçando a receita da mineração que ajudou a conter o déficit em 0,9% do PIB."
       }
     },
     {
-      "fecha": "2026-11-20",
+      "fecha": "2026-11-23",
       "fuente": "BioBioChile",
-      "url": "https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/11/20/codelco-cerraria-2026-con-su-produccion-mas-baja-en-tres-decadas-pese-a-precios-historicos-del-cobre.shtml",
+      "url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/11/23/biministro-mas-dice-que-chile-no-esta-en-recesion-y-evita-hablar-de-un-ano-perdido-en-lo-economico.shtml",
+      "tema": {
+        "es": "Economía",
+        "en": "Economy",
+        "pt": "Economia"
+      },
+      "titular": {
+        "es": "Biministro Mas dice que Chile no está en recesión y evita hablar de un año perdido",
+        "en": "Minister Mas says Chile is not in recession and avoids calling 2026 a lost year",
+        "pt": "Ministro Mas diz que o Chile não está em recessão e evita falar em ano perdido"
+      },
+      "resumen": {
+        "es": "El Banco Central revisó el PIB del primer y segundo trimestre de 2026 a -0,4% y 0,0%, y los organismos internacionales proyectan un crecimiento bajo 1% para el año.",
+        "en": "The Central Bank revised GDP for the first and second quarters of 2026 to -0.4% and 0.0%, and international bodies project growth below 1% for the year.",
+        "pt": "O Banco Central revisou o PIB do primeiro e do segundo trimestres de 2026 para -0,4% e 0,0%, e organismos internacionais projetam crescimento abaixo de 1% no ano."
+      }
+    },
+    {
+      "fecha": "2026-11-23",
+      "fuente": "BioBioChile",
+      "url": "https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/11/23/duro-11-dias-fuera-nvidia-vuelve-a-contratar-a-jensen-huang-como-su-ceo-tras-crisis-por-infidelidad.shtml",
+      "tema": {
+        "es": "Tecnología",
+        "en": "Tech",
+        "pt": "Tecnologia"
+      },
+      "titular": {
+        "es": "Tras 11 días fuera, Nvidia vuelve a contratar a Jensen Huang como CEO",
+        "en": "After 11 days out, Nvidia rehires Jensen Huang as CEO",
+        "pt": "Após 11 dias fora, Nvidia recontrata Jensen Huang como CEO"
+      },
+      "resumen": {
+        "es": "La acción de Nvidia llegó a subir 32,59% en la jornada, hasta US$ 166,44, y arrastró al Nasdaq, que avanzaba 6,59%.",
+        "en": "Nvidia shares jumped as much as 32.59% intraday to US$ 166.44, lifting the Nasdaq, which was up 6.59%.",
+        "pt": "As ações da Nvidia chegaram a subir 32,59% no dia, para US$ 166,44, puxando o Nasdaq, que avançava 6,59%."
+      }
+    },
+    {
+      "fecha": "2026-11-21",
+      "fuente": "BioBioChile",
+      "url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/11/21/codelco-abre-un-millon-de-hectareas-a-privados-en-china-congreso-exige-resguardo-del-control-estatal.shtml",
       "tema": {
         "es": "Minería",
         "en": "Mining",
         "pt": "Mineração"
       },
       "titular": {
-        "es": "Codelco cerraría 2026 con su producción más baja en tres décadas",
-        "en": "Codelco set to end 2026 with its lowest output in three decades",
-        "pt": "Codelco deve fechar 2026 com a menor produção em três décadas"
+        "es": "Codelco abre un millón de hectáreas a socios privados en China",
+        "en": "Codelco opens one million hectares to private partners in China",
+        "pt": "Codelco abre um milhão de hectares a sócios privados na China"
       },
       "resumen": {
-        "es": "La estatal proyecta cerca de 1,2 millones de toneladas, su menor nivel en 31 años y unas 534 mil toneladas menos que en 2017.",
-        "en": "The state miner expects about 1.2 million tonnes, its lowest in 31 years and some 534,000 tonnes less than in 2017.",
-        "pt": "A estatal projeta cerca de 1,2 milhão de toneladas, o menor nível em 31 anos e cerca de 534 mil toneladas a menos que em 2017."
+        "es": "Codelco busca socios en China para explorar cerca de un millón de hectáreas y una cartera inicial de 60 propiedades, mientras su deuda supera los US$ 27.000 millones.",
+        "en": "Codelco is seeking partners in China to explore about one million hectares and an initial portfolio of 60 properties, while its debt exceeds US$ 27 billion.",
+        "pt": "A Codelco busca sócios na China para explorar cerca de um milhão de hectares e uma carteira inicial de 60 propriedades, enquanto sua dívida supera US$ 27 bilhões."
       }
     },
     {
       "fecha": "2026-11-20",
-      "fuente": "Bloomberg Línea",
-      "url": "https://www.bloomberglinea.com/mercados/sp-500-y-nasdaq-caen-tras-retroceso-de-anthropic-y-temor-a-nuevas-alzas-de-tasas-de-la-fed/",
+      "fuente": "Daily Cargo News (Drewry)",
+      "url": "https://www.thedcn.com.au/news/world-container-index-19-november-2026",
       "tema": {
-        "es": "Mercados",
-        "en": "Markets",
-        "pt": "Mercados"
+        "es": "Fletes",
+        "en": "Freight",
+        "pt": "Fretes"
       },
       "titular": {
-        "es": "Wall Street cae por dudas sobre la IA y temor a alzas de tasas de la Fed",
-        "en": "Wall Street falls on AI doubts and fears of Fed rate hikes",
-        "pt": "Wall Street cai com dúvidas sobre IA e temor de alta de juros do Fed"
+        "es": "El índice de contenedores de Drewry cae 3% en la semana",
+        "en": "Drewry World Container Index falls 3% on the week",
+        "pt": "Índice de contêineres da Drewry cai 3% na semana"
       },
       "resumen": {
-        "es": "El Nasdaq caía más de 1,3% y el mercado asignaba sobre 94% de probabilidad a un alza de tasas de la Fed el 9 de diciembre.",
-        "en": "The Nasdaq was down more than 1.3% and markets priced a more than 94% probability of a Fed rate hike on 9 December.",
-        "pt": "O Nasdaq caía mais de 1,3% e o mercado atribuía mais de 94% de probabilidade a uma alta de juros do Fed em 9 de dezembro."
-      }
-    },
-    {
-      "fecha": "2026-11-18",
-      "fuente": "El Desconcierto",
-      "url": "https://eldesconcierto.cl/actualidad/valor-los-combustibles-el-jueves-19-noviembre-primera-vez-casi-4-meses-gasolina-y-diesel-caen-n5464173",
-      "tema": {
-        "es": "Combustibles",
-        "en": "Fuels",
-        "pt": "Combustíveis"
-      },
-      "titular": {
-        "es": "Diésel y gasolinas bajan por primera vez en casi cuatro meses",
-        "en": "Diesel and gasoline fall for the first time in almost four months",
-        "pt": "Diesel e gasolina caem pela primeira vez em quase quatro meses"
-      },
-      "resumen": {
-        "es": "Desde el jueves 19 de noviembre ENAP estima una baja de $141,9 por litro en el diésel y de $38,7 en las gasolinas, tras la ley que revierte parte de las alzas.",
-        "en": "From Thursday 19 November ENAP estimates a cut of CLP 141.9 per litre for diesel and CLP 38.7 for gasoline, after the law that partly reverses the increases.",
-        "pt": "A partir de quinta-feira, 19 de novembro, a ENAP estima queda de CLP 141,9 por litro no diesel e de CLP 38,7 nas gasolinas, após a lei que reverte parte das altas."
-      }
-    },
-    {
-      "fecha": "2026-11-17",
-      "fuente": "Diario Financiero",
-      "url": "https://www.df.cl/empresas/industria/gremios-salmoneros-chilenos-en-alerta-por-ofensiva-de-noruega-para-disputar",
-      "tema": {
-        "es": "Chile-Brasil",
-        "en": "Chile-Brazil",
-        "pt": "Chile-Brasil"
-      },
-      "titular": {
-        "es": "Salmoneros chilenos en alerta por la ofensiva de Noruega en Brasil",
-        "en": "Chilean salmon farmers on alert over Norway’s push into Brazil",
-        "pt": "Salmonicultores chilenos em alerta com ofensiva da Noruega no Brasil"
-      },
-      "resumen": {
-        "es": "Las exportaciones de salmón y trucha a Brasil suman US$ 866,5 millones a octubre (+20,9%), pero el acuerdo EFTA-Mercosur eliminó el arancel de 10% al salmón noruego.",
-        "en": "Salmon and trout exports to Brazil total US$ 866.5 million through October (+20.9%), but the EFTA-Mercosur agreement removed the 10% tariff on Norwegian salmon.",
-        "pt": "As exportações de salmão e truta ao Brasil somam US$ 866,5 milhões até outubro (+20,9%), mas o acordo EFTA-Mercosul eliminou a tarifa de 10% sobre o salmão norueguês."
+        "es": "El índice compuesto WCI bajó 3% a US$ 4.176 por contenedor de 40 pies, aunque sigue 126% sobre su nivel de hace un año.",
+        "en": "The composite WCI fell 3% to US$ 4,176 per 40-foot container, though it remains 126% above its level a year ago.",
+        "pt": "O índice composto WCI caiu 3%, para US$ 4.176 por contêiner de 40 pés, mas segue 126% acima do nível de um ano atrás."
       }
     }
   ],
