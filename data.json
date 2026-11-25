@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-24",
+  "actualizado": "2026-11-25",
   "fallback": {
     "dolar": {
       "valor": 1017.66,
@@ -10,8 +10,8 @@
       "fecha": "2026-11-24"
     },
     "uf": {
-      "valor": 41398.57,
-      "fecha": "2026-11-24"
+      "valor": 41405.45,
+      "fecha": "2026-11-25"
     },
     "utm": {
       "valor": 72440,
@@ -26,8 +26,8 @@
       "fecha": "2026-10-27"
     },
     "libra_cobre": {
-      "valor": 5.51,
-      "fecha": "2026-11-23"
+      "valor": 5.46,
+      "fecha": "2026-11-24"
     },
     "imacec": {
       "valor": 0.2,
@@ -45,9 +45,9 @@
         "en": "Brent crude",
         "pt": "Petróleo Brent"
       },
-      "valor": 89.37,
-      "fecha": "2026-11-23",
-      "fuente": "Newsquawk (ICE)"
+      "valor": 91.4,
+      "fecha": "2026-11-24",
+      "fuente": "Goodman Macro (ICE)"
     },
     {
       "nombre": {
@@ -55,8 +55,8 @@
         "en": "WTI crude",
         "pt": "Petróleo WTI"
       },
-      "valor": 80.17,
-      "fecha": "2026-11-23",
+      "valor": 82.05,
+      "fecha": "2026-11-24",
       "fuente": "Newsquawk (NYMEX)"
     },
     {
@@ -65,8 +65,8 @@
         "en": "Gold",
         "pt": "Ouro"
       },
-      "valor": 3620.2,
-      "fecha": "2026-11-24",
+      "valor": 3523.0,
+      "fecha": "2026-11-25",
       "fuente": "Kitco"
     },
     {
@@ -75,8 +75,8 @@
         "en": "Lithium carbonate (per tonne)",
         "pt": "Carbonato de lítio (por tonelada)"
       },
-      "valor": 13576,
-      "fecha": "2026-11-23",
+      "valor": 13553,
+      "fecha": "2026-11-24",
       "fuente": "Metalcharts, futuros de Guangzhou (GFEX)"
     },
     {
@@ -93,7 +93,7 @@
   "fx": [
     {
       "codigo": "EUR",
-      "clp": 1107.84,
+      "clp": 1114.22,
       "moneda": {
         "es": "Euro",
         "en": "Euro",
@@ -102,7 +102,7 @@
     },
     {
       "codigo": "GBP",
-      "clp": 1325.67,
+      "clp": 1331.72,
       "moneda": {
         "es": "Libra esterlina",
         "en": "British pound",
@@ -111,7 +111,7 @@
     },
     {
       "codigo": "BRL",
-      "clp": 171.63,
+      "clp": 172.37,
       "moneda": {
         "es": "Real brasileño",
         "en": "Brazilian real",
@@ -120,7 +120,7 @@
     },
     {
       "codigo": "CNY",
-      "clp": 152.74,
+      "clp": 152.19,
       "moneda": {
         "es": "Yuan chino",
         "en": "Chinese yuan",
@@ -129,7 +129,7 @@
     },
     {
       "codigo": "PEN",
-      "clp": 294.58,
+      "clp": 292.68,
       "moneda": {
         "es": "Sol peruano",
         "en": "Peruvian sol",
@@ -138,7 +138,7 @@
     },
     {
       "codigo": "MXN",
-      "clp": 53.07,
+      "clp": 52.41,
       "moneda": {
         "es": "Peso mexicano",
         "en": "Mexican peso",
@@ -147,7 +147,7 @@
     },
     {
       "codigo": "JPY",
-      "clp": 6.39,
+      "clp": 6.38,
       "moneda": {
         "es": "Yen japonés",
         "en": "Japanese yen",
@@ -165,7 +165,7 @@
     },
     {
       "codigo": "BTC",
-      "clp": 61507370,
+      "clp": 60509046,
       "moneda": {
         "es": "Bitcoin",
         "en": "Bitcoin",
@@ -175,137 +175,146 @@
   ],
   "news": [
     {
-      "fecha": "2026-11-23",
-      "fuente": "Bloomberg (vía Rigzone)",
-      "url": "https://www.rigzone.com/news/wire/oil_falls_as_trump_signals_iran_talks-23-nov-2026-185152-article/",
-      "tema": {
-        "es": "Petróleo",
-        "en": "Oil",
-        "pt": "Petróleo"
-      },
-      "titular": {
-        "es": "El petróleo cae mientras Trump da señales de diálogo con Irán",
-        "en": "Oil falls as Trump signals Iran talks",
-        "pt": "Petróleo cai enquanto Trump sinaliza negociações com o Irã"
-      },
-      "resumen": {
-        "es": "El WTI cayó 4,5% hasta US$ 80,17 por barril y el Brent 3,5% hasta US$ 89,37, al deshacer los inversionistas sus coberturas ante una escalada militar de EE.UU. en Irán.",
-        "en": "WTI fell 4.5% to US$ 80.17 a barrel and Brent dropped 3.5% to US$ 89.37 as investors unwound hedges against a US military escalation in Iran.",
-        "pt": "O WTI caiu 4,5%, para US$ 80,17 por barril, e o Brent recuou 3,5%, para US$ 89,37, com investidores desfazendo proteções contra uma escalada militar dos EUA no Irã."
-      }
-    },
-    {
-      "fecha": "2026-11-23",
-      "fuente": "Diario Financiero (Bloomberg)",
-      "url": "https://www.df.cl/economia-y-politica/actualidad/el-desplome-del-cobre-pone-a-prueba-la-ofensiva-de-kast-para-contener-el",
+      "fecha": "2026-11-25",
+      "fuente": "Diario Financiero (Reuters)",
+      "url": "https://www.df.cl/mercados/commodities/el-precio-del-cobre-toca-sus-minimos-de-un-ano-luego-que-se-agota-el",
       "tema": {
         "es": "Cobre",
         "en": "Copper",
         "pt": "Cobre"
       },
       "titular": {
-        "es": "El desplome del cobre pone a prueba la ofensiva de Kast para contener el déficit fiscal",
-        "en": "Copper slump tests Kast’s push to contain Chile’s fiscal deficit",
-        "pt": "Queda do cobre põe à prova a ofensiva de Kast para conter o déficit fiscal"
+        "es": "El precio del cobre toca su mínimo en un año",
+        "en": "Copper price hits a one-year low",
+        "pt": "Preço do cobre atinge mínima de um ano"
       },
       "resumen": {
-        "es": "El cobre cayó cerca de 10% en Nueva York la semana pasada y queda más de 20% bajo su récord del 9 de septiembre, amenazando los ingresos mineros que ayudaron a contener el déficit en 0,9% del PIB.",
-        "en": "Copper fell about 10% in New York last week and is more than 20% below its 9 September record, threatening the mining revenue that helped hold the deficit to 0.9% of GDP.",
-        "pt": "O cobre caiu cerca de 10% em Nova York na semana passada e está mais de 20% abaixo do recorde de 9 de setembro, ameaçando a receita da mineração que ajudou a conter o déficit em 0,9% do PIB."
+        "es": "El cobre a tres meses en Londres cayó 1,04% a US$ 11.703 por tonelada (US$ 5,3 por libra), su menor nivel desde el 18 de diciembre de 2025.",
+        "en": "Three-month copper in London fell 1.04% to US$ 11,703 a tonne (US$ 5.3 a pound), its lowest level since 18 December 2025.",
+        "pt": "O cobre de três meses em Londres caiu 1,04%, para US$ 11.703 por tonelada (US$ 5,3 por libra), o menor nível desde 18 de dezembro de 2025."
+      }
+    },
+    {
+      "fecha": "2026-11-25",
+      "fuente": "Diario Financiero",
+      "url": "https://www.df.cl/economia-y-politica/macro/fisco-podria-superar-el-techo-de-deuda-prudente-en-diciembre-por-alza-del",
+      "tema": {
+        "es": "Fiscal",
+        "en": "Fiscal",
+        "pt": "Fiscal"
+      },
+      "titular": {
+        "es": "El fisco podría superar el techo de deuda prudente en diciembre por el alza del dólar",
+        "en": "Chile’s public debt could breach its prudent ceiling in December as the dollar rises",
+        "pt": "Dívida pública do Chile pode superar o teto prudente em dezembro com a alta do dólar"
+      },
+      "resumen": {
+        "es": "La deuda bruta del Gobierno Central llegó a 44,7% del PIB en septiembre, frente a un techo prudente de 45%, y el dólar pasó de cerca de $970 a $1.033 desde fines de septiembre.",
+        "en": "Central government gross debt reached 44.7% of GDP in September, against a prudent ceiling of 45%, and the dollar rose from about CLP 970 to CLP 1,033 since late September.",
+        "pt": "A dívida bruta do Governo Central chegou a 44,7% do PIB em setembro, frente a um teto prudente de 45%, e o dólar passou de cerca de CLP 970 para CLP 1.033 desde o fim de setembro."
+      }
+    },
+    {
+      "fecha": "2026-11-24",
+      "fuente": "PortalPortuario",
+      "url": "https://portalportuario.cl/32-instituciones-suscriben-acuerdo-nacional-por-la-competitividad-logistica/",
+      "tema": {
+        "es": "Logística",
+        "en": "Logistics",
+        "pt": "Logística"
+      },
+      "titular": {
+        "es": "32 instituciones suscriben un Acuerdo Nacional por la Competitividad Logística",
+        "en": "32 institutions sign a National Agreement for Logistics Competitiveness",
+        "pt": "32 instituições assinam Acordo Nacional pela Competitividade Logística"
+      },
+      "resumen": {
+        "es": "El acuerdo, firmado por 32 instituciones públicas y privadas en el Foro Nacional de Competitividad Logística 2026, busca impulsar la logística como motor de crecimiento.",
+        "en": "The agreement, signed by 32 public and private institutions at the 2026 National Logistics Competitiveness Forum, seeks to make logistics a driver of growth.",
+        "pt": "O acordo, assinado por 32 instituições públicas e privadas no Fórum Nacional de Competitividade Logística 2026, busca impulsionar a logística como motor de crescimento."
+      }
+    },
+    {
+      "fecha": "2026-11-24",
+      "fuente": "Portal Innova (Bloomberg)",
+      "url": "https://portalinnova.cl/dolar-sigue-disparado-tras-desplome-del-cobre/",
+      "tema": {
+        "es": "Dólar",
+        "en": "Dollar",
+        "pt": "Dólar"
+      },
+      "titular": {
+        "es": "El dólar cierra en $1.033,5 tras el desplome del cobre",
+        "en": "Dollar closes at CLP 1,033.5 after copper slump",
+        "pt": "Dólar fecha a CLP 1.033,5 após queda do cobre"
+      },
+      "resumen": {
+        "es": "El dólar cerró en $1.033,5, su mayor nivel desde julio de 2022, mientras el cobre al contado terminó en US$ 5,459 por libra.",
+        "en": "The dollar closed at CLP 1,033.5, its highest level since July 2022, while spot copper ended at US$ 5.459 a pound.",
+        "pt": "O dólar fechou a CLP 1.033,5, o maior nível desde julho de 2022, enquanto o cobre à vista terminou em US$ 5,459 por libra."
+      }
+    },
+    {
+      "fecha": "2026-11-24",
+      "fuente": "Newsquawk",
+      "url": "https://www.newsquawk.com/headlines/us-crude-wrap-wti-f7-settles-usd-188-higher-at-usd-8205bbl",
+      "tema": {
+        "es": "Petróleo",
+        "en": "Oil",
+        "pt": "Petróleo"
+      },
+      "titular": {
+        "es": "El petróleo revierte sus pérdidas por la tensión en Ormuz",
+        "en": "Oil reverses losses on Hormuz tensions",
+        "pt": "Petróleo reverte perdas com tensão em Ormuz"
+      },
+      "resumen": {
+        "es": "El WTI cerró con un alza de US$ 1,88 a US$ 82,05 por barril y el Brent de febrero subió US$ 2,10 a US$ 88,78, tras caer temprano a mínimos de tres meses.",
+        "en": "WTI settled US$ 1.88 higher at US$ 82.05 a barrel and February Brent rose US$ 2.10 to US$ 88.78, after falling early to three-month lows.",
+        "pt": "O WTI fechou em alta de US$ 1,88, a US$ 82,05 por barril, e o Brent de fevereiro subiu US$ 2,10, a US$ 88,78, após cair cedo a mínimas de três meses."
       }
     },
     {
       "fecha": "2026-11-23",
-      "fuente": "BioBioChile",
-      "url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/11/23/biministro-mas-dice-que-chile-no-esta-en-recesion-y-evita-hablar-de-un-ano-perdido-en-lo-economico.shtml",
-      "tema": {
-        "es": "Economía",
-        "en": "Economy",
-        "pt": "Economia"
-      },
-      "titular": {
-        "es": "Biministro Mas dice que Chile no está en recesión y evita hablar de un año perdido",
-        "en": "Minister Mas says Chile is not in recession and avoids calling 2026 a lost year",
-        "pt": "Ministro Mas diz que o Chile não está em recessão e evita falar em ano perdido"
-      },
-      "resumen": {
-        "es": "El Banco Central revisó el PIB del primer y segundo trimestre de 2026 a -0,4% y 0,0%, y los organismos internacionales proyectan un crecimiento bajo 1% para el año.",
-        "en": "The Central Bank revised GDP for the first and second quarters of 2026 to -0.4% and 0.0%, and international bodies project growth below 1% for the year.",
-        "pt": "O Banco Central revisou o PIB do primeiro e do segundo trimestres de 2026 para -0,4% e 0,0%, e organismos internacionais projetam crescimento abaixo de 1% no ano."
-      }
-    },
-    {
-      "fecha": "2026-11-23",
-      "fuente": "BioBioChile",
-      "url": "https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/11/23/duro-11-dias-fuera-nvidia-vuelve-a-contratar-a-jensen-huang-como-su-ceo-tras-crisis-por-infidelidad.shtml",
-      "tema": {
-        "es": "Tecnología",
-        "en": "Tech",
-        "pt": "Tecnologia"
-      },
-      "titular": {
-        "es": "Tras 11 días fuera, Nvidia vuelve a contratar a Jensen Huang como CEO",
-        "en": "After 11 days out, Nvidia rehires Jensen Huang as CEO",
-        "pt": "Após 11 dias fora, Nvidia recontrata Jensen Huang como CEO"
-      },
-      "resumen": {
-        "es": "La acción de Nvidia llegó a subir 32,59% en la jornada, hasta US$ 166,44, y arrastró al Nasdaq, que avanzaba 6,59%.",
-        "en": "Nvidia shares jumped as much as 32.59% intraday to US$ 166.44, lifting the Nasdaq, which was up 6.59%.",
-        "pt": "As ações da Nvidia chegaram a subir 32,59% no dia, para US$ 166,44, puxando o Nasdaq, que avançava 6,59%."
-      }
-    },
-    {
-      "fecha": "2026-11-21",
-      "fuente": "BioBioChile",
-      "url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/11/21/codelco-abre-un-millon-de-hectareas-a-privados-en-china-congreso-exige-resguardo-del-control-estatal.shtml",
+      "fuente": "Diario Financiero",
+      "url": "https://www.df.cl/empresas/mineria/cru-enciende-las-alertas-por-el-nino-chile-arriesga-perder-hasta-225-mil",
       "tema": {
         "es": "Minería",
         "en": "Mining",
         "pt": "Mineração"
       },
       "titular": {
-        "es": "Codelco abre un millón de hectáreas a socios privados en China",
-        "en": "Codelco opens one million hectares to private partners in China",
-        "pt": "Codelco abre um milhão de hectares a sócios privados na China"
+        "es": "CRU alerta: por El Niño, Chile arriesga perder hasta 225 mil toneladas de cobre en 2027",
+        "en": "CRU warns El Niño could cost Chile up to 225,000 tonnes of copper in 2027",
+        "pt": "CRU alerta: com El Niño, Chile pode perder até 225 mil toneladas de cobre em 2027"
       },
       "resumen": {
-        "es": "Codelco busca socios en China para explorar cerca de un millón de hectáreas y una cartera inicial de 60 propiedades, mientras su deuda supera los US$ 27.000 millones.",
-        "en": "Codelco is seeking partners in China to explore about one million hectares and an initial portfolio of 60 properties, while its debt exceeds US$ 27 billion.",
-        "pt": "A Codelco busca sócios na China para explorar cerca de um milhão de hectares e uma carteira inicial de 60 propriedades, enquanto sua dívida supera US$ 27 bilhões."
-      }
-    },
-    {
-      "fecha": "2026-11-20",
-      "fuente": "Daily Cargo News (Drewry)",
-      "url": "https://www.thedcn.com.au/news/world-container-index-19-november-2026",
-      "tema": {
-        "es": "Fletes",
-        "en": "Freight",
-        "pt": "Fretes"
-      },
-      "titular": {
-        "es": "El índice de contenedores de Drewry cae 3% en la semana",
-        "en": "Drewry World Container Index falls 3% on the week",
-        "pt": "Índice de contêineres da Drewry cai 3% na semana"
-      },
-      "resumen": {
-        "es": "El índice compuesto WCI bajó 3% a US$ 4.176 por contenedor de 40 pies, aunque sigue 126% sobre su nivel de hace un año.",
-        "en": "The composite WCI fell 3% to US$ 4,176 per 40-foot container, though it remains 126% above its level a year ago.",
-        "pt": "O índice composto WCI caiu 3%, para US$ 4.176 por contêiner de 40 pés, mas segue 126% acima do nível de um ano atrás."
+        "es": "En su escenario alto, CRU estima pérdidas de 175 mil a 225 mil toneladas de cobre en 2027, frente a una producción base de 5,2 millones de toneladas.",
+        "en": "In its high scenario, CRU estimates losses of 175,000 to 225,000 tonnes of copper in 2027, against base output of 5.2 million tonnes.",
+        "pt": "Em seu cenário alto, a CRU estima perdas de 175 mil a 225 mil toneladas de cobre em 2027, frente a uma produção-base de 5,2 milhões de toneladas."
       }
     }
   ],
   "semana": {
-    "desde": "2026-11-17",
-    "tema": "Puesta en marcha y operational readiness",
+    "desde": "2026-11-23",
+    "tema": "Disciplina de capital",
     "pregunta": {
-      "es": "¿Qué parte de tu próxima puesta en marcha todavía no tiene responsable ni fecha?",
-      "en": "Which part of your next plant start-up still has no owner and no date?",
-      "pt": "Que parte da sua próxima partida de planta ainda não tem responsável nem data?"
+      "es": "¿Si evaluara hoy el capital pendiente de comprometer, mantendría su decisión de inversión?",
+      "en": "If you assessed the capital not yet committed today, would you maintain your investment decision?",
+      "pt": "Se avaliasse hoje o capital ainda não comprometido, manteria sua decisão de investimento?"
     },
-    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7528550827116879872"
+    "post_url": ""
   },
   "publicaciones": [
+    {
+      "fecha": "2026-11-24",
+      "texto": {
+        "es": "¿Si evaluara hoy el capital pendiente de comprometer, mantendría su decisión de inversión?",
+        "en": "If you assessed the capital not yet committed today, would you maintain your investment decision?",
+        "pt": "Se avaliasse hoje o capital ainda não comprometido, manteria sua decisão de investimento?"
+      },
+      "url": ""
+    },
     {
       "fecha": "2026-11-17",
       "texto": {
@@ -332,15 +341,6 @@
         "pt": "O contrato é assinado uma vez. O valor se perde todos os meses."
       },
       "url": "https://lnkd.in/p/dJsjBEuq"
-    },
-    {
-      "fecha": "2026-10-30",
-      "texto": {
-        "es": "Casi todas las empresas usan IA. Pocas capturan su valor.",
-        "en": "Almost every company uses AI. Few capture its value.",
-        "pt": "Quase todas as empresas usam IA. Poucas capturam seu valor."
-      },
-      "url": "https://lnkd.in/p/dmrYqawD"
     }
   ]
 }
