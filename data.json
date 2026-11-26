@@ -1,17 +1,17 @@
 {
-  "actualizado": "2026-11-25",
+  "actualizado": "2026-11-26",
   "fallback": {
     "dolar": {
-      "valor": 1017.66,
-      "fecha": "2026-11-24"
+      "valor": 1044.08,
+      "fecha": "2026-11-26"
     },
     "euro": {
-      "valor": 1107.84,
-      "fecha": "2026-11-24"
+      "valor": 1146.84,
+      "fecha": "2026-11-26"
     },
     "uf": {
-      "valor": 41405.45,
-      "fecha": "2026-11-25"
+      "valor": 41412.34,
+      "fecha": "2026-11-26"
     },
     "utm": {
       "valor": 72440,
@@ -26,8 +26,8 @@
       "fecha": "2026-10-27"
     },
     "libra_cobre": {
-      "valor": 5.46,
-      "fecha": "2026-11-24"
+      "valor": 5.31,
+      "fecha": "2026-11-25"
     },
     "imacec": {
       "valor": 0.2,
@@ -45,9 +45,9 @@
         "en": "Brent crude",
         "pt": "Petróleo Brent"
       },
-      "valor": 91.4,
-      "fecha": "2026-11-24",
-      "fuente": "Goodman Macro (ICE)"
+      "valor": 90.91,
+      "fecha": "2026-11-25",
+      "fuente": "Investing.com (ICE)"
     },
     {
       "nombre": {
@@ -55,9 +55,9 @@
         "en": "WTI crude",
         "pt": "Petróleo WTI"
       },
-      "valor": 82.05,
-      "fecha": "2026-11-24",
-      "fuente": "Newsquawk (NYMEX)"
+      "valor": 84.15,
+      "fecha": "2026-11-25",
+      "fuente": "Investing.com (NYMEX)"
     },
     {
       "nombre": {
@@ -65,8 +65,8 @@
         "en": "Gold",
         "pt": "Ouro"
       },
-      "valor": 3523.0,
-      "fecha": "2026-11-25",
+      "valor": 3561.4,
+      "fecha": "2026-11-26",
       "fuente": "Kitco"
     },
     {
@@ -75,8 +75,8 @@
         "en": "Lithium carbonate (per tonne)",
         "pt": "Carbonato de lítio (por tonelada)"
       },
-      "valor": 13553,
-      "fecha": "2026-11-24",
+      "valor": 12864,
+      "fecha": "2026-11-25",
       "fuente": "Metalcharts, futuros de Guangzhou (GFEX)"
     },
     {
@@ -93,7 +93,7 @@
   "fx": [
     {
       "codigo": "EUR",
-      "clp": 1114.22,
+      "clp": 1139.02,
       "moneda": {
         "es": "Euro",
         "en": "Euro",
@@ -102,7 +102,7 @@
     },
     {
       "codigo": "GBP",
-      "clp": 1331.72,
+      "clp": 1360.78,
       "moneda": {
         "es": "Libra esterlina",
         "en": "British pound",
@@ -111,7 +111,7 @@
     },
     {
       "codigo": "BRL",
-      "clp": 172.37,
+      "clp": 178.14,
       "moneda": {
         "es": "Real brasileño",
         "en": "Brazilian real",
@@ -120,7 +120,7 @@
     },
     {
       "codigo": "CNY",
-      "clp": 152.19,
+      "clp": 155.76,
       "moneda": {
         "es": "Yuan chino",
         "en": "Chinese yuan",
@@ -138,7 +138,7 @@
     },
     {
       "codigo": "MXN",
-      "clp": 52.41,
+      "clp": 52.71,
       "moneda": {
         "es": "Peso mexicano",
         "en": "Mexican peso",
@@ -147,7 +147,7 @@
     },
     {
       "codigo": "JPY",
-      "clp": 6.38,
+      "clp": 6.51,
       "moneda": {
         "es": "Yen japonés",
         "en": "Japanese yen",
@@ -156,7 +156,7 @@
     },
     {
       "codigo": "ARS",
-      "clp": 0.64,
+      "clp": 0.65,
       "moneda": {
         "es": "Peso argentino",
         "en": "Argentine peso",
@@ -165,7 +165,7 @@
     },
     {
       "codigo": "BTC",
-      "clp": 60509046,
+      "clp": 61145731,
       "moneda": {
         "es": "Bitcoin",
         "en": "Bitcoin",
@@ -174,6 +174,66 @@
     }
   ],
   "news": [
+    {
+      "fecha": "2026-11-26",
+      "fuente": "Diario Financiero",
+      "url": "https://www.df.cl/mercados/bolsa-monedas/dolar-vuelve-a-subir-cierra-en-1-040-y-mercado-se-divide-sobre-si",
+      "tema": {
+        "es": "Dólar",
+        "en": "Dollar",
+        "pt": "Dólar"
+      },
+      "titular": {
+        "es": "El dólar cierra sobre $1.040 y el mercado se divide sobre un nuevo récord",
+        "en": "Dollar closes above CLP 1,040 and the market is split on a new record",
+        "pt": "Dólar fecha acima de CLP 1.040 e mercado se divide sobre novo recorde"
+      },
+      "resumen": {
+        "es": "El dólar subió $7,1 hasta $1.040,53 el miércoles, mientras el cobre cayó 2,76% a US$ 5,31 por libra en Londres.",
+        "en": "The dollar rose CLP 7.1 to CLP 1,040.53 on Wednesday, while copper fell 2.76% to US$ 5.31 a pound in London.",
+        "pt": "O dólar subiu CLP 7,1, para CLP 1.040,53, na quarta-feira, enquanto o cobre caiu 2,76%, para US$ 5,31 por libra em Londres."
+      }
+    },
+    {
+      "fecha": "2026-11-26",
+      "fuente": "Diario Financiero",
+      "url": "https://www.df.cl/economia-y-politica/macro/con-acuerdo-y-con-un-mayor-gasto-que-el-original-10-claves-del-primer",
+      "tema": {
+        "es": "Fiscal",
+        "en": "Fiscal",
+        "pt": "Fiscal"
+      },
+      "titular": {
+        "es": "El Congreso despacha el Presupuesto 2027 con un gasto mayor al original",
+        "en": "Congress passes the 2027 Budget with higher spending than first proposed",
+        "pt": "Congresso aprova o Orçamento 2027 com gasto maior que o original"
+      },
+      "resumen": {
+        "es": "El gasto público crecerá 1,7% el próximo año, con US$ 140 millones más que el proyecto original, según Hacienda.",
+        "en": "Public spending will grow 1.7% next year, US$ 140 million more than the original bill, according to the Finance Ministry.",
+        "pt": "O gasto público crescerá 1,7% no próximo ano, US$ 140 milhões a mais que o projeto original, segundo o Ministério da Fazenda."
+      }
+    },
+    {
+      "fecha": "2026-11-25",
+      "fuente": "Investing.com",
+      "url": "https://www.investing.com/news/commodities-news/oil-mixed-as-hormuz-attacks-mount-supply-surplus-and-weak-fuel-margins-weigh-5049487",
+      "tema": {
+        "es": "Petróleo",
+        "en": "Oil",
+        "pt": "Petróleo"
+      },
+      "titular": {
+        "es": "El Brent vuelve a cerrar sobre US$ 90 por primera vez en más de una semana",
+        "en": "Brent settles above US$ 90 for the first time in over a week",
+        "pt": "Brent volta a fechar acima de US$ 90 pela primeira vez em mais de uma semana"
+      },
+      "resumen": {
+        "es": "El Brent subió 2,4% a US$ 90,91 por barril y el WTI 2,6% a US$ 84,15, por los ataques en torno a Ormuz.",
+        "en": "Brent rose 2.4% to US$ 90.91 a barrel and WTI 2.6% to US$ 84.15, on attacks around Hormuz.",
+        "pt": "O Brent subiu 2,4%, para US$ 90,91 por barril, e o WTI 2,6%, para US$ 84,15, com ataques em torno de Ormuz."
+      }
+    },
     {
       "fecha": "2026-11-25",
       "fuente": "Diario Financiero (Reuters)",
@@ -232,66 +292,6 @@
         "es": "El acuerdo, firmado por 32 instituciones públicas y privadas en el Foro Nacional de Competitividad Logística 2026, busca impulsar la logística como motor de crecimiento.",
         "en": "The agreement, signed by 32 public and private institutions at the 2026 National Logistics Competitiveness Forum, seeks to make logistics a driver of growth.",
         "pt": "O acordo, assinado por 32 instituições públicas e privadas no Fórum Nacional de Competitividade Logística 2026, busca impulsionar a logística como motor de crescimento."
-      }
-    },
-    {
-      "fecha": "2026-11-24",
-      "fuente": "Portal Innova (Bloomberg)",
-      "url": "https://portalinnova.cl/dolar-sigue-disparado-tras-desplome-del-cobre/",
-      "tema": {
-        "es": "Dólar",
-        "en": "Dollar",
-        "pt": "Dólar"
-      },
-      "titular": {
-        "es": "El dólar cierra en $1.033,5 tras el desplome del cobre",
-        "en": "Dollar closes at CLP 1,033.5 after copper slump",
-        "pt": "Dólar fecha a CLP 1.033,5 após queda do cobre"
-      },
-      "resumen": {
-        "es": "El dólar cerró en $1.033,5, su mayor nivel desde julio de 2022, mientras el cobre al contado terminó en US$ 5,459 por libra.",
-        "en": "The dollar closed at CLP 1,033.5, its highest level since July 2022, while spot copper ended at US$ 5.459 a pound.",
-        "pt": "O dólar fechou a CLP 1.033,5, o maior nível desde julho de 2022, enquanto o cobre à vista terminou em US$ 5,459 por libra."
-      }
-    },
-    {
-      "fecha": "2026-11-24",
-      "fuente": "Newsquawk",
-      "url": "https://www.newsquawk.com/headlines/us-crude-wrap-wti-f7-settles-usd-188-higher-at-usd-8205bbl",
-      "tema": {
-        "es": "Petróleo",
-        "en": "Oil",
-        "pt": "Petróleo"
-      },
-      "titular": {
-        "es": "El petróleo revierte sus pérdidas por la tensión en Ormuz",
-        "en": "Oil reverses losses on Hormuz tensions",
-        "pt": "Petróleo reverte perdas com tensão em Ormuz"
-      },
-      "resumen": {
-        "es": "El WTI cerró con un alza de US$ 1,88 a US$ 82,05 por barril y el Brent de febrero subió US$ 2,10 a US$ 88,78, tras caer temprano a mínimos de tres meses.",
-        "en": "WTI settled US$ 1.88 higher at US$ 82.05 a barrel and February Brent rose US$ 2.10 to US$ 88.78, after falling early to three-month lows.",
-        "pt": "O WTI fechou em alta de US$ 1,88, a US$ 82,05 por barril, e o Brent de fevereiro subiu US$ 2,10, a US$ 88,78, após cair cedo a mínimas de três meses."
-      }
-    },
-    {
-      "fecha": "2026-11-23",
-      "fuente": "Diario Financiero",
-      "url": "https://www.df.cl/empresas/mineria/cru-enciende-las-alertas-por-el-nino-chile-arriesga-perder-hasta-225-mil",
-      "tema": {
-        "es": "Minería",
-        "en": "Mining",
-        "pt": "Mineração"
-      },
-      "titular": {
-        "es": "CRU alerta: por El Niño, Chile arriesga perder hasta 225 mil toneladas de cobre en 2027",
-        "en": "CRU warns El Niño could cost Chile up to 225,000 tonnes of copper in 2027",
-        "pt": "CRU alerta: com El Niño, Chile pode perder até 225 mil toneladas de cobre em 2027"
-      },
-      "resumen": {
-        "es": "En su escenario alto, CRU estima pérdidas de 175 mil a 225 mil toneladas de cobre en 2027, frente a una producción base de 5,2 millones de toneladas.",
-        "en": "In its high scenario, CRU estimates losses of 175,000 to 225,000 tonnes of copper in 2027, against base output of 5.2 million tonnes.",
-        "pt": "Em seu cenário alto, a CRU estima perdas de 175 mil a 225 mil toneladas de cobre em 2027, frente a uma produção-base de 5,2 milhões de toneladas."
       }
     }
   ],
