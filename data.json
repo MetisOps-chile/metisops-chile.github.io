@@ -1,17 +1,17 @@
 {
-  "actualizado": "2026-11-27",
+  "actualizado": "2026-11-28",
   "fallback": {
     "dolar": {
-      "valor": 1044.08,
-      "fecha": "2026-11-26"
+      "valor": 1037.91,
+      "fecha": "2026-11-27"
     },
     "euro": {
       "valor": 1146.84,
       "fecha": "2026-11-26"
     },
     "uf": {
-      "valor": 41419.22,
-      "fecha": "2026-11-27"
+      "valor": 41426.11,
+      "fecha": "2026-11-28"
     },
     "utm": {
       "valor": 72440,
@@ -26,16 +26,16 @@
       "fecha": "2026-10-27"
     },
     "libra_cobre": {
-      "valor": 5.43,
-      "fecha": "2026-11-26"
+      "valor": 5.58,
+      "fecha": "2026-11-27"
     },
     "imacec": {
       "valor": 0.2,
       "fecha": "2026-09-01"
     },
     "tasa_desempleo": {
-      "valor": 9.8,
-      "fecha": "2026-09-01"
+      "valor": 10.0,
+      "fecha": "2026-10-01"
     }
   },
   "commodities": [
@@ -45,9 +45,9 @@
         "en": "Brent crude",
         "pt": "Petróleo Brent"
       },
-      "valor": 96.57,
-      "fecha": "2026-11-26",
-      "fuente": "The Nation (ICE)"
+      "valor": 95.44,
+      "fecha": "2026-11-27",
+      "fuente": "IBTimes (Reuters, ICE)"
     },
     {
       "nombre": {
@@ -55,9 +55,9 @@
         "en": "WTI crude",
         "pt": "Petróleo WTI"
       },
-      "valor": 84.15,
-      "fecha": "2026-11-25",
-      "fuente": "Investing.com (NYMEX)"
+      "valor": 83.08,
+      "fecha": "2026-11-27",
+      "fuente": "IBTimes (Reuters, NYMEX)"
     },
     {
       "nombre": {
@@ -65,9 +65,9 @@
         "en": "Gold",
         "pt": "Ouro"
       },
-      "valor": 3650.08,
+      "valor": 3640.84,
       "fecha": "2026-11-27",
-      "fuente": "FinanceFeeds (Swissquote)"
+      "fuente": "Portafolio (Investing.com)"
     },
     {
       "nombre": {
@@ -75,8 +75,8 @@
         "en": "Lithium carbonate (per tonne)",
         "pt": "Carbonato de lítio (por tonelada)"
       },
-      "valor": 12927,
-      "fecha": "2026-11-26",
+      "valor": 12679,
+      "fecha": "2026-11-28",
       "fuente": "Metalcharts, futuros de Guangzhou (GFEX)"
     },
     {
@@ -93,7 +93,7 @@
   "fx": [
     {
       "codigo": "EUR",
-      "clp": 1140.31,
+      "clp": 1127.16,
       "moneda": {
         "es": "Euro",
         "en": "Euro",
@@ -102,7 +102,7 @@
     },
     {
       "codigo": "GBP",
-      "clp": 1362.17,
+      "clp": 1349.64,
       "moneda": {
         "es": "Libra esterlina",
         "en": "British pound",
@@ -111,7 +111,7 @@
     },
     {
       "codigo": "BRL",
-      "clp": 180.11,
+      "clp": 185.37,
       "moneda": {
         "es": "Real brasileño",
         "en": "Brazilian real",
@@ -120,7 +120,7 @@
     },
     {
       "codigo": "CNY",
-      "clp": 155.54,
+      "clp": 154.84,
       "moneda": {
         "es": "Yuan chino",
         "en": "Chinese yuan",
@@ -129,7 +129,7 @@
     },
     {
       "codigo": "PEN",
-      "clp": 299.46,
+      "clp": 296.64,
       "moneda": {
         "es": "Sol peruano",
         "en": "Peruvian sol",
@@ -138,7 +138,7 @@
     },
     {
       "codigo": "MXN",
-      "clp": 52.79,
+      "clp": 52.44,
       "moneda": {
         "es": "Peso mexicano",
         "en": "Mexican peso",
@@ -147,7 +147,7 @@
     },
     {
       "codigo": "JPY",
-      "clp": 6.52,
+      "clp": 6.46,
       "moneda": {
         "es": "Yen japonés",
         "en": "Japanese yen",
@@ -165,7 +165,7 @@
     },
     {
       "codigo": "BTC",
-      "clp": 64172289,
+      "clp": 61973917,
       "moneda": {
         "es": "Bitcoin",
         "en": "Bitcoin",
@@ -174,6 +174,106 @@
     }
   ],
   "news": [
+    {
+      "fecha": "2026-11-28",
+      "fuente": "IBTimes (Reuters)",
+      "url": "https://www.ibtimes.com.au/oil-prices-brent-weekly-gain-middle-east-attacks-opec-1879508",
+      "tema": {
+        "es": "Petróleo",
+        "en": "Oil",
+        "pt": "Petróleo"
+      },
+      "titular": {
+        "es": "El Brent anota su primera alza semanal de noviembre antes de la reunión de la OPEP+",
+        "en": "Brent posts its first weekly gain of November ahead of the OPEC+ meeting",
+        "pt": "Brent registra sua primeira alta semanal de novembro antes da reunião da Opep+"
+      },
+      "resumen": {
+        "es": "El Brent cerró el viernes en US$ 95,44 por barril (−1,2%), pero subió cerca de 3% en la semana; la OPEP+ se reúne el domingo 29.",
+        "en": "Brent settled on Friday at US$ 95.44 a barrel (−1.2%) but rose about 3% on the week; OPEC+ meets on Sunday the 29th.",
+        "pt": "O Brent fechou a sexta-feira a US$ 95,44 por barril (−1,2%), mas subiu cerca de 3% na semana; a Opep+ se reúne no domingo, dia 29."
+      }
+    },
+    {
+      "fecha": "2026-11-27",
+      "fuente": "INE",
+      "url": "https://www.ine.gob.cl/sala-de-prensa/prensa/general/noticia/2026/11/27/la-tasa-de-desocupaci%C3%B3n-nacional-fue-10-0-en-el-trimestre-agosto-octubre-de-2026",
+      "tema": {
+        "es": "Empleo",
+        "en": "Jobs",
+        "pt": "Emprego"
+      },
+      "titular": {
+        "es": "El desempleo en Chile llega a 10,0% en el trimestre agosto-octubre",
+        "en": "Chile’s unemployment reaches 10.0% in the August–October quarter",
+        "pt": "Desemprego no Chile chega a 10,0% no trimestre agosto-outubro"
+      },
+      "resumen": {
+        "es": "La tasa subió 1,6 puntos en doce meses: la fuerza de trabajo creció 1,3% y los ocupados cayeron 0,4%.",
+        "en": "The rate rose 1.6 points over twelve months: the labour force grew 1.3% and employment fell 0.4%.",
+        "pt": "A taxa subiu 1,6 ponto em doze meses: a força de trabalho cresceu 1,3% e os ocupados caíram 0,4%."
+      }
+    },
+    {
+      "fecha": "2026-11-27",
+      "fuente": "Diario Financiero",
+      "url": "https://www.df.cl/primer-click/el-cobre-se-dispara-y-el-mercado-se-entusiasma-con-un-rally",
+      "tema": {
+        "es": "Cobre",
+        "en": "Copper",
+        "pt": "Cobre"
+      },
+      "titular": {
+        "es": "El cobre se dispara por segundo día y el mercado se entusiasma con un rally",
+        "en": "Copper soars for a second day and markets warm to a rally",
+        "pt": "Cobre dispara pelo segundo dia e o mercado se anima com um rali"
+      },
+      "resumen": {
+        "es": "El cobre subía cerca de 5% en Shanghái, Londres y Comex, impulsado por el regreso del apetito por riesgo y señales de estímulo en China.",
+        "en": "Copper was up about 5% in Shanghai, London and Comex, driven by returning risk appetite and signs of stimulus in China.",
+        "pt": "O cobre subia cerca de 5% em Xangai, Londres e Comex, impulsionado pela volta do apetite por risco e por sinais de estímulo na China."
+      }
+    },
+    {
+      "fecha": "2026-11-27",
+      "fuente": "Portafolio",
+      "url": "https://www.portafolio.co/internacional/el-oro-recupera-terreno-con-un-alza-de-us-3-640-este-27-de-noviembre-esto-impulso-la-recuperacion-del-metal-507248",
+      "tema": {
+        "es": "Oro",
+        "en": "Gold",
+        "pt": "Ouro"
+      },
+      "titular": {
+        "es": "El oro recupera terreno tras tocar su menor nivel desde agosto de 2025",
+        "en": "Gold regains ground after touching its lowest level since August 2025",
+        "pt": "Ouro recupera terreno após tocar seu menor nível desde agosto de 2025"
+      },
+      "resumen": {
+        "es": "El oro spot subió 2,1% a US$ 3.640,84 la onza; acumula una caída de más de US$ 1.000 desde su máximo de mayo.",
+        "en": "Spot gold rose 2.1% to US$ 3,640.84 an ounce; it is still down more than US$ 1,000 from its May high.",
+        "pt": "O ouro à vista subiu 2,1%, para US$ 3.640,84 a onça; acumula queda de mais de US$ 1.000 desde a máxima de maio."
+      }
+    },
+    {
+      "fecha": "2026-11-27",
+      "fuente": "Duplos",
+      "url": "https://duplos.cl/negocios/mercado-cambiario-chile-dolar-observado-semana-27-noviembre-2026/287657/2026/11/27/",
+      "tema": {
+        "es": "Dólar",
+        "en": "Dollar",
+        "pt": "Dólar"
+      },
+      "titular": {
+        "es": "El dólar observado retrocede a $1.037,91, pero termina la semana sobre el lunes",
+        "en": "The observed dollar rate eases to CLP 1,037.91 but ends the week above Monday",
+        "pt": "Dólar observado recua para CLP 1.037,91, mas termina a semana acima de segunda-feira"
+      },
+      "resumen": {
+        "es": "El dólar observado del Banco Central bajó desde $1.044,08 el jueves y quedó sobre los $1.017,17 del lunes 23.",
+        "en": "The Central Bank’s observed rate fell from CLP 1,044.08 on Thursday and ended above Monday the 23rd’s CLP 1,017.17.",
+        "pt": "O dólar observado do Banco Central caiu de CLP 1.044,08 na quinta-feira e ficou acima dos CLP 1.017,17 de segunda-feira, dia 23."
+      }
+    },
     {
       "fecha": "2026-11-27",
       "fuente": "Daily Cargo News (Drewry)",
@@ -192,106 +292,6 @@
         "es": "El índice WCI de Drewry bajó 3% a US$ 4.032 por contenedor de 40 pies; Shanghái–Nueva York cayó 7% a US$ 7.615.",
         "en": "Drewry’s WCI fell 3% to US$ 4,032 per 40ft container; Shanghai–New York dropped 7% to US$ 7,615.",
         "pt": "O índice WCI da Drewry caiu 3%, para US$ 4.032 por contêiner de 40 pés; Xangai–Nova York recuou 7%, para US$ 7.615."
-      }
-    },
-    {
-      "fecha": "2026-11-27",
-      "fuente": "21st Century Business Herald",
-      "url": "https://www.21jingji.com/article/20261127/86e9b90128f0a7a95a4f189e821f11a7.html",
-      "tema": {
-        "es": "Litio",
-        "en": "Lithium",
-        "pt": "Lítio"
-      },
-      "titular": {
-        "es": "Los futuros de carbonato de litio en China tocan un nuevo mínimo del año",
-        "en": "Lithium carbonate futures in China hit a new low for the year",
-        "pt": "Futuros de carbonato de lítio na China atingem nova mínima do ano"
-      },
-      "resumen": {
-        "es": "El contrato principal de Guangzhou cayó 3,16% el 26 de noviembre, a 81.600 yuanes por tonelada.",
-        "en": "Guangzhou’s main contract fell 3.16% on 26 November to 81,600 yuan a tonne.",
-        "pt": "O contrato principal de Guangzhou caiu 3,16% em 26 de novembro, para 81.600 iuanes por tonelada."
-      }
-    },
-    {
-      "fecha": "2026-11-27",
-      "fuente": "FinanceFeeds",
-      "url": "https://financefeeds.com/gold-price-today-3650-friday-rebound-from-15-month-low-silver-up-6-percent-bull-3742-bear-3567/",
-      "tema": {
-        "es": "Oro",
-        "en": "Gold",
-        "pt": "Ouro"
-      },
-      "titular": {
-        "es": "El oro rebota desde su mínimo en 15 meses",
-        "en": "Gold rebounds from a 15-month low",
-        "pt": "Ouro se recupera da mínima em 15 meses"
-      },
-      "resumen": {
-        "es": "El oro spot llegó a US$ 3.650 la onza el viernes por la mañana, frente a US$ 3.567,60 al cierre del jueves.",
-        "en": "Spot gold reached US$ 3,650 an ounce on Friday morning, against US$ 3,567.60 at Thursday’s close.",
-        "pt": "O ouro à vista chegou a US$ 3.650 a onça na manhã de sexta-feira, ante US$ 3.567,60 no fechamento de quinta."
-      }
-    },
-    {
-      "fecha": "2026-11-26",
-      "fuente": "The Nation",
-      "url": "https://www.nationthailand.com/news/world/40073981",
-      "tema": {
-        "es": "Petróleo",
-        "en": "Oil",
-        "pt": "Petróleo"
-      },
-      "titular": {
-        "es": "El Brent sube 2% por ataques en Ormuz y contra una refinería saudita",
-        "en": "Brent rises 2% on Hormuz attacks and a strike on a Saudi refinery",
-        "pt": "Brent sobe 2% com ataques em Ormuz e contra refinaria saudita"
-      },
-      "resumen": {
-        "es": "El Brent cerró en US$ 96,57 por barril (+2,07%); el WTI no tuvo cierre oficial por el feriado de Acción de Gracias en EE.UU.",
-        "en": "Brent settled at US$ 96.57 a barrel (+2.07%); WTI had no official settlement due to the US Thanksgiving holiday.",
-        "pt": "O Brent fechou a US$ 96,57 por barril (+2,07%); o WTI não teve fechamento oficial por causa do feriado de Ação de Graças nos EUA."
-      }
-    },
-    {
-      "fecha": "2026-11-26",
-      "fuente": "BioBioChile",
-      "url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/11/26/dolar-abre-y-cierra-sobre-los-1-040-leve-baja-se-da-gracias-al-cobre-que-sigue-al-alza.shtml",
-      "tema": {
-        "es": "Dólar",
-        "en": "Dollar",
-        "pt": "Dólar"
-      },
-      "titular": {
-        "es": "El dólar se mantiene sobre $1.040 mientras el cobre repunta",
-        "en": "The dollar holds above CLP 1,040 as copper rebounds",
-        "pt": "Dólar se mantém acima de CLP 1.040 enquanto o cobre se recupera"
-      },
-      "resumen": {
-        "es": "El cobre subió a cerca de US$ 5,44 por libra desde US$ 5,31 el día anterior, pero acumula una caída de cerca de 18% en noviembre.",
-        "en": "Copper rose to about US$ 5.44 a pound from US$ 5.31 the day before, but is down about 18% in November.",
-        "pt": "O cobre subiu para cerca de US$ 5,44 por libra, ante US$ 5,31 no dia anterior, mas acumula queda de cerca de 18% em novembro."
-      }
-    },
-    {
-      "fecha": "2026-11-25",
-      "fuente": "La Tercera",
-      "url": "https://www.latercera.com/pulso/noticia/precio-cobre-mas-bajo-2026-impacto-cifras-fiscales/",
-      "tema": {
-        "es": "Fiscal",
-        "en": "Fiscal",
-        "pt": "Fiscal"
-      },
-      "titular": {
-        "es": "Expertos advierten por el impacto fiscal de la caída del cobre",
-        "en": "Experts warn of the fiscal impact of copper’s fall",
-        "pt": "Especialistas alertam para o impacto fiscal da queda do cobre"
-      },
-      "resumen": {
-        "es": "Cada centavo menos en el precio promedio anual del cobre puede costar al fisco hasta US$ 60 millones, según un académico de la U. Autónoma.",
-        "en": "Each cent off the annual average copper price can cost the Treasury up to US$ 60 million, according to an Universidad Autónoma academic.",
-        "pt": "Cada centavo a menos no preço médio anual do cobre pode custar ao Tesouro até US$ 60 milhões, segundo um acadêmico da Universidad Autónoma."
       }
     }
   ],
